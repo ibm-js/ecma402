@@ -1,0 +1,264 @@
+{
+  "main": {
+    "ig": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "Jen",
+                  "2": "Feb",
+                  "3": "Maa",
+                  "4": "Epr",
+                  "5": "Mee",
+                  "6": "Juu",
+                  "7": "Jul",
+                  "8": "Ọgọ",
+                  "9": "Sep",
+                  "10": "Ọkt",
+                  "11": "Nov",
+                  "12": "Dis"
+                },
+                "narrow": {
+                  "1": "1",
+                  "2": "2",
+                  "3": "3",
+                  "4": "4",
+                  "5": "5",
+                  "6": "6",
+                  "7": "7",
+                  "8": "8",
+                  "9": "9",
+                  "10": "10",
+                  "11": "11",
+                  "12": "12"
+                },
+                "wide": {
+                  "1": "Jenụwarị",
+                  "2": "Febrụwarị",
+                  "3": "Maachị",
+                  "4": "Eprel",
+                  "5": "Mee",
+                  "6": "Juun",
+                  "7": "Julaị",
+                  "8": "Ọgọọst",
+                  "9": "Septemba",
+                  "10": "Ọktoba",
+                  "11": "Novemba",
+                  "12": "Disemba"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "Jen",
+                  "2": "Feb",
+                  "3": "Maa",
+                  "4": "Epr",
+                  "5": "Mee",
+                  "6": "Juu",
+                  "7": "Jul",
+                  "8": "Ọgọ",
+                  "9": "Sep",
+                  "10": "Ọkt",
+                  "11": "Nov",
+                  "12": "Dis"
+                },
+                "narrow": {
+                  "1": "1",
+                  "2": "2",
+                  "3": "3",
+                  "4": "4",
+                  "5": "5",
+                  "6": "6",
+                  "7": "7",
+                  "8": "8",
+                  "9": "9",
+                  "10": "10",
+                  "11": "11",
+                  "12": "12"
+                },
+                "wide": {
+                  "1": "Jenụwarị",
+                  "2": "Febrụwarị",
+                  "3": "Maachị",
+                  "4": "Eprel",
+                  "5": "Mee",
+                  "6": "Juun",
+                  "7": "Julaị",
+                  "8": "Ọgọọst",
+                  "9": "Septemba",
+                  "10": "Ọktoba",
+                  "11": "Novemba",
+                  "12": "Disemba"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "Ụka",
+                  "mon": "Mọn",
+                  "tue": "Tiu",
+                  "wed": "Wen",
+                  "thu": "Tọọ",
+                  "fri": "Fraị",
+                  "sat": "Sat"
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "M",
+                  "tue": "T",
+                  "wed": "W",
+                  "thu": "T",
+                  "fri": "F",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Ụka",
+                  "mon": "Mọn",
+                  "tue": "Tiu",
+                  "wed": "Wen",
+                  "thu": "Tọọ",
+                  "fri": "Fraị",
+                  "sat": "Sat"
+                },
+                "wide": {
+                  "sun": "Mbọsị Ụka",
+                  "mon": "Mọnde",
+                  "tue": "Tiuzdee",
+                  "wed": "Wenezdee",
+                  "thu": "Tọọzdee",
+                  "fri": "Fraịdee",
+                  "sat": "Satọdee"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "Ụka",
+                  "mon": "Mọn",
+                  "tue": "Tiu",
+                  "wed": "Wen",
+                  "thu": "Tọọ",
+                  "fri": "Fraị",
+                  "sat": "Sat"
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "M",
+                  "tue": "T",
+                  "wed": "W",
+                  "thu": "T",
+                  "fri": "F",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Ụka",
+                  "mon": "Mọn",
+                  "tue": "Tiu",
+                  "wed": "Wen",
+                  "thu": "Tọọ",
+                  "fri": "Fraị",
+                  "sat": "Sat"
+                },
+                "wide": {
+                  "sun": "Mbọsị Ụka",
+                  "mon": "Mọnde",
+                  "tue": "Tiuzdee",
+                  "wed": "Wenezdee",
+                  "thu": "Tọọzdee",
+                  "fri": "Fraịdee",
+                  "sat": "Satọdee"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "A.M.",
+                  "pm": "P.M."
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "A.M.",
+                  "pm": "P.M."
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "A.M.",
+                  "pm": "P.M."
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "A.M.",
+                  "pm": "P.M."
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "Tupu Kristi",
+                "1": "Afọ Kristi"
+              },
+              "eraAbbr": {
+                "0": "T.K.",
+                "1": "A.K."
+              },
+              "eraNarrow": {
+                "0": "T.K.",
+                "1": "A.K."
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} {0}",
+              "availableFormats": {
+                "EHm": "E HH:mm",
+                "EHms": "E HH:mm:ss",
+                "Ed": "d, E",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
+                "Gy": "G y",
+                "GyMMM": "G y MMM",
+                "GyMMMEd": "G y MMM d, E",
+                "GyMMMd": "G y MMM d",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "E, M/d",
+                "MMM": "LLL",
+                "MMMEd": "E, MMM d",
+                "MMMMEd": "E, MMMM d",
+                "MMMMd": "MMMM d",
+                "MMMd": "MMM d",
+                "Md": "M/d",
+                "d": "d",
+                "h": "h a",
+                "hm": "h:mm a",
+                "hms": "h:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "M/y",
+                "yMEd": "E, M/d/y",
+                "yMMM": "MMM y",
+                "yMMMEd": "E, MMM d, y",
+                "yMMMM": "MMMM y",
+                "yMMMd": "y MMM d",
+                "yMd": "y-MM-dd",
+                "yQQQ": "QQQ y",
+                "yQQQQ": "QQQQ y"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

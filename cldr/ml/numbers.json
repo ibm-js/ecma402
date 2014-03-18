@@ -1,0 +1,43 @@
+{
+  "main": {
+    "ml": {
+      "numbers": {
+        "defaultNumberingSystem": "latn",
+        "symbols-numberSystem-latn": {
+          "decimal": ".",
+          "group": ",",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "NaN"
+        },
+        "symbols-numberSystem-mlym": {
+          "decimal": ".",
+          "group": ",",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "സംഖ്യയല്ല"
+        },
+        "decimalFormats-numberSystem-latn": {
+          "standard": "#,##,##0.###"
+        },
+        "decimalFormats-numberSystem-mlym": {
+          "standard": "#,##,##0.###"
+        },
+        "percentFormats-numberSystem-latn": {
+          "standard": "#,##,##0%"
+        },
+        "percentFormats-numberSystem-mlym": {
+          "standard": "#,##,##0%"
+        },
+        "currencyFormats-numberSystem-latn": {
+          "standard": "#,##,##0.00¤"
+        },
+        "currencyFormats-numberSystem-mlym": {
+          "standard": "#,##,##0.00¤"
+        }
+      }
+    }
+  }
+}

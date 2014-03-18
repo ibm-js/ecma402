@@ -1,0 +1,637 @@
+{
+  "main": {
+    "mn": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "Арабын Нэгдсэн Эмиратын дирхам",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "Афганистаний афгани",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "Албани лек",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "Армени драм",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "Нидерланд Антиллъя гулден",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "Ангол кванза",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "Аргентин песо",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "Австралийн доллар",
+            "symbol": "A$"
+          },
+          "AWG": {
+            "displayName": "Аруба флорин",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "Азербайжан манат",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "Босни-Герцеговин хөрвөгч марк",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "Барбадос доллар",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "Бангладеш така",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "Болгар лев",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "Бахрейн динар",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "Бурунд франк",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "Бермудын доллар",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "Бруней доллар",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "Боливи боливиано",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "Бразилийн рил",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "Багам доллар",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "Бутан нгултрум",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "Ботсвани пула",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "Беларус рубль",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "Белиз доллар",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "Канад доллар",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "Конго франк",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "Швейцар франк",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "Чили песо",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "Хятад юань",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "Колумбын песо",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "Коста Рика колон",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "Куба хөрвөгч песо",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "Куба песо",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "Кабо-Верде эскудо",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "Чех коруна",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "Жибоути франк",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "Данийн крон",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "Доминикан песо",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "Алжир доллар",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "Египет паунд",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "Эритрей накфа",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "Этиоп бирр",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "Евро",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "Фижи доллар",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "Фолклэнд Арлууд паунд",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "Англи фунт стерлинг",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "Гүрж лари",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "Гана седи",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "Гибралтар паунд",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "Гамби даласи",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "Гвиней франк",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "Гватемал кецал",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "Гайана доллар",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "Хонгконг доллар",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "Гондурас лемпира",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "Хорватын куна",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "Гайти гоурде",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "Унгар форинт",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "Индонези рупи",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "Израиль шинэ шекел",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "Энэтхэг рупи",
+            "symbol": "INR"
+          },
+          "IQD": {
+            "displayName": "Ирак динар",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "Иран риал",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "Исланд крона",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "Ямайк доллар",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "Йордан динар",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "Япон иен",
+            "symbol": "JP¥"
+          },
+          "KES": {
+            "displayName": "Кени шиллинг",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "Кыргыз сом",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "Камбож риел",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "Комор франк",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "Хойд Солонгос вон",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "Өмнөд Солонгос вон",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "Кувейт динар",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "Кайманы Арлууд доллар",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "Казах тэнгэ",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "Лао кип",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "Ливан паунд",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "Шри-Ланк рупи",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "Либери доллар",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "Литва литас",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "Латви лац",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "Ливи доллар",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "Марокко дирхам",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "Молдав леу",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "Малайн ариари",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "Македони денар",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "Мьянмар киат",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "Төгрөг",
+            "symbol": "₮"
+          },
+          "MOP": {
+            "displayName": "Макао патака",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "Мавритан угия",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "Мавритын рупи",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "Мальдив руфия",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "Малави квача",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "Мексик песо",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "Малайз ринггит",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "Мозамбик метикал",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "Намиби доллар",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "Нигери найра",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "Никарагуа кордоба",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "Норвеги кроне",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "Балба рупи",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "Шинэ Зеланд доллар",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "Омани риал",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "Панам бальбоа",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "Перу шинэ соль",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "Папуа-Шинэ Гвиней кина",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "Филиппин песо",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "Пакистан рупи",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "Польш злот",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "Парагвай гуарани",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "Катар риал",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "Румын леу",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "Серб динар",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "Орос рубль",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "Руанд франк",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "Саудын риял",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "Соломоны арлуудын доллар",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "Сейшел рупи",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "Судан паунд",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "Швед крона",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "Сингапур доллар",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "Сент Хелена паунд",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "Сьерра Леоне леоне",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "Сомали шиллинг",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "Суринам доллар",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "Өмнөд Судан паунд",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "Сан-Томе ба Принсипи добра",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "Сири паунд",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "Свазиланд лилангени",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "Тай бат",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "Тажик сом",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "Туркмен манат",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "Тунис доллар",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "Тонга панга",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "Туркийн лира",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "Тринидад ба Тобаго доллар",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "Шинэ Тайван доллар",
+            "symbol": "TWD"
+          },
+          "TZS": {
+            "displayName": "Танзани шиллинг",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "Украйн гривня",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "Уганд шиллинг",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "Америк доллар",
+            "symbol": "$"
+          },
+          "UYU": {
+            "displayName": "Уругвай песо",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "Узбек сом",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "Венесуэл боливар",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "Вьетнам донг",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "Вануату вату",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "Самоа тала",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "Франк КФА BEAC",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "Зүүн Карибийн доллар",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "Франк КФА BCЕАО",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "Франц Номхон далайн франк",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "Тодорхойгүй мөнгөн тэмдэгт"
+          },
+          "YER": {
+            "displayName": "Йемен риал",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "Өмнөд Африкийн ранд",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "Замби квача",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

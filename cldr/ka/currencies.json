@@ -1,0 +1,637 @@
+{
+  "main": {
+    "ka": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "არაბთა გაერთიანებული საამიროების დირჰამი",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "ავღანური ავღანი",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "ალბანური ლეკი",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "სომხური დრამი",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "ნიდერლანდების ანტილების გულდენი",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "ანგოლური კვანზა",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "არგენტინული პესო",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "ავსტრალიური დოლარი",
+            "symbol": "AUD"
+          },
+          "AWG": {
+            "displayName": "არუბანული გულდენი",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "აზერბაიჯანული მანათი",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "ბარბადოსული დოლარი",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "ბანგლადეშური ტაკა",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "ბულგარული ლევი",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "ბაჰრეინული დინარი",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "ბურუნდიული ფრანკი",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "ბერმუდული დოლარი",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "ბრუნეული დოლარი",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "ბოლივიური ბოლივიანო",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "ბრაზილიური რეალი",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "ბაჰამური დოლარი",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "ბუტანური ნგულტრუმი",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "ბოცვანური პულა",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "ბელორუსული რუბლი",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "ბელიზის დოლარი",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "კანადური დოლარი",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "კონგოს ფრანკი",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "შვეიცარიული ფრანკი",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "ჩილეს პესო",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "ჩინური იუანი",
+            "symbol": "CNY"
+          },
+          "COP": {
+            "displayName": "კოლუმბიური პესო",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "კოსტა-რიკული კოლონი",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "კუბური კონვერტირებადი პესო",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "კუბური პესო",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "კაბო-ვერდეს ესკუდო",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "ჩეხური კრონა",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "ჯიბუტის ფრანკი",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "დანიური კრონა",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "დომინიკური პესო",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "ალჟირული დინარი",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "ეგვიპტური გირვანქა",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "ერიტრეის ნაკფა",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "ეთიოპიური ბირი",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "ევრო",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "ფიჯის დოლარი",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "ფოლკლენდის კუნძულების ფუნტი",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "ბრიტანული გირვანქა სტერლინგი",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "ქართული ლარი",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "განური სედი",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "გიბრალტარული ფუნტი",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "გამბიური დალასი",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "გვინეური ფრანკი",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "გვატემალური კეტსალი",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "გაიანური დოლარი",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "ჰონკონგის დოლარი",
+            "symbol": "HKD"
+          },
+          "HNL": {
+            "displayName": "ჰონდურასული ლემპირა",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "ხორვატული კუნა",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "ჰაიტური გურდი",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "უნგრული ფორინტი",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "ინდონეზიური რუპია",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "ისრაელის ახალი შეკელი",
+            "symbol": "ILS"
+          },
+          "INR": {
+            "displayName": "ინდური რუპია",
+            "symbol": "INR"
+          },
+          "IQD": {
+            "displayName": "ერაყული დინარი",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "ირანული რიალი",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "ისლანდიური კრონა",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "იამაიკური დოლარი",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "იორდანიული დოლარი",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "იაპონური იენი",
+            "symbol": "JPY"
+          },
+          "KES": {
+            "displayName": "კენიური შილინგი",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "ყირგიზული სომი",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "კამბოჯური რიელი",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "კომორული ფრანკი",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "ჩრდილოეთ კორეული ვონი",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "სამხრეთ კორეული ვონი",
+            "symbol": "KRW"
+          },
+          "KWD": {
+            "displayName": "ქუვეითური დინარი",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "კაიმანის კუნძულების დოლარი",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "ყაზახური ტენგე",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "ლაოსური კიპი",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "ლიბანური ფუნტი",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "შრი-ლანკური რუპია",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "ლიბერიული დოლარი",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "ლიტვური ლიტა",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "ლატვიური ლატი",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "ლიბიური დინარი",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "მაროკოს დირჰამი",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "მოლდოვური ლეუ",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "მადაგასკარის არიარი",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "მაკედონიური დინარი",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "მიანმარის კიატი",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "მონღოლური ტუგრიკი",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "მაკაუს პატაკა",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "მავრიტანული უგია",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "მავრიტანული რუპია",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "მალდივური რუფია",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "მალავიური კვაჩა",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "მექსიკური პესო",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "მალაიზიური რინგიტი",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "მოზამბიკური მეტიკალი",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "ნამიბიური დოლარი",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "ნიგერიული ნაირა",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "ნიკარაგუული კორდობა",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "ნორვეგიული კრონა",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "ნეპალური რუპია",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "ახალი ზელანდიის დოლარი",
+            "symbol": "NZD"
+          },
+          "OMR": {
+            "displayName": "ომანის რიალი",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "პანამური ბალბოა",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "პერუს ახალი სოლი",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "პაპუა-ახალი გვინეის კინა",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "ფილიპინური პესო",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "პაკისტანური რუპია",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "პოლონური ზლოტი",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "პარაგვაული გუარანი",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "კატარის რიალი",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "რუმინული ლეუ",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "სერბული დინარი",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "რუსული რუბლი",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "რუანდული ფრანკი",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "საუდის არაბეთის რიალი",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "სოლომონის კუნძულების დოლარი",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "სეიშელური რუპია",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "სუდანური ფუნტი",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "შვედური კრონა",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "სინგაპურის დოლარი",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "წმ. ელენეს კუნძულის ფუნტი",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "სიერა-ლეონეს ლეონე",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "სომალური შილინგი",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "სურინამული დოლარი",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "სამხრეთ სუდანური ფუნტი",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "სან-ტომე და პრინსიპის დობრა",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "სირიული ფუნტი",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "სვაზილენდის ლილანგენი",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "ტაილანდური ბატი",
+            "symbol": "THB"
+          },
+          "TJS": {
+            "displayName": "ტაჯიკური სომონი",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "თურქმენეთის მანათი",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "ტუნისური დინარი",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "ტონგანური პაანგა",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "ახალი თურქული ლირა",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "ტრინიდად და ტობაგოს დოლარი",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "ტაივანური ახალი დოლარი",
+            "symbol": "TWD"
+          },
+          "TZS": {
+            "displayName": "ტანზანიური შილინგი",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "უკრაინული გრივნა",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "უგანდური შილინგი",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "აშშ დოლარი",
+            "symbol": "US$"
+          },
+          "UYU": {
+            "displayName": "ურუგვაის პესო",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "უზბეკური სუმი",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "ვენესუელის ბოლივარი",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "ვიეტნამური დონგი",
+            "symbol": "VND"
+          },
+          "VUV": {
+            "displayName": "ვანუატუს ვატუ",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "სამოური ტალა",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "CFA ფრანკი (BEAC)",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "აღმოსავლეთ კარიბიული დოლარი",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "(CFA) ფრანკი (BCEAO)",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "CFP ფრანკი",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "უცნობი ვალუტა"
+          },
+          "YER": {
+            "displayName": "იემენის რეალი",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "სამხრეთ აფრიკული რანდი",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "ზამბიური კვაჭა",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "main": {
+    "es-MX": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "ene.",
+                  "2": "febr.",
+                  "3": "mzo.",
+                  "4": "abr.",
+                  "5": "my.",
+                  "6": "jun.",
+                  "7": "jul.",
+                  "8": "ag.",
+                  "9": "set.",
+                  "10": "oct.",
+                  "11": "nov.",
+                  "12": "dic."
+                },
+                "narrow": {
+                  "1": "E",
+                  "2": "F",
+                  "3": "Ma",
+                  "4": "A",
+                  "5": "My",
+                  "6": "Jn",
+                  "7": "Jl",
+                  "8": "Ag",
+                  "9": "S",
+                  "10": "O",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "enero",
+                  "2": "febrero",
+                  "3": "marzo",
+                  "4": "abril",
+                  "5": "mayo",
+                  "6": "junio",
+                  "7": "julio",
+                  "8": "agosto",
+                  "9": "septiembre",
+                  "10": "octubre",
+                  "11": "noviembre",
+                  "12": "diciembre"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "en.",
+                  "2": "febr.",
+                  "3": "mzo.",
+                  "4": "abr.",
+                  "5": "my.",
+                  "6": "jun",
+                  "7": "jul",
+                  "8": "ag.",
+                  "9": "set.",
+                  "10": "oct.",
+                  "11": "nov.",
+                  "12": "dic."
+                },
+                "narrow": {
+                  "1": "E",
+                  "2": "F",
+                  "3": "Ma",
+                  "4": "A",
+                  "5": "My",
+                  "6": "Jn",
+                  "7": "Jl",
+                  "8": "Ag",
+                  "9": "S",
+                  "10": "O",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "enero",
+                  "2": "febrero",
+                  "3": "marzo",
+                  "4": "abril",
+                  "5": "mayo",
+                  "6": "junio",
+                  "7": "julio",
+                  "8": "agosto",
+                  "9": "septiembre",
+                  "10": "octubre",
+                  "11": "noviembre",
+                  "12": "diciembre"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "dom.",
+                  "mon": "lun.",
+                  "tue": "mar.",
+                  "wed": "miér.",
+                  "thu": "jue.",
+                  "fri": "vier.",
+                  "sat": "sáb"
+                },
+                "narrow": {
+                  "sun": "D",
+                  "mon": "L",
+                  "tue": "M",
+                  "wed": "X",
+                  "thu": "J",
+                  "fri": "V",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "do.",
+                  "mon": "lu.",
+                  "tue": "ma.",
+                  "wed": "mi.",
+                  "thu": "ju.",
+                  "fri": "vi.",
+                  "sat": "sá."
+                },
+                "wide": {
+                  "sun": "domingo",
+                  "mon": "lunes",
+                  "tue": "martes",
+                  "wed": "miércoles",
+                  "thu": "jueves",
+                  "fri": "viernes",
+                  "sat": "sábado"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "dom.",
+                  "mon": "lun",
+                  "tue": "mar.",
+                  "wed": "mié.",
+                  "thu": "jue.",
+                  "fri": "vie",
+                  "sat": "sáb."
+                },
+                "narrow": {
+                  "sun": "D",
+                  "mon": "L",
+                  "tue": "M",
+                  "wed": "X",
+                  "thu": "J",
+                  "fri": "V",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "do.",
+                  "mon": "lu.",
+                  "tue": "ma.",
+                  "wed": "mi.",
+                  "thu": "ju.",
+                  "fri": "vi.",
+                  "sat": "sá."
+                },
+                "wide": {
+                  "sun": "domingo",
+                  "mon": "lunes",
+                  "tue": "martes",
+                  "wed": "miércoles",
+                  "thu": "jueves",
+                  "fri": "viernes",
+                  "sat": "sábado"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "a.m.",
+                  "pm": "p.m."
+                },
+                "narrow": {
+                  "am": "a.m.",
+                  "pm": "p.m."
+                },
+                "wide": {
+                  "am": "a.m.",
+                  "pm": "p.m."
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "a.m.",
+                  "pm": "p.m."
+                },
+                "narrow": {
+                  "am": "a.m.",
+                  "pm": "p.m."
+                },
+                "wide": {
+                  "am": "a.m.",
+                  "pm": "p.m."
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "antes de Cristo",
+                "1": "anno Dómini"
+              },
+              "eraAbbr": {
+                "0": "a.C.",
+                "1": "d.C."
+              },
+              "eraNarrow": {
+                "0": "a.C.",
+                "1": "d.C."
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} {0}",
+              "availableFormats": {
+                "EHm": "E H:mm",
+                "EHms": "E H:mm:ss",
+                "Ed": "E d",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
+                "Gy": "y G",
+                "GyMMM": "MMM y G",
+                "GyMMMEd": "E, d 'de' MMMM 'de' y G",
+                "GyMMMd": "d MMM y G",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "E, d/M",
+                "MMM": "LLL",
+                "MMMEd": "E d 'de' MMM",
+                "MMMMd": "d 'de' MMMM",
+                "MMMd": "d 'de' MMM",
+                "MMMdd": "dd-MMM",
+                "MMd": "d/MM",
+                "MMdd": "dd/MM",
+                "Md": "d/M",
+                "d": "d",
+                "h": "hh a",
+                "hm": "hh:mm a",
+                "hms": "hh:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "M/y",
+                "yMEd": "E d/M/y",
+                "yMM": "MM/y",
+                "yMMM": "MMM 'de' y",
+                "yMMMEd": "EEE, d 'de' MMMM 'de' y",
+                "yMMMM": "MMMM 'de' y",
+                "yMMMd": "d 'de' MMM 'de' y",
+                "yMd": "d/M/y",
+                "yQQQ": "QQQ y",
+                "yQQQQ": "QQQQ 'de' y"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

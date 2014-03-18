@@ -1,0 +1,43 @@
+{
+  "main": {
+    "km": {
+      "numbers": {
+        "defaultNumberingSystem": "latn",
+        "symbols-numberSystem-khmr": {
+          "decimal": ",",
+          "group": ".",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "NaN"
+        },
+        "symbols-numberSystem-latn": {
+          "decimal": ",",
+          "group": ".",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "NaN"
+        },
+        "decimalFormats-numberSystem-khmr": {
+          "standard": "#,##0.###"
+        },
+        "decimalFormats-numberSystem-latn": {
+          "standard": "#,##0.###"
+        },
+        "percentFormats-numberSystem-khmr": {
+          "standard": "#,##0%"
+        },
+        "percentFormats-numberSystem-latn": {
+          "standard": "#,##0%"
+        },
+        "currencyFormats-numberSystem-khmr": {
+          "standard": "¤#,##0.00"
+        },
+        "currencyFormats-numberSystem-latn": {
+          "standard": "¤#,##0.00"
+        }
+      }
+    }
+  }
+}

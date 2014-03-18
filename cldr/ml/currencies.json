@@ -1,0 +1,637 @@
+{
+  "main": {
+    "ml": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "യു.എ.ഇ. ദിർഹം",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "അഫ്‌ഗാൻ അഫ്‌‌ഗാനി",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "അൽബേനിയൻ ലെക്",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "അർമേനിയൻ ഡ്രാം",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "നെതർലൻഡ്സ് ആൻറിലൻ ഗിൽഡർ",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "അംഗോളൻ ‍ക്വാൻസ",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "അർജൻറീൻ പെസോ",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "ആസ്ട്രേലിയൻ ഡോളർ",
+            "symbol": "A$"
+          },
+          "AWG": {
+            "displayName": "അറൂബൻ ഗിൽഡർ",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "അസർബയ്ജാനിയൻ മനത്",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "ബോസ്നിയ-ഹെർസഗോവിന കൺവേർട്ടിബിൾ മാർക്ക്",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "ബാർബഡോസ് ഡോളർ",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "ബംഗ്ലാദേശി ടാക്ക",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "ബൾഗേറിയൻ ന്യൂലവ്",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "ബഹറിൻ ദിനാർ",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "ബുറുണ്ടിയൻ ഫ്രാങ്ക്",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "ബെർമുഡൻ ഡോളർ",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "ബ്രൂണെ ഡോളർ",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "ബൊളീവിയൻ ബൊളിവിയാനോ",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "ബ്രസീലിയൻ റിയാൽ",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "ബഹാമിയൻ ഡോളർ",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "ഭൂട്ടാൻ എൻഗൾട്രം",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "ബോട്സ്വാനൻ പ്യൂല",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "ബെലാറഷ്യൻ റൂബിൾ",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "ബെലീസ് ഡോളർ",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "കനേഡിയൻ ഡോളർ",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "കോംഗോളീസ് ഫ്രാങ്ക്",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "സ്വിസ് ഫ്രാങ്ക്",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "ചിലിയൻ പെസോ",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "ചൈനീസ് യുവാൻ",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "കൊളംബിയൻ പെസോ",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "കോസ്റ്റാ റിക്കൻ കോളൻ",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "ക്യൂബൻ പരിവർത്തിത പെസോ",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "ക്യൂബൻ പെസോ",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "കെയ്പ് വെർഡെ എസ്ക്യുഡോ",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "ചെക്ക് റിപ്പബ്ലിക് കൊരൂന",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "ജീബൂട്ടിയൻ ഫ്രാങ്ക്",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "ഡാനിഷ് ക്രോണെ",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "ഡൊമിനിക്കൻ പെസോ",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "അൾജീരിയൻ ദിനാർ",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "ഈജിപ്ഷ്യൻ പൌണ്ട്",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "എറിത്രിയൻ നക്ഫ",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "എത്യോപ്പിയൻ ബിർ",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "യൂറോ",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "ഫിജിയൻ ഡോളർ",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "ഫോക്‌ലാൻഡ് ദ്വീപുകളുടെ പൌണ്ട്",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "ബ്രിട്ടീഷ് പൌണ്ട് സ്റ്റെർലിംങ്",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "ജോർ‍ജ്ജിയൻ ലാരി",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "ഘാന കെഡി",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "ഗിബ്രാൽട്ടർ പൌണ്ട്",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "ഗാമ്പിയൻ ദലാസി",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "ഗിനിയൻ ഫ്രാങ്ക്",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "ഗ്വാട്ടിമാല ക്വെറ്റ്സൽ",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "ഗയാന ഡോളർ",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "ഹോങ് കോങ് ഡോളർ",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "ഹോൻഡ്യുറാസ് ലെംപീര",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "ക്രൊയേഷ്യൻ ക്യൂന",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "ഹെയ്ഷ്യൻ ഗൂർഡ്",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "ഹംഗേറിയൻ ഫോറിൻറ്",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "ഇന്തോനേഷ്യൻ രൂപ",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "ഇസ്രായേലി ഷക്കേൽ",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "ഇന്ത്യൻ രൂപ",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "ഇറാക്കി ദിനാർ",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "ഇറാനിയൻ റിയാൽ",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "ഐസ്‌ലാൻഡിക് ക്രോണ",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "ജമൈക്കൻ ഡോളർ",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "ജോർദ്ദാൻ ദിനാർ",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "ജപ്പാനീസ് യെൻ",
+            "symbol": "JP¥"
+          },
+          "KES": {
+            "displayName": "കെനിയൻ ഷില്ലിംഗ്",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "കിർഗിസ്ഥാൻ സോം",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "കംബോഡിയൻ റീൽ",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "കൊമോറിയൻ ഫ്രാങ്ക്",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "നോർത്ത് കൊറിയൻ വോൺ",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "ദക്ഷിണ കൊറിയൻ വോൺ",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "കുവൈറ്റി ദിനാർ",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "കെയ്മൻദ്വീപുകളുടെ ഡോളർ‌",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "കസാഖ്സ്ഥാൻ റ്റെംഗെ",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "ലാവോഷിയൻ കിപ്",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "ലെബനീസ് പൌണ്ട്",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "ശ്രീലങ്കൻ രൂപ",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "ലൈബീരിയൻ ഡോളർ",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "ലിത്വാനിയൻ ലിത",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "ലാറ്റ്വിയൻ ലാറ്റ്സ്",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "ലിബിയൻ ദിനാർ",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "മൊറോക്കൻ ദിർഹം",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "മൊൽഡോവൻ ലിയൂ",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "മഡഗാസ്കർ ഏരിയറി",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "മാസിഡോണിയൻ ദിനാർ",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "മ്യാൻമാർ ചാറ്റ്",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "മംഗോളിയൻ തുഗ്രിക്",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "മക്കാനീസ് പതാക്ക",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "മൌറിറ്റേനിയൻ ഔഗിയ",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "മൌറീഷ്യൻ രൂപ",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "മാലദ്വീപ് രൂപ",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "മലാവിയൻ ക്വാച",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "മെക്സിക്കൻ പെസോ",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "മലേഷ്യൻ റിംഗിറ്റ്",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "മൊസാമ്പിക്ക് മെറ്റിക്കൽ",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "നമീബിയൻ ഡോളർ",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "നൈജീരിയൻ നൈറ",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "നികരാഗ്വൻ കൊർഡോബ ഒരോ",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "നോർവീജിയൻ ക്രോണെ",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "നേപ്പാളി രൂപ",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "ന്യൂസിലാൻഡ് ഡോളർ",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "ഒമാൻ റിയാൽ",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "പനാമെയ്നിയൻ ബാൽബോവ",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "പെറൂവിയൻ സോൾ ന്യൂവോ",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "പാപുവ ന്യൂ ഗിനിയൻ കിന",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "ഫിലിപ്പൈൻ പെസോ",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "പാക്കിസ്ഥാനി രൂപ",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "പോളിഷ് സ്ലോട്ടി",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "പരാഗ്വേയൻ ഗ്വരനീ",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "ഖത്തർ റിയാൽ",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "റൊമേനിയൻ ലിയു",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "സെർബിയൻ ദിനാർ",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "റഷ്യൻ റൂബിൾ",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "റുവാണ്ടൻ ഫ്രാങ്ക്",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "സൌദി റിയാൽ",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "സോളമൻ ദ്വീപുകളുടെ ഡോളർ",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "സെയ്ഷെൽസ് രൂപ",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "സുഡാനീസ് പൌണ്ട്",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "സ്വീഡിഷ് ക്രോണ",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "സിംഗപ്പൂർ ഡോളർ",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "സെയ്ൻറ് ഹെലെന പൌണ്ട്",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "സിയറാ ലിയോൺ ലിയോൺ",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "സൊമാലി ഷില്ലിംഗ്",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "സൂരിനാം ഡോളർ",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "ദക്ഷിണ സുഡാനീസ് പൗണ്ട്",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "സാവോ റ്റോമി ആൻഡ് പ്രിൻസിപ്പി ഡോബ്ര",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "സിറിയൻ പൌണ്ട്",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "സ്വാസിലാൻഡ് ലിലാംഗനി",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "തായ് ബാത്ത്",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "താജിക്കിസ്ഥാൻ സൊമോനി",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "തുർക്കമനിസ്ഥാനി മനാത്ത്",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "തുനീസിയൻ ദിനാർ",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "റ്റോംഗൻ പാംഗ",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "തുർക്കിഷ് ലിറ",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "ട്രിനിഡാഡ് ആൻഡ് റ്റൊബാഗോ ഡോളർ",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "തായ്‌വാൻ ഡോളർ",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "ടാൻസാനിയൻ ഷില്ലിംഗ്",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "യുക്രേനിയൻ ഹ്രിവ്നിയ",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "ഉഗാണ്ടൻ ഷില്ലിംഗ്",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "യു.എസ്. ഡോളർ",
+            "symbol": "$"
+          },
+          "UYU": {
+            "displayName": "ഉറുഗ്വേൻ പെസോ",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "ഉസ്ബക്കിസ്ഥാൻ സം",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "വെനസ്വേലൻ ബോലിവർ",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "വിയറ്റ്നാമീസ് ഡോങ്",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "വനുവാതു വാതു",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "സമോവൻ താല",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "CFA ഫ്രാങ്ക് BEAC",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "കിഴക്കൻ കരീബിയൻ ഡോളർ",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "CFA ഫ്രാങ്ക് BCEAO",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "CFP ഫ്രാങ്ക്",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "അജ്ഞാത നാണയം"
+          },
+          "YER": {
+            "displayName": "യമനി റിയാൽ",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "ദക്ഷിണ ആഫ്രിക്കൻ റാൻഡ്",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "സാംബിയൻ ക്വാച",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

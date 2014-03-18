@@ -1,0 +1,265 @@
+{
+  "main": {
+    "om": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "Ama",
+                  "2": "Gur",
+                  "3": "Bit",
+                  "4": "Elb",
+                  "5": "Cam",
+                  "6": "Wax",
+                  "7": "Ado",
+                  "8": "Hag",
+                  "9": "Ful",
+                  "10": "Onk",
+                  "11": "Sad",
+                  "12": "Mud"
+                },
+                "narrow": {
+                  "1": "J",
+                  "2": "F",
+                  "3": "M",
+                  "4": "A",
+                  "5": "M",
+                  "6": "J",
+                  "7": "J",
+                  "8": "A",
+                  "9": "S",
+                  "10": "O",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "Amajjii",
+                  "2": "Guraandhala",
+                  "3": "Bitooteessa",
+                  "4": "Elba",
+                  "5": "Caamsa",
+                  "6": "Waxabajjii",
+                  "7": "Adooleessa",
+                  "8": "Hagayya",
+                  "9": "Fuulbana",
+                  "10": "Onkololeessa",
+                  "11": "Sadaasa",
+                  "12": "Muddee"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "Ama",
+                  "2": "Gur",
+                  "3": "Bit",
+                  "4": "Elb",
+                  "5": "Cam",
+                  "6": "Wax",
+                  "7": "Ado",
+                  "8": "Hag",
+                  "9": "Ful",
+                  "10": "Onk",
+                  "11": "Sad",
+                  "12": "Mud"
+                },
+                "narrow": {
+                  "1": "J",
+                  "2": "F",
+                  "3": "M",
+                  "4": "A",
+                  "5": "M",
+                  "6": "J",
+                  "7": "J",
+                  "8": "A",
+                  "9": "S",
+                  "10": "O",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "Amajjii",
+                  "2": "Guraandhala",
+                  "3": "Bitooteessa",
+                  "4": "Elba",
+                  "5": "Caamsa",
+                  "6": "Waxabajjii",
+                  "7": "Adooleessa",
+                  "8": "Hagayya",
+                  "9": "Fuulbana",
+                  "10": "Onkololeessa",
+                  "11": "Sadaasa",
+                  "12": "Muddee"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "Dil",
+                  "mon": "Wix",
+                  "tue": "Qib",
+                  "wed": "Rob",
+                  "thu": "Kam",
+                  "fri": "Jim",
+                  "sat": "San"
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "M",
+                  "tue": "T",
+                  "wed": "W",
+                  "thu": "T",
+                  "fri": "F",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Dil",
+                  "mon": "Wix",
+                  "tue": "Qib",
+                  "wed": "Rob",
+                  "thu": "Kam",
+                  "fri": "Jim",
+                  "sat": "San"
+                },
+                "wide": {
+                  "sun": "Dilbata",
+                  "mon": "Wiixata",
+                  "tue": "Qibxata",
+                  "wed": "Roobii",
+                  "thu": "Kamiisa",
+                  "fri": "Jimaata",
+                  "sat": "Sanbata"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "Dil",
+                  "mon": "Wix",
+                  "tue": "Qib",
+                  "wed": "Rob",
+                  "thu": "Kam",
+                  "fri": "Jim",
+                  "sat": "San"
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "M",
+                  "tue": "T",
+                  "wed": "W",
+                  "thu": "T",
+                  "fri": "F",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Dil",
+                  "mon": "Wix",
+                  "tue": "Qib",
+                  "wed": "Rob",
+                  "thu": "Kam",
+                  "fri": "Jim",
+                  "sat": "San"
+                },
+                "wide": {
+                  "sun": "Dilbata",
+                  "mon": "Wiixata",
+                  "tue": "Qibxata",
+                  "wed": "Roobii",
+                  "thu": "Kamiisa",
+                  "fri": "Jimaata",
+                  "sat": "Sanbata"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "WD",
+                  "pm": "WB"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "WD",
+                  "pm": "WB"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "WD",
+                  "pm": "WB"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "WD",
+                  "pm": "WB"
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "KD",
+                "1": "KB"
+              },
+              "eraAbbr": {
+                "0": "KD",
+                "1": "KB"
+              },
+              "eraNarrow": {
+                "0": "KD",
+                "1": "KB"
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} {0}",
+              "availableFormats": {
+                "EHm": "E HH:mm",
+                "EHms": "E HH:mm:ss",
+                "Ed": "d, E",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
+                "Gy": "G y",
+                "GyMMM": "G y MMM",
+                "GyMMMEd": "G y MMM d, E",
+                "GyMMMd": "G y MMM d",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "MM-dd, E",
+                "MMM": "LLL",
+                "MMMEd": "MMM d, E",
+                "MMMMdd": "dd MMMM",
+                "MMMd": "MMM d",
+                "MMdd": "dd/MM",
+                "Md": "MM-dd",
+                "d": "d",
+                "h": "h a",
+                "hm": "h:mm a",
+                "hms": "h:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "y-MM",
+                "yMEd": "y-MM-dd, E",
+                "yMM": "MM/y",
+                "yMMM": "y MMM",
+                "yMMMEd": "y MMM d, E",
+                "yMMMM": "MMMM y",
+                "yMMMd": "y MMM d",
+                "yMd": "y-MM-dd",
+                "yQQQ": "QQQ y",
+                "yQQQQ": "y QQQQ"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

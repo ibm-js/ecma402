@@ -1,0 +1,637 @@
+{
+  "main": {
+    "da": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "Dirham fra de Forenede Arabiske Emirater",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "Afghansk afghani",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "Albansk lek",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "Armensk dram",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "Nederlandske Antiller-gylden",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "Angolansk kwanza",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "Argentinsk peso",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "Australsk dollar",
+            "symbol": "AU$"
+          },
+          "AWG": {
+            "displayName": "Arubansk florin",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "Aserbajdsjansk manat",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "Bosnien-Hercegovinsk konvertibel mark",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "Barbadisk dollar",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "Bangladeshisk taka",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "Bulgarsk lev",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "Bahrainsk dinar",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "Burundisk franc",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "Bermudansk dollar",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "Bruneisk dollar",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "Boliviansk boliviano",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "Brasiliansk real",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "Bahamansk dollar",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "Bhutansk ngultrum",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "Botswansk pula",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "Hviderussisk rubel",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "Belizisk dollar",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "Canadisk dollar",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "Congolesisk franc",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "Schweizisk franc",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "Chilensk peso",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "Kinesisk yuan renminbi",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "Colombiansk peso",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "Costaricansk colón",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "Cubansk konvertibel peso",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "Cubansk peso",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "Kapverdisk escudo",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "Tjekkisk koruna",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "Djiboutisk franc",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "Dansk krone",
+            "symbol": "kr"
+          },
+          "DOP": {
+            "displayName": "Dominikansk peso",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "Algerisk dinar",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "Egyptisk pund",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "Eritreisk nakfa",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "Etiopisk birr",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "Euro",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "Fijiansk dollar",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "Pund fra Falklandsøerne",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "Britisk pund",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "Georgisk lari",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "Ghanesisk cedi",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "Gibraltarisk pund",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "Gambisk dalasi",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "Guineansk franc",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "Guatemalansk quetzal",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "Guyansk dollar",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "Hongkong dollar",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "Honduransk lempira",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "Kroatisk kuna",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "Haitisk gourde",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "Ungarsk forint",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "Indonesisk pupiah",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "Ny israelsk shekel",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "Indisk rupee",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "Irakisk dinar",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "Iransk rial",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "Islansk krone",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "Jamaicansk dollar",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "Jordansk dinar",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "Japansk yen",
+            "symbol": "JP¥"
+          },
+          "KES": {
+            "displayName": "Kenyansk shilling",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "Kirgisisk som",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "Cambodjansk riel",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "Comorisk franc",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "Nordkoreansk won",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "Sydkoreansk won",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "Kuwaitisk dinar",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "Caymansk dollar",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "Kasakhisk tenge",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "Laotisk kip",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "Libanesisk pund",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "Srilankansk rupee",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "Liberisk dollar",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "Litauisk litas",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "Lettisk lat",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "Libysk dinar",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "Marokkansk dirham",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "Moldovisk leu",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "Madagaskisk ariary",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "Makedonsk denar",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "Myanmarsk kyat",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "Mongolsk tugrik",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "Macaosk pataca",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "Mauritansk ouguiya",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "Mauritisk rupee",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "Maldivisk rufiyaa",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "Malawisk kwacha",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "Mexicansk peso",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "Malaysisk ringgit",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "Mozambiquisk metical",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "Namibisk dollar",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "Nigeriansk naira",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "Nicaraguansk cordoba",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "Norsk krone",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "Nepalesisk rupee",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "New Zealandsk dollar",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "Omansk rial",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "Panamansk balboa",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "Peruviansk nuevo sol",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "Papuansk kina",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "Filippinsk peso",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "Pakistansk rupee",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "Polsk zloty",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "Paraguaysk guarani",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "Qatarsk rial",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "Rumænsk leu",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "Serbisk dinar",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "Russisk rubel",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "Rwandisk franc",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "Saudiarabisk riyal",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "Salomonsk dollar",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "Seychellisk rupee",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "Sudansk pund",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "Svensk krone",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "Singaporeansk dollar",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "Pund fra Saint Helena",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "Sierraleonsk leone",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "Somalisk shilling",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "Surinamsk dollar",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "Sydsudanske pund",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "Dobra fra Sao Tome og Principe",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "Syrisk pund",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "Swazilandsk lilangeni",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "Thailandsk baht",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "Tadsjikisk somoni",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "Turkmensk manat",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "Tunesisk dinar",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "Tongansk paʻanga",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "Tyrkisk lira",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "Dollar fra Trinidad og Tobago",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "Ny taiwansk dollar",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "Tanzanisk shilling",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "Ukrainsk grynia",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "Ugandisk shilling",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "Amerikansk dollar",
+            "symbol": "$"
+          },
+          "UYU": {
+            "displayName": "Uruguayansk peso",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "Usbekisk sum",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "Venezuelansk bolivar",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "Vietnamesisk dong",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "Vanuaisk vatu",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "Samoansk tala",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "CFA-franc (BEAC)",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "Østkaribisk dollar",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "CFA-franc BCEAO",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "CFP-franc",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "Ukendt valuta"
+          },
+          "YER": {
+            "displayName": "Yemenitisk rial",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "Sydafrikansk rand",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "Zambisk kwacha",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "main": {
+    "ms": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "Jan",
+                  "2": "Feb",
+                  "3": "Mac",
+                  "4": "Apr",
+                  "5": "Mei",
+                  "6": "Jun",
+                  "7": "Jul",
+                  "8": "Ogo",
+                  "9": "Sep",
+                  "10": "Okt",
+                  "11": "Nov",
+                  "12": "Dis"
+                },
+                "narrow": {
+                  "1": "J",
+                  "2": "F",
+                  "3": "M",
+                  "4": "A",
+                  "5": "M",
+                  "6": "J",
+                  "7": "J",
+                  "8": "O",
+                  "9": "S",
+                  "10": "O",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "Januari",
+                  "2": "Februari",
+                  "3": "Mac",
+                  "4": "April",
+                  "5": "Mei",
+                  "6": "Jun",
+                  "7": "Julai",
+                  "8": "Ogos",
+                  "9": "September",
+                  "10": "Oktober",
+                  "11": "November",
+                  "12": "Disember"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "Jan",
+                  "2": "Feb",
+                  "3": "Mac",
+                  "4": "Apr",
+                  "5": "Mei",
+                  "6": "Jun",
+                  "7": "Jul",
+                  "8": "Ogo",
+                  "9": "Sep",
+                  "10": "Okt",
+                  "11": "Nov",
+                  "12": "Dis"
+                },
+                "narrow": {
+                  "1": "J",
+                  "2": "F",
+                  "3": "M",
+                  "4": "A",
+                  "5": "M",
+                  "6": "J",
+                  "7": "J",
+                  "8": "O",
+                  "9": "S",
+                  "10": "O",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "Januari",
+                  "2": "Februari",
+                  "3": "Mac",
+                  "4": "April",
+                  "5": "Mei",
+                  "6": "Jun",
+                  "7": "Julai",
+                  "8": "Ogos",
+                  "9": "September",
+                  "10": "Oktober",
+                  "11": "November",
+                  "12": "Disember"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "Ahd",
+                  "mon": "Isn",
+                  "tue": "Sel",
+                  "wed": "Rab",
+                  "thu": "Kha",
+                  "fri": "Jum",
+                  "sat": "Sab"
+                },
+                "narrow": {
+                  "sun": "A",
+                  "mon": "I",
+                  "tue": "S",
+                  "wed": "R",
+                  "thu": "K",
+                  "fri": "J",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Ah",
+                  "mon": "Is",
+                  "tue": "Se",
+                  "wed": "Ra",
+                  "thu": "Kh",
+                  "fri": "Ju",
+                  "sat": "Sa"
+                },
+                "wide": {
+                  "sun": "Ahad",
+                  "mon": "Isnin",
+                  "tue": "Selasa",
+                  "wed": "Rabu",
+                  "thu": "Khamis",
+                  "fri": "Jumaat",
+                  "sat": "Sabtu"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "Ahd",
+                  "mon": "Isn",
+                  "tue": "Sel",
+                  "wed": "Rab",
+                  "thu": "Kha",
+                  "fri": "Jum",
+                  "sat": "Sab"
+                },
+                "narrow": {
+                  "sun": "A",
+                  "mon": "I",
+                  "tue": "S",
+                  "wed": "R",
+                  "thu": "K",
+                  "fri": "J",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Ah",
+                  "mon": "Is",
+                  "tue": "Se",
+                  "wed": "Ra",
+                  "thu": "Kh",
+                  "fri": "Ju",
+                  "sat": "Sa"
+                },
+                "wide": {
+                  "sun": "Ahad",
+                  "mon": "Isnin",
+                  "tue": "Selasa",
+                  "wed": "Rabu",
+                  "thu": "Khamis",
+                  "fri": "Jumaat",
+                  "sat": "Sabtu"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "pg",
+                  "pm": "ptg"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "PG",
+                  "pm": "PTG"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "pg",
+                  "pm": "ptg"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "PG",
+                  "pm": "PTG"
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "S.M.",
+                "1": "TM"
+              },
+              "eraAbbr": {
+                "0": "S.M.",
+                "1": "TM"
+              },
+              "eraNarrow": {
+                "0": "S.M.",
+                "1": "TM"
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} {0}",
+              "availableFormats": {
+                "EHm": "E HH:mm",
+                "EHms": "E HH:mm:ss",
+                "Ed": "d E",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
+                "Gy": "y G",
+                "GyMMM": "MMM y G",
+                "GyMMMEd": "E, d MMM y G",
+                "GyMMMd": "d MMM y G",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hmm": "H:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "E, d-M",
+                "MMM": "LLL",
+                "MMMEd": "E, d MMM",
+                "MMMMd": "d MMMM",
+                "MMMd": "d MMM",
+                "MMdd": "dd/MM",
+                "Md": "d-M",
+                "d": "d",
+                "h": "h a",
+                "hm": "h:mm a",
+                "hms": "h:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "M-y",
+                "yMEd": "E, d/M/y",
+                "yMMM": "MMM y",
+                "yMMMEd": "E, d MMM y",
+                "yMMMd": "d MMM y",
+                "yMd": "d/M/y",
+                "yQQQ": "QQQ y",
+                "yQQQQ": "QQQQ y"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
