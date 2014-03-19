@@ -1,0 +1,261 @@
+{
+  "main": {
+    "rw": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "mut.",
+                  "2": "gas.",
+                  "3": "wer.",
+                  "4": "mat.",
+                  "5": "gic.",
+                  "6": "kam.",
+                  "7": "nya.",
+                  "8": "kan.",
+                  "9": "nze.",
+                  "10": "ukw.",
+                  "11": "ugu.",
+                  "12": "uku."
+                },
+                "narrow": {
+                  "1": "1",
+                  "2": "2",
+                  "3": "3",
+                  "4": "4",
+                  "5": "5",
+                  "6": "6",
+                  "7": "7",
+                  "8": "8",
+                  "9": "9",
+                  "10": "10",
+                  "11": "11",
+                  "12": "12"
+                },
+                "wide": {
+                  "1": "Mutarama",
+                  "2": "Gashyantare",
+                  "3": "Werurwe",
+                  "4": "Mata",
+                  "5": "Gicuransi",
+                  "6": "Kamena",
+                  "7": "Nyakanga",
+                  "8": "Kanama",
+                  "9": "Nzeli",
+                  "10": "Ukwakira",
+                  "11": "Ugushyingo",
+                  "12": "Ukuboza"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "mut.",
+                  "2": "gas.",
+                  "3": "wer.",
+                  "4": "mat.",
+                  "5": "gic.",
+                  "6": "kam.",
+                  "7": "nya.",
+                  "8": "kan.",
+                  "9": "nze.",
+                  "10": "ukw.",
+                  "11": "ugu.",
+                  "12": "uku."
+                },
+                "narrow": {
+                  "1": "1",
+                  "2": "2",
+                  "3": "3",
+                  "4": "4",
+                  "5": "5",
+                  "6": "6",
+                  "7": "7",
+                  "8": "8",
+                  "9": "9",
+                  "10": "10",
+                  "11": "11",
+                  "12": "12"
+                },
+                "wide": {
+                  "1": "Mutarama",
+                  "2": "Gashyantare",
+                  "3": "Werurwe",
+                  "4": "Mata",
+                  "5": "Gicuransi",
+                  "6": "Kamena",
+                  "7": "Nyakanga",
+                  "8": "Kanama",
+                  "9": "Nzeli",
+                  "10": "Ukwakira",
+                  "11": "Ugushyingo",
+                  "12": "Ukuboza"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "cyu.",
+                  "mon": "mbe.",
+                  "tue": "kab.",
+                  "wed": "gtu.",
+                  "thu": "kan.",
+                  "fri": "gnu.",
+                  "sat": "gnd."
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "M",
+                  "tue": "T",
+                  "wed": "W",
+                  "thu": "T",
+                  "fri": "F",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "cyu.",
+                  "mon": "mbe.",
+                  "tue": "kab.",
+                  "wed": "gtu.",
+                  "thu": "kan.",
+                  "fri": "gnu.",
+                  "sat": "gnd."
+                },
+                "wide": {
+                  "sun": "Ku cyumweru",
+                  "mon": "Kuwa mbere",
+                  "tue": "Kuwa kabiri",
+                  "wed": "Kuwa gatatu",
+                  "thu": "Kuwa kane",
+                  "fri": "Kuwa gatanu",
+                  "sat": "Kuwa gatandatu"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "cyu.",
+                  "mon": "mbe.",
+                  "tue": "kab.",
+                  "wed": "gtu.",
+                  "thu": "kan.",
+                  "fri": "gnu.",
+                  "sat": "gnd."
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "M",
+                  "tue": "T",
+                  "wed": "W",
+                  "thu": "T",
+                  "fri": "F",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "cyu.",
+                  "mon": "mbe.",
+                  "tue": "kab.",
+                  "wed": "gtu.",
+                  "thu": "kan.",
+                  "fri": "gnu.",
+                  "sat": "gnd."
+                },
+                "wide": {
+                  "sun": "Ku cyumweru",
+                  "mon": "Kuwa mbere",
+                  "tue": "Kuwa kabiri",
+                  "wed": "Kuwa gatatu",
+                  "thu": "Kuwa kane",
+                  "fri": "Kuwa gatanu",
+                  "sat": "Kuwa gatandatu"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "AM",
+                  "pm": "PM"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "AM",
+                  "pm": "PM"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "AM",
+                  "pm": "PM"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "AM",
+                  "pm": "PM"
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "BCE",
+                "1": "CE"
+              },
+              "eraAbbr": {
+                "0": "BCE",
+                "1": "CE"
+              },
+              "eraNarrow": {
+                "0": "BCE",
+                "1": "CE"
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} {0}",
+              "availableFormats": {
+                "EHm": "E HH:mm",
+                "EHms": "E HH:mm:ss",
+                "Ed": "d, E",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
+                "Gy": "G y",
+                "GyMMM": "G y MMM",
+                "GyMMMEd": "G y MMM d, E",
+                "GyMMMd": "G y MMM d",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "MM-dd, E",
+                "MMM": "LLL",
+                "MMMEd": "MMM d, E",
+                "MMMd": "MMM d",
+                "Md": "MM-dd",
+                "d": "d",
+                "h": "h a",
+                "hm": "h:mm a",
+                "hms": "h:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "y-MM",
+                "yMEd": "y-MM-dd, E",
+                "yMMM": "y MMM",
+                "yMMMEd": "y MMM d, E",
+                "yMMMd": "y MMM d",
+                "yMd": "y-MM-dd",
+                "yQQQ": "y QQQ",
+                "yQQQQ": "y QQQQ"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

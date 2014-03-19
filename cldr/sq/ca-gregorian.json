@@ -1,0 +1,265 @@
+{
+  "main": {
+    "sq": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "Jan",
+                  "2": "Shk",
+                  "3": "Mar",
+                  "4": "Pri",
+                  "5": "Maj",
+                  "6": "Qer",
+                  "7": "Kor",
+                  "8": "Gsh",
+                  "9": "Sht",
+                  "10": "Tet",
+                  "11": "Nën",
+                  "12": "Dhj"
+                },
+                "narrow": {
+                  "1": "J",
+                  "2": "S",
+                  "3": "M",
+                  "4": "P",
+                  "5": "M",
+                  "6": "Q",
+                  "7": "K",
+                  "8": "G",
+                  "9": "S",
+                  "10": "T",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "janar",
+                  "2": "shkurt",
+                  "3": "mars",
+                  "4": "prill",
+                  "5": "maj",
+                  "6": "qershor",
+                  "7": "korrik",
+                  "8": "gusht",
+                  "9": "shtator",
+                  "10": "tetor",
+                  "11": "nëntor",
+                  "12": "dhjetor"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "Jan",
+                  "2": "Shk",
+                  "3": "Mar",
+                  "4": "Pri",
+                  "5": "Maj",
+                  "6": "Qer",
+                  "7": "Kor",
+                  "8": "Gsh",
+                  "9": "Sht",
+                  "10": "Tet",
+                  "11": "Nën",
+                  "12": "Dhj"
+                },
+                "narrow": {
+                  "1": "J",
+                  "2": "S",
+                  "3": "M",
+                  "4": "P",
+                  "5": "M",
+                  "6": "Q",
+                  "7": "K",
+                  "8": "G",
+                  "9": "S",
+                  "10": "T",
+                  "11": "N",
+                  "12": "D"
+                },
+                "wide": {
+                  "1": "janar",
+                  "2": "shkurt",
+                  "3": "mars",
+                  "4": "prill",
+                  "5": "maj",
+                  "6": "qershor",
+                  "7": "korrik",
+                  "8": "gusht",
+                  "9": "shtator",
+                  "10": "tetor",
+                  "11": "nëntor",
+                  "12": "dhjetor"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "Die",
+                  "mon": "Hën",
+                  "tue": "Mar",
+                  "wed": "Mër",
+                  "thu": "Enj",
+                  "fri": "Pre",
+                  "sat": "Sht"
+                },
+                "narrow": {
+                  "sun": "D",
+                  "mon": "H",
+                  "tue": "M",
+                  "wed": "M",
+                  "thu": "E",
+                  "fri": "P",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Die",
+                  "mon": "Hën",
+                  "tue": "Mar",
+                  "wed": "Mër",
+                  "thu": "Enj",
+                  "fri": "Pre",
+                  "sat": "Sht"
+                },
+                "wide": {
+                  "sun": "e diel",
+                  "mon": "e hënë",
+                  "tue": "e martë",
+                  "wed": "e mërkurë",
+                  "thu": "e enjte",
+                  "fri": "e premte",
+                  "sat": "e shtunë"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "Die",
+                  "mon": "Hën",
+                  "tue": "Mar",
+                  "wed": "Mër",
+                  "thu": "Enj",
+                  "fri": "Pre",
+                  "sat": "Sht"
+                },
+                "narrow": {
+                  "sun": "D",
+                  "mon": "H",
+                  "tue": "M",
+                  "wed": "M",
+                  "thu": "E",
+                  "fri": "P",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Die",
+                  "mon": "Hën",
+                  "tue": "Mar",
+                  "wed": "Mër",
+                  "thu": "Enj",
+                  "fri": "Pre",
+                  "sat": "Sht"
+                },
+                "wide": {
+                  "sun": "e diel",
+                  "mon": "e hënë",
+                  "tue": "e martë",
+                  "wed": "e mërkurë",
+                  "thu": "e enjte",
+                  "fri": "e premte",
+                  "sat": "e shtunë"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "paradite",
+                  "pm": "pasdite"
+                },
+                "narrow": {
+                  "am": "AM",
+                  "pm": "PM"
+                },
+                "wide": {
+                  "am": "paradite",
+                  "pm": "pasdite"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "paradite",
+                  "pm": "pasdite"
+                },
+                "narrow": {
+                  "am": "AM",
+                  "pm": "PM"
+                },
+                "wide": {
+                  "am": "paradite",
+                  "pm": "pasdite"
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "para erës së re",
+                "1": "erës së re"
+              },
+              "eraAbbr": {
+                "0": "p.e.r.",
+                "1": "e.r."
+              },
+              "eraNarrow": {
+                "0": "p.e.r.",
+                "1": "e.r."
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} 'në' {0}",
+              "availableFormats": {
+                "EHm": "E HH:mm",
+                "EHms": "E HH:mm:ss",
+                "Ed": "E, d",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
+                "Gy": "y G",
+                "GyMMM": "MMM y G",
+                "GyMMMEd": "E, d MMM y G",
+                "GyMMMd": "d MMM y G",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "E, d/M",
+                "MMM": "LLL",
+                "MMMEd": "E d MMM",
+                "MMMMEd": "E d MMMM",
+                "MMMMd": "d MMMM",
+                "MMMd": "d MMM",
+                "MMdd": "dd/MM",
+                "Md": "d/M",
+                "d": "d",
+                "h": "h a",
+                "hm": "h:mm a",
+                "hms": "h:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "M/y",
+                "yMEd": "E, d/M/y",
+                "yMMM": "MMM y",
+                "yMMMEd": "E, d MMM y",
+                "yMMMM": "MMMM y",
+                "yMMMd": "d MMM y",
+                "yMd": "dd/MM/y",
+                "yQQQ": "QQQ y",
+                "yQQQQ": "QQQQ y"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

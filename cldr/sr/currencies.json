@@ -1,0 +1,637 @@
+{
+  "main": {
+    "sr": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "Уједињени арапски емирати дирхам",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "Авганистански авгани",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "Албански лек",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "Јерменски драм",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "Холандски антили гилдер",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "Анголијска кванза",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "Аргентински пезо",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "Аустралијски долар",
+            "symbol": "A$"
+          },
+          "AWG": {
+            "displayName": "Арубански флорин",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "Азербејџански манат",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "Конвертибилна марка",
+            "symbol": "КМ"
+          },
+          "BBD": {
+            "displayName": "Барбадошки долар",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "Бангладешка така",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "Бугарски лев",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "Бахреински динар",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "Бурундски франак",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "Бермудски долар",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "Брунејски долар",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "Боливијски Боливиано",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "Бразилски Реал",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "Бахамски долар",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "Бутански нгултрум",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "Боцванска пула",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "Белоруска рубља",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "Белизе долар",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "Канадски долар",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "Конголски франак",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "Швајцарски франак",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "Чилеански пезо",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "Кинески јуан ренминби",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "Колумбијски пезо",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "Костарикански колон",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "Кубански конвертибилни песо",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "Кубански пезо",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "Зеленортски ескудо",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "Чешка круна",
+            "symbol": "Кч"
+          },
+          "DJF": {
+            "displayName": "Џибутански франак",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "Данска круна",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "Доминикански пезо",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "Алжирски динар",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "Египатска фунта",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "Eритрејска накфa",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "Етиопијски бир",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "Евро",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "Фиџи долар",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "Фокландска острва фунта",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "Британска фунта стерлинга",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "Грузијски лари",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "Гански цеди",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "Гибралтарска фунта",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "Гамбијски даласи",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "Гвинејски франак",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "Гватемалски квецал",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "Гујански долар",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "Хонгконшки долар",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "Хондурашка лемпира",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "Хрватска куна",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "Хаићански гурд",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "Мађарска форинта",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "Индонежанска рупија",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "Израелски нови шекел",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "Индијска рупија",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "Ирачки динар",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "Ирански риjал",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "Исландска круна",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "Јамајкански долар",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "Јордански динар",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "Јапански јен",
+            "symbol": "¥"
+          },
+          "KES": {
+            "displayName": "Кенијски шилинг",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "Киргистански сом",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "Kамбоџански ријел",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "Коморски франак",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "Севернокорејски вон",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "Јужнокорејски Вон",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "Кувајтски динар",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "Кајманска острва долар",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "Казахстански тенџ",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "Лаошки кип",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "Либанска фунта",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "Шриланканскa рупиja",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "Либеријски долар",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "Литвански литас",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "Латвијски лати",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "Либијски динар",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "Марокански дирхам",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "Молдавски леј",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "Малагасијски ариари",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "Македонски денар",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "Мјанмарски кјат",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "Монголски тугрик",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "Маканишка патака",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "Мауританијска oгија",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "Маурицијска рупија",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "Малдивска руфија",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "Малавијска квача",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "Мексички пезо",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "Малезијски ринггит",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "Мозамбијски метикал",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "Намибијски долар",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "Нигеријска наира",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "Никарагванска златна кордоба",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "Норвешка круна",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "Непалскa рупиja",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "Новозеландски долар",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "Омански ријал",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "Панамска балбоа",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "Перуански нуево сол",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "Папуанска кина",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "Филипински пезо",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "Пакистанскa рупиja",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "Пољски злот",
+            "symbol": "зл"
+          },
+          "PYG": {
+            "displayName": "Парагвајски гуарни",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "Катаршки ријал",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "Румунски леј (1952–2006)",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "Српски динар",
+            "symbol": "дин."
+          },
+          "RUB": {
+            "displayName": "Руска рубља",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "Руандски франак",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "Саудијски ријал",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "Соломонско-острвски долар",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "Сејшелска рупија",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "Суданска фунта",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "Шведска круна",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "Сингапурски долар",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "Св. јеленска фунта",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "Сијера-леоншки леоне",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "Сомалијски шилинг",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "Суринамски долар",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "Јужносуданска фунта",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "Сао Томе и Принципе добра",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "Сиријска фунта",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "Свази лилангени",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "Таи бахт",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "Tаџихистански сомон",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "Туркменистански манат",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "Tунежански динар",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "Тонгоншка Панга",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "Турска лира",
+            "symbol": "Тл"
+          },
+          "TTD": {
+            "displayName": "Тринидад тобагошки долар",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "Нови тајвански долар",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "Танзанијски шилинг",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "Украјинска хривња",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "Угандски шилинг",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "Амерички долар",
+            "symbol": "US$"
+          },
+          "UYU": {
+            "displayName": "Уругвајски пезо",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "Узбекистански сом",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "Венецуелански боливар",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "Вијетнамски донг",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "Вануатски вату",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "Самоанска тала",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "CFA франак BEAC",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "Источно-карипски долар",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "CFA франак BCEAO",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "CFP франак",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "Непозната или неважећа валута"
+          },
+          "YER": {
+            "displayName": "Јеменски риjал",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "Јужно-афрички ранд",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "Замбијска квача",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

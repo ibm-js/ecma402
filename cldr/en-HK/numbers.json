@@ -1,0 +1,26 @@
+{
+  "main": {
+    "en-HK": {
+      "numbers": {
+        "defaultNumberingSystem": "latn",
+        "symbols-numberSystem-latn": {
+          "decimal": ".",
+          "group": ",",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "NaN"
+        },
+        "decimalFormats-numberSystem-latn": {
+          "standard": "#,##0.###"
+        },
+        "percentFormats-numberSystem-latn": {
+          "standard": "#,##0%"
+        },
+        "currencyFormats-numberSystem-latn": {
+          "standard": "¤#,##0.00"
+        }
+      }
+    }
+  }
+}

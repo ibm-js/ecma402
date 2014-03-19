@@ -1,0 +1,637 @@
+{
+  "main": {
+    "is": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "Arabískt dírham",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "Afgani",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "Albanskt lek",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "Armenskt dramm",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "Hollenskt Antillugyllini",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "Angólsk kvansa",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "Argentínskur pesi",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "Ástralskur dalur",
+            "symbol": "A$"
+          },
+          "AWG": {
+            "displayName": "Arúbönsk flórína",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "Aserskt manat",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "Skiptanlegt Bosníu og Hersegóvínu-mark",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "Barbadoskur dalur",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "Bangladessk taka",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "Búlgarskt lef",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "Bareinskur denari",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "Búrúndískur franki",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "Bermúdadalur",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "Brúneiskur dalur",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "Bólivíani",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "Brasilískt ríal",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "Bahamadalur",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "Bútanskt núltrum",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "Botsvönsk púla",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "Hvítrússnesk rúbla",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "Belískur dalur",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "Kanadískur dalur",
+            "symbol": "CAD"
+          },
+          "CDF": {
+            "displayName": "Kongóskur franki",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "Svissneskur franki",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "Síleskur pesi",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "Kínverskt júan",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "Kólumbískur pesi",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "Kostarískt kólon",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "Kúbverskur skiptanlegur pesi",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "Kúbverskur pesi",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "Grænhöfðeyskur skúti",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "Tékknesk króna",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "Djíbútískur franki",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "Dönsk króna",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "Dóminískur pesi",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "Alsírskur denari",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "Egypskt pund",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "Erítresk nakfa",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "Eþíópískt birr",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "Evra",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "Fídjeyskur dalur",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "Falklenskt pund",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "Sterlingspund",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "Georgískur lari",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "Ganverskur sedi",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "Gíbraltarspund",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "Gambískur dalasi",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "Gíneufranki",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "Gvatemalskt kvesal",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "Gvæjanskur dalur",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "Hong Kong-dalur",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "Hondúrsk lempíra",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "Króatísk kúna",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "Haítískur gúrdi",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "Ungversk fórinta",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "Indónesísk rúpía",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "Nýr ísraelskur sikill",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "Indversk rúpía",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "Írakskur denari",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "Íranskt ríal",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "Íslensk króna",
+            "symbol": "kr"
+          },
+          "JMD": {
+            "displayName": "Jamaískur dalur",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "Jórdanskur denari",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "Japanskt jen",
+            "symbol": "JP¥"
+          },
+          "KES": {
+            "displayName": "Kenískur skildingur",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "Kirgiskt som",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "Kambódískt ríal",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "Kómoreyskur franki",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "Norðurkóreskt vonn",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "Suðurkóreskt vonn",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "Kúveiskur denari",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "Caymaneyskur dalur",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "Kasakst tengi",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "Laoskt kip",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "Líbanskt pund",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "Srílönsk rúpía",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "Líberískur dalur",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "Litháískt lít",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "Lettneskt lat",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "Líbískur denari",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "Marokkóskt dírham",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "Moldavískt lei",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "Madagaskararjari",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "Makedónskur denari",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "Mjanmarskt kjat",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "Mongólskur túríkur",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "Makaópataka",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "Máritönsk úgía",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "Máritísk rúpía",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "Maldíveysk rúpía",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "Malavísk kvaka",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "Mexíkóskur pesi",
+            "symbol": "MXN"
+          },
+          "MYR": {
+            "displayName": "Malasískt ringit",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "Mósambískt metikal",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "Namibískur dalur",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "Nígerísk næra",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "Níkarögsk kordóva",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "Norsk króna",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "Nepölsk rúpía",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "Nýsjálenskur dalur",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "Ómanskt ríal",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "Balbói",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "Perúskt sól",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "Papúsk kína",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "Filippseyskur pesi",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "Pakistönsk rúpía",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "Pólskt slot",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "Paragvæskt gvaraní",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "Katarskt ríal",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "Rúmenskt lei",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "Serbneskur denari",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "Rússnesk rúbla",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "Rúandskur franki",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "Sádiarabískt ríal",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "Salómonseyskur dalur",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "Seychellesrúpía",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "Súdanskt pund",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "Sænsk króna",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "Singapúrskur dalur",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "Helenskt pund",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "Síerraleónsk ljóna",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "Sómalískur skildingur",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "Súrínamdalur",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "Suðursúdanskt pund",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "Saó Tóme og Prinsípe-dóbra",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "Sýrlenskt pund",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "Svasílenskur lílangeni",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "Taílenskt bat",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "Tadsjikskur sómóni",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "Túrkmenskt manat",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "Túniskur denari",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "Tongapanga",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "Tyrknesk líra",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "Trínidad og Tóbagó-dalur",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "Taívanskur dalur",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "Tansanískur skildingur",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "Úkraínsk hrinja",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "Úgandskur skildingur",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "Bandaríkjadalur",
+            "symbol": "USD"
+          },
+          "UYU": {
+            "displayName": "Úrúgvæskur pesi",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "Úsbekskt súm",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "Venesúelskur bólívari",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "Víetnamskt dong",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "Vanúatúskt vatú",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "Samóatala",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "Miðafrískur franki",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "Austurkarabískur dalur",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "Vesturafrískur franki",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "Pólinesískur franki",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "Óþekktur gjaldmiðill"
+          },
+          "YER": {
+            "displayName": "Jemenskt ríal",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "Suðurafrískt rand",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "Sambísk kvaka",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

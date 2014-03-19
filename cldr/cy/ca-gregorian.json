@@ -1,0 +1,262 @@
+{
+  "main": {
+    "cy": {
+      "dates": {
+        "calendars": {
+          "gregorian": {
+            "months": {
+              "format": {
+                "abbreviated": {
+                  "1": "Ion",
+                  "2": "Chwef",
+                  "3": "Mawrth",
+                  "4": "Ebrill",
+                  "5": "Mai",
+                  "6": "Meh",
+                  "7": "Gorff",
+                  "8": "Awst",
+                  "9": "Medi",
+                  "10": "Hyd",
+                  "11": "Tach",
+                  "12": "Rhag"
+                },
+                "narrow": {
+                  "1": "I",
+                  "2": "Ch",
+                  "3": "M",
+                  "4": "E",
+                  "5": "M",
+                  "6": "M",
+                  "7": "G",
+                  "8": "A",
+                  "9": "M",
+                  "10": "H",
+                  "11": "T",
+                  "12": "Rh"
+                },
+                "wide": {
+                  "1": "Ionawr",
+                  "2": "Chwefror",
+                  "3": "Mawrth",
+                  "4": "Ebrill",
+                  "5": "Mai",
+                  "6": "Mehefin",
+                  "7": "Gorffennaf",
+                  "8": "Awst",
+                  "9": "Medi",
+                  "10": "Hydref",
+                  "11": "Tachwedd",
+                  "12": "Rhagfyr"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "1": "Ion",
+                  "2": "Chw",
+                  "3": "Maw",
+                  "4": "Ebr",
+                  "5": "Mai",
+                  "6": "Meh",
+                  "7": "Gor",
+                  "8": "Awst",
+                  "9": "Medi",
+                  "10": "Hyd",
+                  "11": "Tach",
+                  "12": "Rhag"
+                },
+                "narrow": {
+                  "1": "I",
+                  "2": "Ch",
+                  "3": "M",
+                  "4": "E",
+                  "5": "M",
+                  "6": "M",
+                  "7": "G",
+                  "8": "A",
+                  "9": "M",
+                  "10": "H",
+                  "11": "T",
+                  "12": "Rh"
+                },
+                "wide": {
+                  "1": "Ionawr",
+                  "2": "Chwefror",
+                  "3": "Mawrth",
+                  "4": "Ebrill",
+                  "5": "Mai",
+                  "6": "Mehefin",
+                  "7": "Gorffennaf",
+                  "8": "Awst",
+                  "9": "Medi",
+                  "10": "Hydref",
+                  "11": "Tachwedd",
+                  "12": "Rhagfyr"
+                }
+              }
+            },
+            "days": {
+              "format": {
+                "abbreviated": {
+                  "sun": "Sul",
+                  "mon": "Llun",
+                  "tue": "Maw",
+                  "wed": "Mer",
+                  "thu": "Iau",
+                  "fri": "Gwen",
+                  "sat": "Sad"
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "Ll",
+                  "tue": "M",
+                  "wed": "M",
+                  "thu": "I",
+                  "fri": "G",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Su",
+                  "mon": "Ll",
+                  "tue": "Ma",
+                  "wed": "Me",
+                  "thu": "Ia",
+                  "fri": "Gw",
+                  "sat": "Sa"
+                },
+                "wide": {
+                  "sun": "Dydd Sul",
+                  "mon": "Dydd Llun",
+                  "tue": "Dydd Mawrth",
+                  "wed": "Dydd Mercher",
+                  "thu": "Dydd Iau",
+                  "fri": "Dydd Gwener",
+                  "sat": "Dydd Sadwrn"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "sun": "Sul",
+                  "mon": "Llun",
+                  "tue": "Maw",
+                  "wed": "Mer",
+                  "thu": "Iau",
+                  "fri": "Gwe",
+                  "sat": "Sad"
+                },
+                "narrow": {
+                  "sun": "S",
+                  "mon": "Ll",
+                  "tue": "M",
+                  "wed": "M",
+                  "thu": "I",
+                  "fri": "G",
+                  "sat": "S"
+                },
+                "short": {
+                  "sun": "Su",
+                  "mon": "Ll",
+                  "tue": "Ma",
+                  "wed": "Me",
+                  "thu": "Ia",
+                  "fri": "Gw",
+                  "sat": "Sa"
+                },
+                "wide": {
+                  "sun": "Dydd Sul",
+                  "mon": "Dydd Llun",
+                  "tue": "Dydd Mawrth",
+                  "wed": "Dydd Mercher",
+                  "thu": "Dydd Iau",
+                  "fri": "Dydd Gwener",
+                  "sat": "Dydd Sadwrn"
+                }
+              }
+            },
+            "dayPeriods": {
+              "format": {
+                "abbreviated": {
+                  "am": "AM",
+                  "pm": "PM"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "AM",
+                  "pm": "PM"
+                }
+              },
+              "stand-alone": {
+                "abbreviated": {
+                  "am": "AM",
+                  "pm": "PM"
+                },
+                "narrow": {
+                  "am": "a",
+                  "pm": "p"
+                },
+                "wide": {
+                  "am": "AM",
+                  "pm": "PM"
+                }
+              }
+            },
+            "eras": {
+              "eraNames": {
+                "0": "Cyn Crist",
+                "1": "Oed Crist"
+              },
+              "eraAbbr": {
+                "0": "CC",
+                "1": "OC"
+              },
+              "eraNarrow": {
+                "0": "C",
+                "1": "O"
+              }
+            },
+            "dateTimeFormats": {
+              "full": "{1} 'am' {0}",
+              "availableFormats": {
+                "EHm": "E, HH:mm",
+                "EHms": "E, HH:mm:ss",
+                "Ed": "E, d",
+                "Ehm": "E, h.mm a",
+                "Ehms": "E, h.mm.ss a",
+                "Gy": "y G",
+                "GyMMM": "MMM y G",
+                "GyMMMEd": "E, d MMM y G",
+                "GyMMMd": "d MMM y G",
+                "H": "HH",
+                "Hm": "HH:mm",
+                "Hms": "HH:mm:ss",
+                "M": "L",
+                "MEd": "E, d/M",
+                "MMM": "LLL",
+                "MMMEd": "E, d MMM",
+                "MMMd": "d MMM",
+                "Md": "d/M",
+                "d": "d",
+                "h": "h a",
+                "hm": "h.mm a",
+                "hms": "h:mm:ss a",
+                "ms": "mm:ss",
+                "y": "y",
+                "yM": "M/y",
+                "yMEd": "E, d/M/y",
+                "yMMM": "MMM y",
+                "yMMMEd": "E, d MMM y",
+                "yMMMd": "d MMM y",
+                "yMd": "d/M/y",
+                "yQ": "Q y",
+                "yQQQ": "QQQ y",
+                "yQQQQ": "QQQQ y"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

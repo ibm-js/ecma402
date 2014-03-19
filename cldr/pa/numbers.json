@@ -1,0 +1,43 @@
+{
+  "main": {
+    "pa": {
+      "numbers": {
+        "defaultNumberingSystem": "latn",
+        "symbols-numberSystem-guru": {
+          "decimal": ".",
+          "group": ",",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "NaN"
+        },
+        "symbols-numberSystem-latn": {
+          "decimal": ".",
+          "group": ",",
+          "percentSign": "%",
+          "minusSign": "-",
+          "infinity": "∞",
+          "nan": "NaN"
+        },
+        "decimalFormats-numberSystem-guru": {
+          "standard": "#,##,##0.###"
+        },
+        "decimalFormats-numberSystem-latn": {
+          "standard": "#,##,##0.###"
+        },
+        "percentFormats-numberSystem-guru": {
+          "standard": "#,##,##0%"
+        },
+        "percentFormats-numberSystem-latn": {
+          "standard": "#,##,##0%"
+        },
+        "currencyFormats-numberSystem-guru": {
+          "standard": "¤ #,##,##0.00"
+        },
+        "currencyFormats-numberSystem-latn": {
+          "standard": "¤ #,##,##0.00"
+        }
+      }
+    }
+  }
+}

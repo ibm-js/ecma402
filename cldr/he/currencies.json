@@ -1,0 +1,637 @@
+{
+  "main": {
+    "he": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "דירהם של איחוד הנסיכויות הערביות",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "אפגני אפגני",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "לק אלבני",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "דראם ארמני",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "גילדן של האנטילים ההולנדיים",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "קואנזה אנגולי",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "פזו ארגנטינאי",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "דולר אוסטרלי",
+            "symbol": "A$"
+          },
+          "AWG": {
+            "displayName": "פלורין של ארובה",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "מאנאט אזרביג׳ני",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "מארק בר המרה של בוסניה־הרצגובינה",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "דולר ברבדיאני",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "טאקה בנגלדשי",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "לב בולגרי",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "דינר בחרייני",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "פרנק בורונדי",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "דולר ברמודה",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "דולר ברוניי",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "בוליביאנו",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "ריאל ברזילאי",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "דולר בהאמי",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "נגולטרום בהוטני",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "פולה בוצוואני",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "רובל בלרוסי",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "דולר בליזי",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "דולר קנדי",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "פרנק קונגולזי",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "פרנק שוויצרי",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "פזו צ׳ילאני",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "יואן רנמינבי סיני",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "פזו קולומביאני",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "קולון קוסטה־ריקני",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "פזו קובני להמרה",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "פזו קובני",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "אסקודו כף ורדה",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "קורונה צ׳כית",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "פרנק ג׳יבוטי",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "כתר דני",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "פזו דומיניקני",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "דינר אלג׳ירי",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "לירה מיצרית",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "נאקפה אריתראי",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "ביר אתיופי",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "אירו",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "דולר פיג׳י",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "לירה של איי פוקלנד",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "לירה שטרלינג",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "לרי גאורגי",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "סדי גאני",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "פאונד גיברלטר",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "דלאסי גמבי",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "פרנק גינאי",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "קצל גואטמלי",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "דולר גיאני",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "דולר הונג קונגי",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "למפירה הונדורי",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "קונה קרואטי",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "גארד האיטי",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "פורינט הונגרי",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "רופיה אינדונזית",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "ש״ח",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "רופי הודית",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "דינר עירקי",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "ריאל איראני",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "קרונה איסלנדית",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "דולר ג׳מאיקני",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "דינר ירדני",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "ין יפני",
+            "symbol": "JP¥"
+          },
+          "KES": {
+            "displayName": "שילינג קנייאתי",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "סום קירגיזי",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "ריל קמבודי",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "פרנק קומורואי",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "וון צפון קוראני",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "וון דרום קוראני",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "דינר כוויתי",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "דולר קיימאני",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "טנגה קזחסטני",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "קיפ לאי",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "לירה לבנונית",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "רופי סרי לנקי",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "דולר ליברי",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "ליטא ליטאי",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "לט לטבי",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "דינר לובי",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "דירהם מרוקאי",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "ליאו מולדובני",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "אריארי מלגשי",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "דינר מקדוני",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "קיאט מיאנמרי",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "טוגריק מונגולי",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "פטקה של מקאו",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "אוגוויה מאוריטני",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "רופי מאוריציני",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "רופיה מלדיבית",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "קואצ׳ה מלאוי",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "פזו מקסיקני",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "רינגיט מלזי",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "מטיקל מוזמביני",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "דולר נמיבי",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "נאירה ניגרי",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "קורדובה ניקראגי",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "כתר נורבגי",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "רופי נפאלי",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "דולר ניו זילנדי",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "ריאל עומאני",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "בלבואה פנמי",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "סול פרואני חדש",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "קינה של פפואה גינאה החדשה",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "פזו פיליפיני",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "רופי פקיסטני",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "זלוטי פולני",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "גוורני פראגוואי",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "ריאל קטארי",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "לאו רומני חדש",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "דינר סרבי",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "רובל",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "פרנק רואנדי",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "ריאל סעודי",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "דולר איי שלמה",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "רופי סיישלי",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "לירה סודנית",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "כתר שוודי",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "דולר סינגפורי",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "פאונד סנט הלני",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "ליאון סיירה לאוני",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "שילינג סומאלי",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "דולר סורינאמי",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "לירה דרום סודאנית",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "דוברה של סן טומה ופרינסיפה",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "לירה סורית",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "לילנגני סווזי",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "בהט תאילנדי",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "סומוני טג׳קיסטני",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "מנאט טורקמני",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "דינר טוניסאי",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "פאאמגה טונגי",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "לירה טורקית חדשה",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "דולר טרינידדי",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "דולר טייוואני חדש",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "שילינג טנזני",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "גריבנה אוקראיני",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "שילינג אוגנדי",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "דולר אמריקאי",
+            "symbol": "US$"
+          },
+          "UYU": {
+            "displayName": "פזו אורוגוואי",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "סום אוזבקי",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "בוליבר ונצואלי",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "דונג וייטנאמי",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "ואטו של ונואטו",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "טאלה סמואי",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "פרנק CFA BEAC",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "דולר מזרח קריבי",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "פרנק CFA BCEAO",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "פרנק CFP",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "מטבע שאינו ידוע"
+          },
+          "YER": {
+            "displayName": "ריאל תימני",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "ראנד דרום אפריקאי",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "קוואצ׳ה זמבית",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

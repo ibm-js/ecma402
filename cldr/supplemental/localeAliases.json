@@ -1,0 +1,40 @@
+{
+  "supplemental": {
+    "metadata": {
+      "alias": {
+        "localeAlias": {
+          "no-NO": {
+            "_replacement": "nb-NO"
+          },
+          "sr-BA": {
+            "_replacement": "sr-Cyrl-BA"
+          },
+          "sr-ME": {
+            "_replacement": "sr-Latn-ME"
+          },
+          "sr-RS": {
+            "_replacement": "sr-Cyrl-RS"
+          },
+          "sr-XK": {
+            "_replacement": "sr-Cyrl-XK"
+          },
+          "zh-CN": {
+            "_replacement": "zh-Hans-CN"
+          },
+          "zh-HK": {
+            "_replacement": "zh-Hant-HK"
+          },
+          "zh-MO": {
+            "_replacement": "zh-Hant-MO"
+          },
+          "zh-SG": {
+            "_replacement": "zh-Hans-SG"
+          },
+          "zh-TW": {
+            "_replacement": "zh-Hant-TW"
+          }
+        }
+      }
+    }
+  }
+}

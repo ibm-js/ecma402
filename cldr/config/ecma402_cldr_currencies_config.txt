@@ -1,0 +1,1 @@
+section=currencies ; path=//cldr/main/[^/]++/numbers/currencies/currency\[@type=".*"\]/(displayName|symbol)

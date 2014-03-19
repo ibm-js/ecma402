@@ -1,0 +1,637 @@
+{
+  "main": {
+    "sq": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "Dirhami i Emirateve të Bashkuara Arabe",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "Afgani afgan",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "Leku shqiptar",
+            "symbol": "Lekë"
+          },
+          "AMD": {
+            "displayName": "Drami armen",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "Gilderi antilian holandez",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "Kuanza angole",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "Peso argjentinase",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "Dollar australian",
+            "symbol": "A$"
+          },
+          "AWG": {
+            "displayName": "Florin aruban",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "Manata azere",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "Marka e Bosnjë-Hercegovinës [e shkëmbyeshme]",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "Dollar barbadian",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "Takë e Bangladeshit",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "Levi bullgar",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "Dinar i Bahreinit",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "Franga burundiane",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "Dollar bermude",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "Dollar i Bruneit",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "Boliviani bolivian",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "Real brazilian",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "Dollar bahamasi",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "Ngultrum butanez",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "Pula botsvane",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "Rubla bjelloruse",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "Dollar Belize",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "Dollari kanadez",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "Franga kongole",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "Franga zvicerane",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "Peso kiliane",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "Juani kinez",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "Peso kolumbiane",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "Koloni kostarikan",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "Peso kubane e shkëmbyeshme",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "Peso kubane",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "Eskudo e Kepit të Gjelbër",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "Koruna e Republikës Çeke",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "Franga xhibutiane",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "Koronë daneze",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "Peso dominikane",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "Dinar algjerian",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "Stërlina egjiptiane",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "Nakfa e Eritresë",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "Bira etiopase",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "Euro",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "Dollar i Fixhit",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "Stërlina e Ishujve Folkland",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "Sterlina britanike",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "Lari gjeorgjian",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "Sejda ganeze",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "Sterlina e Gjibraltarit",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "Dalasi gambian",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "Franga guinease",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "Kuecali i Guatemalës",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "Dollar guajanez",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "Dollar i Hong Kongut",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "Lempira hondurase",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "Kuna kroate",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "Gurd haitian",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "Forinta hungareze",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "Rupi indoneziane",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "Shekeli izrealit",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "Rupi indiane",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "Dinar irakian",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "Rial iranian",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "Krona islandeze",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "Dollar xhamajkan",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "Dinar jordanez",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "Jen japonez",
+            "symbol": "JP¥"
+          },
+          "KES": {
+            "displayName": "Shilinga keniane",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "Soma kirgize",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "Rial kamboxhian",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "Franga komore",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "Uoni i Koresë së Veriut",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "Uoni i Koresë së Jugut",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "Dinar kuvajtian",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "Dollar i Ishujve Kajman",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "Tenga kazake",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "Kipa e Laosit",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "Sterlina libaneze",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "Rupi e Sri Lankës",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "Dollar liberian",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "Lita lituaneze",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "Lata letoneze",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "Dinar libian",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "Dirham maroken",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "Leu moldav",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "Arieri malagas",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "Denar maqedonas",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "Kiatë e Mianmarit",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "Tugrika mongole",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "Patakë e Makaos",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "Ugija mauritane",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "Rupia mauritiane",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "Rufiu i Maldivit",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "Kuaça malaviane",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "Peso meksikane",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "Ringit malajzian",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "Metikali i Mozambikut",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "Dollar i Namibisë",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "Naira nigeriane",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "Kordoba nikaraguane",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "Krona norvegjeze",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "Rupi nepaleze",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "Dollar i Zelandës së Re",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "Riali i Omanit",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "Balboa panameze",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "Sola nuevo-peruane",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "Kina e Papua-Guineas së Re",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "Peso filipinase",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "Rupi pakistaneze",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "Zllota polake",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "Guaran paraguaian",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "Rial i Katarit",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "Leu rumun",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "Dinar serb",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "Rubla ruse",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "Franga ruandeze",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "Rial saudit",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "Dollar i Ishujve Solomon",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "Rupia e Sejshellzave",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "Stërlina sudaneze",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "Korona suedeze",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "Dollar i Singaporit",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "Stërlina e Ishullit të Shën Helenës",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "Leoni i Sierra Leones",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "Shilinga somaleze",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "Dollar surinamez",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "Stërlina e Sudanit të Jugut",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "Dobra e Sao Tomes dhe Prinsipes",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "Sterlina siriane",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "Lilangeni i Svazilandit",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "Bata tajlandeze",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "Somona taxhike",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "Manata turkmene",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "Dinar tunizian",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "Panga tongane",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "Lirë turke",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "Dollar i Trinidadit dhe Tobagos",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "Dollar tajvanez",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "Shilinga e Tanzanisë",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "Rivnia ukrainase",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "Shilinga ugandeze",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "Dollari amerikan",
+            "symbol": "US$"
+          },
+          "UYU": {
+            "displayName": "Peso uruguaiane",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "Soma uzbeke",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "Bolivar venezuelian",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "Dongë vietnameze",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "Vatuja e Vanuatusë",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "Tala samoane",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "Franga kamerunase",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "Dollar i Karaibeve Lindore",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "Franga e Bregut të Fildishtë",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "Franga franceze e Polinezisë",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "Valutë e panjohur"
+          },
+          "YER": {
+            "displayName": "Rial i Jemenit",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "Randa e Afrikës së Jugut",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "Kuaça e Zambikut",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}

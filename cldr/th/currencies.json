@@ -1,0 +1,637 @@
+{
+  "main": {
+    "th": {
+      "numbers": {
+        "currencies": {
+          "AED": {
+            "displayName": "เดอร์แฮมสหรัฐอาหรับเอมิเรตส์",
+            "symbol": "AED"
+          },
+          "AFN": {
+            "displayName": "อัฟกานิอัฟกานิสถาน",
+            "symbol": "AFN"
+          },
+          "ALL": {
+            "displayName": "เลกแอลเบเนีย",
+            "symbol": "ALL"
+          },
+          "AMD": {
+            "displayName": "แดรมอาร์เมเนีย",
+            "symbol": "AMD"
+          },
+          "ANG": {
+            "displayName": "กิลเดอร์เนเธอร์แลนด์แอนทิลลิส",
+            "symbol": "ANG"
+          },
+          "AOA": {
+            "displayName": "กวานซาแองโกลา",
+            "symbol": "AOA"
+          },
+          "ARS": {
+            "displayName": "เปโซอาร์เจนตินา",
+            "symbol": "ARS"
+          },
+          "AUD": {
+            "displayName": "ดอลลาร์ออสเตรเลีย",
+            "symbol": "AU$"
+          },
+          "AWG": {
+            "displayName": "ฟลอรินอารูบา",
+            "symbol": "AWG"
+          },
+          "AZN": {
+            "displayName": "มานัตอาเซอร์ไบจาน",
+            "symbol": "AZN"
+          },
+          "BAM": {
+            "displayName": "มาร์กบอสเนีย-เฮอร์เซโกวีนา",
+            "symbol": "BAM"
+          },
+          "BBD": {
+            "displayName": "ดอลลาร์บาร์เบโดส",
+            "symbol": "BBD"
+          },
+          "BDT": {
+            "displayName": "ตากาบังกลาเทศ",
+            "symbol": "BDT"
+          },
+          "BGN": {
+            "displayName": "เลฟบัลแกเรีย",
+            "symbol": "BGN"
+          },
+          "BHD": {
+            "displayName": "ดีนาร์บาห์เรน",
+            "symbol": "BHD"
+          },
+          "BIF": {
+            "displayName": "ฟรังก์บุรุนดี",
+            "symbol": "BIF"
+          },
+          "BMD": {
+            "displayName": "ดอลลาร์เบอร์มิวดา",
+            "symbol": "BMD"
+          },
+          "BND": {
+            "displayName": "ดอลลาร์บรูไน",
+            "symbol": "BND"
+          },
+          "BOB": {
+            "displayName": "โบลิเวียโนโบลิเวีย",
+            "symbol": "BOB"
+          },
+          "BRL": {
+            "displayName": "เรียลบราซิล",
+            "symbol": "R$"
+          },
+          "BSD": {
+            "displayName": "ดอลลาร์บาฮามาส",
+            "symbol": "BSD"
+          },
+          "BTN": {
+            "displayName": "เอ็งกุลตรัมภูฏาน",
+            "symbol": "BTN"
+          },
+          "BWP": {
+            "displayName": "ปูลาบอตสวานา",
+            "symbol": "BWP"
+          },
+          "BYR": {
+            "displayName": "รูเบิลเบลารุส",
+            "symbol": "BYR"
+          },
+          "BZD": {
+            "displayName": "ดอลลาร์เบลีซ",
+            "symbol": "BZD"
+          },
+          "CAD": {
+            "displayName": "ดอลลาร์แคนาดา",
+            "symbol": "CA$"
+          },
+          "CDF": {
+            "displayName": "ฟรังก์คองโก",
+            "symbol": "CDF"
+          },
+          "CHF": {
+            "displayName": "ฟรังก์สวิส",
+            "symbol": "CHF"
+          },
+          "CLP": {
+            "displayName": "เปโซชิลี",
+            "symbol": "CLP"
+          },
+          "CNY": {
+            "displayName": "หยวนจีน",
+            "symbol": "CN¥"
+          },
+          "COP": {
+            "displayName": "เปโซโคลอมเบีย",
+            "symbol": "COP"
+          },
+          "CRC": {
+            "displayName": "โกลองคอสตาริกา",
+            "symbol": "CRC"
+          },
+          "CUC": {
+            "displayName": "เปโซคิวบา (แปลงสภาพ)",
+            "symbol": "CUC"
+          },
+          "CUP": {
+            "displayName": "เปโซคิวบา",
+            "symbol": "CUP"
+          },
+          "CVE": {
+            "displayName": "เอสคูโดเคปเวิร์ด",
+            "symbol": "CVE"
+          },
+          "CZK": {
+            "displayName": "โครูนาสาธารณรัฐเช็ก",
+            "symbol": "CZK"
+          },
+          "DJF": {
+            "displayName": "ฟรังก์จิบูตี",
+            "symbol": "DJF"
+          },
+          "DKK": {
+            "displayName": "โครนเดนมาร์ก",
+            "symbol": "DKK"
+          },
+          "DOP": {
+            "displayName": "เปโซโดมินิกัน",
+            "symbol": "DOP"
+          },
+          "DZD": {
+            "displayName": "ดีนาร์แอลจีเรีย",
+            "symbol": "DZD"
+          },
+          "EGP": {
+            "displayName": "ปอนด์อียิปต์",
+            "symbol": "EGP"
+          },
+          "ERN": {
+            "displayName": "แนกฟาเอริเทรีย",
+            "symbol": "ERN"
+          },
+          "ETB": {
+            "displayName": "เบอรร์เอธิโอเปีย",
+            "symbol": "ETB"
+          },
+          "EUR": {
+            "displayName": "ยูโร",
+            "symbol": "€"
+          },
+          "FJD": {
+            "displayName": "ดอลลาร์ฟิจิ",
+            "symbol": "FJD"
+          },
+          "FKP": {
+            "displayName": "ปอนด์หมู่เกาะฟอล์กแลนด์",
+            "symbol": "FKP"
+          },
+          "GBP": {
+            "displayName": "ปอนด์สเตอร์ลิง (สหราชอาณาจักร)",
+            "symbol": "£"
+          },
+          "GEL": {
+            "displayName": "ลารีจอร์เจีย",
+            "symbol": "GEL"
+          },
+          "GHS": {
+            "displayName": "เซดีกานา",
+            "symbol": "GHS"
+          },
+          "GIP": {
+            "displayName": "ปอนด์ยิบรอลตาร์",
+            "symbol": "GIP"
+          },
+          "GMD": {
+            "displayName": "ดาลาซีแกมเบีย",
+            "symbol": "GMD"
+          },
+          "GNF": {
+            "displayName": "ฟรังก์กินี",
+            "symbol": "GNF"
+          },
+          "GTQ": {
+            "displayName": "เควตซัลกัวเตมาลา",
+            "symbol": "GTQ"
+          },
+          "GYD": {
+            "displayName": "ดอลลาร์กายอานา",
+            "symbol": "GYD"
+          },
+          "HKD": {
+            "displayName": "ดอลลาร์ฮ่องกง",
+            "symbol": "HK$"
+          },
+          "HNL": {
+            "displayName": "เลมปิราฮอนดูรัส",
+            "symbol": "HNL"
+          },
+          "HRK": {
+            "displayName": "คูนาโครเอเชีย",
+            "symbol": "HRK"
+          },
+          "HTG": {
+            "displayName": "กูร์ดเฮติ",
+            "symbol": "HTG"
+          },
+          "HUF": {
+            "displayName": "ฟอรินต์ฮังการี",
+            "symbol": "HUF"
+          },
+          "IDR": {
+            "displayName": "รูเปียห์อินโดนีเซีย",
+            "symbol": "IDR"
+          },
+          "ILS": {
+            "displayName": "นิวเชเกลอิสราเอล",
+            "symbol": "₪"
+          },
+          "INR": {
+            "displayName": "รูปีอินเดีย",
+            "symbol": "₹"
+          },
+          "IQD": {
+            "displayName": "ดีนาร์อิรัก",
+            "symbol": "IQD"
+          },
+          "IRR": {
+            "displayName": "เรียลอิหร่าน",
+            "symbol": "IRR"
+          },
+          "ISK": {
+            "displayName": "โครนาไอซ์แลนด์",
+            "symbol": "ISK"
+          },
+          "JMD": {
+            "displayName": "ดอลลาร์จาเมกา",
+            "symbol": "JMD"
+          },
+          "JOD": {
+            "displayName": "ดีนาร์จอร์แดน",
+            "symbol": "JOD"
+          },
+          "JPY": {
+            "displayName": "เยนญี่ปุ่น",
+            "symbol": "¥"
+          },
+          "KES": {
+            "displayName": "ชิลลิ่งเคนยา",
+            "symbol": "KES"
+          },
+          "KGS": {
+            "displayName": "ซอมคีร์กีซสถาน",
+            "symbol": "KGS"
+          },
+          "KHR": {
+            "displayName": "เรียลกัมพูชา",
+            "symbol": "KHR"
+          },
+          "KMF": {
+            "displayName": "ฟรังก์คอโมโรส",
+            "symbol": "KMF"
+          },
+          "KPW": {
+            "displayName": "วอนเกาหลีเหนือ",
+            "symbol": "KPW"
+          },
+          "KRW": {
+            "displayName": "วอนเกาหลีใต้",
+            "symbol": "₩"
+          },
+          "KWD": {
+            "displayName": "ดีนาร์คูเวต",
+            "symbol": "KWD"
+          },
+          "KYD": {
+            "displayName": "ดอลลาร์หมู่เกาะเคย์แมน",
+            "symbol": "KYD"
+          },
+          "KZT": {
+            "displayName": "เทงเจคาซัคสถาน",
+            "symbol": "KZT"
+          },
+          "LAK": {
+            "displayName": "กีบลาว",
+            "symbol": "LAK"
+          },
+          "LBP": {
+            "displayName": "ปอนด์เลบานอน",
+            "symbol": "LBP"
+          },
+          "LKR": {
+            "displayName": "รูปีศรีลังกา",
+            "symbol": "LKR"
+          },
+          "LRD": {
+            "displayName": "ดอลลาร์ไลบีเรีย",
+            "symbol": "LRD"
+          },
+          "LTL": {
+            "displayName": "ลีตัสลิทัวเนีย",
+            "symbol": "LTL"
+          },
+          "LVL": {
+            "displayName": "ลัตส์ลัตเวีย",
+            "symbol": "LVL"
+          },
+          "LYD": {
+            "displayName": "ดีนาร์ลิเบีย",
+            "symbol": "LYD"
+          },
+          "MAD": {
+            "displayName": "ดีแรห์มโมร็อกโก",
+            "symbol": "MAD"
+          },
+          "MDL": {
+            "displayName": "ลิวมอลโดวา",
+            "symbol": "MDL"
+          },
+          "MGA": {
+            "displayName": "อาเรียรีมาลากาซี",
+            "symbol": "MGA"
+          },
+          "MKD": {
+            "displayName": "ดีนาร์มาซิโดเนีย",
+            "symbol": "MKD"
+          },
+          "MMK": {
+            "displayName": "จ๊าตพม่า",
+            "symbol": "MMK"
+          },
+          "MNT": {
+            "displayName": "ทูกริกมองโกเลีย",
+            "symbol": "MNT"
+          },
+          "MOP": {
+            "displayName": "ปาตากามาเก๊า",
+            "symbol": "MOP"
+          },
+          "MRO": {
+            "displayName": "อูกียามอริเตเนีย",
+            "symbol": "MRO"
+          },
+          "MUR": {
+            "displayName": "รูปีมอริเชียส",
+            "symbol": "MUR"
+          },
+          "MVR": {
+            "displayName": "รูฟิยามัลดีฟส์",
+            "symbol": "MVR"
+          },
+          "MWK": {
+            "displayName": "ควาชามาลาวี",
+            "symbol": "MWK"
+          },
+          "MXN": {
+            "displayName": "เปโซเม็กซิโก",
+            "symbol": "MX$"
+          },
+          "MYR": {
+            "displayName": "ริงกิตมาเลเซีย",
+            "symbol": "MYR"
+          },
+          "MZN": {
+            "displayName": "เมติคัลโมซัมบิก",
+            "symbol": "MZN"
+          },
+          "NAD": {
+            "displayName": "ดอลลาร์นามิเบีย",
+            "symbol": "NAD"
+          },
+          "NGN": {
+            "displayName": "ไนราไนจีเรีย",
+            "symbol": "NGN"
+          },
+          "NIO": {
+            "displayName": "กอร์โดบานิการากัว",
+            "symbol": "NIO"
+          },
+          "NOK": {
+            "displayName": "โครนนอร์เวย์",
+            "symbol": "NOK"
+          },
+          "NPR": {
+            "displayName": "รูปีเนปาล",
+            "symbol": "NPR"
+          },
+          "NZD": {
+            "displayName": "ดอลลาร์นิวซีแลนด์",
+            "symbol": "NZ$"
+          },
+          "OMR": {
+            "displayName": "เรียลโอมาน",
+            "symbol": "OMR"
+          },
+          "PAB": {
+            "displayName": "บัลบัวปานามา",
+            "symbol": "PAB"
+          },
+          "PEN": {
+            "displayName": "นูโวซอลเปรู",
+            "symbol": "PEN"
+          },
+          "PGK": {
+            "displayName": "กีนาปาปัวนิวกินี",
+            "symbol": "PGK"
+          },
+          "PHP": {
+            "displayName": "เปโซฟิลิปปินส์",
+            "symbol": "PHP"
+          },
+          "PKR": {
+            "displayName": "รูปีปากีสถาน",
+            "symbol": "PKR"
+          },
+          "PLN": {
+            "displayName": "ซลอตีโปแลนด์",
+            "symbol": "PLN"
+          },
+          "PYG": {
+            "displayName": "กวารานีปารากวัย",
+            "symbol": "PYG"
+          },
+          "QAR": {
+            "displayName": "เรียลกาตาร์",
+            "symbol": "QAR"
+          },
+          "RON": {
+            "displayName": "ลิวโรมาเนีย",
+            "symbol": "RON"
+          },
+          "RSD": {
+            "displayName": "ดีนาร์เซอร์เบีย",
+            "symbol": "RSD"
+          },
+          "RUB": {
+            "displayName": "รูเบิลรัสเซีย",
+            "symbol": "RUB"
+          },
+          "RWF": {
+            "displayName": "ฟรังก์รวันดา",
+            "symbol": "RWF"
+          },
+          "SAR": {
+            "displayName": "ริยัลซาอุดีอาระเบีย",
+            "symbol": "SAR"
+          },
+          "SBD": {
+            "displayName": "ดอลลาร์หมู่เกาะโซโลมอน",
+            "symbol": "SBD"
+          },
+          "SCR": {
+            "displayName": "รูปีเซเชลส์",
+            "symbol": "SCR"
+          },
+          "SDG": {
+            "displayName": "ปอนด์ซูดาน",
+            "symbol": "SDG"
+          },
+          "SEK": {
+            "displayName": "โครนาสวีเดน",
+            "symbol": "SEK"
+          },
+          "SGD": {
+            "displayName": "ดอลลาร์สิงคโปร์",
+            "symbol": "SGD"
+          },
+          "SHP": {
+            "displayName": "ปอนด์เซนต์เฮเลนา",
+            "symbol": "SHP"
+          },
+          "SLL": {
+            "displayName": "ลีโอนเซียร์ราลีโอน",
+            "symbol": "SLL"
+          },
+          "SOS": {
+            "displayName": "ชิลลิงโซมาเลีย",
+            "symbol": "SOS"
+          },
+          "SRD": {
+            "displayName": "ดอลลาร์ซูรินาเม",
+            "symbol": "SRD"
+          },
+          "SSP": {
+            "displayName": "ปอนด์ซูดานใต้",
+            "symbol": "SSP"
+          },
+          "STD": {
+            "displayName": "ดอบราเซาตูเมและปรินซิปี",
+            "symbol": "STD"
+          },
+          "SYP": {
+            "displayName": "ปอนด์ซีเรีย",
+            "symbol": "SYP"
+          },
+          "SZL": {
+            "displayName": "ลิลันเจนีสวาซิ",
+            "symbol": "SZL"
+          },
+          "THB": {
+            "displayName": "บาทไทย",
+            "symbol": "฿"
+          },
+          "TJS": {
+            "displayName": "โซโมนิทาจิกิสถาน",
+            "symbol": "TJS"
+          },
+          "TMT": {
+            "displayName": "มานัตเติร์กเมนิสถาน",
+            "symbol": "TMT"
+          },
+          "TND": {
+            "displayName": "ดีนาร์ตูนิเซีย",
+            "symbol": "TND"
+          },
+          "TOP": {
+            "displayName": "พาแองกาตองกา",
+            "symbol": "TOP"
+          },
+          "TRY": {
+            "displayName": "ลีราตุรกี",
+            "symbol": "TRY"
+          },
+          "TTD": {
+            "displayName": "ดอลลาร์ตรินิแดดและโตเบโก",
+            "symbol": "TTD"
+          },
+          "TWD": {
+            "displayName": "ดอลลาร์ไต้หวันใหม่",
+            "symbol": "NT$"
+          },
+          "TZS": {
+            "displayName": "ชิลลิงแทนซาเนีย",
+            "symbol": "TZS"
+          },
+          "UAH": {
+            "displayName": "ฮรีฟเนียยูเครน",
+            "symbol": "UAH"
+          },
+          "UGX": {
+            "displayName": "ชิลลิงยูกันดา",
+            "symbol": "UGX"
+          },
+          "USD": {
+            "displayName": "ดอลลาร์สหรัฐ",
+            "symbol": "US$"
+          },
+          "UYU": {
+            "displayName": "เปโซอุรุกวัย",
+            "symbol": "UYU"
+          },
+          "UZS": {
+            "displayName": "ซอมอุซเบกิสถาน",
+            "symbol": "UZS"
+          },
+          "VEF": {
+            "displayName": "โบลิวาร์เวเนซุเอลา",
+            "symbol": "VEF"
+          },
+          "VND": {
+            "displayName": "ดองเวียดนาม",
+            "symbol": "₫"
+          },
+          "VUV": {
+            "displayName": "วาตูวานูอาตู",
+            "symbol": "VUV"
+          },
+          "WST": {
+            "displayName": "ทาลาซามัว",
+            "symbol": "WST"
+          },
+          "XAF": {
+            "displayName": "ฟรังก์เซฟาธนาคารรัฐแอฟริกากลาง",
+            "symbol": "FCFA"
+          },
+          "XCD": {
+            "displayName": "ดอลลาร์แคริบเบียนตะวันออก",
+            "symbol": "EC$"
+          },
+          "XOF": {
+            "displayName": "ฟรังก์เซฟาธนาคารกลางรัฐแอฟริกาตะวันตก",
+            "symbol": "CFA"
+          },
+          "XPF": {
+            "displayName": "ฟรังก์ซีเอฟพี",
+            "symbol": "CFPF"
+          },
+          "XXX": {
+            "displayName": "สกุลเงินที่ไม่รู้จัก"
+          },
+          "YER": {
+            "displayName": "เรียลเยเมน",
+            "symbol": "YER"
+          },
+          "ZAR": {
+            "displayName": "แรนด์แอฟริกาใต้",
+            "symbol": "ZAR"
+          },
+          "ZMW": {
+            "displayName": "ควาชาแซมเบีย",
+            "symbol": "ZMW"
+          }
+        }
+      }
+    }
+  }
+}
