@@ -38,61 +38,6 @@ define(
 			return result;
 		}
 
-		// ECMA 262 Section 9.1
-		function IsPrimitive(x) {
-			return (typeof x).test(/undefined|null|boolean|string|number/);
-		}
-
-		function ToPrimitive(input, PreferredType) {
-			switch(typeof x) {
-				case "undefined":
-				case "null":
-				case "boolean":
-				case "string":
-				case "number":
-					return input;
-					break;
-				default: // ECMA 262 Section 8.12.8
-					var toString, valueOf;
-					var str, val;
-					if(PreferredType=="String"||(PreferredType===undefined)){
-						toString = input["toString"];
-						if(typeof toString=="function"){
-							str = input.toString();
-							if(IsPrimitive(str)){
-								return str;
-							}
-						}
-						valueOf = input["valueOf"];
-						if(typeof valueOf=="function"){
-							val = input.valueOf();
-							if(IsPrimitive(val)){
-								return val;
-							}
-						}
-						throw new TypeError;
-					}
-					if(PreferredType=="Number"||PreferredType===undefined){
-						valueOf = input["valueOf"];
-						if(typeof valueOf=="function"){
-							val = input.valueOf();
-							if(IsPrimitive(val)){
-								return val;
-							}
-						}
-						toString = input["toString"];
-						if(typeof toString=="function"){
-							str = input.toString();
-							if(IsPrimitive(str)){
-								return str;
-							}
-						}
-						throw new TypeError;
-					}
-					break;
-			}
-		}
-
 		// ECMA 402 Section 6.1
 		function _toUpperCaseIdentifier(/* String */identifier) {
 			var match = /[a-z]/g;
