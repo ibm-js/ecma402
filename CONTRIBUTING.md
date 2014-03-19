@@ -102,7 +102,7 @@ and merge them into your local clone and then push them to your GitHub fork:
 
 ```bash
 $ cd ecma402
-$ git remote add upstream git@github.com:ibm-dojo/ecma402.git
+$ git remote add upstream git@github.com:ibm-js/ecma402.git
 $ git fetch upstream
 ```
 

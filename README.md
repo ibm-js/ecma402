@@ -19,7 +19,7 @@ All contributions require a [Dojo Foundation CLA](http://dojofoundation.org/abou
 
  To install the latest master, go to the root Dojo installation directory and clone ecma402 from github
 
- git clone git://github.com/ibm-dojo/ecma402.git
+ git clone git://github.com/ibm-js/ecma402.git
 
 ## Documentation
 
