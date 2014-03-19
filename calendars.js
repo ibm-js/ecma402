@@ -1,4 +1,3 @@
-// Copyright 2013 International Business Machines Corporation. All rights reserved.
 define(
 	["./Record"],
 	function(Record) {
