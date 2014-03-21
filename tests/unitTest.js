@@ -1,5 +1,4 @@
-// Copyright 2013 International Business Machines Corporation. All rights reserved.
-define([ 'intern!object', 'intern/chai!assert', '../Intl' ], function(registerSuite, assert, Intl) {
+define([ 'intern!object', 'intern/chai!assert', '../IntlShim' ], function(registerSuite, assert, IntlShim) {
 	registerSuite({
 		name : 'unitTest',
 		matcherFunctions : function() {
@@ -74,7 +73,7 @@ define([ 'intern!object', 'intern/chai!assert', '../Intl' ], function(registerSu
 			} ];
 
 			testLanguageTags.forEach(function(currentTag) {
-				var nf = new Intl.NumberFormat(currentTag.input);
+				var nf = new IntlShim.NumberFormat(currentTag.input);
 				assert.strictEqual(nf.resolvedOptions().locale, currentTag.bestfit,
 					'BestFitMatcher() should return the correct locale for language tag "'+currentTag.input+'"');
 			});
@@ -118,9 +117,9 @@ define([ 'intern!object', 'intern/chai!assert', '../Intl' ], function(registerSu
 				if(currentTest.style=="currency"){
 					nfOptions.currency = currentTest.currency;
 				}
-				var nf = new Intl.NumberFormat(currentTest.locales, nfOptions);
+				var nf = new IntlShim.NumberFormat(currentTest.locales, nfOptions);
 				assert.strictEqual(nf.format(currentTest.input), currentTest.expected,
-					'Intl.NumberFormat.format() should return expected string for locale"'+currentTest.locales
+					'IntlShim.NumberFormat.format() should return expected string for locale '+currentTest.locales
 						+'" style:'+currentTest.style);
 			});
 		},
@@ -180,9 +179,115 @@ define([ 'intern!object', 'intern/chai!assert', '../Intl' ], function(registerSu
 				"expected" : "12:00:00 π.μ."
 			}];
 			testCases.forEach(function(currentTest) {
-				var df = new Intl.DateTimeFormat(currentTest.locales, currentTest.options);
+				var df = new IntlShim.DateTimeFormat(currentTest.locales, currentTest.options);
 				assert.strictEqual(df.format(currentTest.input), currentTest.expected,
-					'Intl.DateTimeFormat.format() should return expected string for locale"'+currentTest.locales);
+					'IntlShim.DateTimeFormat.format() should return expected string for locale '+currentTest.locales);
+			});
+		},
+		testShim : function() {
+			var numberFormattingTestCases = [ {
+				"native" : false,
+				"locales" : "sl",
+				"style" : "currency",
+				"currency" : "eur",
+				"input" : 12345.678,
+				"expected" : "12.345,68\u00A0€",
+				"expected2" : "12.345,68\u00A0€" // If on a browser that doesn't have Intl.
+			},
+			{
+				"native" : true,
+				"locales" : "sl",
+				"style" : "currency",
+				"currency" : "eur",
+				"input" : 12345.678,
+				"expected" : "€12.345,68", // This is the result from native implementation on Firefox nightly.  Will depend on the browser.
+				"expected2" : "12.345,68\u00A0€" // If on a browser that doesn't have Intl.
+			}
+			];
+			
+			var dateTimeFormattingTestCases = [ {
+				"native" : false,
+				"locales" : "en-US",
+				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"input" : new Date("2014-01-01T20:06:09Z").getTime(),
+				"expected" : "8:06:09 PM",
+				"expected2" : "8:06:09 PM"
+			},
+			{
+				"native" : true,
+				"locales" : "en-US",
+				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"input" : new Date("2014-01-01T20:06:09Z").getTime(),
+				"expected" : "8:06:09 PM",
+				"expected2" : "8:06:09 PM"
+			},
+			{	"native" : false,
+				"locales" : "en-US",
+				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM",
+				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM"
+			},
+			{
+				"native" : true,
+				"locales" : "en-US",
+				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "Thu, Mar 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly.  Will depend on the browser.
+				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browser that doesn't have Intl.
+			},
+			{
+				"native" : false,
+				"locales" : "en-US",
+				"options" : {year:"numeric", month:"long", day:"numeric", weekday:"long", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM", // Because we're only doing exact pattern matches at this point.
+				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // Because we're only doing exact pattern matches at this point.
+			},
+			{
+				"native" : true,
+				"locales" : "en-US",
+				"options" : {year:"numeric", month:"long", day:"numeric", weekday:"long", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "Thursday, March 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly.  Will depend on the browser.
+				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browswer that doesn't have Intl.
+			}
+			];
+
+			numberFormattingTestCases.forEach(function(currentTest) {
+				IntlShim.setNative(currentTest.native);
+				var nfOptions = {
+					style : currentTest.style
+				};
+				if(currentTest.style=="currency"){
+					nfOptions.currency = currentTest.currency;
+				}
+				var nf = new IntlShim.NumberFormat(currentTest.locales, nfOptions);
+
+				var __globalObject = Function("return this;")();
+				var expectedValue;
+				if (__globalObject.Intl !== undefined) {
+					expectedValue = currentTest.expected;
+				} else {
+					expectedValue = currentTest.expected2;
+				}
+				assert.strictEqual(nf.format(currentTest.input), expectedValue,
+					'IntlShim.NumberFormat.format() with native = '+currentTest.native.toString()+' should return expected string for locale '+currentTest.locales
+						+'" style:'+currentTest.style);
+			});
+			
+			dateTimeFormattingTestCases.forEach(function(currentTest) {
+				IntlShim.setNative(currentTest.native);
+				var expectedValue;
+				var __globalObject = Function("return this;")();
+				if (__globalObject.Intl !== undefined) {
+					expectedValue = currentTest.expected;
+				} else {
+					expectedValue = currentTest.expected2;
+				}
+				var df = new IntlShim.DateTimeFormat(currentTest.locales, currentTest.options);
+				assert.strictEqual(df.format(currentTest.input), expectedValue,
+					'IntlShim.DateTimeFormat.format() with native = '+currentTest.native.toString()+' should return expected string for locale '+currentTest.locales);
 			});
 		}
 	});
