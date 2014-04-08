@@ -1,0 +1,45 @@
+<!DOCTYPE html charset=utf-8">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>IBM ECMA-402 Intl demo</title>
+    </head>
+    <body>
+        <h1>IBM ECMA-402 Intl demo</h1>
+        <p id="demo">Click a button to display the current date and time as a string.</p>
+		<script src="/ecma402/requirejs/require.js"></script>
+	<script>
+		function formatit(locale) {
+			require.config({
+				  baseUrl: '/ecma402',
+				  config: { 'locales' : ["de", "ja", "es"]}
+			});
+			require([ "Intl" ], function(Intl) {
+				var options = {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric"
+				};
+				df = new Intl.DateTimeFormat(locale, options);
+				var x = document.getElementById("demo");
+				x.innerHTML = df.format(new Date());
+			});
+		}
+	</script>
+	<button onclick='
+        var d = new Date();
+   		var x = document.getElementById("demo");
+		x.innerHTML = d.toUTCString();
+		'>UTC String</button>
+       <button onclick='formatit()'>Intl [Default Locale]</button>
+       <button onclick='formatit("en")'>Intl [English]</button>
+       <button onclick='formatit("de")'>Intl [German]</button>
+       <button onclick='formatit("es")'>Intl [Spanish]</button>
+       <button onclick='formatit("ja")'>Intl [Japanese]</button>
+       <button onclick='formatit("fr")'>Intl [French] (not loaded)</button>
+    </body>
+</html>

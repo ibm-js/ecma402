@@ -1,4 +1,4 @@
-define([ 'intern!object', 'intern/chai!assert', '../IntlShim' ], function(registerSuite, assert, IntlShim) {
+define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShim' ], function(registerSuite, assert, Intl, IntlShim) {
 	registerSuite({
 		name : 'unitTest',
 		matcherFunctions : function() {
@@ -73,7 +73,7 @@ define([ 'intern!object', 'intern/chai!assert', '../IntlShim' ], function(regist
 			} ];
 
 			testLanguageTags.forEach(function(currentTag) {
-				var nf = new IntlShim.NumberFormat(currentTag.input);
+				var nf = new Intl.NumberFormat(currentTag.input);
 				assert.strictEqual(nf.resolvedOptions().locale, currentTag.bestfit,
 					'BestFitMatcher() should return the correct locale for language tag "'+currentTag.input+'"');
 			});
@@ -117,71 +117,122 @@ define([ 'intern!object', 'intern/chai!assert', '../IntlShim' ], function(regist
 				if(currentTest.style=="currency"){
 					nfOptions.currency = currentTest.currency;
 				}
-				var nf = new IntlShim.NumberFormat(currentTest.locales, nfOptions);
+				var nf = new Intl.NumberFormat(currentTest.locales, nfOptions);
 				assert.strictEqual(nf.format(currentTest.input), currentTest.expected,
-					'IntlShim.NumberFormat.format() should return expected string for locale '+currentTest.locales
+					'Intl.NumberFormat.format() should return expected string for locale '+currentTest.locales
 						+'" style:'+currentTest.style);
 			});
 		},
 		dateTimeFormat : function() {
 			var testCases = [ {
 				"locales" : "en-US",
-				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("2014-01-01T20:06:09Z").getTime(),
 				"expected" : "8:06:09 PM"
-			},
-			{
+			}, {
 				"locales" : "en-US",
-				"options" : {era: "short", year:"numeric", month:"short", day:"numeric", weekday:"short", timeZone:"UTC"},
+				"options" : {
+					era : "short",
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
 				"expected" : "Thu, Jan 1, 1970 AD"
-			},
-			{
+			}, {
 				"locales" : "zh-Hant",
-				"options" : {year:"numeric", month:"short", day:"numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
 				"expected" : "1970年1月1日"
-			},
-			{
+			}, {
 				"locales" : "en-US",
-				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1970-01-01T20:00:00Z").getTime(),
 				"expected" : "8:00:00 PM"
-			},
-			{
+			}, {
 				"locales" : "en-US",
-				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
 				"expected" : "Thu, Jan 1, 1970 at 12:00:00 AM"
-			},
-			{
+			}, {
 				"locales" : "en-US",
-				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
 				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM"
-			},
-			{
+			}, {
 				"locales" : "de-DE",
-				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
 				"expected" : "Do., 4. März 1965 17:59:30"
-			},
-			{
+			}, {
 				"locales" : "en-US",
-				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
 				"expected" : "12:00:00 AM"
-			},
-			{
+			}, {
 				"locales" : "el",
-				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
 				"expected" : "12:00:00 π.μ."
-			}];
+			} ];
 			testCases.forEach(function(currentTest) {
-				var df = new IntlShim.DateTimeFormat(currentTest.locales, currentTest.options);
+				var df = new Intl.DateTimeFormat(currentTest.locales, currentTest.options);
 				assert.strictEqual(df.format(currentTest.input), currentTest.expected,
-					'IntlShim.DateTimeFormat.format() should return expected string for locale '+currentTest.locales);
+					'Intl.DateTimeFormat.format() should return expected string for locale '+currentTest.locales);
 			});
 		},
 		testShim : function() {
@@ -193,101 +244,144 @@ define([ 'intern!object', 'intern/chai!assert', '../IntlShim' ], function(regist
 				"input" : 12345.678,
 				"expected" : "12.345,68\u00A0€",
 				"expected2" : "12.345,68\u00A0€" // If on a browser that doesn't have Intl.
-			},
-			{
-				"native" : true,
-				"locales" : "sl",
-				"style" : "currency",
-				"currency" : "eur",
-				"input" : 12345.678,
-				"expected" : "€12.345,68", // This is the result from native implementation on Firefox nightly.  Will depend on the browser.
-				"expected2" : "12.345,68\u00A0€" // If on a browser that doesn't have Intl.
-			}
-			];
-			
+			} ];
+
 			var dateTimeFormattingTestCases = [ {
 				"native" : false,
 				"locales" : "en-US",
-				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("2014-01-01T20:06:09Z").getTime(),
 				"expected" : "8:06:09 PM",
 				"expected2" : "8:06:09 PM"
-			},
-			{
+			}, {
 				"native" : true,
 				"locales" : "en-US",
-				"options" : {hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("2014-01-01T20:06:09Z").getTime(),
 				"expected" : "8:06:09 PM",
 				"expected2" : "8:06:09 PM"
-			},
-			{	"native" : false,
+			}, {
+				"native" : false,
 				"locales" : "en-US",
-				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
 				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM",
 				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM"
-			},
-			{
+			}, {
 				"native" : true,
 				"locales" : "en-US",
-				"options" : {year:"numeric", month:"short", day:"numeric", weekday:"short", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "short",
+					day : "numeric",
+					weekday : "short",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Thu, Mar 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly.  Will depend on the browser.
+				"expected" : "Thu, Mar 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly. Will depend on the browser.
 				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browser that doesn't have Intl.
-			},
-			{
+			}, {
 				"native" : false,
 				"locales" : "en-US",
-				"options" : {year:"numeric", month:"long", day:"numeric", weekday:"long", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "long",
+					day : "numeric",
+					weekday : "long",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
 				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM", // Because we're only doing exact pattern matches at this point.
 				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // Because we're only doing exact pattern matches at this point.
-			},
-			{
+			}, {
 				"native" : true,
 				"locales" : "en-US",
-				"options" : {year:"numeric", month:"long", day:"numeric", weekday:"long", hour: "numeric", minute: "numeric", second: "numeric", timeZone:"UTC"},
+				"options" : {
+					year : "numeric",
+					month : "long",
+					day : "numeric",
+					weekday : "long",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Thursday, March 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly.  Will depend on the browser.
+				"expected" : "Thursday, March 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly. Will depend on the
+																	// browser.
 				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browswer that doesn't have Intl.
-			}
-			];
+			} ];
 
-			numberFormattingTestCases.forEach(function(currentTest) {
-				IntlShim.setNative(currentTest.native);
-				var nfOptions = {
-					style : currentTest.style
-				};
-				if(currentTest.style=="currency"){
-					nfOptions.currency = currentTest.currency;
-				}
-				var nf = new IntlShim.NumberFormat(currentTest.locales, nfOptions);
+			numberFormattingTestCases
+				.forEach(function(currentTest) {
+					var nfOptions = {
+						style : currentTest.style
+					};
+					if(currentTest.style=="currency"){
+						nfOptions.currency = currentTest.currency;
+					}
 
-				var __globalObject = Function("return this;")();
-				var expectedValue;
-				if (__globalObject.Intl !== undefined) {
-					expectedValue = currentTest.expected;
-				} else {
-					expectedValue = currentTest.expected2;
-				}
-				assert.strictEqual(nf.format(currentTest.input), expectedValue,
-					'IntlShim.NumberFormat.format() with native = '+currentTest.native.toString()+' should return expected string for locale '+currentTest.locales
-						+'" style:'+currentTest.style);
-			});
-			
+					var nf;
+					if(currentTest.native){
+						nf = new IntlShim.NumberFormat(currentTest.locales, nfOptions);
+					}else{
+						nf = new Intl.NumberFormat(currentTest.locales, nfOptions);
+					}
+					var __globalObject = Function("return this;")();
+					var expectedValue;
+					if(__globalObject.Intl!==undefined){
+						expectedValue = currentTest.expected;
+					}else{
+						expectedValue = currentTest.expected2;
+					}
+					assert.strictEqual(nf.format(currentTest.input), expectedValue,
+						'Intl.NumberFormat.format() with native = '+currentTest.native.toString()
+							+' should return expected string for locale '+currentTest.locales+'" style:'
+							+currentTest.style);
+				});
+
 			dateTimeFormattingTestCases.forEach(function(currentTest) {
-				IntlShim.setNative(currentTest.native);
 				var expectedValue;
 				var __globalObject = Function("return this;")();
-				if (__globalObject.Intl !== undefined) {
+				if(__globalObject.Intl!==undefined){
 					expectedValue = currentTest.expected;
-				} else {
+				}else{
 					expectedValue = currentTest.expected2;
 				}
-				var df = new IntlShim.DateTimeFormat(currentTest.locales, currentTest.options);
+				var df;
+				if(currentTest.native){
+					df = new IntlShim.DateTimeFormat(currentTest.locales, currentTest.options);
+				}else{
+					df = new Intl.DateTimeFormat(currentTest.locales, currentTest.options);
+				}
 				assert.strictEqual(df.format(currentTest.input), expectedValue,
-					'IntlShim.DateTimeFormat.format() with native = '+currentTest.native.toString()+' should return expected string for locale '+currentTest.locales);
+					'Intl.DateTimeFormat.format() with native = '+currentTest.native.toString()
+						+' should return expected string for locale '+currentTest.locales);
 			});
 		}
 	});

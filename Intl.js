@@ -1,41 +1,48 @@
+//
+// JavaScript implementation of Internationalization APIs as defined in ECMA standard 402 version 1.0
+//
+require.config({
+	baseUrl : "/ecma402",
+	paths : {
+		"require" : "/ecma402/requirejs/require",
+		"text" : "/ecma402/requirejs/text",
+		"json" : "/ecma402/requirejs/json"
+	},
+	shim : {
+		'preloads' : [ 'locales']
+	}
+});
+
+
+var dependencyList = [
+	"Record",
+	"List",
+	"calendars",
+	"locales",
+	"preloads",
+	"json!cldr/config/availableLocales.json",
+	"json!cldr/supplemental/aliases.json",
+	"json!cldr/supplemental/localeAliases.json",
+	"json!cldr/supplemental/parentLocales.json",
+	"json!cldr/supplemental/currencyData.json",
+	"json!cldr/supplemental/timeData.json",
+	"json!cldr/supplemental/likelySubtags.json",
+	"json!cldr/supplemental/numberingSystems.json" ];
+
 define(
-	[ "dojo/request", "./calendars", "./Record", "./List" ],
-	function(request, calendars, Record, List) {
-		//
-		// JavaScript implementation of Internationalization APIs as defined in ECMA standard 402 version 1.0
-		//
-		
+	dependencyList,
+	function(Record, List, calendars, locales, preloads, availableLocales_json, aliases_json, localeAliases_json,
+		parentLocales_json, currencyData_json, timeData_json, likelySubtags_json, numberingSystems_json) {
+		var Intl = {};
+		var availableLocalesList = CanonicalizeLocaleList(availableLocales_json.availableLocales);
 		var unicodeLocaleExtensions = /-u(-[a-z0-9]{2,8})+/g;
 		var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second", "timeZoneName" ];
-		var availableLocalesList = CanonicalizeLocaleList(getCLDRJson("config", "availableLocales").availableLocales);
-		var aliases = getCLDRJson("supplemental", "aliases").supplemental.metadata.alias;
-		var localeAliases = getCLDRJson("supplemental", "localeAliases").supplemental.metadata.alias;
-		var parentLocales = getCLDRJson("supplemental", "parentLocales").supplemental.parentLocales;
-		var currencyData = getCLDRJson("supplemental", "currencyData").supplemental.currencyData.fractions;
-		var timeData = getCLDRJson("supplemental", "timeData").supplemental.timeData;
-		var likelySubtags = getCLDRJson("supplemental", "likelySubtags").supplemental.likelySubtags;
-		var numberingSystems = getCLDRJson("supplemental", "numberingSystems").supplemental.numberingSystems;
+		var numberingSystems = numberingSystems_json.supplemental.numberingSystems;
 		var availableNumberingSystems = [ "latn" ];
 		for( var ns in numberingSystems){
 			if(numberingSystems[ns]._type=="numeric"&&ns!="latn"){
 				availableNumberingSystems.push(ns);
 			}
-		}
-
-		// Utility function for Synchronous JSON loading using Dojo require.
-		function getCLDRJson(locale, path) {
-			var result = undefined;
-			var url = require.toUrl("ecma402/cldr/"+locale+"/"+path+".json");
-			var options = {
-				sync : true,
-				handleAs : "json"
-			};
-			request(url, options).then(function(data) {
-				result = data;
-			}, function(error) {
-				result = null;
-			});
-			return result;
 		}
 
 		// ECMA 402 Section 6.1
@@ -95,7 +102,6 @@ define(
 			}
 			return false; // Boolean
 		}
-
 		// ECMA 402 Section 6.2.3
 		function CanonicalizeLanguageTag(/* String */locale) {
 			var result = locale.toLowerCase();
@@ -105,7 +111,7 @@ define(
 			var regionTag = /(?:-)([a-z]{2})(?=(-|$))/g;
 			var variantTag = /(?:-)([a-z0-9]{5,8}|\d[a-z0-9]{3})/;
 			var extlangTag = /^([a-z]{2,3}(-[a-z]{3}))(?=(-|$))/;
-			// Canonicalize the Language Tag
+			var aliases = aliases_json.supplemental.metadata.alias; // Canonicalize the Language Tag
 			result = result.replace(languageTag, function(m) {
 				if(aliases!=null){
 					var lookupAlias = aliases.languageAlias[m];
@@ -261,13 +267,13 @@ define(
 			}
 			var result = new Record();
 			if(availableLocale){
-				result.set("locale",availableLocale);
+				result.set("locale", availableLocale);
 				if(locale!=noExtensionsLocale){
-					result.set("extension",locale.match(unicodeLocaleExtensions)[0]);
-					result.set("extensionIndex",locale.search(unicodeLocaleExtensions));
+					result.set("extension", locale.match(unicodeLocaleExtensions)[0]);
+					result.set("extensionIndex", locale.search(unicodeLocaleExtensions));
 				}
 			}else{
-				result.set("locale",DefaultLocale());
+				result.set("locale", DefaultLocale());
 			}
 
 			return result;
@@ -283,6 +289,8 @@ define(
 
 		function BestFitAvailableLocale(availableLocales, locale) {
 			var candidate = locale;
+			var aliases = aliases_json.supplemental.metadata.alias; // Canonicalize the Language Tag
+			var localeAliases = localeAliases_json.supplemental.metadata.alias;
 			while (true){
 				var langtag = candidate.substring(0, candidate.indexOf("-"));
 				var lookupAlias = aliases.languageAlias[langtag];
@@ -296,7 +304,7 @@ define(
 				if(availableLocales.indexOf(candidate)>=0){
 					return candidate;
 				}
-				var parentLocale = parentLocales.parentLocale[candidate];
+				var parentLocale = parentLocales_json.supplemental.parentLocales.parentLocale[candidate];
 				if(parentLocale){
 					candidate = parentLocale;
 				}else{
@@ -327,13 +335,13 @@ define(
 			}
 			var result = new Record();
 			if(availableLocale){
-				result.set("locale",availableLocale);
+				result.set("locale", availableLocale);
 				if(locale!=noExtensionsLocale){
-					result.set("extension",locale.match(unicodeLocaleExtensions)[0]);
-					result.set("extensionIndex",locale.search(unicodeLocaleExtensions));
+					result.set("extension", locale.match(unicodeLocaleExtensions)[0]);
+					result.set("extensionIndex", locale.search(unicodeLocaleExtensions));
 				}
 			}else{
-				result.set("locale",DefaultLocale());
+				result.set("locale", DefaultLocale());
 			}
 			return result;
 		}
@@ -355,7 +363,7 @@ define(
 				extensionSubtagsLength = extensionSubtags["length"];
 			}
 			var result = new Record();
-			result.set("dataLocale",foundLocale);
+			result.set("dataLocale", foundLocale);
 			var supportedExtension = "-u";
 			var i = 0;
 			var len = relevantExtensionKeys["length"];
@@ -393,7 +401,7 @@ define(
 						}
 					}
 				}
-				result.set(key,value);
+				result.set(key, value);
 				supportedExtension += supportedExtensionAddition;
 				i++;
 			}
@@ -402,7 +410,7 @@ define(
 				var postExtension = foundLocale.substring(extensionIndex);
 				foundLocale = preExtension+supportedExtension+postExtension;
 			}
-			result.set("locale",foundLocale);
+			result.set("locale", foundLocale);
 			return result;
 		}
 
@@ -513,12 +521,11 @@ define(
 		}
 
 		function CurrencyDigits(currency) {
-			if(currencyData[currency]){
-				return currencyData[currency]._digits;
+			if(currencyData_json.supplemental.currencyData.fractions[currency]){
+				return currencyData_json.supplemental.currencyData.fractions[currency]._digits;
 			}
 			return 2;
 		}
-
 		// ECMA 402 Section 11.1.1.1
 		function InitializeNumberFormat(numberFormat, locales, options) {
 			if(numberFormat.hasOwnProperty("initializedIntlObject")&&numberFormat.initializedIntlObject){
@@ -533,7 +540,7 @@ define(
 			}
 			var opt = new Record();
 			var matcher = GetOption(options, "localeMatcher", "string", [ "lookup", "best fit" ], "best fit");
-			opt.set("localeMatcher",matcher);
+			opt.set("localeMatcher", matcher);
 			var r = ResolveLocale(NumberFormat.availableLocales, requestedLocales, opt,
 				NumberFormat.relevantExtensionKeys, NumberFormat.localeData);
 			numberFormat.locale = r.locale;
@@ -559,12 +566,16 @@ define(
 			var cd = GetOption(options, "currencyDisplay", "string", [ "code", "symbol", "name" ], "symbol");
 			if(s=="currency"){
 				numberFormat.currencyDisplay = cd;
-			}
-			if(cd=="symbol"||cd=="name"){
-				var currencies = getCLDRJson(numberFormat.dataLocale, "currencies").main[numberFormat.dataLocale].numbers.currencies;
-				if(currencies[numberFormat.currency]){
-					numberFormat.currencySymbol = currencies[numberFormat.currency].symbol;
-					numberFormat.currencyDisplayName = currencies[numberFormat.currency].displayName;
+				if(cd=="symbol"||cd=="name"){
+					var loadedLocale = preloads[numberFormat.dataLocale] ? numberFormat.dataLocale : preloads[DefaultLocale()] ? DefaultLocale() : "root";
+					if (!preloads[loadedLocale]["currencies"]){
+						loadedLocale = "root";
+					}
+					var curr = preloads[loadedLocale]["currencies"].main[loadedLocale].numbers.currencies;
+					if(curr[numberFormat.currency]){
+						numberFormat.currencySymbol = curr[numberFormat.currency].symbol;
+						numberFormat.currencyDisplayName = curr[numberFormat.currency].displayName;
+					}
 				}
 			}
 			var mnid = GetNumberOption(options, "minimumIntegerDigits", 1, 21, 1);
@@ -597,11 +608,15 @@ define(
 			}
 			var g = GetOption(options, "useGrouping", "boolean", undefined, true);
 			numberFormat.useGrouping = g;
-			var numbers = getCLDRJson(numberFormat.dataLocale, "numbers").main[numberFormat.dataLocale].numbers;
-			if(r.locale==r.dataLocale){
-				numberFormat.numberingSystem = numbers.defaultNumberingSystem;
+			loadedLocale = preloads[numberFormat.dataLocale] ? numberFormat.dataLocale : preloads[DefaultLocale()] ? DefaultLocale() : "root";
+			if (!preloads[loadedLocale]["numbers"]){
+				loadedLocale = "root";
 			}
-			var numberInfo = _getNumberInfo(numbers, numberFormat.numberingSystem);
+			var numb = preloads[loadedLocale]["numbers"].main[loadedLocale]["numbers"];
+			if(r.locale==r.dataLocale){
+				numberFormat.numberingSystem = numb.defaultNumberingSystem;
+			}
+			var numberInfo = _getNumberInfo(numb, numberFormat.numberingSystem);
 			var stylePatterns = numberInfo.patterns[s];
 			numberFormat.positivePattern = stylePatterns["positivePattern"];
 			numberFormat.negativePattern = stylePatterns["negativePattern"];
@@ -639,17 +654,17 @@ define(
 		}
 		// Utility function to convert a string in scientific notation to a corresponding string of digits
 		function _toDigitString(x) {
-			var m=x;
-			var negative=false;
+			var m = x;
+			var negative = false;
 			if(m.charAt(0)=='-'){
-				negative=true;
-				m=m.substring(1);
+				negative = true;
+				m = m.substring(1);
 			}
-			var parts=m.split("e");
+			var parts = m.split("e");
 			var mantissa = parts[0];
 			var exponent = Number(parts[1]);
 			if(exponent>0){
-				m = mantissa.substr(0,1)+mantissa.substr(2); // Get just the digits
+				m = mantissa.substr(0, 1)+mantissa.substr(2); // Get just the digits
 				if(m.length-1<exponent){ // Need to add zeroes.
 					var e = exponent+1-m.length;
 					while (e>0){
@@ -660,12 +675,12 @@ define(
 					m = m.substr(0, exponent+1)+"."+m.substr(exponent+1);
 				}
 			}else if(exponent<0){
-				var digits = mantissa.substr(0,1)+mantissa.substr(2); // Get just the digits
+				var digits = mantissa.substr(0, 1)+mantissa.substr(2); // Get just the digits
 				m = "0.";
-				for(var i=exponent;i<-1;i++){
-					m+="0";
+				for(var i = exponent; i<-1; i++){
+					m += "0";
 				}
-				m+=digits;
+				m += digits;
 			}
 			if(negative){
 				m = "-"+m;
@@ -680,23 +695,23 @@ define(
 			var n;
 			var target;
 			if(x==0){
-				for(var i=0;i<p;i++){
-					m+="0";
+				for(var i = 0; i<p; i++){
+					m += "0";
 				}
-				e=0;
+				e = 0;
 			}else{
-				target = Math.pow(10,p-1);
-				if (x<target){
-					e=p-1;
-					while(x<target){
-						target/=10;
+				target = Math.pow(10, p-1);
+				if(x<target){
+					e = p-1;
+					while (x<target){
+						target /= 10;
 						e--;
 					}
 				}else{
-					target = Math.pow(10,p);
-					e=p-1;
-					while(x>=target){
-						target*=10;
+					target = Math.pow(10, p);
+					e = p-1;
+					while (x>=target){
+						target *= 10;
 						e++;
 					}
 				}
@@ -721,8 +736,8 @@ define(
 				m = Math.round(m).toString();
 			}
 			if(e>=p){
-				for(var i=0;i<e-p+1;i++){
-					m+="0";
+				for(var i = 0; i<e-p+1; i++){
+					m += "0";
 				}
 				return m;
 			}
@@ -730,23 +745,23 @@ define(
 				return m;
 			}
 			if(e>=0){
-				m=m.substr(0,e+1)+"."+m.substr(e+1,p-(e+1));
+				m = m.substr(0, e+1)+"."+m.substr(e+1, p-(e+1));
 			}else{
-				var prefix="0.";
-				for(var i=0;i<-(e+1);i++){
-					prefix+="0";
+				var prefix = "0.";
+				for(var i = 0; i<-(e+1); i++){
+					prefix += "0";
 				}
-				m=prefix+m;
+				m = prefix+m;
 
 			}
 			if(/\./.test(m)&&maxPrecision>minPrecision){
 				var cut = maxPrecision-minPrecision;
 				while (cut>0&&/0$/.test(m)){
-					m=m.substr(0,m.length-1);
+					m = m.substr(0, m.length-1);
 					cut--;
 				}
 				if(/\.$/.test(m)){
-					m=m.substr(0,m.length-1);
+					m = m.substr(0, m.length-1);
 				}
 			}
 			return m;
@@ -758,14 +773,14 @@ define(
 			// Otherwise, Number.toFixed() is going to give us back a value in
 			// scientific notation, and we have to convert it back to a
 			// series of digits.
-			if(Math.abs(x)<Math.pow(10,21)){
+			if(Math.abs(x)<Math.pow(10, 21)){
 				m = x.toFixed(maxFraction).toString();
 			}else{
 				m = _toDigitString(x.toString());
 				if(maxFraction>0){
-					m+=".";
-					for(var i=0;i<maxFraction;i++){
-						m+="0";
+					m += ".";
+					for(var i = 0; i<maxFraction; i++){
+						m += "0";
 					}
 				}
 			}
@@ -834,18 +849,20 @@ define(
 			}else{
 				result = numberFormat.positivePattern;
 			}
-			result = result.replace("-", numberFormat.symbols.minusSign);
-			result = result.replace("%", numberFormat.symbols.percentSign);
-			result = result.replace("{number}", n);
-			if(numberFormat.style=="currency"){
-				var currency = numberFormat.currency;
-				var cd = currency;
-				if(numberFormat.currencyDisplay=="symbol"){
-					cd = numberFormat.currencySymbol;
-				}else if(numberFormat.currencyDisplay=="name"){
-					cd = numberFormat.currencyDisplayName;
+			if(result){
+				result = result.replace("-", numberFormat.symbols.minusSign);
+				result = result.replace("%", numberFormat.symbols.percentSign);
+				result = result.replace("{number}", n);
+				if(numberFormat.style=="currency"){
+					var currency = numberFormat.currency;
+					var cd = currency;
+					if(numberFormat.currencyDisplay=="symbol"){
+						cd = numberFormat.currencySymbol;
+					}else if(numberFormat.currencyDisplay=="name"){
+						cd = numberFormat.currencyDisplayName;
+					}
+					result = result.replace("{currency}", cd);
 				}
-				result = result.replace("{currency}", cd);
 			}
 			return result;
 		}
@@ -1000,7 +1017,7 @@ define(
 			options = ToDateTimeOptions(options, "any", "date");
 			var opt = new Record();
 			var matcher = GetOption(options, "localeMatcher", "string", [ "lookup", "best fit" ], "best fit");
-			opt.set("localeMatcher",matcher);
+			opt.set("localeMatcher", matcher);
 			var r = ResolveLocale(DateTimeFormat.availableLocales, requestedLocales, opt,
 				DateTimeFormat.relevantExtensionKeys, DateTimeFormat.localeData);
 			dateTimeFormat.locale = r.locale;
@@ -1019,7 +1036,7 @@ define(
 			opt = new Record();
 			dateTimeProperties.forEach(function(prop) {
 				var value = GetOption(options, prop, "string", _validDateTimePropertyValues(prop), undefined);
-				opt.set(prop,value);
+				opt.set(prop, value);
 			});
 
 			// Steps 20-21: Here we deviate slightly from the strict definition as defined in ECMA 402.
@@ -1027,7 +1044,11 @@ define(
 			// up front, and accessing them here, we instead wait until we know which locale we are
 			// interested in, and load the formats from the JSON data.
 			var cldrCalendar = dateTimeFormat.calendar.replace("gregory", "gregorian");
-			var calData = getCLDRJson(dateTimeFormat.dataLocale, "ca-"+cldrCalendar).main[dateTimeFormat.dataLocale].dates.calendars[cldrCalendar];
+			var loadedLocale = preloads[dateTimeFormat.dataLocale] ? dateTimeFormat.dataLocale : preloads[DefaultLocale()] ? DefaultLocale() : "root";
+			if (!preloads[loadedLocale]["ca-"+cldrCalendar]){
+				loadedLocale = "root";
+			}
+			var calData = preloads[loadedLocale]["ca-"+cldrCalendar].main[loadedLocale].dates.calendars[cldrCalendar];
 			dateTimeFormat.calData = calData;
 			var formats = _convertAvailableDateTimeFormats(calData.dateTimeFormats);
 			matcher = GetOption(options, "formatMatcher", "string", [ "basic", "best fit" ], "best fit");
@@ -1042,13 +1063,12 @@ define(
 			var hr12 = GetOption(options, "hour12", "boolean", undefined, undefined);
 			if(dateTimeFormat.hour!=undefined){
 				if(hr12==undefined){
-					hr12 = DateTimeFormat.localeData[dateTimeFormat.dataLocale]
-						&&DateTimeFormat.localeData[dateTimeFormat.dataLocale].hour12;
+					hr12 = DateTimeFormat.localeData[loadedLocale]&&DateTimeFormat.localeData[loadedLocale].hour12;
 				}
 				dateTimeFormat.hour12 = hr12;
 				if(hr12){
-					var hourNo0 = DateTimeFormat.localeData[dateTimeFormat.dataLocale]
-						&&DateTimeFormat.localeData[dateTimeFormat.dataLocale].hourNo0;
+					var hourNo0 = DateTimeFormat.localeData[loadedLocale]
+						&&DateTimeFormat.localeData[loadedLocale].hourNo0;
 					dateTimeFormat.hourNo0 = hourNo0;
 					dateTimeFormat.hour = bestFormat.hour12;
 					pattern = bestFormat.pattern12;
@@ -1070,9 +1090,11 @@ define(
 			}
 			var locale = dateTimeFormat.locale;
 			var nf = {};
-			InitializeNumberFormat(nf,locale, {	useGrouping : false	});
+			InitializeNumberFormat(nf, locale, {
+				useGrouping : false
+			});
 			var nf2 = {};
-			InitializeNumberFormat(nf2,locale, {
+			InitializeNumberFormat(nf2, locale, {
 				minimumIntegerDigits : 2,
 				useGrouping : false
 			});
@@ -1108,12 +1130,16 @@ define(
 					var standalone = (p=="month"&&dateTimeFormat.standaloneMonth);
 					fv = _getCalendarField(dateTimeFormat.calData, standalone, p, f, v);
 				}
-				result = result.replace("{"+p+"}", fv);
+				if(result){
+					result = result.replace("{"+p+"}", fv);
+				}
 			});
 			if(dateTimeFormat.hour12){
 				var ampm = pm ? "pm" : "am";
 				var fv = _getCalendarField(dateTimeFormat.calData, false, "dayperiod", "short", ampm);
-				result = result.replace("{ampm}", fv);
+				if(result){
+					result = result.replace("{ampm}", fv);
+				}
 			}
 			return result;
 		}
@@ -1183,94 +1209,94 @@ define(
 				pieces[x] = pieces[x].replace(dateFields, function(field) {
 					switch(field) {
 						case "GGGGG":
-							result.set("era","narrow");
+							result.set("era", "narrow");
 							return "{era}";
 						case "GGGG":
-							result.set("era","long");
+							result.set("era", "long");
 							return "{era}";
 						case "GGG":
 						case "GG":
 						case "G":
-							result.set("era","short");
+							result.set("era", "short");
 							return "{era}";
 						case "yy":
-							result.set("year","2-digit");
+							result.set("year", "2-digit");
 							return "{year}";
 						case "y":
 						case "yyy":
 						case "yyyy":
-							result.set("year","numeric");
+							result.set("year", "numeric");
 							return "{year}";
 						case "LLLLL":
-							result.set("standaloneMonth",true);
+							result.set("standaloneMonth", true);
 						case "MMMMM":
-							result.set("month","narrow");
+							result.set("month", "narrow");
 							return "{month}";
 						case "LLLL":
-							result.set("standaloneMonth",true);
+							result.set("standaloneMonth", true);
 						case "MMMM":
-							result.set("month","long");
+							result.set("month", "long");
 							return "{month}";
 						case "LLL":
-							result.set("standaloneMonth",true);
+							result.set("standaloneMonth", true);
 						case "MMM":
-							result.set("month","short");
+							result.set("month", "short");
 							return "{month}";
 						case "LL":
 						case "MM":
-							result.set("month","2-digit");
+							result.set("month", "2-digit");
 							return "{month}";
 						case "L":
 						case "M":
-							result.set("month","numeric");
+							result.set("month", "numeric");
 							return "{month}";
 						case "EEEEE":
-							result.set("weekday","narrow");
+							result.set("weekday", "narrow");
 							return "{weekday}";
 						case "EEEE":
-							result.set("weekday","long");
+							result.set("weekday", "long");
 							return "{weekday}";
 						case "EEE":
 						case "EE":
 						case "E":
-							result.set("weekday","short");
+							result.set("weekday", "short");
 							return "{weekday}";
 						case "dd":
-							result.set("day","2-digit");
+							result.set("day", "2-digit");
 							return "{day}";
 						case "d":
-							result.set("day","numeric");
+							result.set("day", "numeric");
 							return "{day}";
 						case "a":
 							return "{ampm}";
 						case "hh":
-							result.set("hour12","2-digit");
+							result.set("hour12", "2-digit");
 						case "HH":
-							result.set("hour","2-digit");
+							result.set("hour", "2-digit");
 							return "{hour}";
 						case "h":
-							result.set("hour12","numeric");
+							result.set("hour12", "numeric");
 						case "H":
-							result.set("hour","numeric");
+							result.set("hour", "numeric");
 							return "{hour}";
 						case "mm":
-							result.set("minute","2-digit");
+							result.set("minute", "2-digit");
 							return "{minute}";
 						case "m":
-							result.set("minute","numeric");
+							result.set("minute", "numeric");
 							return "{minute}";
 						case "ss":
-							result.set("second","2-digit");
+							result.set("second", "2-digit");
 							return "{second}";
 						case "s":
-							result.set("second","numeric");
+							result.set("second", "numeric");
 							return "{second}";
 						default:
 							return field;
 					}
 				});
 			}
-			result.set("pattern",pieces.join(""));
+			result.set("pattern", pieces.join(""));
 			return result;
 		}
 
@@ -1287,25 +1313,25 @@ define(
 					var outputFormat = _ToIntlDateTimeFormat(availableFormats[format]);
 					if(/H/.test(format)){
 						var outputFormat12 = _ToIntlDateTimeFormat(format12);
-						outputFormat.set("hour12",outputFormat12.hour12);
+						outputFormat.set("hour12", outputFormat12.hour12);
 						outputFormat.set("pattern12", outputFormat12.pattern);
 					}
 					result.push(outputFormat);
 				}
 			}
 			// ECMA402 requires us to have a full date format that includes weekday, year, month
-			// day, hour, minute, and second.  Since CLDR doesn't specifically have that combination,
+			// day, hour, minute, and second. Since CLDR doesn't specifically have that combination,
 			// we have to piece it together using three pieces:
 			// a). The yMMMMEd or yMMMEd format from available formats
 			// b). The "full" date/time format combiner.
 			// c). The Hms format in locales using 24-hour clock, or the hms format in locales using a 12-hour clock.
 			var combinedDateFormat = dateTimeFormats.full||"{1} {0}";
-			combinedDateFormat = combinedDateFormat.replace("{1}",availableFormats.yMMMMEd||availableFormats.yMMMEd);
-			var combinedDateTimeFormat24 = combinedDateFormat.replace("{0}",availableFormats.Hms);
-			var combinedDateTimeFormat12 = combinedDateFormat.replace("{0}",availableFormats.hms);
+			combinedDateFormat = combinedDateFormat.replace("{1}", availableFormats.yMMMMEd||availableFormats.yMMMEd);
+			var combinedDateTimeFormat24 = combinedDateFormat.replace("{0}", availableFormats.Hms);
+			var combinedDateTimeFormat12 = combinedDateFormat.replace("{0}", availableFormats.hms);
 			outputFormat = _ToIntlDateTimeFormat(combinedDateTimeFormat24);
 			outputFormat12 = _ToIntlDateTimeFormat(combinedDateTimeFormat12);
-			outputFormat.set("hour12",outputFormat12.hour12);
+			outputFormat.set("hour12", outputFormat12.hour12);
 			outputFormat.set("pattern12", outputFormat12.pattern);
 			result.push(outputFormat);
 			return result;
@@ -1342,12 +1368,13 @@ define(
 			};
 		});
 		Object.freeze(NumberFormat);
-		
+
 		// ECMA 402 Section 12.2.3
 		var DateTimeFormat = {};
 		DateTimeFormat.availableLocales = availableLocalesList;
 		DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
 		DateTimeFormat.localeData = {};
+		var timeData = timeData_json.supplemental.timeData;
 		DateTimeFormat.availableLocales.forEach(function(loc) {
 			var calendarPreferences = [ "gregory" ];
 			var region = "001";
@@ -1357,7 +1384,7 @@ define(
 			if(regionPos>=0){
 				region = loc.substr(regionPos+1, 2);
 			}else{
-				var likelySubtag = likelySubtags[loc];
+				var likelySubtag = likelySubtags_json.supplemental.likelySubtags[loc];
 				if(likelySubtag){
 					region = likelySubtag.substr(-2);
 				}
@@ -1373,9 +1400,6 @@ define(
 			};
 		});
 		Object.freeze(DateTimeFormat);
-		
-		// Creation of the Intl object begins here.
-		var Intl = {};
 
 		Intl.Collator = function() {
 			throw new TypeError("Intl.Collator is not supported.");
@@ -1492,7 +1516,7 @@ define(
 				var result = new Record();
 				for( var f in fields){
 					if(this.hasOwnProperty(fields[f])){
-						result.set(fields[f],this[fields[f]]);
+						result.set(fields[f], this[fields[f]]);
 					}
 				}
 				return result;
@@ -1523,7 +1547,6 @@ define(
 			configurable : true,
 			enumerable : false
 		});
-
 
 		// ECMA 402 Section 12.1.2.1
 		Intl.DateTimeFormat.call = function(thisObject, locales, options) {
@@ -1580,9 +1603,9 @@ define(
 				}
 				if(this.boundFormat===undefined){
 					var F = function() {
-						var date=undefined;
+						var date = undefined;
 						if(arguments.length>0){
-							date=arguments[0];
+							date = arguments[0];
 						}
 						var x;
 						if(date==undefined){
@@ -1625,7 +1648,7 @@ define(
 				var result = new Record();
 				for( var f in fields){
 					if(this.hasOwnProperty(fields[f])){
-						result.set(fields[f],this[fields[f]]);
+						result.set(fields[f], this[fields[f]]);
 					}
 				}
 				return result;
@@ -1636,8 +1659,8 @@ define(
 		});
 
 		// ECMA 402 Section 13.2.1
-		Number.prototype.toLocaleString = function(){
-			if(!(this instanceof Number)){
+		Number.prototype.toLocaleString = function() {
+			if(!(thisinstanceofNumber)){
 				throw new TypeError("not a valid Number");
 			}
 			var x = Number(this);
@@ -1650,13 +1673,13 @@ define(
 				options = arguments[1];
 			}
 			var numberFormat = {};
-			InitializeNumberFormat(numberFormat,locales,options);
-			return FormatNumber(numberFormat,x);
+			InitializeNumberFormat(numberFormat, locales, options);
+			return FormatNumber(numberFormat, x);
 		};
-		
+
 		// ECMA 402 Section 13.3.1
-		Date.prototype.toLocaleString = function(){
-			if(!(this instanceof Date)){
+		Date.prototype.toLocaleString = function() {
+			if(!(thisinstanceofDate)){
 				throw new TypeError("not a valid Date");
 			}
 			var x = this.getTime();
@@ -1671,14 +1694,14 @@ define(
 			if(arguments.length>1){
 				options = arguments[1];
 			}
-			options = ToDateTimeOptions(options,"any","all");
+			options = ToDateTimeOptions(options, "any", "all");
 			var dateTimeFormat = {};
-			InitializeDateTimeFormat(dateTimeFormat,locales,options);
-			return FormatDateTime(dateTimeFormat,x);
+			InitializeDateTimeFormat(dateTimeFormat, locales, options);
+			return FormatDateTime(dateTimeFormat, x);
 		};
 		// ECMA 402 Section 13.3.2
-		Date.prototype.toLocaleDateString = function(){
-			if(!(this instanceof Date)){
+		Date.prototype.toLocaleDateString = function() {
+			if(!(thisinstanceofDate)){
 				throw new TypeError("not a valid Date");
 			}
 			var x = this.getTime();
@@ -1693,14 +1716,14 @@ define(
 			if(arguments.length>1){
 				options = arguments[1];
 			}
-			options = ToDateTimeOptions(options,"date","date");
+			options = ToDateTimeOptions(options, "date", "date");
 			var dateTimeFormat = {};
-			InitializeDateTimeFormat(dateTimeFormat,locales,options);
-			return FormatDateTime(dateTimeFormat,x);
+			InitializeDateTimeFormat(dateTimeFormat, locales, options);
+			return FormatDateTime(dateTimeFormat, x);
 		};
 		// ECMA 402 Section 13.3.3
-		Date.prototype.toLocaleTimeString = function(){
-			if(!(this instanceof Date)){
+		Date.prototype.toLocaleTimeString = function() {
+			if(!(thisinstanceofDate)){
 				throw new TypeError("not a valid Date");
 			}
 			var x = this.getTime();
@@ -1715,11 +1738,10 @@ define(
 			if(arguments.length>1){
 				options = arguments[1];
 			}
-			options = ToDateTimeOptions(options,"time","time");
+			options = ToDateTimeOptions(options, "time", "time");
 			var dateTimeFormat = {};
-			InitializeDateTimeFormat(dateTimeFormat,locales,options);
-			return FormatDateTime(dateTimeFormat,x);
+			InitializeDateTimeFormat(dateTimeFormat, locales, options);
+			return FormatDateTime(dateTimeFormat, x);
 		};
-		
 		return Intl;
 	});
