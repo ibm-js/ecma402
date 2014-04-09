@@ -1,35 +1,54 @@
 /**
  * 
  */
-define( ["module",
-        "json!cldr/config/availableLocales.json",
-     	"json!cldr/supplemental/aliases.json",
-    	"json!cldr/supplemental/localeAliases.json",
-    	"json!cldr/supplemental/parentLocales.json",
-], function(module, availableLocales_json, aliases_json, localeAliases_json, parentLocales_json) {
-	var locales = {};
-	locales.preLoadList = [];
-	locales.preLoadDependencyList = [];
-	var jsonElements = [ "currencies", "numbers", "ca-gregorian" ];
+define([ "module", "common" ], function(module, common) {
+	var locales = {
+		preLoadList : [],
+		jsonElements : [ "currencies", "numbers", "ca-gregorian" ]
+	};
 
 	function loadLocaleElements(locale) {
-		jsonElements.forEach(function(element){
+		locales.jsonElements.forEach(function(element) {
 			var dependency = "json!cldr/"+locale+"/"+element+".json";
-			locales.preLoadDependencyList.push(dependency);
-			require([dependency]);
+			require([ dependency ]);
 		});
 	}
 
-	locales.defaultLocale = function() {
-		return "en";
-	};
-	
-	loadLocaleElements(locales.defaultLocale());
-	if (module.config()){
-		module.config().forEach(function(locale){
-			locales.preLoadList.push(locale);
-			loadLocaleElements(locale);
-		});
+	locales.preLoadList.push(common.DefaultLocale());
+	loadLocaleElements(common.DefaultLocale());
+
+	if(module.config()){
+		if(typeof module.config()==="string"){
+			if(module.config()==="allAvailable"){
+				common.availableLocalesList.forEach(function(locale) {
+					if(locale!=="root"&&locale!==common.DefaultLocale()){
+						locales.preLoadList.push(locale);
+						loadLocaleElements(locale);
+					}
+				});
+			}else{
+				var bestFitPreload = common.BestFitAvailableLocale(common.availableLocalesList, module.config());
+				if(bestFitPreload && locales.preLoadList.indexOf(bestFitPreload)===-1){
+					locales.preLoadList.push(bestFitPreload);
+					loadLocaleElements(bestFitPreload);
+				}
+			}
+		}else if(module.config() instanceof Array){
+			module.config().forEach(function(locale) {
+				var bestFitPreload = common.BestFitAvailableLocale(common.availableLocalesList, locale);
+				if(bestFitPreload && locales.preLoadList.indexOf(bestFitPreload)===-1){
+					locales.preLoadList.push(bestFitPreload);
+					loadLocaleElements(bestFitPreload);
+				}
+			});
+		}else if(module.config() instanceof RegExp){
+			common.availableLocalesList.forEach(function(locale) {
+				if(module.config().test(locale)&&locale!=="root"&&locale!==common.DefaultLocale()){
+					locales.preLoadList.push(locale);
+					loadLocaleElements(locale);
+				}
+			});			
+		}
 	}
 	return locales;
 });

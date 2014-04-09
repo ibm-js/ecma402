@@ -9,33 +9,28 @@ require.config({
 		"json" : "/ecma402/requirejs/json"
 	},
 	shim : {
-		'preloads' : [ 'locales']
-	}
+		'Intl' : [ 'locales' ],
+	    'preloads' : [ 'locales' ]
+	},
+	waitSeconds : 0
 });
-
 
 var dependencyList = [
 	"Record",
-	"List",
 	"calendars",
+	"common",
 	"locales",
 	"preloads",
-	"json!cldr/config/availableLocales.json",
-	"json!cldr/supplemental/aliases.json",
-	"json!cldr/supplemental/localeAliases.json",
-	"json!cldr/supplemental/parentLocales.json",
 	"json!cldr/supplemental/currencyData.json",
 	"json!cldr/supplemental/timeData.json",
 	"json!cldr/supplemental/likelySubtags.json",
 	"json!cldr/supplemental/numberingSystems.json" ];
 
-define(
+define( "Intl",
 	dependencyList,
-	function(Record, List, calendars, locales, preloads, availableLocales_json, aliases_json, localeAliases_json,
-		parentLocales_json, currencyData_json, timeData_json, likelySubtags_json, numberingSystems_json) {
+	function(Record, calendars, common, locales, preloads, currencyData_json, timeData_json, likelySubtags_json,
+		numberingSystems_json) {
 		var Intl = {};
-		var availableLocalesList = CanonicalizeLocaleList(availableLocales_json.availableLocales);
-		var unicodeLocaleExtensions = /-u(-[a-z0-9]{2,8})+/g;
 		var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second", "timeZoneName" ];
 		var numberingSystems = numberingSystems_json.supplemental.numberingSystems;
 		var availableNumberingSystems = [ "latn" ];
@@ -43,481 +38,6 @@ define(
 			if(numberingSystems[ns]._type=="numeric"&&ns!="latn"){
 				availableNumberingSystems.push(ns);
 			}
-		}
-
-		// ECMA 402 Section 6.1
-		function _toUpperCaseIdentifier(/* String */identifier) {
-			var match = /[a-z]/g;
-			return identifier.replace(match, function(m) {
-				return m.toUpperCase();
-			}); // String
-		}
-
-		// ECMA 402 Section 6.1
-		function _toLowerCaseIdentifier(/* String */identifier) {
-			var match = /[A-Z]/g;
-			return identifier.replace(match, function(m) {
-				return m.toLowerCase();
-			}); // String
-		}
-
-		// ECMA 402 Section 6.2.2
-		function IsStructurallyValidLanguageTag(/* String */locale) {
-			if(typeof locale!=="string"){
-				return false; // Boolean
-			}
-			var identifier = _toLowerCaseIdentifier(locale);
-			var langtag = /^([a-z]{2,3}(-[a-z]{3}){0,3}|[a-z]{4,8})(-[a-z]{4})?(-([a-z]{2}|\d{3}))?(-([a-z0-9]{5,8}|\d[a-z0-9]{3}))*(-[a-wyz0-9](-[a-z0-9]{2,8})+)*(-x(-[a-z0-9]{1,8})+)?$/;
-			var privateuse = /x(-[a-z0-9]{1,8})+/;
-			var grandfathered = /en-gb-oed|(i-(ami|bnn|default|enochian|hak|klingon|lux|mingo|navajo|pwn|tao|tay|tsu))|sgn-((be-(fr|nl))|(ch-de))/;
-			if(privateuse.test(identifier)||grandfathered.test(identifier)){
-				return true; // Boolean
-			}
-
-			function _isUniqueVariant(element, index, array) {
-				var firstSingletonPosition = identifier.search(/-[a-z0-9]-/);
-				if(firstSingletonPosition>0){
-					return identifier.indexOf(element)>firstSingletonPosition
-						||identifier.indexOf(element)==identifier.lastIndexOf(element, firstSingletonPosition); // Boolean
-				}
-				return identifier.indexOf(element)==identifier.lastIndexOf(element); // Boolean
-			}
-
-			function _isUniqueSingleton(element, index, array) {
-				var firstXPosition = identifier.search(/-x-/);
-				if(firstXPosition>0){
-					return identifier.indexOf(element)==identifier.lastIndexOf(element, firstXPosition); // Boolean
-				}
-				return identifier.indexOf(element)==identifier.lastIndexOf(element); // Boolean
-			}
-
-			if(langtag.test(identifier)){ // represents a well-formed BCP 47 language tag
-				var varianttag = /-[a-z0-9]{5,8}|\d[a-z0-9]{3}/g;
-				var variants = varianttag.exec(identifier);
-				var singletontag = /-[a-wyz0-9]-/g;
-				var singletons = singletontag.exec(identifier);
-				var variantsOK = !variants||variants.every(_isUniqueVariant); // has no duplicate variant tags
-				var singletonsOK = !singletons||singletons.every(_isUniqueSingleton); // has no duplicate singleton tags
-				return variantsOK&&singletonsOK;
-			}
-			return false; // Boolean
-		}
-		// ECMA 402 Section 6.2.3
-		function CanonicalizeLanguageTag(/* String */locale) {
-			var result = locale.toLowerCase();
-			var firstSingletonPosition = result.search(/(^|-)[a-z0-9]-/);
-			var languageTag = /^([a-z]{2,3}(-[a-z]{3}){0,3}|[a-z]{4,8})(?=(-|$))/;
-			var scriptTag = /(?:-)([a-z]{4})(?=(-|$))/;
-			var regionTag = /(?:-)([a-z]{2})(?=(-|$))/g;
-			var variantTag = /(?:-)([a-z0-9]{5,8}|\d[a-z0-9]{3})/;
-			var extlangTag = /^([a-z]{2,3}(-[a-z]{3}))(?=(-|$))/;
-			var aliases = aliases_json.supplemental.metadata.alias; // Canonicalize the Language Tag
-			result = result.replace(languageTag, function(m) {
-				if(aliases!=null){
-					var lookupAlias = aliases.languageAlias[m];
-					if(lookupAlias&&lookupAlias._reason!="macrolanguage"){
-						m = lookupAlias._replacement ? lookupAlias._replacement : m;
-					}
-				}
-				return m;
-			}); // String
-			// Canonicalize the Script Tag
-			result = result.replace(scriptTag, function(m) {
-				if(firstSingletonPosition==-1||result.indexOf(m)<firstSingletonPosition){
-					m = m.substring(0, 2).toUpperCase()+m.substring(2);
-					var script = m.substring(1);
-					if(aliases!=null){
-						var lookupAlias = aliases.scriptAlias[script];
-						if(lookupAlias){
-							m = lookupAlias._replacement ? "-"+lookupAlias._replacement : m;
-						}
-					}
-				}
-				return m;
-			}); // String
-			// Canonicalize the Region Tag
-			result = result.replace(regionTag, function(m) {
-				if(firstSingletonPosition==-1||result.indexOf(m)<firstSingletonPosition){
-					m = m.toUpperCase();
-					var region = m.substring(1);
-					if(aliases!=null){
-						var lookupAlias = aliases.territoryAlias[region];
-						if(lookupAlias){
-							var repl = lookupAlias._replacement;
-							if(repl.indexOf(" ")>=0){
-								repl = repl.substring(0, repl.indexOf(" "));
-							}
-							m = repl ? "-"+repl : m;
-						}
-					}
-				}
-				return m;
-			}); // String
-			// Canonicalize the Variant Tag
-			result = result.replace(variantTag, function(m) {
-				// Variant tags are upper case in CLDR's data.
-				var variant = _toUpperCaseIdentifier(m.substring(1));
-				if(aliases!=null){
-					var lookupAlias = aliases.variantAlias[variant];
-					if(lookupAlias){
-						var repl = lookupAlias._replacement;
-						m = repl ? "-"+_toLowerCaseIdentifier(repl) : m;
-					}
-				}
-				return m;
-			}); // String
-			// Canonicalize any whole tag combinations or grandfathered tags
-			result = result.replace(result, function(m) {
-				if(aliases!=null){
-					var lookupAlias = aliases.languageAlias[m];
-					if(lookupAlias&&lookupAlias._reason!="macrolanguage"){
-						m = lookupAlias._replacement ? lookupAlias._replacement : m;
-					}
-				}
-				return m;
-			}); // String
-			// Remove the prefix if an extlang tag exists
-			if(extlangTag.test(result)){
-				result = result.replace(/^[a-z]{2,3}-/, "");
-			}
-			return result; // String
-		}
-
-		// ECMA 402 Section 6.2.4
-		function DefaultLocale() {
-			var result = undefined;
-			if(IsStructurallyValidLanguageTag(navigator.language)){
-				result = BestFitAvailableLocale(availableLocalesList, CanonicalizeLanguageTag(navigator.language));
-			}
-			if(!result&&IsStructurallyValidLanguageTag(navigator.userLanguage)){
-				result = BestFitAvailableLocale(availableLocalesList, CanonicalizeLanguageTag(navigator.userLanguage));
-			}
-			if(!result){
-				result = "root";
-			}
-			return result;
-		}
-
-		// ECMA 402 Section 6.3.1
-		function IsWellFormedCurrencyCode(currency) {
-			var wellFormed = /^[A-Za-z]{3}$/;
-			return wellFormed.test(currency.toString()); // Boolean
-		}
-
-		// ECMA 402 Section 9.2.1
-		function CanonicalizeLocaleList(locales) {
-			if(locales===undefined){
-				return new List();
-			}
-			if(locales===null){
-				throw new TypeError("Locale list can not be null");
-			}
-			var seen = [];
-			if(typeof locales=="string"){
-				locales = new Array(locales);
-			}
-			var O = Object(locales);
-			for(Pk in O){
-				var kValue = O[Pk];
-				if(typeof kValue!="string"&&typeof kValue!="object"){
-					throw new TypeError(kValue+" must be a string or an object.");
-				}
-				var tag = kValue.toString();
-				if(!IsStructurallyValidLanguageTag(tag)){
-					throw new RangeError(tag+" is not a structurally valid language tag.");
-				}
-				tag = CanonicalizeLanguageTag(tag);
-				if(seen.indexOf(tag)<0){
-					seen.push(tag);
-				}
-			}
-			return seen;
-		}
-
-		// ECMA 402 Section 9.2.2
-		function BestAvailableLocale(availableLocales, locale) {
-			var candidate = locale;
-			while (true){
-				if(availableLocales.indexOf(candidate)>=0){
-					return candidate;
-				}
-				var pos = candidate.lastIndexOf("-");
-				if(pos<0){
-					return undefined;
-				}
-				if(pos>=2&&candidate.charAt(pos-2)=="-"){
-					pos -= 2;
-				}
-				candidate = candidate.substring(0, pos);
-			}
-		}
-
-		// ECMA 402 Section 9.2.3
-		function LookupMatcher(availableLocales, requestedLocales) {
-			var i = 0;
-			var len = requestedLocales.length;
-			var availableLocale = undefined;
-			var locale = undefined;
-			var noExtensionsLocale = undefined;
-			while (i<len&&availableLocale===undefined){
-				locale = requestedLocales[i];
-				noExtensionsLocale = locale.replace(unicodeLocaleExtensions, "");
-				availableLocale = BestAvailableLocale(availableLocales, noExtensionsLocale);
-				i++;
-			}
-			var result = new Record();
-			if(availableLocale){
-				result.set("locale", availableLocale);
-				if(locale!=noExtensionsLocale){
-					result.set("extension", locale.match(unicodeLocaleExtensions)[0]);
-					result.set("extensionIndex", locale.search(unicodeLocaleExtensions));
-				}
-			}else{
-				result.set("locale", DefaultLocale());
-			}
-
-			return result;
-		}
-
-		// Algorithm is similar to BestAvailableLocale, as in Section 9.2.2
-		// except that the following additional operations are performed:
-		// 1). CLDR macrolanguage replacements are done ( i.e. "cmn" becomes "zh" )
-		// 2). Known locale aliases, such as zh-TW = zh-Hant-TW, are resolved,
-		// 3). Explicit parent locales from CLDR's supplemental data are also considered.
-		// This data for item #2 is not currently in CLDR see http://unicode.org/cldr/trac/ticket/5949,
-		// but should be there in a future release.
-
-		function BestFitAvailableLocale(availableLocales, locale) {
-			var candidate = locale;
-			var aliases = aliases_json.supplemental.metadata.alias; // Canonicalize the Language Tag
-			var localeAliases = localeAliases_json.supplemental.metadata.alias;
-			while (true){
-				var langtag = candidate.substring(0, candidate.indexOf("-"));
-				var lookupAlias = aliases.languageAlias[langtag];
-				if(lookupAlias&&lookupAlias._reason=="macrolanguage"){
-					candidate = candidate.replace(langtag, lookupAlias._replacement);
-				}
-				lookupAlias = localeAliases.localeAlias[candidate];
-				if(lookupAlias){
-					candidate = lookupAlias._replacement;
-				}
-				if(availableLocales.indexOf(candidate)>=0){
-					return candidate;
-				}
-				var parentLocale = parentLocales_json.supplemental.parentLocales.parentLocale[candidate];
-				if(parentLocale){
-					candidate = parentLocale;
-				}else{
-					var pos = candidate.lastIndexOf("-");
-					if(pos<0){
-						return undefined;
-					}
-					if(pos>=2&&candidate.charAt(pos-2)=="-"){
-						pos -= 2;
-					}
-					candidate = candidate.substring(0, pos);
-				}
-			}
-		}
-
-		// ECMA 402 Section 9.2.4
-		function BestFitMatcher(availableLocales, requestedLocales) {
-			var i = 0;
-			var len = requestedLocales.length;
-			var availableLocale = undefined;
-			var locale = undefined;
-			var noExtensionsLocale = undefined;
-			while (i<len&&availableLocale===undefined){
-				locale = requestedLocales[i];
-				noExtensionsLocale = locale.replace(unicodeLocaleExtensions, "");
-				availableLocale = BestFitAvailableLocale(availableLocales, noExtensionsLocale);
-				i++;
-			}
-			var result = new Record();
-			if(availableLocale){
-				result.set("locale", availableLocale);
-				if(locale!=noExtensionsLocale){
-					result.set("extension", locale.match(unicodeLocaleExtensions)[0]);
-					result.set("extensionIndex", locale.search(unicodeLocaleExtensions));
-				}
-			}else{
-				result.set("locale", DefaultLocale());
-			}
-			return result;
-		}
-
-		// ECMA 402 Section 9.2.5
-		function ResolveLocale(availableLocales, requestedLocales, options, relevantExtensionKeys, localeData) {
-			var matcher = options.localeMatcher;
-			var r = matcher=="lookup" ? LookupMatcher(availableLocales, requestedLocales) : BestFitMatcher(
-				availableLocales, requestedLocales);
-			var foundLocale = r.locale;
-			var extension = "";
-			var extensionSubtags = [];
-			var extensionSubtagsLength = 0;
-			var extensionIndex = 0;
-			if(r.extension!==undefined){
-				extension = r.extension;
-				extensionIndex = r.extensionIndex;
-				extensionSubtags = extension.split("-");
-				extensionSubtagsLength = extensionSubtags["length"];
-			}
-			var result = new Record();
-			result.set("dataLocale", foundLocale);
-			var supportedExtension = "-u";
-			var i = 0;
-			var len = relevantExtensionKeys["length"];
-			while (i<len){
-				var key = relevantExtensionKeys[String(i)];
-				var foundLocaleData = localeData[foundLocale];
-				var keyLocaleData = foundLocaleData[key];
-				var value = keyLocaleData["0"];
-				var supportedExtensionAddition = "";
-				if(typeof extensionSubtags!="undefined"){
-					var keyPos = extensionSubtags.indexOf(key);
-					var valuePos;
-					if(keyPos!=-1){
-						if(keyPos+1<extensionSubtagsLength&&extensionSubtags[String(keyPos+1)].length>2){
-							var requestedValue = extensionSubtags[String(keyPos+1)];
-							valuePos = keyLocaleData.indexOf(requestedValue);
-							if(valuePos!=-1){
-								value = requestedValue;
-								supportedExtensionAddition = "-"+key+"-"+value;
-							}
-						}else{
-							valuePos = keyLocaleData.indexOf("true");
-							if(valuePos!=-1){
-								value = "true";
-							}
-						}
-					}
-				}
-				var optionsValue = options[key];
-				if(optionsValue!==undefined){
-					if(keyLocaleData.indexOf(optionsValue)!=-1){
-						if(optionsValue!=value){
-							value = optionsValue;
-							supportedExtensionAddition = "";
-						}
-					}
-				}
-				result.set(key, value);
-				supportedExtension += supportedExtensionAddition;
-				i++;
-			}
-			if(supportedExtension.length>2){
-				var preExtension = foundLocale.substring(0, extensionIndex);
-				var postExtension = foundLocale.substring(extensionIndex);
-				foundLocale = preExtension+supportedExtension+postExtension;
-			}
-			result.set("locale", foundLocale);
-			return result;
-		}
-
-		// ECMA 402 Section 9.2.6
-		function LookupSupportedLocales(availableLocales, requestedLocales) {
-			var len = requestedLocales.length;
-			var subset = new List();
-			var k = 0;
-			while (k<len){
-				var locale = requestedLocales[k];
-				var noExtensionsLocale = locale.replace(unicodeLocaleExtensions, "");
-				var availableLocale = BestAvailableLocale(availableLocales, noExtensionsLocale);
-				if(availableLocale!==undefined){
-					subset.push(locale);
-				}
-				k++;
-			}
-			var subsetArray = subset.toArray();
-			return subsetArray;
-		}
-
-		// ECMA 402 Section 9.2.7
-		function BestFitSupportedLocales(availableLocales, requestedLocales) {
-			var len = requestedLocales.length;
-			var subset = new List();
-			var k = 0;
-			while (k<len){
-				var locale = requestedLocales[k];
-				var noExtensionsLocale = locale.replace(unicodeLocaleExtensions, "");
-				var availableLocale = BestFitAvailableLocale(availableLocales, noExtensionsLocale);
-				if(availableLocale!==undefined){
-					subset.push(locale);
-				}
-				k++;
-			}
-			var subsetArray = subset.toArray();
-			return subsetArray;
-		}
-
-		// ECMA 402 Section 9.2.8
-		function SupportedLocales(availableLocales, requestedLocales, options) {
-			var matcher = undefined;
-			var subset;
-			if(options!==undefined){
-				options = Object(options);
-				matcher = options["localeMatcher"];
-				if(matcher!==undefined){
-					matcher = String(matcher);
-					if(matcher!=="lookup"&&matcher!=="best fit"){
-						throw new RangeError("Matching algorithm must be 'lookup' or 'best fit'.");
-					}
-				}
-			}
-			if(matcher===undefined||matcher==="best fit"){
-				subset = BestFitSupportedLocales(availableLocales, requestedLocales);
-			}else{
-				subset = LookupSupportedLocales(availableLocales, requestedLocales);
-			}
-			for( var P in Object.getOwnPropertyNames(subset)){
-				var desc = Object.getOwnPropertyDescriptor(subset, P);
-				if(desc!==undefined){
-					desc.writable = false;
-					desc.configurable = false;
-					Object.defineProperty(subset, P, desc);
-				}
-			}
-			Object.defineProperty(subset, "length", {
-				writable : false,
-				configurable : false
-			});
-			return subset;
-		}
-
-		// ECMA 402 Section 9.2.9
-		function GetOption(options, property, type, values, fallback) {
-			var value = options[property];
-			if(value!==undefined){
-				if(type=="boolean"){
-					value = Boolean(value);
-				}
-				if(type=="string"){
-					value = String(value);
-				}
-				if(values!==undefined){
-					for( var v in values){
-						if(values[v]===value){
-							return value;
-						}
-					}
-					throw new RangeError("The specified value "+value+" for property "+property+" is invalid.");
-				}
-				return value;
-			}
-			return fallback;
-		}
-
-		// ECMA 402 Section 9.2.10
-		function GetNumberOption(options, property, minimum, maximum, fallback) {
-			var value = options[property];
-			if(value!==undefined){
-				value = Number(value);
-				if(isNaN(value)||value<minimum||value>maximum){
-					throw new RangeError("The specified number value "+value+" is not in the allowed range");
-				}
-				return Math.floor(value);
-			}
-			return fallback;
 		}
 
 		function CurrencyDigits(currency) {
@@ -532,23 +52,23 @@ define(
 				throw new TypeError("NumberFormat is already initialized.");
 			}
 			numberFormat.initializedIntlObject = true;
-			var requestedLocales = CanonicalizeLocaleList(locales);
+			var requestedLocales = common.CanonicalizeLocaleList(locales);
 			if(options===undefined){
 				options = {};
 			}else{
 				options = Object(options);
 			}
 			var opt = new Record();
-			var matcher = GetOption(options, "localeMatcher", "string", [ "lookup", "best fit" ], "best fit");
+			var matcher = common.GetOption(options, "localeMatcher", "string", [ "lookup", "best fit" ], "best fit");
 			opt.set("localeMatcher", matcher);
-			var r = ResolveLocale(NumberFormat.availableLocales, requestedLocales, opt,
+			var r = common.ResolveLocale(NumberFormat.availableLocales, requestedLocales, opt,
 				NumberFormat.relevantExtensionKeys, NumberFormat.localeData);
 			numberFormat.locale = r.locale;
 			numberFormat.dataLocale = r.dataLocale;
 			numberFormat.numberingSystem = r.nu;
-			var s = GetOption(options, "style", "string", [ "decimal", "percent", "currency" ], "decimal");
+			var s = common.GetOption(options, "style", "string", [ "decimal", "percent", "currency" ], "decimal");
 			numberFormat.style = s;
-			var c = GetOption(options, "currency", "string");
+			var c = common.GetOption(options, "currency", "string");
 			if(c!==undefined&&!IsWellFormedCurrencyCode(c)){
 				throw new RangeError("Invalid currency code "+c);
 			}
@@ -563,14 +83,11 @@ define(
 				numberFormat.currencyDisplayName = c;
 				cDigits = CurrencyDigits(c);
 			}
-			var cd = GetOption(options, "currencyDisplay", "string", [ "code", "symbol", "name" ], "symbol");
+			var cd = common.GetOption(options, "currencyDisplay", "string", [ "code", "symbol", "name" ], "symbol");
 			if(s=="currency"){
 				numberFormat.currencyDisplay = cd;
 				if(cd=="symbol"||cd=="name"){
-					var loadedLocale = preloads[numberFormat.dataLocale] ? numberFormat.dataLocale : preloads[DefaultLocale()] ? DefaultLocale() : "root";
-					if (!preloads[loadedLocale]["currencies"]){
-						loadedLocale = "root";
-					}
+					var loadedLocale = (preloads[numberFormat.dataLocale]&&preloads[numberFormat.dataLocale]["currencies"]) ? numberFormat.dataLocale : "root";
 					var curr = preloads[loadedLocale]["currencies"].main[loadedLocale].numbers.currencies;
 					if(curr[numberFormat.currency]){
 						numberFormat.currencySymbol = curr[numberFormat.currency].symbol;
@@ -578,7 +95,7 @@ define(
 					}
 				}
 			}
-			var mnid = GetNumberOption(options, "minimumIntegerDigits", 1, 21, 1);
+			var mnid = common.GetNumberOption(options, "minimumIntegerDigits", 1, 21, 1);
 			numberFormat.minimumIntegerDigits = mnid;
 			var mnfdDefault;
 			if(s=="currency"){
@@ -586,7 +103,7 @@ define(
 			}else{
 				mnfdDefault = 0;
 			}
-			var mnfd = GetNumberOption(options, "minimumFractionDigits", 0, 20, mnfdDefault);
+			var mnfd = common.GetNumberOption(options, "minimumFractionDigits", 0, 20, mnfdDefault);
 			numberFormat.minimumFractionDigits = mnfd;
 			var mxfdDefault;
 			if(s=="currency"){
@@ -596,22 +113,20 @@ define(
 			}else{
 				mxfdDefault = Math.max(mnfd, 3);
 			}
-			var mxfd = GetNumberOption(options, "maximumFractionDigits", mnfd, 20, mxfdDefault);
+			var mxfd = common.GetNumberOption(options, "maximumFractionDigits", mnfd, 20, mxfdDefault);
 			numberFormat.maximumFractionDigits = mxfd;
 			var mnsd = options["minimumSignificantDigits"];
 			var mxsd = options["maximumSignificantDigits"];
 			if(mnsd!==undefined||mxsd!==undefined){
-				mnsd = GetNumberOption(options, "minimumSignificantDigits", 1, 21, 1);
-				mxsd = GetNumberOption(options, "maximumSignificantDigits", mnsd, 21, 1);
+				mnsd = common.GetNumberOption(options, "minimumSignificantDigits", 1, 21, 1);
+				mxsd = common.GetNumberOption(options, "maximumSignificantDigits", mnsd, 21, 1);
 				numberFormat.minimumSignificantDigits = mnsd;
 				numberFormat.maximumSignificantDigits = mxsd;
 			}
-			var g = GetOption(options, "useGrouping", "boolean", undefined, true);
+			var g = common.GetOption(options, "useGrouping", "boolean", undefined, true);
 			numberFormat.useGrouping = g;
-			loadedLocale = preloads[numberFormat.dataLocale] ? numberFormat.dataLocale : preloads[DefaultLocale()] ? DefaultLocale() : "root";
-			if (!preloads[loadedLocale]["numbers"]){
-				loadedLocale = "root";
-			}
+			loadedLocale = (preloads[numberFormat.dataLocale]&&preloads[numberFormat.dataLocale]["numbers"]) ? numberFormat.dataLocale
+				: "root";
 			var numb = preloads[loadedLocale]["numbers"].main[loadedLocale]["numbers"];
 			if(r.locale==r.dataLocale){
 				numberFormat.numberingSystem = numb.defaultNumberingSystem;
@@ -1013,12 +528,12 @@ define(
 				throw new TypeError("DateTimeFormat is already initialized.");
 			}
 			dateTimeFormat.initializedIntlObject = true;
-			var requestedLocales = CanonicalizeLocaleList(locales);
+			var requestedLocales = common.CanonicalizeLocaleList(locales);
 			options = ToDateTimeOptions(options, "any", "date");
 			var opt = new Record();
-			var matcher = GetOption(options, "localeMatcher", "string", [ "lookup", "best fit" ], "best fit");
+			var matcher = common.GetOption(options, "localeMatcher", "string", [ "lookup", "best fit" ], "best fit");
 			opt.set("localeMatcher", matcher);
-			var r = ResolveLocale(DateTimeFormat.availableLocales, requestedLocales, opt,
+			var r = common.ResolveLocale(DateTimeFormat.availableLocales, requestedLocales, opt,
 				DateTimeFormat.relevantExtensionKeys, DateTimeFormat.localeData);
 			dateTimeFormat.locale = r.locale;
 			dateTimeFormat.numberingSystem = r.nu;
@@ -1027,7 +542,7 @@ define(
 			var tz = options["timeZone"];
 			if(tz!==undefined){
 				tz = tz.toString();
-				tz = _toUpperCaseIdentifier(tz);
+				tz = common._toUpperCaseIdentifier(tz);
 				if(tz!="UTC"){
 					throw new RangeError("Timezones other than UTC are not supported");
 				}
@@ -1035,7 +550,7 @@ define(
 			dateTimeFormat.timeZone = tz;
 			opt = new Record();
 			dateTimeProperties.forEach(function(prop) {
-				var value = GetOption(options, prop, "string", _validDateTimePropertyValues(prop), undefined);
+				var value = common.GetOption(options, prop, "string", _validDateTimePropertyValues(prop), undefined);
 				opt.set(prop, value);
 			});
 
@@ -1044,14 +559,11 @@ define(
 			// up front, and accessing them here, we instead wait until we know which locale we are
 			// interested in, and load the formats from the JSON data.
 			var cldrCalendar = dateTimeFormat.calendar.replace("gregory", "gregorian");
-			var loadedLocale = preloads[dateTimeFormat.dataLocale] ? dateTimeFormat.dataLocale : preloads[DefaultLocale()] ? DefaultLocale() : "root";
-			if (!preloads[loadedLocale]["ca-"+cldrCalendar]){
-				loadedLocale = "root";
-			}
+			var loadedLocale = ( preloads[dateTimeFormat.dataLocale] && preloads[dateTimeFormat.dataLocale]["ca-"+cldrCalendar] ) ? dateTimeFormat.dataLocale : "root";
 			var calData = preloads[loadedLocale]["ca-"+cldrCalendar].main[loadedLocale].dates.calendars[cldrCalendar];
 			dateTimeFormat.calData = calData;
 			var formats = _convertAvailableDateTimeFormats(calData.dateTimeFormats);
-			matcher = GetOption(options, "formatMatcher", "string", [ "basic", "best fit" ], "best fit");
+			matcher = common.GetOption(options, "formatMatcher", "string", [ "basic", "best fit" ], "best fit");
 			var bestFormat = matcher=="basic" ? BasicFormatMatcher(opt, formats) : BestFitFormatMatcher(opt, formats);
 			dateTimeProperties.forEach(function(prop) {
 				var pDesc = Object.getOwnPropertyDescriptor(bestFormat, prop);
@@ -1060,7 +572,7 @@ define(
 				}
 			});
 			var pattern;
-			var hr12 = GetOption(options, "hour12", "boolean", undefined, undefined);
+			var hr12 = common.GetOption(options, "hour12", "boolean", undefined, undefined);
 			if(dateTimeFormat.hour!=undefined){
 				if(hr12==undefined){
 					hr12 = DateTimeFormat.localeData[loadedLocale]&&DateTimeFormat.localeData[loadedLocale].hour12;
@@ -1359,7 +871,7 @@ define(
 
 		// ECMA 402 Section 11.3.2
 		var NumberFormat = {};
-		NumberFormat.availableLocales = availableLocalesList;
+		NumberFormat.availableLocales = common.availableLocalesList;
 		NumberFormat.relevantExtensionKeys = [ "nu" ];
 		NumberFormat.localeData = {};
 		NumberFormat.availableLocales.forEach(function(loc) {
@@ -1371,7 +883,7 @@ define(
 
 		// ECMA 402 Section 12.2.3
 		var DateTimeFormat = {};
-		DateTimeFormat.availableLocales = availableLocalesList;
+		DateTimeFormat.availableLocales = common.availableLocalesList;
 		DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
 		DateTimeFormat.localeData = {};
 		var timeData = timeData_json.supplemental.timeData;
@@ -1445,12 +957,12 @@ define(
 		Object.defineProperty(Intl.NumberFormat, "supportedLocalesOf", {
 			value : function(locales) {
 				var availableLocales = NumberFormat.availableLocales;
-				var requestedLocales = CanonicalizeLocaleList(locales);
+				var requestedLocales = common.CanonicalizeLocaleList(locales);
 				var options = undefined;
 				if(arguments.length>1){
 					options = arguments[1];
 				}
-				return SupportedLocales(availableLocales, requestedLocales, options);
+				return common.SupportedLocales(availableLocales, requestedLocales, options);
 			},
 			writable : true,
 			enumerable : false,
@@ -1565,12 +1077,12 @@ define(
 		Object.defineProperty(Intl.DateTimeFormat, "supportedLocalesOf", {
 			value : function(locales) {
 				var availableLocales = DateTimeFormat.availableLocales;
-				var requestedLocales = CanonicalizeLocaleList(locales);
+				var requestedLocales = common.CanonicalizeLocaleList(locales);
 				var options = undefined;
 				if(arguments.length>1){
 					options = arguments[1];
 				}
-				return SupportedLocales(availableLocales, requestedLocales, options);
+				return common.SupportedLocales(availableLocales, requestedLocales, options);
 			},
 			writable : true,
 			enumerable : false,

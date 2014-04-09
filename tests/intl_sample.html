@@ -6,13 +6,17 @@
     </head>
     <body>
         <h1>IBM ECMA-402 Intl demo</h1>
-        <p id="demo">Click a button to display the current date and time as a string.</p>
+        <h3>Click a button to change the locale being formatted.</h3>
+        <h4>Current Date and Time</h4>
+        <p id="demo">Now</p>
+        <h4>The number 123456.789</h4>
+        <p id="numb">123456.789</p>
 		<script src="/ecma402/requirejs/require.js"></script>
 	<script>
 		function formatit(locale) {
 			require.config({
 				  baseUrl: '/ecma402',
-				  config: { 'locales' : ["de", "ja", "es"]}
+				  config: { 'locales' : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
 			});
 			require([ "Intl" ], function(Intl) {
 				var options = {
@@ -27,6 +31,9 @@
 				df = new Intl.DateTimeFormat(locale, options);
 				var x = document.getElementById("demo");
 				x.innerHTML = df.format(new Date());
+				nf = new Intl.NumberFormat(locale, options);
+				var y = document.getElementById("numb");
+				y.innerHTML = nf.format(123456.789);
 			});
 		}
 	</script>
@@ -34,12 +41,18 @@
         var d = new Date();
    		var x = document.getElementById("demo");
 		x.innerHTML = d.toUTCString();
-		'>UTC String</button>
-       <button onclick='formatit()'>Intl [Default Locale]</button>
-       <button onclick='formatit("en")'>Intl [English]</button>
-       <button onclick='formatit("de")'>Intl [German]</button>
-       <button onclick='formatit("es")'>Intl [Spanish]</button>
-       <button onclick='formatit("ja")'>Intl [Japanese]</button>
-       <button onclick='formatit("fr")'>Intl [French] (not loaded)</button>
+		var n = Number(123456.789);
+		var y = document.getElementById("numb");
+		y.innerHTML = n.toString();
+		'>Javascript Generic</button>
+       <button onclick='formatit()'>[Default Locale]</button>
+       <button onclick='formatit("ar-SA")'>Arabic - Saudi Arabia</button>
+       <button onclick='formatit("ar-TN")'>Arabic - Tunisia</button>
+       <button onclick='formatit("en")'>English</button>
+       <button onclick='formatit("de")'>German</button>
+       <button onclick='formatit("es")'>Spanish</button>
+       <button onclick='formatit("hi-u-nu-deva")'>Hindi w/native digits</button>
+       <button onclick='formatit("ja")'>Japanese</button>
+       <button onclick='formatit("fr")'>French (not preloaded)</button>
     </body>
 </html>
