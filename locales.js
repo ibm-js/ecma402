@@ -3,7 +3,7 @@
  */
 define([ "module", "common" ], function (module, common) {
 	var locales = {
-		preLoadList : [ ],
+		preLoadList : [ "root" ],
 		jsonElements : [ "currencies", "numbers", "ca-gregorian" ]
 	};
 
@@ -21,7 +21,7 @@ define([ "module", "common" ], function (module, common) {
 		if (typeof module.config() === "string") {
 			if (module.config() === "allAvailable") {
 				common.availableLocalesList.forEach(function (locale) {
-					if (locale !== "root" && locale !== common.DefaultLocale()) {
+					if (locales.preLoadList.indexOf(locale) === -1) {
 						locales.preLoadList.push(locale);
 						loadLocaleElements(locale);
 					}
@@ -43,7 +43,7 @@ define([ "module", "common" ], function (module, common) {
 			});
 		} else if (module.config() instanceof RegExp) {
 			common.availableLocalesList.forEach(function (locale) {
-				if (module.config().test(locale) && locale !== "root" && locale !== common.DefaultLocale()) {
+				if (module.config().test(locale) && locales.preLoadList.indexOf(locale) === -1) {
 					locales.preLoadList.push(locale);
 					loadLocaleElements(locale);
 				}

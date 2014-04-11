@@ -77,9 +77,7 @@ define(
 				if (s == "currency") {
 					numberFormat.currencyDisplay = cd;
 					if (cd == "symbol" || cd == "name") {
-						var loadedLocale = (preloads[numberFormat.dataLocale] && preloads[numberFormat.dataLocale]["currencies"]) ? numberFormat.dataLocale
-								: "root";
-						var curr = preloads[loadedLocale]["currencies"].main[loadedLocale].numbers.currencies;
+						var curr = preloads[numberFormat.dataLocale]["currencies"].main[numberFormat.dataLocale].numbers.currencies;
 						if (curr[numberFormat.currency]) {
 							numberFormat.currencySymbol = curr[numberFormat.currency].symbol;
 							numberFormat.currencyDisplayName = curr[numberFormat.currency].displayName;
@@ -116,9 +114,7 @@ define(
 				}
 				var g = common.GetOption(options, "useGrouping", "boolean", undefined, true);
 				numberFormat.useGrouping = g;
-				loadedLocale = (preloads[numberFormat.dataLocale] && preloads[numberFormat.dataLocale]["numbers"]) ? numberFormat.dataLocale
-						: "root";
-				var numb = preloads[loadedLocale]["numbers"].main[loadedLocale]["numbers"];
+				var numb = preloads[numberFormat.dataLocale]["numbers"].main[numberFormat.dataLocale]["numbers"];
 				if (r.locale == r.dataLocale) {
 					numberFormat.numberingSystem = numb.defaultNumberingSystem;
 				}
@@ -565,11 +561,8 @@ define(
 				 * the JSON data.
 				 */
 				var cldrCalendar = dateTimeFormat.calendar.replace("gregory", "gregorian");
-				var loadedLocale = (preloads[dateTimeFormat.dataLocale] && preloads[dateTimeFormat.dataLocale]["ca-"
-						+ cldrCalendar]) ? dateTimeFormat.dataLocale : "root";
-				var calData = preloads[loadedLocale]["ca-" + cldrCalendar].main[loadedLocale].dates.calendars[cldrCalendar];
-				dateTimeFormat.calData = calData;
-				var formats = _convertAvailableDateTimeFormats(calData.dateTimeFormats);
+				dateTimeFormat.calData = preloads[dateTimeFormat.dataLocale]["ca-" + cldrCalendar].main[dateTimeFormat.dataLocale].dates.calendars[cldrCalendar];
+				var formats = _convertAvailableDateTimeFormats(dateTimeFormat.calData.dateTimeFormats);
 				matcher = common.GetOption(options, "formatMatcher", "string", [ "basic", "best fit" ], "best fit");
 				var bestFormat = matcher == "basic" ? BasicFormatMatcher(opt, formats) : BestFitFormatMatcher(opt,
 						formats);
@@ -583,13 +576,13 @@ define(
 				var hr12 = common.GetOption(options, "hour12", "boolean", undefined, undefined);
 				if (dateTimeFormat.hour != undefined) {
 					if (hr12 == undefined) {
-						hr12 = DateTimeFormat.localeData[loadedLocale]
-								&& DateTimeFormat.localeData[loadedLocale].hour12;
+						hr12 = DateTimeFormat.localeData[dateTimeFormat.dataLocale]
+								&& DateTimeFormat.localeData[dateTimeFormat.dataLocale].hour12;
 					}
 					dateTimeFormat.hour12 = hr12;
 					if (hr12) {
-						var hourNo0 = DateTimeFormat.localeData[loadedLocale]
-								&& DateTimeFormat.localeData[loadedLocale].hourNo0;
+						var hourNo0 = DateTimeFormat.localeData[dateTimeFormat.dataLocale]
+								&& DateTimeFormat.localeData[dateTimeFormat.dataLocale].hourNo0;
 						dateTimeFormat.hourNo0 = hourNo0;
 						dateTimeFormat.hour = bestFormat.hour12;
 						pattern = bestFormat.pattern12;
@@ -892,7 +885,7 @@ define(
 
 			// ECMA 402 Section 11.3.2
 			var NumberFormat = {};
-			NumberFormat.availableLocales = common.availableLocalesList;
+			NumberFormat.availableLocales = locales.preLoadList;
 			NumberFormat.relevantExtensionKeys = [ "nu" ];
 			NumberFormat.localeData = {};
 			NumberFormat.availableLocales.forEach(function (loc) {
@@ -904,7 +897,7 @@ define(
 
 			// ECMA 402 Section 12.2.3
 			var DateTimeFormat = {};
-			DateTimeFormat.availableLocales = common.availableLocalesList;
+			DateTimeFormat.availableLocales = locales.preLoadList;
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
 			DateTimeFormat.localeData = {};
 			var timeData = timeData_json.supplemental.timeData;

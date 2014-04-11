@@ -1,27 +1,20 @@
+//
+// Shim for native vs. ecma402 package implementation of the Intl object.
+//
+var __globalObject = Function("return this;")();
+var dependencies = [];
+if (__globalObject.Intl === undefined) {
+	dependencies.push("Intl");
+}
 require.config({
-	baseUrl : "/ecma402"
+	baseUrl : "/ecma402",
+	paths : {
+		"require" : "/ecma402/requirejs/require",
+	}
 });
-define("IntlShim", [], function () {
-	//
-	// Shim for native vs. ecma402 package implementation of the Intl object.
-	//
-	var __globalObject = Function("return this;")();
-
-	// -----------------------------------------------------------------------------
-
+define("IntlShim", dependencies, function (Intl) {
 	if (__globalObject.Intl !== undefined) {
 		return __globalObject.Intl;
 	}
-	var IntlShim = {};
-	require([ "Intl" ], function (ecma402Intl) {
-		// Always use the browser's Collator if possible, since we didn't implement it.
-		if (__globalObject.Intl !== undefined) {
-			IntlShim.Collator = __globalObject.Intl.Collator;
-		} else {
-			IntlShim.Collator = ecma402Intl.Collator;
-		}
-		IntlShim.NumberFormat = ecma402Intl.NumberFormat;
-		IntlShim.DateTimeFormat = ecma402Intl.DateTimeFormat;
-	});
-	return IntlShim;
+	return Intl;
 });

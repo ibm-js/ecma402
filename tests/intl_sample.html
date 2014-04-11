@@ -7,18 +7,30 @@
     <body>
         <h1>IBM ECMA-402 Intl demo</h1>
         <h3>Click a button to change the locale being formatted.</h3>
-        <h4>Current Date and Time</h4>
-        <p id="demo">Now</p>
-        <h4>The number 123456.789</h4>
-        <p id="numb">123456.789</p>
-		<script src="/ecma402/requirejs/require.js"></script>
+		<table border="2" style="width:80%">
+		<tr>
+		  <th></th>
+		  <th>IBM</th>
+		  <th>Native</th>
+		</tr>
+		<tr>
+		  <td>Current Date/Time</td>
+		  <td id="demo"></td>
+		  <td id="demo1"></td>
+		</tr>
+		<tr>
+		  <td>Number</td>
+		  <td id="numb"></td>
+		  <td id="numb1"></td>
+		</tr>
+</table> 		<script src="/ecma402/requirejs/require.js"></script>
 	<script>
 		function formatit(locale) {
 			require.config({
 				  baseUrl: '/ecma402',
 				  config: { 'locales' : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
 			});
-			require([ "Intl" ], function(Intl) {
+			require([ "Intl", "IntlShim"], function(Intl,IntlShim) {
 				var options = {
 					year : "numeric",
 					month : "short",
@@ -31,20 +43,18 @@
 				df = new Intl.DateTimeFormat(locale, options);
 				var x = document.getElementById("demo");
 				x.innerHTML = df.format(new Date());
+				df1 = new IntlShim.DateTimeFormat(locale, options);
+				var x1 = document.getElementById("demo1");
+				x1.innerHTML = df1.format(new Date());
 				nf = new Intl.NumberFormat(locale, options);
 				var y = document.getElementById("numb");
 				y.innerHTML = nf.format(123456.789);
+				nf1 = new IntlShim.NumberFormat(locale, options);
+				var y1 = document.getElementById("numb1");
+				y1.innerHTML = nf1.format(123456.789);
 			});
 		}
 	</script>
-	<button onclick='
-        var d = new Date();
-   		var x = document.getElementById("demo");
-		x.innerHTML = d.toUTCString();
-		var n = Number(123456.789);
-		var y = document.getElementById("numb");
-		y.innerHTML = n.toString();
-		'>Javascript Generic</button>
        <button onclick='formatit()'>[Default Locale]</button>
        <button onclick='formatit("ar-SA")'>Arabic - Saudi Arabia</button>
        <button onclick='formatit("ar-TN")'>Arabic - Tunisia</button>

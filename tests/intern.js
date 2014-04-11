@@ -56,7 +56,7 @@ define({
 	// can be used here
 	loader: {
 		baseUrl: '/ecma402',
-		config : { "locales" : ["ar","de","el","en","es","hi","id","ja","th","zh","zh-Hant"] },
+		config : { "locales" : /^(ar|de(-CH)?|el|en(-(GB|NZ))?|es|he|hi|id|ja|pt.*|sr(-Latn)?|th|zh.*)$/ },
 		// Packages that should be registered with the loader in each testing environment
 		packages : [ 
 		  		    { name: 'intern',
