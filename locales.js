@@ -3,7 +3,7 @@
  */
 define([ "module", "common" ], function (module, common) {
 	var locales = {
-		preLoadList : [],
+		preLoadList : [ ],
 		jsonElements : [ "currencies", "numbers", "ca-gregorian" ]
 	};
 

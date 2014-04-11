@@ -171,7 +171,7 @@ define(
 				properties.forEach(function(property) {
 					var adaptedProperties = [ property, "__"+property, "_"+property, property+"_", property+"__" ];
 					adaptedProperties.forEach(function(property) {
-						this.taintDataProperty(Object.prototype, property);
+						testIntl.taintDataProperty(Object.prototype, property);
 					});
 				});
 			},
@@ -185,7 +185,7 @@ define(
 				properties.forEach(function(property) {
 					var adaptedProperties = [ property, "__"+property, "_"+property, property+"_", property+"__" ];
 					adaptedProperties.forEach(function(property) {
-						this.untaintDataProperty(Object.prototype, property);
+						testIntl.untaintDataProperty(Object.prototype, property);
 					});
 				});
 			},
