@@ -1,4 +1,4 @@
-define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShim' ], function(registerSuite, assert, Intl, IntlShim) {
+define([ 'intern!object', 'intern/chai!assert', 'Intl' ], function(registerSuite, assert, Intl) {
 	registerSuite({
 		name : 'unitTest',
 		matcherFunctions : function() {
@@ -235,7 +235,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShi
 					'Intl.DateTimeFormat.format() should return expected string for locale '+currentTest.locales);
 			});
 		},
-		testShim : function() {
+/*		testShim : function() {
 			var numberFormattingTestCases = [ {
 				"native" : false,
 				"locales" : "sl",
@@ -383,6 +383,6 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShi
 					'Intl.DateTimeFormat.format() with native = '+currentTest.native.toString()
 						+' should return expected string for locale '+currentTest.locales);
 			});
-		}
+		} */
 	});
 });

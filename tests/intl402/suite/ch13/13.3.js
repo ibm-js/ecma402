@@ -1,7 +1,7 @@
 // Copyright 2012,2013 Mozilla Corporation. All rights reserved.
 // This code is governed by the BSD license found in the LICENSE file.
 define(
-	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/tests/intl402/harness/testIntl', 'ecma402/tests/intl402/harness/testBuiltInObject' ], 
+	[ 'intern!object', 'intern/chai!assert', 'Intl', 'tests/intl402/harness/testIntl', 'tests/intl402/harness/testBuiltInObject' ], 
 	function(registerSuite, assert, Intl, testIntl, testBuiltInObject) {
 	registerSuite({
 		name : '13.3',
@@ -212,12 +212,13 @@ define(
 			 *     built-in Intl.DateTimeFormat constructor.
 			 * @author Norbert Lindenberg
 			 */
-			// Note: This test placed last because it alters Intl.DateTimeFormat and can
-			// cause other test cases to fail inadvertently.
+			var save = Intl.DateTimeFormat;
 			testIntl.taintDataProperty(Intl, "DateTimeFormat");
 			new Date().toLocaleString();
 			new Date().toLocaleDateString();
 			new Date().toLocaleTimeString();
+			testIntl.untaintDataProperty(Intl, "DateTimeFormat");
+			Intl.DateTimeFormat = save;
 		}
 	});
 });

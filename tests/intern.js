@@ -55,32 +55,33 @@ define({
 	// Configuration options for the module loader; any AMD configuration options supported by the specified AMD loader
 	// can be used here
 	loader: {
-		baseUrl: 'http://localhost:8000',
+		baseUrl: '/ecma402',
+		config : { "locales" : ["ar","de","el","en","es","hi","id","ja","th","zh","zh-Hant"] },
 		// Packages that should be registered with the loader in each testing environment
 		packages : [ 
 		  		    { name: 'intern',
-		  			  location: '/node_modules/intern'
+		  			  location: '../node_modules/intern'
 		  			},
 		    		]
 	},
 	// Non-functional test suite(s) to run in each browser
-	suites : [  'ecma402/tests/unitTest' ],
-//             ['ecma402/tests/intl402/suite/ch06/6.2'],
-//    'ecma402/tests/intl402/suite/ch06/6.3',
-//    'ecma402/tests/intl402/suite/ch06/6.4',
-//    'ecma402/tests/intl402/suite/ch08/8.0',
-//    'ecma402/tests/intl402/suite/ch09/9.1',
-//    'ecma402/tests/intl402/suite/ch09/9.2',
-//    'ecma402/tests/intl402/suite/ch11/11.1',
-//    'ecma402/tests/intl402/suite/ch11/11.2',
-//    'ecma402/tests/intl402/suite/ch11/11.3',
-//    'ecma402/tests/intl402/suite/ch11/11.4',
-//    'ecma402/tests/intl402/suite/ch12/12.1',
-//    'ecma402/tests/intl402/suite/ch12/12.2',
-//    'ecma402/tests/intl402/suite/ch12/12.3',
-//    'ecma402/tests/intl402/suite/ch12/12.4',
-//    'ecma402/tests/intl402/suite/ch13/13.2',
-//    'ecma402/tests/intl402/suite/ch13/13.3'],
+	suites : [  'tests/unitTest',
+	            'tests/intl402/suite/ch06/6.2',
+                'tests/intl402/suite/ch06/6.3',
+                'tests/intl402/suite/ch06/6.4',
+                'tests/intl402/suite/ch08/8.0',
+                'tests/intl402/suite/ch09/9.1',
+                'tests/intl402/suite/ch09/9.2',
+                'tests/intl402/suite/ch11/11.1',
+                'tests/intl402/suite/ch11/11.2',
+                'tests/intl402/suite/ch11/11.3',
+                'tests/intl402/suite/ch11/11.4',
+                'tests/intl402/suite/ch12/12.1',	
+                'tests/intl402/suite/ch12/12.2',
+                'tests/intl402/suite/ch12/12.3',
+                'tests/intl402/suite/ch12/12.4',
+                'tests/intl402/suite/ch13/13.2',
+                'tests/intl402/suite/ch13/13.3'],
 
 	// Functional test suite(s) to run in each browser once non-functional tests are completed
 	functionalSuites: [ /* 'myPackage/tests/functional' */ ],

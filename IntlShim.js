@@ -1,7 +1,7 @@
 require.config({
 	baseUrl : "/ecma402"
 });
-define("IntlShim", [ ], function() {
+define("IntlShim", [], function () {
 	//
 	// Shim for native vs. ecma402 package implementation of the Intl object.
 	//
@@ -9,15 +9,15 @@ define("IntlShim", [ ], function() {
 
 	// -----------------------------------------------------------------------------
 
-	if(__globalObject.Intl!==undefined){
+	if (__globalObject.Intl !== undefined) {
 		return __globalObject.Intl;
 	}
 	var IntlShim = {};
-	require([ "Intl" ], function(ecma402Intl) {
+	require([ "Intl" ], function (ecma402Intl) {
 		// Always use the browser's Collator if possible, since we didn't implement it.
-		if(__globalObject.Intl!==undefined){
+		if (__globalObject.Intl !== undefined) {
 			IntlShim.Collator = __globalObject.Intl.Collator;
-		}else{
+		} else {
 			IntlShim.Collator = ecma402Intl.Collator;
 		}
 		IntlShim.NumberFormat = ecma402Intl.NumberFormat;

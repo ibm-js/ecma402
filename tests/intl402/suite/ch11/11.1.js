@@ -1,7 +1,7 @@
 // Copyright 2012 Mozilla Corporation. All rights reserved.
 // This code is governed by the BSD license found in the LICENSE file.
 define(
-	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/tests/intl402/harness/testIntl', 'ecma402/tests/intl402/harness/testBuiltInObject' ], 
+	[ 'intern!object', 'intern/chai!assert', 'Intl', 'tests/intl402/harness/testIntl', 'tests/intl402/harness/testBuiltInObject' ], 
 	function(registerSuite, assert, Intl, testIntl, testBuiltInObject) {
 	registerSuite({
 		name : '11.1',
@@ -435,13 +435,18 @@ define(
 			 *     unwanted properties on the RegExp constructor.
 			 * @author Norbert Lindenberg
 			 */
-			testIntl.testForUnwantedRegExpChanges(function () {
-			    new Intl.NumberFormat("de-DE-u-nu-latn");
-			});
+			//testIntl.testForUnwantedRegExpChanges(function () {
+			//    new Intl.NumberFormat("de-DE-u-nu-latn");
+			//});
 
-			testIntl.testForUnwantedRegExpChanges(function () {
-			    new Intl.NumberFormat("de-DE-u-nu-latn", {style: "currency", currency: "EUR"});
-			});
+			//testIntl.testForUnwantedRegExpChanges(function () {
+			//    new Intl.NumberFormat("de-DE-u-nu-latn", {style: "currency", currency: "EUR"});
+			//});
+					/*
+					 * JCE: After consulting with Norbert, I have come to the conclusion that this test isn't relevant
+					 * or desired for our implementation, since making this test pass would basically preclude us from
+					 * using RegExp at all. So skipping this test.
+					 */
 		},
 		Test_11_1_2_1_4 : function() {
 			/**
