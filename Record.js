@@ -1,4 +1,4 @@
-define([], function (Record) {
+define( "Record", [], function (Record) {
 
 	// Implementation of the Record abstract data type from ECMA 402.
 	Record = function () {

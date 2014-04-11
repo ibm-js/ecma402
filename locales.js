@@ -1,7 +1,7 @@
 /**
  * 
  */
-define([ "module", "common" ], function (module, common) {
+define( "locales", [ "module", "common" ], function (module, common) {
 	var locales = {
 		preLoadList : [ "root" ],
 		jsonElements : [ "currencies", "numbers", "ca-gregorian" ]

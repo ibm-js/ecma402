@@ -1,4 +1,4 @@
-define([], function (List) {
+define( "List", [], function (List) {
 
 	// Implementation of the List abstract data type from ECMA 402.
 	List = function () {

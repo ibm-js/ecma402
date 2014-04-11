@@ -24,7 +24,7 @@ define(
 			var numberingSystems = numberingSystems_json.supplemental.numberingSystems;
 			var availableNumberingSystems = [ "latn" ];
 			for ( var ns in numberingSystems) {
-				if (numberingSystems[ns]._type == "numeric" && ns != "latn") {
+				if (numberingSystems[ns]._type === "numeric" && ns !== "latn") {
 					availableNumberingSystems.push(ns);
 				}
 			}
@@ -62,11 +62,11 @@ define(
 				if (c !== undefined && !common.IsWellFormedCurrencyCode(c)) {
 					throw new RangeError("Invalid currency code " + c);
 				}
-				if (s == "currency" && c === undefined) {
+				if (s === "currency" && c === undefined) {
 					throw new TypeError("No currency code specified.");
 				}
 				var cDigits = 2;
-				if (s == "currency") {
+				if (s === "currency") {
 					c = common._toUpperCaseIdentifier(c);
 					numberFormat.currency = c;
 					numberFormat.currencySymbol = c;
@@ -74,9 +74,9 @@ define(
 					cDigits = CurrencyDigits(c);
 				}
 				var cd = common.GetOption(options, "currencyDisplay", "string", [ "code", "symbol", "name" ], "symbol");
-				if (s == "currency") {
+				if (s === "currency") {
 					numberFormat.currencyDisplay = cd;
-					if (cd == "symbol" || cd == "name") {
+					if (cd === "symbol" || cd === "name") {
 						var curr = preloads[numberFormat.dataLocale]["currencies"].main[numberFormat.dataLocale].numbers.currencies;
 						if (curr[numberFormat.currency]) {
 							numberFormat.currencySymbol = curr[numberFormat.currency].symbol;
@@ -87,7 +87,7 @@ define(
 				var mnid = common.GetNumberOption(options, "minimumIntegerDigits", 1, 21, 1);
 				numberFormat.minimumIntegerDigits = mnid;
 				var mnfdDefault;
-				if (s == "currency") {
+				if (s === "currency") {
 					mnfdDefault = cDigits;
 				} else {
 					mnfdDefault = 0;
@@ -95,9 +95,9 @@ define(
 				var mnfd = common.GetNumberOption(options, "minimumFractionDigits", 0, 20, mnfdDefault);
 				numberFormat.minimumFractionDigits = mnfd;
 				var mxfdDefault;
-				if (s == "currency") {
+				if (s === "currency") {
 					mxfdDefault = Math.max(mnfd, cDigits);
-				} else if (s == "percent") {
+				} else if (s === "percent") {
 					mxfdDefault = Math.max(mnfd, 0);
 				} else {
 					mxfdDefault = Math.max(mnfd, 3);
@@ -115,7 +115,7 @@ define(
 				var g = common.GetOption(options, "useGrouping", "boolean", undefined, true);
 				numberFormat.useGrouping = g;
 				var numb = preloads[numberFormat.dataLocale]["numbers"].main[numberFormat.dataLocale]["numbers"];
-				if (r.locale == r.dataLocale) {
+				if (r.locale === r.dataLocale) {
 					numberFormat.numberingSystem = numb.defaultNumberingSystem;
 				}
 				var numberInfo = _getNumberInfo(numb, numberFormat.numberingSystem);
@@ -140,7 +140,7 @@ define(
 				var numExp = /[0-9#.,]+/;
 				var number = numExp.exec(pattern)[0];
 				var dPos = number.lastIndexOf(".");
-				if (dPos != -1) {
+				if (dPos !== -1) {
 					number = number.substring(0, dPos);
 				}
 				var groupings = number.split(",");
@@ -151,7 +151,7 @@ define(
 				while (ungroupedDigits && ungroupedDigits[0].length > currentGrouping.length) {
 					var digitsLeft = ungroupedDigits[0].length - currentGrouping.length;
 					n = n.substr(0, digitsLeft) + "," + n.substring(digitsLeft);
-					if (groupings.length > 1) {
+					if (groupings.length > 0) {
 						currentGrouping = groupings.shift();
 					}
 					ungroupedDigits = /^\d+/.exec(n);
@@ -339,7 +339,7 @@ define(
 					if (numberFormat.useGrouping) {
 						n = doGrouping(n, numberFormat.cldrPattern);
 					}
-					if (numberFormat.numberingSystem !== undefined && numberFormat.numberingSystem != "latn") {
+					if (numberFormat.numberingSystem !== undefined && numberFormat.numberingSystem !== "latn") {
 						var alldigits = /\d/g;
 						n = n.replace(alldigits, function (m) {
 							return numberingSystems[numberFormat.numberingSystem]._digits.charAt(m);
@@ -362,12 +362,12 @@ define(
 					result = result.replace("-", numberFormat.symbols.minusSign);
 					result = result.replace("%", numberFormat.symbols.percentSign);
 					result = result.replace("{number}", n);
-					if (numberFormat.style == "currency") {
+					if (numberFormat.style === "currency") {
 						var currency = numberFormat.currency;
 						var cd = currency;
-						if (numberFormat.currencyDisplay == "symbol") {
+						if (numberFormat.currencyDisplay === "symbol") {
 							cd = numberFormat.currencySymbol;
-						} else if (numberFormat.currencyDisplay == "name") {
+						} else if (numberFormat.currencyDisplay === "name") {
 							cd = numberFormat.currencyDisplayName;
 						}
 						result = result.replace("{currency}", cd);
@@ -396,7 +396,7 @@ define(
 					var patterns = cldrPattern.split(";");
 					var positivePattern, negativePattern;
 					positivePattern = patterns[0];
-					if (patterns[length] == 2) {
+					if (patterns[length] === 2) {
 						negativePattern = patterns[1];
 					} else {
 						negativePattern = "-" + positivePattern;
@@ -425,21 +425,21 @@ define(
 				var timeFields = [ "hour", "minute", "second" ];
 
 				var needDefaults = true;
-				if (required == "date" || required == "any") {
+				if (required === "date" || required === "any") {
 					weekdayFields.forEach(function (field) {
 						if (options[field] !== undefined) {
 							needDefaults = false;
 						}
 					});
 				}
-				if (required == "time" || required == "any") {
+				if (required === "time" || required === "any") {
 					timeFields.forEach(function (field) {
 						if (options[field] !== undefined) {
 							needDefaults = false;
 						}
 					});
 				}
-				if (needDefaults && (defaults == "date" || defaults == "all")) {
+				if (needDefaults && (defaults === "date" || defaults === "all")) {
 					dateFields.forEach(function (field) {
 						Object.defineProperty(options, field, {
 							value : "numeric",
@@ -449,7 +449,7 @@ define(
 						});
 					});
 				}
-				if (needDefaults && (defaults == "time" || defaults == "all")) {
+				if (needDefaults && (defaults === "time" || defaults === "all")) {
 					timeFields.forEach(function (field) {
 						Object.defineProperty(options, field, {
 							value : "numeric",
@@ -482,19 +482,19 @@ define(
 						var optionsProp = options[property];
 						var formatProp = undefined;
 						var formatPropDesc = Object.getOwnPropertyDescriptor(format, property);
-						if (formatPropDesc != undefined) {
+						if (formatPropDesc !== undefined) {
 							formatProp = format[property];
 						}
-						if (optionsProp == undefined && formatProp != undefined) {
+						if (optionsProp === undefined && formatProp !== undefined) {
 							score -= additionPenalty;
-						} else if (optionsProp != undefined && formatProp == undefined) {
+						} else if (optionsProp !== undefined && formatProp === undefined) {
 							score -= removalPenalty;
 						} else {
 							var values = [ "2-digit", "numeric", "narrow", "short", "long" ];
 							var optionsPropIndex = values.indexOf(optionsProp);
 							var formatPropIndex = values.indexOf(formatProp);
 							var delta = Math.max(Math.min(formatPropIndex - optionsPropIndex, 2), -2);
-							if (delta == 2) {
+							if (delta === 2) {
 								score -= longMorePenalty;
 							} else if (delta == 1) {
 								score -= shortMorePenalty;
@@ -542,7 +542,7 @@ define(
 				if (tz !== undefined) {
 					tz = tz.toString();
 					tz = common._toUpperCaseIdentifier(tz);
-					if (tz != "UTC") {
+					if (tz !== "UTC") {
 						throw new RangeError("Timezones other than UTC are not supported");
 					}
 				}
@@ -558,24 +558,25 @@ define(
 				 * Steps 20-21: Here we deviate slightly from the strict definition as defined in ECMA 402. Instead of
 				 * having all the formats predefined (i.e. hard-coded) in the locale data object up front, and accessing
 				 * them here, we instead wait until we know which locale we are interested in, and load the formats from
-				 * the JSON data.
+				 * the JSON data. This saves us having to convert CLDR date formats to ECMA 402's format for a bunch of
+				 * locales that we aren't really using.
 				 */
 				var cldrCalendar = dateTimeFormat.calendar.replace("gregory", "gregorian");
 				dateTimeFormat.calData = preloads[dateTimeFormat.dataLocale]["ca-" + cldrCalendar].main[dateTimeFormat.dataLocale].dates.calendars[cldrCalendar];
 				var formats = _convertAvailableDateTimeFormats(dateTimeFormat.calData.dateTimeFormats);
 				matcher = common.GetOption(options, "formatMatcher", "string", [ "basic", "best fit" ], "best fit");
-				var bestFormat = matcher == "basic" ? BasicFormatMatcher(opt, formats) : BestFitFormatMatcher(opt,
+				var bestFormat = matcher === "basic" ? BasicFormatMatcher(opt, formats) : BestFitFormatMatcher(opt,
 						formats);
 				dateTimeProperties.forEach(function (prop) {
 					var pDesc = Object.getOwnPropertyDescriptor(bestFormat, prop);
-					if (pDesc != undefined) {
+					if (pDesc !== undefined) {
 						dateTimeFormat[prop] = bestFormat[prop];
 					}
 				});
 				var pattern;
 				var hr12 = common.GetOption(options, "hour12", "boolean", undefined, undefined);
-				if (dateTimeFormat.hour != undefined) {
-					if (hr12 == undefined) {
+				if (dateTimeFormat.hour !== undefined) {
+					if (hr12 === undefined) {
 						hr12 = DateTimeFormat.localeData[dateTimeFormat.dataLocale]
 								&& DateTimeFormat.localeData[dateTimeFormat.dataLocale].hour12;
 					}
@@ -622,28 +623,28 @@ define(
 					var f = dateTimeFormat[p];
 					var v = tm[p];
 					var fv;
-					if (p == "year" && v <= 0) {
+					if (p === "year" && v <= 0) {
 						v = 1 - v;
 					}
-					if (p == "month") {
+					if (p === "month") {
 						v++;
 					}
-					if (p == "hour" && dateTimeFormat.hour12) {
+					if (p === "hour" && dateTimeFormat.hour12) {
 						v = v % 12;
-						pm = (v != tm[p]);
-						if (v == 0 && dateTimeFormat.hourNo0) {
+						pm = (v !== tm[p]);
+						if (v === 0 && dateTimeFormat.hourNo0) {
 							v = 12;
 						}
 					}
-					if (f == "numeric") {
+					if (f === "numeric") {
 						fv = FormatNumber(nf, v);
-					} else if (f == "2-digit") {
+					} else if (f === "2-digit") {
 						fv = FormatNumber(nf2, v);
 						if (fv.length > 2) {
 							fv = fv.substr(-2);
 						}
 					} else {
-						var standalone = (p == "month" && dateTimeFormat.standaloneMonth);
+						var standalone = (p === "month" && dateTimeFormat.standaloneMonth);
 						fv = _getCalendarField(dateTimeFormat.calData, standalone, p, f, v);
 					}
 					if (result) {
@@ -708,7 +709,7 @@ define(
 								return calData.dayPeriods.format.wide[value];
 						}
 					case "timeZoneName":
-						if (value == "UTC") {
+						if (value === "UTC") {
 							return "UTC";
 						}
 						return "local";
@@ -830,7 +831,7 @@ define(
 				var usableFormatSkeletons = /^G{0,5}y{0,4}M{0,5}E{0,5}d{0,2}H{0,2}m{0,2}s{0,2}$/;
 				for ( var format in availableFormats) {
 					var format12 = availableFormats[format.replace("H", "h")];
-					if (usableFormatSkeletons.test(format) && format12 != undefined) {
+					if (usableFormatSkeletons.test(format) && format12 !== undefined) {
 						var outputFormat = _ToIntlDateTimeFormat(availableFormats[format]);
 						if (/H/.test(format)) {
 							var outputFormat12 = _ToIntlDateTimeFormat(format12);
@@ -862,23 +863,24 @@ define(
 				return result;
 			}
 
-			// Utility function to return the valid values for a date/time
-			// field,
-			// according to table 3 in ECMA 402 section 12.1.1.1
+			/*
+			 * Utility function to return the valid values for a date/time field, according to table 3 in ECMA 402
+			 * section 12.1.1.1
+			 */
 			function _validDateTimePropertyValues (prop) {
-				if (prop == "weekday" || prop == "era") {
+				if (prop === "weekday" || prop === "era") {
 					return [ "narrow", "short", "long" ];
 				}
-				if (prop == "year" || prop == "day" || prop == "hour" || prop == "minute" || prop == "second") {
+				if (prop === "year" || prop === "day" || prop === "hour" || prop === "minute" || prop === "second") {
 					return [ "2-digit", "numeric" ];
 				}
-				if (prop == "month") {
+				if (prop === "month") {
 					return [ "2-digit", "numeric", "narrow", "short", "long" ];
 				}
-				if (prop == "weekday" || prop == "era") {
+				if (prop === "weekday" || prop === "era") {
 					return [ "narrow", "short", "long" ];
 				}
-				if (prop == "timeZoneName") {
+				if (prop === "timeZoneName") {
 					return [ "short", "long" ];
 				}
 			}
@@ -956,7 +958,7 @@ define(
 
 			// ECMA 402 Section 11.1.2.1
 			Intl.NumberFormat.call = function (thisObject, locales, options) {
-				if (thisObject == Intl || thisObject === undefined) {
+				if (thisObject === Intl || thisObject === undefined) {
 					return new Intl.NumberFormat(locales, options);
 				}
 				var obj = Object(thisObject);

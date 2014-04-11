@@ -1,7 +1,7 @@
 /**
  * Commonly used routines throughout ECMA-402 package. Also referred to in the standard as "Abstract Operations"
  */
-define(
+define( "common",
 		[ "List", "Record", "json!cldr/config/availableLocales.json", "json!cldr/supplemental/aliases.json",
 				"json!cldr/supplemental/localeAliases.json", "json!cldr/supplemental/parentLocales.json", ],
 		function (List, Record, availableLocales_json, aliases_json, localeAliases_json, parentLocales_json) {

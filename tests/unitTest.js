@@ -1,4 +1,4 @@
-define([ 'intern!object', 'intern/chai!assert', 'Intl' ], function(registerSuite, assert, Intl) {
+define([ 'intern!object', 'intern/chai!assert', 'Intl', 'IntlShim' ], function(registerSuite, assert, Intl, IntlShim) {
 	registerSuite({
 		name : 'unitTest',
 		matcherFunctions : function() {
@@ -235,7 +235,7 @@ define([ 'intern!object', 'intern/chai!assert', 'Intl' ], function(registerSuite
 					'Intl.DateTimeFormat.format() should return expected string for locale '+currentTest.locales);
 			});
 		},
-/*		testShim : function() {
+		testShim : function() {
 			var numberFormattingTestCases = [ {
 				"native" : false,
 				"locales" : "sl",
@@ -383,6 +383,6 @@ define([ 'intern!object', 'intern/chai!assert', 'Intl' ], function(registerSuite
 					'Intl.DateTimeFormat.format() with native = '+currentTest.native.toString()
 						+' should return expected string for locale '+currentTest.locales);
 			});
-		} */
+		}
 	});
 });

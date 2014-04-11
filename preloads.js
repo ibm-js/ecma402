@@ -1,4 +1,4 @@
-define([ 'common', 'locales', "json!cldr/root/currencies.json", "json!cldr/root/numbers.json",
+define( "preloads", [ 'common', 'locales', "json!cldr/root/currencies.json", "json!cldr/root/numbers.json",
 		"json!cldr/root/ca-gregorian.json" ], function (common, locales, root_currencies, root_numbers,
 		root_ca_gregorian) {
 	var preloads = {
