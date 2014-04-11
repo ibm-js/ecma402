@@ -41,18 +41,18 @@ define( "common",
 						var firstSingletonPosition = identifier.search(/-[a-z0-9]-/);
 						if (firstSingletonPosition > 0) {
 							return identifier.indexOf(element) > firstSingletonPosition
-									|| identifier.indexOf(element) == identifier.lastIndexOf(element,
+									|| identifier.indexOf(element) ===  identifier.lastIndexOf(element,
 											firstSingletonPosition); // Boolean
 						}
-						return identifier.indexOf(element) == identifier.lastIndexOf(element); // Boolean
+						return identifier.indexOf(element) ===  identifier.lastIndexOf(element); // Boolean
 					}
 
 					function _isUniqueSingleton (element, index, array) {
 						var firstXPosition = identifier.search(/-x-/);
 						if (firstXPosition > 0) {
-							return identifier.indexOf(element) == identifier.lastIndexOf(element, firstXPosition); // Boolean
+							return identifier.indexOf(element) ===  identifier.lastIndexOf(element, firstXPosition); // Boolean
 						}
-						return identifier.indexOf(element) == identifier.lastIndexOf(element); // Boolean
+						return identifier.indexOf(element) ===  identifier.lastIndexOf(element); // Boolean
 					}
 
 					if (langtag.test(identifier)) { // represents a well-formed BCP 47 language tag
@@ -80,9 +80,9 @@ define( "common",
 					var aliases = aliases_json.supplemental.metadata.alias;
 					/* Canonicalize the Language Tag */
 					result = result.replace(languageTag, function (m) {
-						if (aliases != null) {
+						if (aliases !== null) {
 							var lookupAlias = aliases.languageAlias[m];
-							if (lookupAlias && lookupAlias._reason != "macrolanguage") {
+							if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
 								m = lookupAlias._replacement ? lookupAlias._replacement : m;
 							}
 						}
@@ -90,10 +90,10 @@ define( "common",
 					}); // String
 					// Canonicalize the Script Tag
 					result = result.replace(scriptTag, function (m) {
-						if (firstSingletonPosition == -1 || result.indexOf(m) < firstSingletonPosition) {
+						if (firstSingletonPosition ===  -1 || result.indexOf(m) < firstSingletonPosition) {
 							m = m.substring(0, 2).toUpperCase() + m.substring(2);
 							var script = m.substring(1);
-							if (aliases != null) {
+							if (aliases !== null) {
 								var lookupAlias = aliases.scriptAlias[script];
 								if (lookupAlias) {
 									m = lookupAlias._replacement ? "-" + lookupAlias._replacement : m;
@@ -104,10 +104,10 @@ define( "common",
 					}); // String
 					// Canonicalize the Region Tag
 					result = result.replace(regionTag, function (m) {
-						if (firstSingletonPosition == -1 || result.indexOf(m) < firstSingletonPosition) {
+						if (firstSingletonPosition ===  -1 || result.indexOf(m) < firstSingletonPosition) {
 							m = m.toUpperCase();
 							var region = m.substring(1);
-							if (aliases != null) {
+							if (aliases !== null) {
 								var lookupAlias = aliases.territoryAlias[region];
 								if (lookupAlias) {
 									var repl = lookupAlias._replacement;
@@ -124,7 +124,7 @@ define( "common",
 					result = result.replace(variantTag, function (m) {
 						// Variant tags are upper case in CLDR's data.
 						var variant = common._toUpperCaseIdentifier(m.substring(1));
-						if (aliases != null) {
+						if (aliases !== null) {
 							var lookupAlias = aliases.variantAlias[variant];
 							if (lookupAlias) {
 								var repl = lookupAlias._replacement;
@@ -135,9 +135,9 @@ define( "common",
 					}); // String
 					// Canonicalize any whole tag combinations or grandfathered tags
 					result = result.replace(result, function (m) {
-						if (aliases != null) {
+						if (aliases !== null) {
 							var lookupAlias = aliases.languageAlias[m];
-							if (lookupAlias && lookupAlias._reason != "macrolanguage") {
+							if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
 								m = lookupAlias._replacement ? lookupAlias._replacement : m;
 							}
 						}
@@ -182,13 +182,13 @@ define( "common",
 						throw new TypeError("Locale list can not be null");
 					}
 					var seen = [];
-					if (typeof locales == "string") {
+					if (typeof locales ===  "string") {
 						locales = new Array(locales);
 					}
 					var O = Object(locales);
 					for (Pk in O) {
 						var kValue = O[Pk];
-						if (typeof kValue != "string" && typeof kValue != "object") {
+						if (typeof kValue !== "string" && typeof kValue !== "object") {
 							throw new TypeError(kValue + " must be a string or an object.");
 						}
 						var tag = kValue.toString();
@@ -214,7 +214,7 @@ define( "common",
 						if (pos < 0) {
 							return undefined;
 						}
-						if (pos >= 2 && candidate.charAt(pos - 2) == "-") {
+						if (pos >= 2 && candidate.charAt(pos - 2) ===  "-") {
 							pos -= 2;
 						}
 						candidate = candidate.substring(0, pos);
@@ -237,7 +237,7 @@ define( "common",
 					var result = new Record();
 					if (availableLocale) {
 						result.set("locale", availableLocale);
-						if (locale != noExtensionsLocale) {
+						if (locale !== noExtensionsLocale) {
 							result.set("extension", locale.match(this.unicodeLocaleExtensions)[0]);
 							result.set("extensionIndex", locale.search(this.unicodeLocaleExtensions));
 						}
@@ -263,7 +263,7 @@ define( "common",
 					while (true) {
 						var langtag = candidate.substring(0, candidate.indexOf("-"));
 						var lookupAlias = aliases.languageAlias[langtag];
-						if (lookupAlias && lookupAlias._reason == "macrolanguage") {
+						if (lookupAlias && lookupAlias._reason ===  "macrolanguage") {
 							candidate = candidate.replace(langtag, lookupAlias._replacement);
 						}
 						lookupAlias = localeAliases.localeAlias[candidate];
@@ -281,7 +281,7 @@ define( "common",
 							if (pos < 0) {
 								return undefined;
 							}
-							if (pos >= 2 && candidate.charAt(pos - 2) == "-") {
+							if (pos >= 2 && candidate.charAt(pos - 2) ===  "-") {
 								pos -= 2;
 							}
 							candidate = candidate.substring(0, pos);
@@ -305,7 +305,7 @@ define( "common",
 					var result = new Record();
 					if (availableLocale) {
 						result.set("locale", availableLocale);
-						if (locale != noExtensionsLocale) {
+						if (locale !== noExtensionsLocale) {
 							result.set("extension", locale.match(this.unicodeLocaleExtensions)[0]);
 							result.set("extensionIndex", locale.search(this.unicodeLocaleExtensions));
 						}
@@ -319,7 +319,7 @@ define( "common",
 				ResolveLocale : function (availableLocales, requestedLocales, options, relevantExtensionKeys,
 						localeData) {
 					var matcher = options.localeMatcher;
-					var r = matcher == "lookup" ? this.LookupMatcher(availableLocales, requestedLocales) : this
+					var r = matcher ===  "lookup" ? this.LookupMatcher(availableLocales, requestedLocales) : this
 							.BestFitMatcher(availableLocales, requestedLocales);
 					var foundLocale = r.locale;
 					var extension = "";
@@ -343,21 +343,21 @@ define( "common",
 						var keyLocaleData = foundLocaleData[key];
 						var value = keyLocaleData["0"];
 						var supportedExtensionAddition = "";
-						if (typeof extensionSubtags != "undefined") {
+						if (typeof extensionSubtags !== "undefined") {
 							var keyPos = extensionSubtags.indexOf(key);
 							var valuePos;
-							if (keyPos != -1) {
+							if (keyPos !== -1) {
 								if (keyPos + 1 < extensionSubtagsLength
 										&& extensionSubtags[String(keyPos + 1)].length > 2) {
 									var requestedValue = extensionSubtags[String(keyPos + 1)];
 									valuePos = keyLocaleData.indexOf(requestedValue);
-									if (valuePos != -1) {
+									if (valuePos !== -1) {
 										value = requestedValue;
 										supportedExtensionAddition = "-" + key + "-" + value;
 									}
 								} else {
 									valuePos = keyLocaleData.indexOf("true");
-									if (valuePos != -1) {
+									if (valuePos !== -1) {
 										value = "true";
 									}
 								}
@@ -365,8 +365,8 @@ define( "common",
 						}
 						var optionsValue = options[key];
 						if (optionsValue !== undefined) {
-							if (keyLocaleData.indexOf(optionsValue) != -1) {
-								if (optionsValue != value) {
+							if (keyLocaleData.indexOf(optionsValue) !== -1) {
+								if (optionsValue !== value) {
 									value = optionsValue;
 									supportedExtensionAddition = "";
 								}
@@ -459,10 +459,10 @@ define( "common",
 				GetOption : function (options, property, type, values, fallback) {
 					var value = options[property];
 					if (value !== undefined) {
-						if (type == "boolean") {
+						if (type ===  "boolean") {
 							value = Boolean(value);
 						}
-						if (type == "string") {
+						if (type ===  "string") {
 							value = String(value);
 						}
 						if (values !== undefined) {
