@@ -8,7 +8,7 @@
  * @author Norbert Lindenberg
  */
 define(
-	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ],
+	[ 'intern!object', 'intern/chai!assert', 'Intl' ],
 	function(registerSuite, assert, Intl) {
 
 		/**
@@ -47,6 +47,7 @@ define(
 
 		var testIntl = {
 
+			save : {},
 			/**
 			 * @description Calls the provided function for every service constructor in the Intl object, until f returns a falsy value. It returns the result
 			 *              of the last call to f, mapped to a boolean.
@@ -143,6 +144,22 @@ define(
 					configurable : true
 				});
 			},
+			/**
+			 * Untaints a named method of the given object by removing it.
+			 * 
+			 * @param {object}
+			 *            obj the object whose method to taint
+			 * @param {string}
+			 *            property the name of the method to taint
+			 */
+			untaintMethod : function(obj, property) {
+				Object.defineProperty(obj, property, {
+					writable : true,
+					enumerable : false,
+					configurable : true
+				});
+				delete obj[property];
+			},
 
 			/**
 			 * Taints the given properties (and similarly named properties) by installing setters on Object.prototype that assert false.
@@ -178,11 +195,33 @@ define(
 			 */
 			taintArray : function() {
 				this.taintDataProperty(Array.prototype, "0");
+				this.save.indexOf = Array.prototype.indexOf;
 				this.taintMethod(Array.prototype, "indexOf");
+				this.save.join = Array.prototype.join;
 				this.taintMethod(Array.prototype, "join");
+				this.save.push = Array.prototype.push;
 				this.taintMethod(Array.prototype, "push");
+				this.save.slice = Array.prototype.slice;
 				this.taintMethod(Array.prototype, "slice");
+				this.save.sort = Array.prototype.sort;
 				this.taintMethod(Array.prototype, "sort");
+			},
+
+			/**
+			 * Untaints the Array object by creating a setter for the property "0" and replacing some key methods with functions that throw exceptions.
+			 */
+			untaintArray : function() {
+				this.untaintDataProperty(Array.prototype, "0");
+				this.untaintMethod(Array.prototype, "indexOf");
+				this.untaintMethod(Array.prototype, "join");
+				this.untaintMethod(Array.prototype, "push");
+				this.untaintMethod(Array.prototype, "slice");
+				this.untaintMethod(Array.prototype, "sort");
+				Array.prototype.indexOf = this.save.indexOf;
+				Array.prototype.join = this.save.join;
+				Array.prototype.push = this.save.push;
+				Array.prototype.slice = this.save.slice;
+				Array.prototype.sort = this.save.sort;
 			},
 
 			/**

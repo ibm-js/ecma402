@@ -1,7 +1,7 @@
 // Copyright 2012 Mozilla Corporation. All rights reserved.
 // This code is governed by the BSD license found in the LICENSE file.
 define(
-	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/tests/intl402/harness/testIntl', 'ecma402/tests/intl402/harness/testBuiltInObject' ], 
+	[ 'intern!object', 'intern/chai!assert', 'Intl', 'tests/intl402/harness/testIntl', 'tests/intl402/harness/testBuiltInObject' ], 
 	function(registerSuite, assert, Intl, testIntl, testBuiltInObject) {
 	registerSuite({
 		name : '13.2',
@@ -153,10 +153,12 @@ define(
 			 *     built-in Intl.NumberFormat constructor.
 			 * @author Norbert Lindenberg
 			 */
-			// Note: This test placed last because it alters Intl.NumberFormat and can
-			// cause other test cases to fail inadvertently.
+			var save = Intl.NumberFormat;
 			testIntl.taintDataProperty(Intl, "NumberFormat");
 			(0.0).toLocaleString();
+			testIntl.untaintDataProperty(Intl, "NumberFormat");
+			Intl.NumberFormat = save;
+
 		}
 	});
 });
