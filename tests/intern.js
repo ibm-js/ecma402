@@ -49,7 +49,7 @@ define({
 	// loader
 	useLoader: {
 		'host-node': 'requirejs',
-		'host-browser': '/ecma402/requirejs/require.js'
+		'host-browser': '../../requirejs/require.js'
 	},
 
 	// Configuration options for the module loader; any AMD configuration options supported by the specified AMD loader

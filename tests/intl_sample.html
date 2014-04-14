@@ -23,14 +23,15 @@
 		  <td id="numb"></td>
 		  <td id="numb1"></td>
 		</tr>
-</table> 		<script src="/ecma402/requirejs/require.js"></script>
+</table>
+ 		<script src="../../requirejs/require.js"></script>
 	<script>
 		function formatit(locale) {
 			require.config({
 				  baseUrl: '/ecma402',
 				  config: { 'locales' : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
 			});
-			require([ "Intl", "IntlShim"], function(Intl,IntlShim) {
+			require([ "./Intl", "./IntlShim"], function(Intl,IntlShim) {
 				var options = {
 					year : "numeric",
 					month : "short",

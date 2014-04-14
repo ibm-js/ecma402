@@ -1,27 +1,21 @@
-/* JavaScript implementation of Internationalization APIs as defined in ECMA standard 402 version 1.0 */
 require.config({
-	baseUrl : "/ecma402",
-	paths : {
-		"require" : "/ecma402/requirejs/require",
-		"text" : "/ecma402/requirejs/text",
-		"json" : "/ecma402/requirejs/json"
-	},
 	shim : {
-		'Intl' : [ 'locales' ],
 		'preloads' : [ 'locales' ]
 	},
 	waitSeconds : 0
 });
 
 define(
-		"Intl",
-		[ "Record", "calendars", "common", "locales", "preloads", "json!cldr/supplemental/currencyData.json",
-				"json!cldr/supplemental/timeData.json", "json!cldr/supplemental/likelySubtags.json",
-				"json!cldr/supplemental/numberingSystems.json" ],
+		[ "./Record", "./calendars", "./common", "./locales", "./preloads", "../requirejs-text/text!cldr/supplemental/currencyData.json",
+				"../requirejs-text/text!cldr/supplemental/timeData.json", "../requirejs-text/text!cldr/supplemental/likelySubtags.json",
+				"../requirejs-text/text!cldr/supplemental/numberingSystems.json" ],
 		function (Record, calendars, common, locales, preloads, currencyData_json, timeData_json, likelySubtags_json,
 				numberingSystems_json) {
 			var Intl = {};
-			var numberingSystems = numberingSystems_json.supplemental.numberingSystems;
+			var currencyData = JSON.parse(currencyData_json);
+			var timeData = JSON.parse(timeData_json).supplemental.timeData;
+			var likelySubtags = JSON.parse(likelySubtags_json).supplemental.likelySubtags;
+			var numberingSystems = JSON.parse(numberingSystems_json).supplemental.numberingSystems;
 			var availableNumberingSystems = [ "latn" ];
 			for ( var ns in numberingSystems) {
 				if (numberingSystems[ns]._type === "numeric" && ns !== "latn") {
@@ -30,8 +24,8 @@ define(
 			}
 
 			function CurrencyDigits (currency) {
-				if (currencyData_json.supplemental.currencyData.fractions[currency]) {
-					return currencyData_json.supplemental.currencyData.fractions[currency]._digits;
+				if (currencyData.supplemental.currencyData.fractions[currency]) {
+					return currencyData.supplemental.currencyData.fractions[currency]._digits;
 				}
 				return 2;
 			}
@@ -902,7 +896,6 @@ define(
 			DateTimeFormat.availableLocales = locales.preLoadList;
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
 			DateTimeFormat.localeData = {};
-			var timeData = timeData_json.supplemental.timeData;
 			DateTimeFormat.availableLocales.forEach(function (loc) {
 				var calendarPreferences = [ "gregory" ];
 				var region = "001";
@@ -912,7 +905,7 @@ define(
 				if (regionPos >= 0) {
 					region = loc.substr(regionPos + 1, 2);
 				} else {
-					var likelySubtag = likelySubtags_json.supplemental.likelySubtags[loc];
+					var likelySubtag = likelySubtags[loc];
 					if (likelySubtag) {
 						region = likelySubtag.substr(-2);
 					}

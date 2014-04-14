@@ -1,4 +1,4 @@
-define( "calendars", [ "Record" ], function (Record) {
+define( [ "./Record" ], function (Record) {
 
 	function LocalTimeGregorian (date, timeZone) {
 		var result = new Record();

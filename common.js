@@ -1,13 +1,17 @@
 /**
  * Commonly used routines throughout ECMA-402 package. Also referred to in the standard as "Abstract Operations"
  */
-define( "common",
-		[ "List", "Record", "json!cldr/config/availableLocales.json", "json!cldr/supplemental/aliases.json",
-				"json!cldr/supplemental/localeAliases.json", "json!cldr/supplemental/parentLocales.json", ],
+define(["./List", "./Record", 
+        "../requirejs-text/text!cldr/config/availableLocales.json",
+		"../requirejs-text/text!cldr/supplemental/aliases.json",
+		"../requirejs-text/text!cldr/supplemental/localeAliases.json",
+		"../requirejs-text/text!cldr/supplemental/parentLocales.json", ],
 		function (List, Record, availableLocales_json, aliases_json, localeAliases_json, parentLocales_json) {
+			var aliases = JSON.parse(aliases_json).supplemental.metadata.alias;
+			var localeAliases = JSON.parse(localeAliases_json).supplemental.metadata.alias;
+			var parentLocales = JSON.parse(parentLocales_json).supplemental.parentLocales.parentLocale;
 			var common = {
 				unicodeLocaleExtensions : /-u(-[a-z0-9]{2,8})+/g,
-
 				// ECMA 402 Section 6.1
 				_toUpperCaseIdentifier : function (identifier) {
 					var match = /[a-z]/g;
@@ -41,18 +45,18 @@ define( "common",
 						var firstSingletonPosition = identifier.search(/-[a-z0-9]-/);
 						if (firstSingletonPosition > 0) {
 							return identifier.indexOf(element) > firstSingletonPosition
-									|| identifier.indexOf(element) ===  identifier.lastIndexOf(element,
+									|| identifier.indexOf(element) === identifier.lastIndexOf(element,
 											firstSingletonPosition); // Boolean
 						}
-						return identifier.indexOf(element) ===  identifier.lastIndexOf(element); // Boolean
+						return identifier.indexOf(element) === identifier.lastIndexOf(element); // Boolean
 					}
 
 					function _isUniqueSingleton (element, index, array) {
 						var firstXPosition = identifier.search(/-x-/);
 						if (firstXPosition > 0) {
-							return identifier.indexOf(element) ===  identifier.lastIndexOf(element, firstXPosition); // Boolean
+							return identifier.indexOf(element) === identifier.lastIndexOf(element, firstXPosition); // Boolean
 						}
-						return identifier.indexOf(element) ===  identifier.lastIndexOf(element); // Boolean
+						return identifier.indexOf(element) === identifier.lastIndexOf(element); // Boolean
 					}
 
 					if (langtag.test(identifier)) { // represents a well-formed BCP 47 language tag
@@ -77,7 +81,6 @@ define( "common",
 					var regionTag = /(?:-)([a-z]{2})(?=(-|$))/g;
 					var variantTag = /(?:-)([a-z0-9]{5,8}|\d[a-z0-9]{3})/;
 					var extlangTag = /^([a-z]{2,3}(-[a-z]{3}))(?=(-|$))/;
-					var aliases = aliases_json.supplemental.metadata.alias;
 					/* Canonicalize the Language Tag */
 					result = result.replace(languageTag, function (m) {
 						if (aliases !== null) {
@@ -90,7 +93,7 @@ define( "common",
 					}); // String
 					// Canonicalize the Script Tag
 					result = result.replace(scriptTag, function (m) {
-						if (firstSingletonPosition ===  -1 || result.indexOf(m) < firstSingletonPosition) {
+						if (firstSingletonPosition === -1 || result.indexOf(m) < firstSingletonPosition) {
 							m = m.substring(0, 2).toUpperCase() + m.substring(2);
 							var script = m.substring(1);
 							if (aliases !== null) {
@@ -104,7 +107,7 @@ define( "common",
 					}); // String
 					// Canonicalize the Region Tag
 					result = result.replace(regionTag, function (m) {
-						if (firstSingletonPosition ===  -1 || result.indexOf(m) < firstSingletonPosition) {
+						if (firstSingletonPosition === -1 || result.indexOf(m) < firstSingletonPosition) {
 							m = m.toUpperCase();
 							var region = m.substring(1);
 							if (aliases !== null) {
@@ -182,7 +185,7 @@ define( "common",
 						throw new TypeError("Locale list can not be null");
 					}
 					var seen = [];
-					if (typeof locales ===  "string") {
+					if (typeof locales === "string") {
 						locales = new Array(locales);
 					}
 					var O = Object(locales);
@@ -214,7 +217,7 @@ define( "common",
 						if (pos < 0) {
 							return undefined;
 						}
-						if (pos >= 2 && candidate.charAt(pos - 2) ===  "-") {
+						if (pos >= 2 && candidate.charAt(pos - 2) === "-") {
 							pos -= 2;
 						}
 						candidate = candidate.substring(0, pos);
@@ -258,12 +261,10 @@ define( "common",
 
 				BestFitAvailableLocale : function (availableLocales, locale) {
 					var candidate = locale;
-					var aliases = aliases_json.supplemental.metadata.alias; // Canonicalize the Language Tag
-					var localeAliases = localeAliases_json.supplemental.metadata.alias;
 					while (true) {
 						var langtag = candidate.substring(0, candidate.indexOf("-"));
 						var lookupAlias = aliases.languageAlias[langtag];
-						if (lookupAlias && lookupAlias._reason ===  "macrolanguage") {
+						if (lookupAlias && lookupAlias._reason === "macrolanguage") {
 							candidate = candidate.replace(langtag, lookupAlias._replacement);
 						}
 						lookupAlias = localeAliases.localeAlias[candidate];
@@ -273,7 +274,7 @@ define( "common",
 						if (availableLocales.indexOf(candidate) >= 0) {
 							return candidate;
 						}
-						var parentLocale = parentLocales_json.supplemental.parentLocales.parentLocale[candidate];
+						var parentLocale = parentLocales[candidate];
 						if (parentLocale) {
 							candidate = parentLocale;
 						} else {
@@ -281,7 +282,7 @@ define( "common",
 							if (pos < 0) {
 								return undefined;
 							}
-							if (pos >= 2 && candidate.charAt(pos - 2) ===  "-") {
+							if (pos >= 2 && candidate.charAt(pos - 2) === "-") {
 								pos -= 2;
 							}
 							candidate = candidate.substring(0, pos);
@@ -319,7 +320,7 @@ define( "common",
 				ResolveLocale : function (availableLocales, requestedLocales, options, relevantExtensionKeys,
 						localeData) {
 					var matcher = options.localeMatcher;
-					var r = matcher ===  "lookup" ? this.LookupMatcher(availableLocales, requestedLocales) : this
+					var r = matcher === "lookup" ? this.LookupMatcher(availableLocales, requestedLocales) : this
 							.BestFitMatcher(availableLocales, requestedLocales);
 					var foundLocale = r.locale;
 					var extension = "";
@@ -459,10 +460,10 @@ define( "common",
 				GetOption : function (options, property, type, values, fallback) {
 					var value = options[property];
 					if (value !== undefined) {
-						if (type ===  "boolean") {
+						if (type === "boolean") {
 							value = Boolean(value);
 						}
-						if (type ===  "string") {
+						if (type === "string") {
 							value = String(value);
 						}
 						if (values !== undefined) {
@@ -493,6 +494,6 @@ define( "common",
 				},
 			};
 
-			common.availableLocalesList = common.CanonicalizeLocaleList(availableLocales_json.availableLocales);
+			common.availableLocalesList = common.CanonicalizeLocaleList(JSON.parse(availableLocales_json).availableLocales);
 			return common;
 		});
