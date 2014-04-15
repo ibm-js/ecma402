@@ -1,5 +1,5 @@
-define( [ "./common", "./locales", "../requirejs/require", "../requirejs-text/text!cldr/root/currencies.json", "../requirejs-text/text!cldr/root/numbers.json",
-		"../requirejs-text/text!cldr/root/ca-gregorian.json" ], function (common, locales, require, root_currencies, root_numbers,
+define( [ "require", "./common", "./locales",  "../requirejs-text/text!cldr/root/currencies.json", "../requirejs-text/text!cldr/root/numbers.json",
+		"../requirejs-text/text!cldr/root/ca-gregorian.json" ], function (require, common, locales, root_currencies, root_numbers,
 		root_ca_gregorian) {
 	var preloads = {
 		"root" : {
@@ -14,7 +14,7 @@ define( [ "./common", "./locales", "../requirejs/require", "../requirejs-text/te
 			preloads[locale] = {};
 		}
 		locales.jsonElements.forEach(function (element) {
-			preloads[locale][element] = JSON.parse(this.require("../requirejs-text/text!cldr/" + locale + "/" + element + ".json"));
+			preloads[locale][element] = JSON.parse(require("../requirejs-text/text!cldr/" + locale + "/" + element + ".json"));
 		});
 	}
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-define( [ "module", "./common", "../requirejs/require" ], function (module, common, require) {
+define( [ "require", "module", "./common",  ], function (require, module, common) {
 	var locales = {
 		preLoadList : [ "root" ],
 		jsonElements : [ "currencies", "numbers", "ca-gregorian" ]
@@ -10,7 +10,7 @@ define( [ "module", "./common", "../requirejs/require" ], function (module, comm
 	function loadLocaleElements (locale) {
 		locales.jsonElements.forEach(function (element) {
 			var dependency = "../requirejs-text/text!cldr/" + locale + "/" + element + ".json";
-			this.require([ dependency ]);
+			require([ dependency ]);
 		});
 	}
 
