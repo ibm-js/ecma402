@@ -23,39 +23,7 @@
 		  <td id="numb"></td>
 		  <td id="numb1"></td>
 		</tr>
-</table>
- 		<script src="../../requirejs/require.js"></script>
-	<script>
-		function formatit(locale) {
-			require.config({
-				  baseUrl: '/ecma402',
-				  config: { 'locales' : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
-			});
-			require([ "./Intl", "./IntlShim"], function(Intl,IntlShim) {
-				var options = {
-					year : "numeric",
-					month : "short",
-					day : "numeric",
-					weekday : "short",
-					hour : "numeric",
-					minute : "numeric",
-					second : "numeric"
-				};
-				df = new Intl.DateTimeFormat(locale, options);
-				var x = document.getElementById("demo");
-				x.innerHTML = df.format(new Date());
-				df1 = new IntlShim.DateTimeFormat(locale, options);
-				var x1 = document.getElementById("demo1");
-				x1.innerHTML = df1.format(new Date());
-				nf = new Intl.NumberFormat(locale, options);
-				var y = document.getElementById("numb");
-				y.innerHTML = nf.format(123456.789);
-				nf1 = new IntlShim.NumberFormat(locale, options);
-				var y1 = document.getElementById("numb1");
-				y1.innerHTML = nf1.format(123456.789);
-			});
-		}
-	</script>
+		</table>
        <button onclick='formatit()'>[Default Locale]</button>
        <button onclick='formatit("ar-SA")'>Arabic - Saudi Arabia</button>
        <button onclick='formatit("ar-TN")'>Arabic - Tunisia</button>
@@ -65,5 +33,43 @@
        <button onclick='formatit("hi-u-nu-deva")'>Hindi w/native digits</button>
        <button onclick='formatit("ja")'>Japanese</button>
        <button onclick='formatit("fr")'>French (not preloaded)</button>
-    </body>
+</body>
+<script src="../../requirejs/require.js"></script>
+<script>
+	require.config({
+		  baseUrl: '/ecma402',
+		  config: { 'locales' : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
+	});
+
+	require(["./IntlShim"], function(IntlShim) {
+		formatit = function (locale) {
+			var options = {
+				year : "numeric",
+				month : "short",
+				day : "numeric",
+				weekday : "short",
+				hour : "numeric",
+				minute : "numeric",
+				second : "numeric"
+			};
+
+			df1 = new IntlShim.DateTimeFormat(locale, options);
+			var x1 = document.getElementById("demo");
+			x1.innerHTML = df1.format(new Date());
+			nf = new IntlShim.NumberFormat(locale, options);
+			var y = document.getElementById("numb");
+			y.innerHTML = nf.format(123456.789);
+
+			if (typeof Intl !== "undefined") {
+				var df = new Intl.DateTimeFormat(locale, options);
+				var x = document.getElementById("demo1");
+				x.innerHTML = df.format(new Date());
+
+				var nf1 = new Intl.NumberFormat(locale, options);
+				var y1 = document.getElementById("numb1");
+				y1.innerHTML = nf1.format(123456.789);
+			}
+		};
+	});
+</script>
 </html>
