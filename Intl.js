@@ -1,15 +1,8 @@
-require.config({
-	shim : {
-		'preloads' : [ 'locales' ]
-	},
-	waitSeconds : 0
-});
-
 define(
-		[ "./Record", "./calendars", "./common", "./locales", "./preloads", "requirejs-text/text!./cldr/supplemental/currencyData.json",
+		[ "./Record", "./calendars", "./common", "./preloads!", "requirejs-text/text!./cldr/supplemental/currencyData.json",
 				"requirejs-text/text!./cldr/supplemental/timeData.json", "requirejs-text/text!./cldr/supplemental/likelySubtags.json",
 				"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
-		function (Record, calendars, common, locales, preloads, currencyData_json, timeData_json, likelySubtags_json,
+		function (Record, calendars, common, preloads, currencyData_json, timeData_json, likelySubtags_json,
 				numberingSystems_json) {
 			var Intl = {};
 			var currencyData = JSON.parse(currencyData_json);
@@ -881,7 +874,7 @@ define(
 
 			// ECMA 402 Section 11.3.2
 			var NumberFormat = {};
-			NumberFormat.availableLocales = locales.preLoadList;
+			NumberFormat.availableLocales = Object.keys(preloads);
 			NumberFormat.relevantExtensionKeys = [ "nu" ];
 			NumberFormat.localeData = {};
 			NumberFormat.availableLocales.forEach(function (loc) {
@@ -893,7 +886,7 @@ define(
 
 			// ECMA 402 Section 12.2.3
 			var DateTimeFormat = {};
-			DateTimeFormat.availableLocales = locales.preLoadList;
+			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {

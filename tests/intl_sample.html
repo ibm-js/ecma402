@@ -38,10 +38,12 @@
 <script>
 	require.config({
 		  baseUrl: "../..",
-		  config: { "locales" : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
+		  config: {
+			  "ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|de)$/
+		  }
 	});
 
-	require(["ecma402/IntlShim"], function(IntlShim) {
+	require(["ecma402/Intl"], function(IntlShim) {
 		formatit = function (locale) {
 			var options = {
 				year : "numeric",
