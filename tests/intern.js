@@ -56,13 +56,16 @@ define({
 	// can be used here
 	loader: {
 		baseUrl: '/ecma402',
-		config : { "locales" : /^(ar|de(-CH)?|el|en(-(GB|NZ))?|es|he|hi|id|ja|pt.*|sl|sr(-Latn)?|th|zh.*)$/ },
+		config : { "preloads" : /^(ar|de(-CH)?|el|en(-(GB|NZ))?|es|he|hi|id|ja|pt.*|sl|sr(-Latn)?|th|zh.*)$/ },
 		// Packages that should be registered with the loader in each testing environment
 		packages : [ 
 		  		    { name: 'intern',
-		  			  location: '../node_modules/intern'
-		  			},
-		    		]
+			  			  location: '../node_modules/intern'
+			  			},
+			  		{ name: 'requirejs-text',
+				  		  location: '../requirejs-text'
+				  	},
+		    	]
 	},
 	// Non-functional test suite(s) to run in each browser
 	suites : [  'tests/unitTest',
