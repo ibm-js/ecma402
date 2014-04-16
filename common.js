@@ -2,10 +2,10 @@
  * Commonly used routines throughout ECMA-402 package. Also referred to in the standard as "Abstract Operations"
  */
 define(["./List", "./Record", 
-        "../requirejs-text/text!cldr/config/availableLocales.json",
-		"../requirejs-text/text!cldr/supplemental/aliases.json",
-		"../requirejs-text/text!cldr/supplemental/localeAliases.json",
-		"../requirejs-text/text!cldr/supplemental/parentLocales.json", ],
+        "requirejs-text/text!./cldr/config/availableLocales.json",
+		"requirejs-text/text!./cldr/supplemental/aliases.json",
+		"requirejs-text/text!./cldr/supplemental/localeAliases.json",
+		"requirejs-text/text!./cldr/supplemental/parentLocales.json" ],
 		function (List, Record, availableLocales_json, aliases_json, localeAliases_json, parentLocales_json) {
 			var aliases = JSON.parse(aliases_json).supplemental.metadata.alias;
 			var localeAliases = JSON.parse(localeAliases_json).supplemental.metadata.alias;

@@ -6,9 +6,9 @@ require.config({
 });
 
 define(
-		[ "./Record", "./calendars", "./common", "./locales", "./preloads", "../requirejs-text/text!cldr/supplemental/currencyData.json",
-				"../requirejs-text/text!cldr/supplemental/timeData.json", "../requirejs-text/text!cldr/supplemental/likelySubtags.json",
-				"../requirejs-text/text!cldr/supplemental/numberingSystems.json" ],
+		[ "./Record", "./calendars", "./common", "./locales", "./preloads", "requirejs-text/text!./cldr/supplemental/currencyData.json",
+				"requirejs-text/text!./cldr/supplemental/timeData.json", "requirejs-text/text!./cldr/supplemental/likelySubtags.json",
+				"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
 		function (Record, calendars, common, locales, preloads, currencyData_json, timeData_json, likelySubtags_json,
 				numberingSystems_json) {
 			var Intl = {};

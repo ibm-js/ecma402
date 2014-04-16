@@ -1,4 +1,4 @@
-<!DOCTYPE html charset=utf-8">
+<!DOCTYPE html>
 <html>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -37,11 +37,11 @@
 <script src="../../requirejs/require.js"></script>
 <script>
 	require.config({
-		  baseUrl: '/ecma402',
-		  config: { 'locales' : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
+		  baseUrl: "../..",
+		  config: { "locales" : /^(ar-(TN|SA)|en|es|hi|ja|de)$/ }
 	});
 
-	require(["./IntlShim"], function(IntlShim) {
+	require(["ecma402/IntlShim"], function(IntlShim) {
 		formatit = function (locale) {
 			var options = {
 				year : "numeric",
