@@ -1,8 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>IBM ECMA-402 Intl demo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>IBM ECMA-402 Intl demo</title>
+
+		<script src="../../requirejs/require.js"></script>
+		<script>
+			require.config({
+				baseUrl: "../..",
+				config: {
+					"ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|de)$/
+				}
+			});
+
+			require(["ecma402/Intl"], function(IntlIbm) {
+				formatit = function (locale) {
+					var options = {
+						year : "numeric",
+						month : "short",
+						day : "numeric",
+						weekday : "short",
+						hour : "numeric",
+						minute : "numeric",
+						second : "numeric"
+					};
+
+					df1 = new IntlIbm.DateTimeFormat(locale, options);
+					var x1 = document.getElementById("demo");
+					x1.innerHTML = df1.format(new Date());
+					nf = new IntlIbm.NumberFormat(locale, options);
+					var y = document.getElementById("numb");
+					y.innerHTML = nf.format(123456.789);
+
+					if (typeof Intl !== "undefined") {
+						var df = new Intl.DateTimeFormat(locale, options);
+						var x = document.getElementById("demo1");
+						x.innerHTML = df.format(new Date());
+
+						var nf1 = new Intl.NumberFormat(locale, options);
+						var y1 = document.getElementById("numb1");
+						y1.innerHTML = nf1.format(123456.789);
+					}
+				};
+			});
+		</script>
     </head>
     <body>
         <h1>IBM ECMA-402 Intl demo</h1>
@@ -34,44 +75,4 @@
        <button onclick='formatit("ja")'>Japanese</button>
        <button onclick='formatit("fr")'>French (not preloaded)</button>
 </body>
-<script src="../../requirejs/require.js"></script>
-<script>
-	require.config({
-		  baseUrl: "../..",
-		  config: {
-			  "ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|de)$/
-		  }
-	});
-
-	require(["ecma402/Intl"], function(IntlShim) {
-		formatit = function (locale) {
-			var options = {
-				year : "numeric",
-				month : "short",
-				day : "numeric",
-				weekday : "short",
-				hour : "numeric",
-				minute : "numeric",
-				second : "numeric"
-			};
-
-			df1 = new IntlShim.DateTimeFormat(locale, options);
-			var x1 = document.getElementById("demo");
-			x1.innerHTML = df1.format(new Date());
-			nf = new IntlShim.NumberFormat(locale, options);
-			var y = document.getElementById("numb");
-			y.innerHTML = nf.format(123456.789);
-
-			if (typeof Intl !== "undefined") {
-				var df = new Intl.DateTimeFormat(locale, options);
-				var x = document.getElementById("demo1");
-				x.innerHTML = df.format(new Date());
-
-				var nf1 = new Intl.NumberFormat(locale, options);
-				var y1 = document.getElementById("numb1");
-				y1.innerHTML = nf1.format(123456.789);
-			}
-		};
-	});
-</script>
 </html>
