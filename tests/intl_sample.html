@@ -9,7 +9,7 @@
 			require.config({
 				baseUrl: "../..",
 				config: {
-					"ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|de)$/
+					"ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|th|de)$/
 				}
 			});
 
@@ -73,6 +73,8 @@
        <button onclick='formatit("es")'>Spanish</button>
        <button onclick='formatit("hi-u-nu-deva")'>Hindi w/native digits</button>
        <button onclick='formatit("ja")'>Japanese</button>
+       <button onclick='formatit("th")'>Thai with Buddhist calendar</button>
+       <button onclick='formatit("th-u-ca-gregory")'>Thai with Gregorian calendar</button>
        <button onclick='formatit("fr")'>French (not preloaded)</button>
 </body>
 </html>

@@ -12,6 +12,9 @@ define([
 			// Compute dependencies to require().
 			// For specified locale, load JSON files for its "currencies", "numbers", and "ca-gregorian" data.
 			var jsonElements = [ "currencies", "numbers", "ca-gregorian" ];
+			if ( locale === "th" ) {
+				jsonElements.push("ca-buddhist");
+			}
 			var dependencies = jsonElements.map(function (element) {
 				return "requirejs-text/text!./cldr/" + locale + "/" + element + ".json";
 			});
