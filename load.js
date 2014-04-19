@@ -15,6 +15,9 @@ define([
 			if ( locale === "th" ) {
 				jsonElements.push("ca-buddhist");
 			}
+			if ( locale === "zh-Hant" || locale === "zh-TW" ) {
+				jsonElements.push("ca-roc");
+			}
 			var dependencies = jsonElements.map(function (element) {
 				return "requirejs-text/text!./cldr/" + locale + "/" + element + ".json";
 			});

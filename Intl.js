@@ -892,7 +892,7 @@ define(
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
-			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist" ];
+			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "roc" ];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {
 				var region = "001";
