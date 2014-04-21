@@ -614,9 +614,6 @@ define(
 					var f = dateTimeFormat[p];
 					var v = tm[p];
 					var fv;
-					if (p === "year" && v <= 0) {
-						v = 1 - v;
-					}
 					if (p === "month") {
 						v++;
 					}
@@ -892,7 +889,7 @@ define(
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
-			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "roc" ];
+			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "japanese", "roc" ];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {
 				var region = "001";
