@@ -1,0 +1,1 @@
+section=ca-buddhist ; path=//cldr/main/[^/]++/dates/calendars/buddhist/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="0"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])

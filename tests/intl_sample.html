@@ -9,7 +9,7 @@
 			require.config({
 				baseUrl: "../..",
 				config: {
-					"ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|de)$/
+					"ecma402/preloads": /^(ar-(TN|SA)|en|es|hi|ja|th|de|zh-Hant|zh-TW)$/
 				}
 			});
 
@@ -27,7 +27,9 @@
 
 					df1 = new IntlIbm.DateTimeFormat(locale, options);
 					var x1 = document.getElementById("demo");
-					x1.innerHTML = df1.format(new Date());
+					var theDate = new Date();
+					// For debugging purposes to set to a specific date... theDate.setFullYear(1745,0,1);
+					x1.innerHTML = df1.format(theDate);
 					nf = new IntlIbm.NumberFormat(locale, options);
 					var y = document.getElementById("numb");
 					y.innerHTML = nf.format(123456.789);
@@ -35,7 +37,7 @@
 					if (typeof Intl !== "undefined") {
 						var df = new Intl.DateTimeFormat(locale, options);
 						var x = document.getElementById("demo1");
-						x.innerHTML = df.format(new Date());
+						x.innerHTML = df.format(theDate);
 
 						var nf1 = new Intl.NumberFormat(locale, options);
 						var y1 = document.getElementById("numb1");
@@ -73,6 +75,11 @@
        <button onclick='formatit("es")'>Spanish</button>
        <button onclick='formatit("hi-u-nu-deva")'>Hindi w/native digits</button>
        <button onclick='formatit("ja")'>Japanese</button>
+       <button onclick='formatit("ja-u-ca-japanese")'>Japanese w/Japanese calendar</button>
+       <button onclick='formatit("th")'>Thai</button>
+       <button onclick='formatit("th-u-ca-gregory")'>Thai w/ Gregorian calendar</button>
+       <button onclick='formatit("zh-Hant")'>T-Chinese</button>
+       <button onclick='formatit("zh-TW-u-ca-roc")'>T-Chinese w/ ROC calendar</button>
        <button onclick='formatit("fr")'>French (not preloaded)</button>
 </body>
 </html>

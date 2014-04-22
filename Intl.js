@@ -1,12 +1,16 @@
 define(
-		[ "./Record", "./calendars", "./common", "./preloads!", "requirejs-text/text!./cldr/supplemental/currencyData.json",
-				"requirejs-text/text!./cldr/supplemental/timeData.json", "requirejs-text/text!./cldr/supplemental/likelySubtags.json",
+		[ "./Record", "./calendars", "./common", "./preloads!", 
+		  		"requirejs-text/text!./cldr/supplemental/currencyData.json",
+				"requirejs-text/text!./cldr/supplemental/timeData.json",
+				"requirejs-text/text!./cldr/supplemental/calendarPreferenceData.json",
+				"requirejs-text/text!./cldr/supplemental/likelySubtags.json",
 				"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
-		function (Record, calendars, common, preloads, currencyData_json, timeData_json, likelySubtags_json,
+		function (Record, calendars, common, preloads, currencyData_json, timeData_json, calendarPreferenceData_json, likelySubtags_json,
 				numberingSystems_json) {
 			var Intl = {};
 			var currencyData = JSON.parse(currencyData_json);
 			var timeData = JSON.parse(timeData_json).supplemental.timeData;
+			var calendarPreferenceData = JSON.parse(calendarPreferenceData_json).supplemental.calendarPreferenceData;
 			var likelySubtags = JSON.parse(likelySubtags_json).supplemental.likelySubtags;
 			var numberingSystems = JSON.parse(numberingSystems_json).supplemental.numberingSystems;
 			var availableNumberingSystems = [ "latn" ];
@@ -610,9 +614,6 @@ define(
 					var f = dateTimeFormat[p];
 					var v = tm[p];
 					var fv;
-					if (p === "year" && v <= 0) {
-						v = 1 - v;
-					}
 					if (p === "month") {
 						v++;
 					}
@@ -839,7 +840,7 @@ define(
 				// format in locales using a 12-hour clock.
 				var combinedDateFormat = dateTimeFormats.full || "{1} {0}";
 				combinedDateFormat = combinedDateFormat.replace("{1}", availableFormats.yMMMMEd
-						|| availableFormats.yMMMEd);
+						|| availableFormats.yMMMEd || availableFormats.yyyyMMMMEd || availableFormats.yyyyMMMEd || availableFormats.GyMMMMEd || availableFormats.GyMMMEd);
 				var combinedDateTimeFormat24 = combinedDateFormat.replace("{0}", availableFormats.Hms);
 				var combinedDateTimeFormat12 = combinedDateFormat.replace("{0}", availableFormats.hms);
 				outputFormat = _ToIntlDateTimeFormat(combinedDateTimeFormat24);
@@ -888,9 +889,9 @@ define(
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
+			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "japanese", "roc" ];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {
-				var calendarPreferences = [ "gregory" ];
 				var region = "001";
 				var hour12 = false;
 				var hourNo0 = false;
@@ -906,6 +907,22 @@ define(
 
 				hour12 = timeData[region] && (/h|K/.test(timeData[region]._preferred));
 				hourNo0 = timeData[region] && (/h|k/.test(timeData[region]._preferred));
+				calendarPreferences = [];
+				if (calendarPreferenceData[region]) {
+					var prefs = calendarPreferenceData[region].toString().split(" ");
+					prefs.forEach(function (pref){
+						var thisPref = pref.replace("gregorian","gregory");
+						if (DateTimeFormat.supportedCalendars.indexOf(thisPref) !== -1){
+							calendarPreferences.push(thisPref);
+						}
+					});
+				}
+				
+				/* Gregorian should always be supported */
+				if (calendarPreferences.indexOf("gregory") === -1) {
+					calendarPreferences.push("gregory");
+				}
+				
 				DateTimeFormat.localeData[loc] = {
 					"nu" : availableNumberingSystems,
 					"ca" : calendarPreferences,

@@ -1,0 +1,1 @@
+section=ca-japanese ; path=//cldr/main/[^/]++/dates/calendars/japanese/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
