@@ -1,0 +1,3 @@
+section=ca-islamic ; path=//cldr/main/[^/]++/dates/calendars/islamic/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
+section=ca-islamic-civil ; path=//cldr/main/[^/]++/dates/calendars/islamic-civil/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
+section=ca-islamic-tbla ; path=//cldr/main/[^/]++/dates/calendars/islamic-tbla/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])

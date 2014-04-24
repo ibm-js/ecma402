@@ -1,0 +1,1 @@
+section=ca-hebrew ; path=//cldr/main/[^/]++/dates/calendars/hebrew/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
