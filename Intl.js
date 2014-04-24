@@ -1,5 +1,5 @@
 define(
-		[ "./Record", "./calendars", "./common", "./preloads!", 
+		[ "./Record", "./calendars", "./common", "./locales!", 
 		  		"requirejs-text/text!./cldr/supplemental/currencyData.json",
 				"requirejs-text/text!./cldr/supplemental/timeData.json",
 				"requirejs-text/text!./cldr/supplemental/calendarPreferenceData.json",

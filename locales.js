@@ -2,7 +2,7 @@
  * Plugin to pre-load the locales the app has specified via:
  *
  * require.config({
- * 		"ecma402/preloads":  /^(ar-(TN|SA)|en|es|hi|ja|de)$/
+ * 		"ecma402/locales":  /^(ar-(TN|SA)|en|es|hi|ja|de)$/
  * });
  */
 define([
