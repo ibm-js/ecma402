@@ -2,59 +2,65 @@
  * Commonly used routines throughout ECMA-402 package. Also referred to in the standard as "Abstract Operations"
  */
 define(["./List", "./Record", 
-        "requirejs-text/text!./cldr/config/availableLocales.json",
-		"requirejs-text/text!./cldr/supplemental/aliases.json",
-		"requirejs-text/text!./cldr/supplemental/localeAliases.json",
-		"requirejs-text/text!./cldr/supplemental/parentLocales.json" ],
-		function (List, Record, availableLocales_json, aliases_json, localeAliases_json, parentLocales_json) {
-			var aliases = JSON.parse(aliases_json).supplemental.metadata.alias;
-			var localeAliases = JSON.parse(localeAliases_json).supplemental.metadata.alias;
-			var parentLocales = JSON.parse(parentLocales_json).supplemental.parentLocales.parentLocale;
-			var common = {
-				unicodeLocaleExtensions : /-u(-[a-z0-9]{2,8})+/g,
-				// ECMA 402 Section 6.1
-				_toUpperCaseIdentifier : function (identifier) {
-					var match = /[a-z]/g;
-					return identifier.replace(match, function (m) {
-						return m.toUpperCase();
-					}); // String
-				},
+    "requirejs-text/text!./cldr/config/availableLocales.json",
+	"requirejs-text/text!./cldr/supplemental/aliases.json",
+	"requirejs-text/text!./cldr/supplemental/localeAliases.json",
+	"requirejs-text/text!./cldr/supplemental/parentLocales.json" ],
+	function (List, Record, availableLocalesJson, aliasesJson, localeAliasesJson, parentLocalesJson) {
+		var aliases = JSON.parse(aliasesJson).supplemental.metadata.alias;
+		var localeAliases = JSON.parse(localeAliasesJson).supplemental.metadata.alias;
+		var parentLocales = JSON.parse(parentLocalesJson).supplemental.parentLocales.parentLocale;
+		var common = {
+			unicodeLocaleExtensions : /-u(-[a-z0-9]{2,8})+/g,
+			// ECMA 402 Section 6.1
+			_toUpperCaseIdentifier : function (identifier) {
+				var match = /[a-z]/g;
+				return identifier.replace(match, function (m) {
+					return m.toUpperCase();
+				}); // String
+			},
+			// ECMA 402 Section 6.1
+			_toLowerCaseIdentifier : function (identifier) {
+				var match = /[A-Z]/g;
+				return identifier.replace(match, function (m) {
+					return m.toLowerCase();
+				}); // String
+			},
 
-				// ECMA 402 Section 6.1
-				_toLowerCaseIdentifier : function (identifier) {
-					var match = /[A-Z]/g;
-					return identifier.replace(match, function (m) {
-						return m.toLowerCase();
-					}); // String
-				},
+			// ECMA 402 Section 6.2.2
+			isStructurallyValidLanguageTag : function (locale) {
+				if (typeof locale !== "string") {
+					return false; // Boolean
+				}
+				var identifier = this._toLowerCaseIdentifier(locale);
+				var langtag = new RegExp(
+						"^([a-z]{2,3}(-[a-z]{3}){0,3}|[a-z]{4,8})" + // language
+						"(-[a-z]{4})?" + // script
+						"(-([a-z]{2}|\\d{3}))?" + // territory
+						"(-([a-z0-9]{5,8}|\\d[a-z0-9]{3}))*" + // variant
+						"(-[a-wyz0-9](-[a-z0-9]{2,8})+)*(-x(-[a-z0-9]{1,8})+)?$"); // extension
+				var privateuse = /x(-[a-z0-9]{1,8})+/;
+				var grandfathered = new RegExp(
+						"en-gb-oed|(i-(ami|bnn|default|enochian|hak|klingon|lux|mingo|navajo|pwn|tao|tay|tsu))|" +
+						"sgn-((be-(fr|nl))|(ch-de))");
+				if (privateuse.test(identifier) || grandfathered.test(identifier)) {
+					return true; // Boolean
+				}
 
-				// ECMA 402 Section 6.2.2
-				IsStructurallyValidLanguageTag : function (locale) {
-					if (typeof locale !== "string") {
-						return false; // Boolean
+				function _isUniqueVariant (element) {
+					var firstSingletonPosition = identifier.search(/-[a-z0-9]-/);
+					if (firstSingletonPosition > 0) {
+						return identifier.indexOf(element) > firstSingletonPosition
+								|| identifier.indexOf(element) === identifier.lastIndexOf(element,
+										firstSingletonPosition); // Boolean
 					}
-					var identifier = this._toLowerCaseIdentifier(locale);
-					var langtag = /^([a-z]{2,3}(-[a-z]{3}){0,3}|[a-z]{4,8})(-[a-z]{4})?(-([a-z]{2}|\d{3}))?(-([a-z0-9]{5,8}|\d[a-z0-9]{3}))*(-[a-wyz0-9](-[a-z0-9]{2,8})+)*(-x(-[a-z0-9]{1,8})+)?$/;
-					var privateuse = /x(-[a-z0-9]{1,8})+/;
-					var grandfathered = /en-gb-oed|(i-(ami|bnn|default|enochian|hak|klingon|lux|mingo|navajo|pwn|tao|tay|tsu))|sgn-((be-(fr|nl))|(ch-de))/;
-					if (privateuse.test(identifier) || grandfathered.test(identifier)) {
-						return true; // Boolean
-					}
+					return identifier.indexOf(element) === identifier.lastIndexOf(element); // Boolean
+				}
 
-					function _isUniqueVariant (element, index, array) {
-						var firstSingletonPosition = identifier.search(/-[a-z0-9]-/);
-						if (firstSingletonPosition > 0) {
-							return identifier.indexOf(element) > firstSingletonPosition
-									|| identifier.indexOf(element) === identifier.lastIndexOf(element,
-											firstSingletonPosition); // Boolean
-						}
-						return identifier.indexOf(element) === identifier.lastIndexOf(element); // Boolean
-					}
-
-					function _isUniqueSingleton (element, index, array) {
+					function _isUniqueSingleton (element) {
 						var firstXPosition = identifier.search(/-x-/);
 						if (firstXPosition > 0) {
-							return identifier.indexOf(element) === identifier.lastIndexOf(element, firstXPosition); // Boolean
+							return identifier.indexOf(element) === identifier.lastIndexOf(element, firstXPosition);
 						}
 						return identifier.indexOf(element) === identifier.lastIndexOf(element); // Boolean
 					}
@@ -155,13 +161,13 @@ define(["./List", "./Record",
 
 				// ECMA 402 Section 6.2.4
 				DefaultLocale : function () {
-					var result = undefined;
-					if (this.IsStructurallyValidLanguageTag(navigator.language)) {
+					var result;
+					if (this.isStructurallyValidLanguageTag(navigator.language)) {
 						result = this.BestFitAvailableLocale(this.availableLocalesList, this
 								.CanonicalizeLanguageTag(navigator.language));
 					}
-					if (!result && this.IsStructurallyValidLanguageTag(navigator.userLanguage)) {
-						result = this.BestFitAvailableLocale(availableLocalesList, this
+					if (!result && this.isStructurallyValidLanguageTag(navigator.userLanguage)) {
+						result = this.BestFitAvailableLocale(this.availableLocalesList, this
 								.CanonicalizeLanguageTag(navigator.userLanguage));
 					}
 					if (!result) {
@@ -189,13 +195,13 @@ define(["./List", "./Record",
 						locales = new Array(locales);
 					}
 					var O = Object(locales);
-					for (Pk in O) {
+					for (var Pk in O) {
 						var kValue = O[Pk];
 						if (typeof kValue !== "string" && typeof kValue !== "object") {
 							throw new TypeError(kValue + " must be a string or an object.");
 						}
 						var tag = kValue.toString();
-						if (!this.IsStructurallyValidLanguageTag(tag)) {
+						if (!this.isStructurallyValidLanguageTag(tag)) {
 							throw new RangeError(tag + " is not a structurally valid language tag.");
 						}
 						tag = this.CanonicalizeLanguageTag(tag);
@@ -228,10 +234,10 @@ define(["./List", "./Record",
 				LookupMatcher : function (availableLocales, requestedLocales) {
 					var i = 0;
 					var len = requestedLocales.length;
-					var availableLocale = undefined;
-					var locale = undefined;
-					var noExtensionsLocale = undefined;
-					while (i < len && availableLocale === undefined) {
+					var availableLocale = null;
+					var locale = null;
+					var noExtensionsLocale = null;
+					while (i < len && availableLocale === null) {
 						locale = requestedLocales[i];
 						noExtensionsLocale = locale.replace(this.unicodeLocaleExtensions, "");
 						availableLocale = this.BestAvailableLocale(availableLocales, noExtensionsLocale);
@@ -294,10 +300,10 @@ define(["./List", "./Record",
 				BestFitMatcher : function (availableLocales, requestedLocales) {
 					var i = 0;
 					var len = requestedLocales.length;
-					var availableLocale = undefined;
-					var locale = undefined;
-					var noExtensionsLocale = undefined;
-					while (i < len && availableLocale === undefined) {
+					var availableLocale = null;
+					var locale = null;
+					var noExtensionsLocale = null;
+					while (i < len && availableLocale === null) {
 						locale = requestedLocales[i];
 						noExtensionsLocale = locale.replace(this.unicodeLocaleExtensions, "");
 						availableLocale = this.BestFitAvailableLocale(availableLocales, noExtensionsLocale);
@@ -331,13 +337,13 @@ define(["./List", "./Record",
 						extension = r.extension;
 						extensionIndex = r.extensionIndex;
 						extensionSubtags = extension.split("-");
-						extensionSubtagsLength = extensionSubtags["length"];
+						extensionSubtagsLength = extensionSubtags.length;
 					}
 					var result = new Record();
 					result.set("dataLocale", foundLocale);
 					var supportedExtension = "-u";
 					var i = 0;
-					var len = relevantExtensionKeys["length"];
+					var len = relevantExtensionKeys.length;
 					while (i < len) {
 						var key = relevantExtensionKeys[String(i)];
 						var foundLocaleData = localeData[foundLocale];
@@ -386,114 +392,114 @@ define(["./List", "./Record",
 					return result;
 				},
 
-				// ECMA 402 Section 9.2.6
-				LookupSupportedLocales : function (availableLocales, requestedLocales) {
-					var len = requestedLocales.length;
-					var subset = new List();
-					var k = 0;
-					while (k < len) {
-						var locale = requestedLocales[k];
-						var noExtensionsLocale = locale.replace(this.unicodeLocaleExtensions, "");
-						var availableLocale = this.BestAvailableLocale(availableLocales, noExtensionsLocale);
-						if (availableLocale !== undefined) {
-							subset.push(locale);
-						}
-						k++;
+			// ECMA 402 Section 9.2.6
+			LookupSupportedLocales : function (availableLocales, requestedLocales) {
+				var len = requestedLocales.length;
+				var subset = new List();
+				var k = 0;
+				while (k < len) {
+					var locale = requestedLocales[k];
+					var noExtensionsLocale = locale.replace(this.unicodeLocaleExtensions, "");
+					var availableLocale = this.BestAvailableLocale(availableLocales, noExtensionsLocale);
+					if (availableLocale !== undefined) {
+						subset.push(locale);
 					}
-					var subsetArray = subset.toArray();
-					return subsetArray;
-				},
+					k++;
+				}
+				var subsetArray = subset.toArray();
+				return subsetArray;
+			},
 
-				// ECMA 402 Section 9.2.7
-				BestFitSupportedLocales : function (availableLocales, requestedLocales) {
-					var len = requestedLocales.length;
-					var subset = new List();
-					var k = 0;
-					while (k < len) {
-						var locale = requestedLocales[k];
-						var noExtensionsLocale = locale.replace(this.unicodeLocaleExtensions, "");
-						var availableLocale = this.BestFitAvailableLocale(availableLocales, noExtensionsLocale);
-						if (availableLocale !== undefined) {
-							subset.push(locale);
-						}
-						k++;
+			// ECMA 402 Section 9.2.7
+			BestFitSupportedLocales : function (availableLocales, requestedLocales) {
+				var len = requestedLocales.length;
+				var subset = new List();
+				var k = 0;
+				while (k < len) {
+					var locale = requestedLocales[k];
+					var noExtensionsLocale = locale.replace(this.unicodeLocaleExtensions, "");
+					var availableLocale = this.BestFitAvailableLocale(availableLocales, noExtensionsLocale);
+					if (availableLocale !== undefined) {
+						subset.push(locale);
 					}
-					var subsetArray = subset.toArray();
-					return subsetArray;
-				},
+					k++;
+				}
+				var subsetArray = subset.toArray();
+				return subsetArray;
+			},
 
-				// ECMA 402 Section 9.2.8
-				SupportedLocales : function (availableLocales, requestedLocales, options) {
-					var matcher = undefined;
-					var subset;
-					if (options !== undefined) {
-						options = Object(options);
-						matcher = options["localeMatcher"];
-						if (matcher !== undefined) {
-							matcher = String(matcher);
-							if (matcher !== "lookup" && matcher !== "best fit") {
-								throw new RangeError("Matching algorithm must be 'lookup' or 'best fit'.");
+			// ECMA 402 Section 9.2.8
+			SupportedLocales : function (availableLocales, requestedLocales, options) {
+				var matcher;
+				var subset;
+				if (options !== undefined) {
+					options = Object(options);
+					matcher = options.localeMatcher;
+					if (matcher !== undefined) {
+						matcher = String(matcher);
+						if (matcher !== "lookup" && matcher !== "best fit") {
+							throw new RangeError("Matching algorithm must be 'lookup' or 'best fit'.");
+						}
+					}
+				}
+				if (matcher === undefined || matcher === "best fit") {
+					subset = this.BestFitSupportedLocales(availableLocales, requestedLocales);
+				} else {
+					subset = this.LookupSupportedLocales(availableLocales, requestedLocales);
+				}
+				for ( var P in Object.getOwnPropertyNames(subset)) {
+					var desc = Object.getOwnPropertyDescriptor(subset, P);
+					if (desc !== undefined) {
+						desc.writable = false;
+						desc.configurable = false;
+						Object.defineProperty(subset, P, desc);
+					}
+				}
+				Object.defineProperty(subset, "length", {
+					writable : false,
+					configurable : false
+				});
+				return subset;
+			},
+
+			// ECMA 402 Section 9.2.9
+			GetOption : function (options, property, type, values, fallback) {
+				var value = options[property];
+				if (value !== undefined) {
+					if (type === "boolean") {
+						value = Boolean(value);
+					}
+					if (type === "string") {
+						value = String(value);
+					}
+					if (values !== undefined) {
+						for ( var v in values) {
+							if (values[v] === value) {
+								return value;
 							}
 						}
+						throw new RangeError("The specified value " + value + " for property " + property
+								+ " is invalid.");
 					}
-					if (matcher === undefined || matcher === "best fit") {
-						subset = this.BestFitSupportedLocales(availableLocales, requestedLocales);
-					} else {
-						subset = this.LookupSupportedLocales(availableLocales, requestedLocales);
-					}
-					for ( var P in Object.getOwnPropertyNames(subset)) {
-						var desc = Object.getOwnPropertyDescriptor(subset, P);
-						if (desc !== undefined) {
-							desc.writable = false;
-							desc.configurable = false;
-							Object.defineProperty(subset, P, desc);
-						}
-					}
-					Object.defineProperty(subset, "length", {
-						writable : false,
-						configurable : false
-					});
-					return subset;
-				},
+					return value;
+				}
+				return fallback;
+			},
 
-				// ECMA 402 Section 9.2.9
-				GetOption : function (options, property, type, values, fallback) {
-					var value = options[property];
-					if (value !== undefined) {
-						if (type === "boolean") {
-							value = Boolean(value);
-						}
-						if (type === "string") {
-							value = String(value);
-						}
-						if (values !== undefined) {
-							for ( var v in values) {
-								if (values[v] === value) {
-									return value;
-								}
-							}
-							throw new RangeError("The specified value " + value + " for property " + property
-									+ " is invalid.");
-						}
-						return value;
+			// ECMA 402 Section 9.2.10
+			GetNumberOption : function (options, property, minimum, maximum, fallback) {
+				var value = options[property];
+				if (value !== undefined) {
+					value = Number(value);
+					if (isNaN(value) || value < minimum || value > maximum) {
+						throw new RangeError("The specified number value " + value + " is not in the allowed range");
 					}
-					return fallback;
-				},
+					return Math.floor(value);
+				}
+				return fallback;
+			},
+		};
 
-				// ECMA 402 Section 9.2.10
-				GetNumberOption : function (options, property, minimum, maximum, fallback) {
-					var value = options[property];
-					if (value !== undefined) {
-						value = Number(value);
-						if (isNaN(value) || value < minimum || value > maximum) {
-							throw new RangeError("The specified number value " + value + " is not in the allowed range");
-						}
-						return Math.floor(value);
-					}
-					return fallback;
-				},
-			};
-
-			common.availableLocalesList = common.CanonicalizeLocaleList(JSON.parse(availableLocales_json).availableLocales);
-			return common;
-		});
+		common.availableLocalesList = common.CanonicalizeLocaleList(JSON.parse(availableLocalesJson).availableLocales);
+		return common;
+	});
