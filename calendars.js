@@ -1,10 +1,10 @@
-define( [ "./Record",
-	  		"requirejs-text/text!./cldr/supplemental/calendarData.json",
-            "./buddhistCalendar",
-            "./gregorianCalendar",
-            "./japaneseCalendar",
-            "./rocCalendar" ],
-    function (Record,calendarDataJson,buddhistCalendar,gregorianCalendar,japaneseCalendar,rocCalendar) {	
+define([ "./Record",
+		"requirejs-text/text!./cldr/supplemental/calendarData.json",
+        "./buddhistCalendar",
+        "./gregorianCalendar",
+        "./japaneseCalendar",
+        "./rocCalendar" ],
+    function (Record, calendarDataJson, buddhistCalendar, gregorianCalendar, japaneseCalendar, rocCalendar) {
 	var calendars = {
 		toLocalTime : function (date, calendar, timeZone) {
 			switch (calendar) {

@@ -1,5 +1,5 @@
-define( [ "./Record", "requirejs-text/text!./cldr/supplemental/calendarData.json"],
-	function (Record,calendarDataJson) {
+define([ "./Record", "requirejs-text/text!./cldr/supplemental/calendarData.json"],
+	function (Record, calendarDataJson) {
 	var calendarData = JSON.parse(calendarDataJson).supplemental.calendarData;
 	var calendarFunctions = {
 		eraOffset : function (calendar, era) {

@@ -14,13 +14,13 @@ define([
 			var jsonElements = [ "currencies", "numbers", "ca-gregorian" ];
 			
 			// TODO: Determine this dynamically from CLDR's calendarPreferenceData instead of hard-coding.
-			if ( locale === "th" ) {
+			if (locale === "th") {
 				jsonElements.push("ca-buddhist");
 			}
-			if ( locale === "zh-Hant" || locale === "zh-TW" ) {
+			if (locale === "zh-Hant" || locale === "zh-TW") {
 				jsonElements.push("ca-roc");
 			}
-			if ( locale === "ja" ) {
+			if (locale === "ja") {
 				jsonElements.push("ca-japanese");
 			}
 			var dependencies = jsonElements.map(function (element) {

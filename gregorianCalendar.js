@@ -17,7 +17,7 @@ define(
 			result.set("year", year);
 			result.set("month", timeZone === "UTC" ? dt.getUTCMonth() : dt.getMonth());
 			result.set("day", timeZone === "UTC" ? dt.getUTCDate() : dt.getDate());
-			calendarFunctions.setTimeFields(dt,timeZone,result);
+			calendarFunctions.setTimeFields(dt, timeZone, result);
 			return result;
 		}
 	};

@@ -38,14 +38,14 @@ define([
 	var locales = Object.keys(localeHash);
 
 	// Compute dependencies to require()
-	var dependencies = locales.map(function(locale){ return "./load!" + locale; });
+	var dependencies = locales.map(function (locale) { return "./load!" + locale; });
 
 	return {
 		load: function (path, callerRequire, onload) {
 			// Load the locale data for every requested locale, and then return it in a hash
 			require(dependencies, function () {
 				var localeDataArray = arguments, localeDataHash = {};
-				locales.forEach(function(locale, idx){
+				locales.forEach(function (locale, idx) {
 					localeDataHash[locale] = localeDataArray[idx];
 				});
 				onload(localeDataHash);
