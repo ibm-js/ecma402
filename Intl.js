@@ -5,7 +5,8 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 		"requirejs-text/text!./cldr/supplemental/likelySubtags.json",
 		"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
 	function (Record, calendars, common, preloads, currencyDataJson, timeDataJson, calendarPreferenceDataJson,
-				likelySubtagsJson,	numberingSystemsJson) {
+				likelySubtagsJson, numberingSystemsJson) {
+			/*jshint maxcomplexity: 22*/
 			var Intl = {};
 			var currencyData = JSON.parse(currencyDataJson);
 			var timeData = JSON.parse(timeDataJson).supplemental.timeData;
@@ -13,14 +14,14 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			var likelySubtags = JSON.parse(likelySubtagsJson).supplemental.likelySubtags;
 			var numberingSystems = JSON.parse(numberingSystemsJson).supplemental.numberingSystems;
 			var availableNumberingSystems = [ "latn" ];
-			for ( var ns in numberingSystems) {
+			for (var ns in numberingSystems) {
 				if (numberingSystems[ns]._type === "numeric" && ns !== "latn") {
 					availableNumberingSystems.push(ns);
 				}
 			}
 
 			// ECMA 402 Section 11.1.1.1
-			function _initializeNumberFormat (numberFormat, locales, options) {
+			function _initializeNumberFormat(numberFormat, locales, options) {
 				if (numberFormat.hasOwnProperty("initializedIntlObject") && numberFormat.initializedIntlObject) {
 					throw new TypeError("NumberFormat is already initialized.");
 				}
@@ -122,7 +123,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			 * Utility function to insert grouping separators into the proper locations in a string of digits based on
 			 * the CLDR pattern string.
 			 */
-			function doGrouping (n, pattern) {
+			function doGrouping(n, pattern) {
 				var numExp = /[0-9#.,]+/;
 				var number = numExp.exec(pattern)[0];
 				var dPos = number.lastIndexOf(".");
@@ -147,7 +148,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			/*
 			 * Utility function to convert a string in scientific notation to a corresponding string of digits
 			 */
-			function _toDigitString (x) {
+			function _toDigitString(x) {
 				var m = x;
 				var negative = false;
 				if (m.charAt(0) === "-") {
@@ -182,7 +183,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return m;
 			}
 			// ECMA 402 Section 11.3.2 (_toRawPrecision abstract operation)
-			function _toRawPrecision (x, minPrecision, maxPrecision) {
+			function _toRawPrecision(x, minPrecision, maxPrecision) {
 				var p = maxPrecision;
 				var e;
 				var m = "";
@@ -260,7 +261,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return m;
 			}
 			// ECMA 402 Section 11.3.2 (_toRawFixed abstract operation)
-			function _toRawFixed (x, minInteger, minFraction, maxFraction) {
+			function _toRawFixed(x, minInteger, minFraction, maxFraction) {
 				var m;
 				/*
 				 * if x < 10^21, then we can use the standard built in function. Otherwise, Number.toFixed() is going to
@@ -294,7 +295,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return m;
 			}
 			// ECMA 402 Section 11.3.2 (_formatNumber abstract operation)
-			function _formatNumber (numberFormat, x) {
+			function _formatNumber(numberFormat, x) {
 				var negative = (x < 0);
 				var n;
 				if (!isFinite(x)) {
@@ -357,7 +358,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			}
 
 			// Utility function to retrive necessary number fields from the CLDR data
-			function _getNumberInfo (numbers, numberingSystem) {
+			function _getNumberInfo(numbers, numberingSystem) {
 				var result = {};
 				result.symbols = {};
 				var numberExp = /[0-9#.,]+/;
@@ -368,7 +369,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 
 				result.patterns = {};
 				var styles = [ "decimal", "percent", "currency" ];
-				for ( var s in styles) {
+				for (var s in styles) {
 					var style = styles[s];
 					key = style + "Formats-numberSystem-" + numberingSystem;
 					altkey = style + "Formats-numberSystem-latn";
@@ -393,7 +394,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			}
 
 			// ECMA 402 Section 12.1.1.1 (_toDateTimeOptions abstract operation)
-			function _toDateTimeOptions (options, required, defaults) {
+			function _toDateTimeOptions(options, required, defaults) {
 				if (options === undefined) {
 					options = null;
 				} else {
@@ -442,7 +443,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return options;
 			}
 			// ECMA 402 Section 12.1.1.1 (_basicFormatMatcher abstract operation)
-			function _basicFormatMatcher (options, formats) {
+			function _basicFormatMatcher(options, formats) {
 				var removalPenalty = 120;
 				var additionPenalty = 20;
 				var longLessPenalty = 8;
@@ -494,12 +495,12 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return bestFormat;
 			}
 			// ECMA 402 Section 12.1.1.1
-			function _bestFitFormatMatcher (options, formats) {
+			function _bestFitFormatMatcher(options, formats) {
 				return _basicFormatMatcher(options, formats);
 			}
 
 			/* ECMA 402 Section 12.1.1.1 */
-			function _initializeDateTimeFormat (dateTimeFormat, locales, options) {
+			function _initializeDateTimeFormat(dateTimeFormat, locales, options) {
 				var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second",
 						"timeZoneName" ];
 				if (dateTimeFormat.hasOwnProperty("initializedIntlObject") && dateTimeFormat.initializedIntlObject) {
@@ -580,7 +581,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			}
 
 			// ECMA 402 Section 12.3.2
-			function _formatDateTime (dateTimeFormat, x) {
+			function _formatDateTime(dateTimeFormat, x) {
 				var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second",
 						"timeZoneName" ];
 				if (!isFinite(x)) {
@@ -639,11 +640,11 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return result;
 			}
 			// ECMA 402 Section 12.3.2
-			function _toLocalTime (date, calendar, timeZone) {
+			function _toLocalTime(date, calendar, timeZone) {
 				return calendars.toLocalTime(date, calendar, timeZone);
 			}
 
-			function _getCalendarField (calData, standalone, property, format, value) {
+			function _getCalendarField(calData, standalone, property, format, value) {
 				var result = null;
 				switch (property) {
 					case "weekday":
@@ -717,11 +718,12 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			 * formats as defined by ECMA 402. For definition of fields, in CLDR, refer to
 			 * http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
 			 */
-			function _ToIntlDateTimeFormat (format) {
+			function _ToIntlDateTimeFormat(format) {
 				var dateFields = /G{1,5}|y{1,4}|[ML]{1,5}|E{1,5}|d{1,2}|a|[Hh]{1,2}|m{1,2}|s{1,2}/g;
 				var result = new Record();
 				var pieces = format.split("'");
 				for (var x = 0; x < pieces.length; x += 2) { // Don't do replacements for fields that are quoted
+					/*jshint maxcomplexity: 36*/
 					pieces[x] = pieces[x].replace(dateFields, function (field) {
 						switch (field) {
 							case "GGGGG":
@@ -821,6 +823,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 								return field;
 						}
 					});
+					/*jshint maxcomplexity: 10*/
 				}
 				result.set("pattern", pieces.join(""));
 				return result;
@@ -832,11 +835,11 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			// definition of fields,
 			// in CLDR, refer to
 			// http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
-			function _convertAvailableDateTimeFormats (dateTimeFormats) {
+			function _convertAvailableDateTimeFormats(dateTimeFormats) {
 				var availableFormats = dateTimeFormats.availableFormats;
 				var result = [];
 				var usableFormatSkeletons = /^G{0,5}y{0,4}M{0,5}E{0,5}d{0,2}H{0,2}m{0,2}s{0,2}$/;
-				for ( var format in availableFormats) {
+				for (var format in availableFormats) {
 					var format12 = availableFormats[format.replace("H", "h")];
 					if (usableFormatSkeletons.test(format) && format12 !== undefined) {
 						var outputFormat = _ToIntlDateTimeFormat(availableFormats[format]);
@@ -858,9 +861,9 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				// c). The Hms format in locales using 24-hour clock, or the hms
 				// format in locales using a 12-hour clock.
 				var combinedDateFormat = dateTimeFormats.full || "{1} {0}";
-				combinedDateFormat = combinedDateFormat.replace("{1}", 
-						availableFormats.yMMMMEd|| availableFormats.yMMMEd || 
-						availableFormats.yyyyMMMMEd || availableFormats.yyyyMMMEd || 
+				combinedDateFormat = combinedDateFormat.replace("{1}",
+						availableFormats.yMMMMEd || availableFormats.yMMMEd ||
+						availableFormats.yyyyMMMMEd || availableFormats.yyyyMMMEd ||
 						availableFormats.GyMMMMEd || availableFormats.GyMMMEd);
 				var combinedDateTimeFormat24 = combinedDateFormat.replace("{0}", availableFormats.Hms);
 				var combinedDateTimeFormat12 = combinedDateFormat.replace("{0}", availableFormats.hms);
@@ -876,7 +879,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			 * Utility function to return the valid values for a date/time field, according to table 3 in ECMA 402
 			 * section 12.1.1.1
 			 */
-			function _validDateTimePropertyValues (prop) {
+			function _validDateTimePropertyValues(prop) {
 				if (prop === "weekday" || prop === "era") {
 					return [ "narrow", "short", "long" ];
 				}
@@ -928,9 +931,9 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				var calendarPreferences = [];
 				if (calendarPreferenceData[region]) {
 					var prefs = calendarPreferenceData[region].toString().split(" ");
-					prefs.forEach(function (pref){
-						var thisPref = pref.replace("gregorian","gregory");
-						if (DateTimeFormat.supportedCalendars.indexOf(thisPref) !== -1){
+					prefs.forEach(function (pref) {
+						var thisPref = pref.replace("gregorian", "gregory");
+						if (DateTimeFormat.supportedCalendars.indexOf(thisPref) !== -1) {
 							calendarPreferences.push(thisPref);
 						}
 					});
@@ -945,7 +948,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 					"nu" : availableNumberingSystems,
 					"ca" : calendarPreferences,
 					"hour12" : hour12,
-					"hourNo0" : hourNo0,
+					"hourNo0" : hourNo0
 				};
 			});
 			Object.freeze(DateTimeFormat);
@@ -1054,7 +1057,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 							"minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits",
 							"minimumSignificantDigits", "maximumSignificantDigits", "useGrouping" ];
 					var result = new Record();
-					for ( var f in fields) {
+					for (var f in fields) {
 						if (this.hasOwnProperty(fields[f])) {
 							result.set(fields[f], this[fields[f]]);
 						}
@@ -1173,7 +1176,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 					var fields = [ "locale", "calendar", "numberingSystem", "timeZone", "hour12", "weekday", "era",
 							"year", "month", "day", "hour", "minute", "second", "timeZoneName" ];
 					var result = new Record();
-					for ( var f in fields) {
+					for (var f in fields) {
 						if (this.hasOwnProperty(fields[f])) {
 							result.set(fields[f], this[fields[f]]);
 						}
