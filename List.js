@@ -1,7 +1,7 @@
-define( [], function (List) {
+define(function () {
 
 	// Implementation of the List abstract data type from ECMA 402.
-	List = function () {
+	var List = function () {
 		for (var i = 0; i < arguments.length; i++) {
 			this[i] = arguments[i];
 		}

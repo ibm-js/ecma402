@@ -1,7 +1,7 @@
-define( [], function (Record) {
+define(function () {
 
 	// Implementation of the Record abstract data type from ECMA 402.
-	Record = function () {
+	var Record = function () {
 		this.length = 0;
 	};
 
