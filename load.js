@@ -11,11 +11,14 @@ define([
 		load: function (locale, callerRequire, onload) {
 			// Compute dependencies to require().
 			// For specified locale, load JSON files for its "currencies", "numbers", and "ca-gregorian" data.
-			var jsonElements = [ "currencies", "numbers", "ca-gregorian" ];
+			var jsonElements = new Array("currencies", "numbers", "ca-gregorian");
 			
 			// TODO: Determine this dynamically from CLDR's calendarPreferenceData instead of hard-coding.
 			if (locale === "th") {
 				jsonElements.push("ca-buddhist");
+			}
+			if (locale === "he") {
+				jsonElements.push("ca-hebrew");
 			}
 			if (locale === "zh-Hant" || locale === "zh-TW") {
 				jsonElements.push("ca-roc");

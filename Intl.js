@@ -624,7 +624,8 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 						}
 					} else {
 						var standalone = (p === "month" && dateTimeFormat.standaloneMonth);
-						fv = _getCalendarField(dateTimeFormat.calData, standalone, p, f, v);
+						fv = _getCalendarField(dateTimeFormat.calendar, dateTimeFormat.calData, tm.year, standalone, p,
+								f, v);
 					}
 					if (result) {
 						result = result.replace("{" + p + "}", fv);
@@ -632,7 +633,8 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				});
 				if (dateTimeFormat.hour12) {
 					var ampm = pm ? "pm" : "am";
-					var fv = _getCalendarField(dateTimeFormat.calData, false, "dayperiod", "short", ampm);
+					var fv = _getCalendarField(dateTimeFormat.calendar, dateTimeFormat.calData, tm.year, false,
+							"dayperiod", "short", ampm);
 					if (result) {
 						result = result.replace("{ampm}", fv);
 					}
@@ -644,7 +646,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return calendars.toLocalTime(date, calendar, timeZone);
 			}
 
-			function _getCalendarField(calData, standalone, property, format, value) {
+			function _getCalendarField (calType, calData, year, standalone, property, format, value) {
 				var result = null;
 				switch (property) {
 					case "weekday":
@@ -676,18 +678,26 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 						}
 						break;
 					case "month":
+						var monthValue = value;
+						/*
+						 * Because of leap month in the Hebrew calendar, there isn't a 1-1 correlation between
+						 * month number and the resource name in CLDR, so we have to adjust accordingly.
+						 */
+						if (calType === "hebrew") {
+							monthValue = calendars.hebrewMonthResource(year,value);
+						}
 						switch (format) {
 							case "narrow":
-								result = standalone ? calData.months["stand-alone"].narrow[value]
-										: calData.months.format.narrow[value];
+								result = standalone ? calData.months["stand-alone"].narrow[monthValue]
+										: calData.months.format.narrow[monthValue];
 								break;
 							case "short":
-								result = standalone ? calData.months["stand-alone"].abbreviated[value]
-										: calData.months.format.abbreviated[value];
+								result = standalone ? calData.months["stand-alone"].abbreviated[monthValue]
+										: calData.months.format.abbreviated[monthValue];
 								break;
 							case "long":
-								result = standalone ? calData.months["stand-alone"].wide[value]
-										: calData.months.format.wide[value];
+								result = standalone ? calData.months["stand-alone"].wide[monthValue]
+										: calData.months.format.wide[monthValue];
 								break;
 						}
 						break;
@@ -910,7 +920,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
-			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "japanese", "roc" ];
+			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "hebrew", "japanese", "roc" ];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {
 				var region = "001";
