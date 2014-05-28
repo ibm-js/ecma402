@@ -10,16 +10,16 @@ define([ "./Record",
 	var calendars = {
 		toLocalTime : function (date, calendar, timeZone) {
 			switch (calendar) {
-				case "buddhist" :
-					return buddhistCalendar.toLocalTime(date, timeZone);
-				case "hebrew" :
-					return hebrewCalendar.toLocalTime(date, timeZone);
-				case "japanese" :
-					return japaneseCalendar.toLocalTime(date, timeZone);
-				case "roc" :
-					return rocCalendar.toLocalTime(date, timeZone);
-				default:
-					return gregorianCalendar.toLocalTime(date, timeZone);
+			case "buddhist" :
+				return buddhistCalendar.toLocalTime(date, timeZone);
+			case "hebrew" :
+				return hebrewCalendar.toLocalTime(date, timeZone);
+			case "japanese" :
+				return japaneseCalendar.toLocalTime(date, timeZone);
+			case "roc" :
+				return rocCalendar.toLocalTime(date, timeZone);
+			default:
+				return gregorianCalendar.toLocalTime(date, timeZone);
 			}
 		},
 		hebrewMonthResource : function (year, month) {

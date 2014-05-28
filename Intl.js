@@ -649,77 +649,77 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			function _getCalendarField(calType, calData, year, standalone, property, format, value) {
 				var result = null;
 				switch (property) {
-					case "weekday":
-						var cldrWeekdayKeys = [ "sun", "mon", "tue", "wed", "thu", "fri", "sat" ];
-						var weekdayKey = cldrWeekdayKeys[value];
-						switch (format) {
-							case "narrow":
-								result = calData.days.format.narrow[weekdayKey];
-								break;
-							case "short":
-								result = calData.days.format.abbreviated[weekdayKey];
-								break;
-							case "long":
-								result = calData.days.format.wide[weekdayKey];
-								break;
-						}
+				case "weekday":
+					var cldrWeekdayKeys = [ "sun", "mon", "tue", "wed", "thu", "fri", "sat" ];
+					var weekdayKey = cldrWeekdayKeys[value];
+					switch (format) {
+					case "narrow":
+						result = calData.days.format.narrow[weekdayKey];
 						break;
-					case "era":
-						switch (format) {
-							case "narrow":
-								result = calData.eras.eraNarrow[value];
-								break;
-							case "short":
-								result = calData.eras.eraAbbr[value];
-								break;
-							case "long":
-								result = calData.eras.eraNames[value];
-								break;
-						}
+					case "short":
+						result = calData.days.format.abbreviated[weekdayKey];
 						break;
-					case "month":
-						var monthValue = value;
-						/*
-						 * Because of leap month in the Hebrew calendar, there isn't a 1-1 correlation between
-						 * month number and the resource name in CLDR, so we have to adjust accordingly.
-						 */
-						if (calType === "hebrew") {
-							monthValue = calendars.hebrewMonthResource(year, value);
-						}
-						switch (format) {
-							case "narrow":
-								result = standalone ? calData.months["stand-alone"].narrow[monthValue]
-										: calData.months.format.narrow[monthValue];
-								break;
-							case "short":
-								result = standalone ? calData.months["stand-alone"].abbreviated[monthValue]
-										: calData.months.format.abbreviated[monthValue];
-								break;
-							case "long":
-								result = standalone ? calData.months["stand-alone"].wide[monthValue]
-										: calData.months.format.wide[monthValue];
-								break;
-						}
+					case "long":
+						result = calData.days.format.wide[weekdayKey];
 						break;
-					case "dayperiod":
-						switch (format) {
-							case "narrow":
-								result = calData.dayPeriods.format.narrow[value];
-								break;
-							case "short":
-								result = calData.dayPeriods.format.abbreviated[value];
-								break;
-							case "long":
-								result = calData.dayPeriods.format.wide[value];
-								break;
-						}
+					}
+					break;
+				case "era":
+					switch (format) {
+					case "narrow":
+						result = calData.eras.eraNarrow[value];
 						break;
-					case "timeZoneName":
-						if (value === "UTC") {
-							result = "UTC";
-						}
-						result = "local";
+					case "short":
+						result = calData.eras.eraAbbr[value];
 						break;
+					case "long":
+						result = calData.eras.eraNames[value];
+						break;
+					}
+					break;
+				case "month":
+					var monthValue = value;
+					/*
+					* Because of leap month in the Hebrew calendar, there isn't a 1-1 correlation between
+					* month number and the resource name in CLDR, so we have to adjust accordingly.
+					*/
+					if (calType === "hebrew") {
+						monthValue = calendars.hebrewMonthResource(year, value);
+					}
+					switch (format) {
+					case "narrow":
+						result = standalone ? calData.months["stand-alone"].narrow[monthValue]
+								: calData.months.format.narrow[monthValue];
+						break;
+					case "short":
+						result = standalone ? calData.months["stand-alone"].abbreviated[monthValue]
+								: calData.months.format.abbreviated[monthValue];
+						break;
+					case "long":
+						result = standalone ? calData.months["stand-alone"].wide[monthValue]
+								: calData.months.format.wide[monthValue];
+						break;
+					}
+					break;
+				case "dayperiod":
+					switch (format) {
+					case "narrow":
+						result = calData.dayPeriods.format.narrow[value];
+						break;
+					case "short":
+						result = calData.dayPeriods.format.abbreviated[value];
+						break;
+					case "long":
+						result = calData.dayPeriods.format.wide[value];
+						break;
+					}
+					break;
+				case "timeZoneName":
+					if (value === "UTC") {
+						result = "UTC";
+					}
+					result = "local";
+					break;
 				}
 				return result;
 			}
@@ -736,101 +736,101 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 					/*jshint maxcomplexity: 36*/
 					pieces[x] = pieces[x].replace(dateFields, function (field) {
 						switch (field) {
-							case "GGGGG":
-								result.set("era", "narrow");
-								return "{era}";
-							case "GGGG":
-								result.set("era", "long");
-								return "{era}";
-							case "GGG":
-							case "GG":
-							case "G":
-								result.set("era", "short");
-								return "{era}";
-							case "yy":
-								result.set("year", "2-digit");
-								return "{year}";
-							case "y":
-							case "yyy":
-							case "yyyy":
-								result.set("year", "numeric");
-								return "{year}";
-							case "LLLLL":
-								result.set("standaloneMonth", true);
-								result.set("month", "narrow");
-								return "{month}";
-							case "MMMMM":
-								result.set("month", "narrow");
-								return "{month}";
-							case "LLLL":
-								result.set("standaloneMonth", true);
-								result.set("month", "long");
-								return "{month}";
-							case "MMMM":
-								result.set("month", "long");
-								return "{month}";
-							case "LLL":
-								result.set("standaloneMonth", true);
-								result.set("month", "short");
-								return "{month}";
-							case "MMM":
-								result.set("month", "short");
-								return "{month}";
-							case "LL":
-							case "MM":
-								result.set("month", "2-digit");
-								return "{month}";
-							case "L":
-							case "M":
-								result.set("month", "numeric");
-								return "{month}";
-							case "EEEEE":
-								result.set("weekday", "narrow");
-								return "{weekday}";
-							case "EEEE":
-								result.set("weekday", "long");
-								return "{weekday}";
-							case "EEE":
-							case "EE":
-							case "E":
-								result.set("weekday", "short");
-								return "{weekday}";
-							case "dd":
-								result.set("day", "2-digit");
-								return "{day}";
-							case "d":
-								result.set("day", "numeric");
-								return "{day}";
-							case "a":
-								return "{ampm}";
-							case "hh":
-								result.set("hour12", "2-digit");
-								result.set("hour", "2-digit");
-								return "{hour}";
-							case "HH":
-								result.set("hour", "2-digit");
-								return "{hour}";
-							case "h":
-								result.set("hour12", "numeric");
-								result.set("hour", "numeric");
-								return "{hour}";
-							case "H":
-								result.set("hour", "numeric");
-								return "{hour}";
-							case "mm":
-								result.set("minute", "2-digit");
-								return "{minute}";
-							case "m":
-								result.set("minute", "numeric");
-								return "{minute}";
-							case "ss":
-								result.set("second", "2-digit");
-								return "{second}";
-							case "s":
-								result.set("second", "numeric");
-								return "{second}";
-							default:
-								return field;
+						case "GGGGG":
+							result.set("era", "narrow");
+							return "{era}";
+						case "GGGG":
+							result.set("era", "long");
+							return "{era}";
+						case "GGG":
+						case "GG":
+						case "G":
+							result.set("era", "short");
+							return "{era}";
+						case "yy":
+							result.set("year", "2-digit");
+							return "{year}";
+						case "y":
+						case "yyy":
+						case "yyyy":
+							result.set("year", "numeric");
+							return "{year}";
+						case "LLLLL":
+							result.set("standaloneMonth", true);
+							result.set("month", "narrow");
+							return "{month}";
+						case "MMMMM":
+							result.set("month", "narrow");
+							return "{month}";
+						case "LLLL":
+							result.set("standaloneMonth", true);
+							result.set("month", "long");
+							return "{month}";
+						case "MMMM":
+							result.set("month", "long");
+							return "{month}";
+						case "LLL":
+							result.set("standaloneMonth", true);
+							result.set("month", "short");
+							return "{month}";
+						case "MMM":
+							result.set("month", "short");
+							return "{month}";
+						case "LL":
+						case "MM":
+							result.set("month", "2-digit");
+							return "{month}";
+						case "L":
+						case "M":
+							result.set("month", "numeric");
+							return "{month}";
+						case "EEEEE":
+							result.set("weekday", "narrow");
+							return "{weekday}";
+						case "EEEE":
+							result.set("weekday", "long");
+							return "{weekday}";
+						case "EEE":
+						case "EE":
+						case "E":
+							result.set("weekday", "short");
+							return "{weekday}";
+						case "dd":
+							result.set("day", "2-digit");
+							return "{day}";
+						case "d":
+							result.set("day", "numeric");
+							return "{day}";
+						case "a":
+							return "{ampm}";
+						case "hh":
+							result.set("hour12", "2-digit");
+							result.set("hour", "2-digit");
+							return "{hour}";
+						case "HH":
+							result.set("hour", "2-digit");
+							return "{hour}";
+						case "h":
+							result.set("hour12", "numeric");
+							result.set("hour", "numeric");
+							return "{hour}";
+						case "H":
+							result.set("hour", "numeric");
+							return "{hour}";
+						case "mm":
+							result.set("minute", "2-digit");
+							return "{minute}";
+						case "m":
+							result.set("minute", "numeric");
+							return "{minute}";
+						case "ss":
+							result.set("second", "2-digit");
+							return "{second}";
+						case "s":
+							result.set("second", "numeric");
+							return "{second}";
+						default:
+							return field;
 						}
 					});
 					/*jshint maxcomplexity: 10*/
