@@ -6,7 +6,7 @@
  * @author Norbert Lindenberg
  */
 define(
-	[ 'intern!object', 'intern/chai!assert', 'Intl', 'tests/intl402/harness/testIntl' ], function(registerSuite, assert, Intl, testIntl) {
+	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/tests/intl402/harness/testIntl' ], function(registerSuite, assert, Intl, testIntl) {
 	registerSuite({
 		name : '6.2',
 		Test_6_2_2_a : function() {
@@ -116,7 +116,7 @@ define(
 		 "de-DE": ["de-DE", "de"],
 		 "DE-de": ["de-DE", "de"],
 		 "cmn": [ "cmn"],
-		 "CMN-hANS": [ "cmn-Hans", "cmn", ],
+		 "CMN-hANS": [ "cmn-Hans", "cmn" ],
 		 "cmn-hans-cn": [ "cmn-Hans-CN", "cmn-Hans", "cmn"],
 		 "es-419": ["es-419", "es"],
 		 "es-419-u-nu-latn": ["es-419-u-nu-latn", "es-419", "es", "es-u-nu-latn"],

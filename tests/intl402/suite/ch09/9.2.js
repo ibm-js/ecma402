@@ -1,7 +1,7 @@
 // Copyright 2012 Mozilla Corporation. All rights reserved.
 // This code is governed by the BSD license found in the LICENSE file.
 define(
-	[ 'intern!object', 'intern/chai!assert', 'Intl', 'tests/intl402/harness/testIntl' ], function(registerSuite, assert, Intl, testIntl) {
+	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/tests/intl402/harness/testIntl' ], function(registerSuite, assert, Intl, testIntl) {
 	registerSuite({
 		name : '9.2',
 		Test_9_2_1_1 : function() {

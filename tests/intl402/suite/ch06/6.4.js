@@ -6,7 +6,7 @@
  * @author Norbert Lindenberg
  */
 define(
-	[ 'intern!object', 'intern/chai!assert', 'Intl', 'tests/intl402/harness/testIntl' ], 
+	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/tests/intl402/harness/testIntl' ], 
 	function(registerSuite, assert, Intl, testIntl) {
 	registerSuite({
 		name : '6.4',

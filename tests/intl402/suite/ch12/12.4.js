@@ -1,7 +1,7 @@
 // Copyright 2012 Mozilla Corporation. All rights reserved.
 // This code is governed by the BSD license found in the LICENSE file.
 define(
-	[ 'intern!object', 'intern/chai!assert', 'Intl' ], 
+	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], 
 	function(registerSuite, assert, Intl) {
 	registerSuite({
 		name : '12.4',

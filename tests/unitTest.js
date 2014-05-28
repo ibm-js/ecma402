@@ -1,75 +1,81 @@
-define([ 'intern!object', 'intern/chai!assert', 'Intl', 'IntlShim' ], function(registerSuite, assert, Intl, IntlShim) {
+define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShim' ], function(registerSuite, assert, Intl, IntlShim) {
+	var isFF;
+	if (typeof window != undefined && typeof document != undefined) {
+		isFF = (!parseFloat(navigator.userAgent.split("WebKit/")[1]) && 
+			!(document.all && parseFloat(navigator.appVersion.split("MSIE ")[1]) || parseFloat(navigator.appVersion.split("rv:")[1]))) &&
+			parseFloat(navigator.userAgent.split("Firefox/")[1]);
+	}
 	registerSuite({
 		name : 'unitTest',
 		matcherFunctions : function() {
 			var testLanguageTags = [ {
 				"input" : "en-US",
 				"lookup" : "en",
-				"bestfit" : "en",
+				"bestfit" : "en"
 			}, {
 				"input" : "en-BS",
 				"lookup" : "en",
-				"bestfit" : "en",
+				"bestfit" : "en"
 			}, {
 				"input" : "foo",
 				"lookup" : "en",
-				"bestfit" : "en",
+				"bestfit" : "en"
 			}, {
 				"input" : "de-de",
 				"lookup" : "de",
-				"bestfit" : "de",
+				"bestfit" : "de"
 			}, {
 				"input" : "de-ch",
 				"lookup" : "de-CH",
-				"bestfit" : "de-CH",
+				"bestfit" : "de-CH"
 			}, {
 				"input" : "ja-jp",
 				"lookup" : "ja",
-				"bestfit" : "ja",
+				"bestfit" : "ja"
 			}, {
 				"input" : "iw-il",
 				"lookup" : "he",
-				"bestfit" : "he",
+				"bestfit" : "he"
 			}, {
 				"input" : "zh-CN",
 				"lookup" : "zh",
-				"bestfit" : "zh-Hans",
+				"bestfit" : "zh-Hans"
 			}, {
 				"input" : "zh-SG",
 				"lookup" : "zh",
-				"bestfit" : "zh-Hans-SG",
+				"bestfit" : "zh-Hans-SG"
 			}, {
 				"input" : "zh-TW",
 				"lookup" : "zh",
-				"bestfit" : "zh-Hant",
+				"bestfit" : "zh-Hant"
 			}, {
 				"input" : "zh-MO",
 				"lookup" : "zh",
-				"bestfit" : "zh-Hant-HK",
+				"bestfit" : "zh-Hant-HK"
 			}, {
 				"input" : "zh-HK-VARIANT",
 				"lookup" : "zh",
-				"bestfit" : "zh-Hant-HK",
+				"bestfit" : "zh-Hant-HK"
 			}, {
 				"input" : "sr-ME",
 				"lookup" : "sr",
-				"bestfit" : "sr-Latn",
+				"bestfit" : "sr-Latn"
 			}, {
 				"input" : "sr-YU",
 				"lookup" : "sr",
-				"bestfit" : "sr",
+				"bestfit" : "sr"
 			}, {
 				"input" : "pt-AO",
 				"lookup" : "pt",
-				"bestfit" : "pt-AO",
+				"bestfit" : "pt-AO"
 			}, {
 				"input" : "en-GB-u-co-phonebk",
 				"lookup" : "en-GB",
-				"bestfit" : "en-GB",
+				"bestfit" : "en-GB"
 			}, {
 				"input" : "en-NZ-u-ca-japanese",
 				"lookup" : "en",
-				"bestfit" : "en-NZ",
+				"bestfit" : "en-NZ"
 			} ];
 
 			testLanguageTags.forEach(function(currentTag) {
@@ -300,7 +306,7 @@ define([ 'intern!object', 'intern/chai!assert', 'Intl', 'IntlShim' ], function(r
 					timeZone : "UTC"
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Thu, Mar 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly. Will depend on the browser.
+				"expected" : "Thu, Mar 4, 1965, 5:59:30 PM",
 				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browser that doesn't have Intl.
 			}, {
 				"native" : false,
@@ -332,8 +338,7 @@ define([ 'intern!object', 'intern/chai!assert', 'Intl', 'IntlShim' ], function(r
 					timeZone : "UTC"
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Thursday, March 4, 1965, 5:59:30 PM", // This is the result from native implementation on Firefox nightly. Will depend on the
-																	// browser.
+				"expected": "Thursday, March 4, 1965, 5:59:30 PM",
 				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browswer that doesn't have Intl.
 			} ];
 
@@ -355,21 +360,31 @@ define([ 'intern!object', 'intern/chai!assert', 'Intl', 'IntlShim' ], function(r
 					var __globalObject = Function("return this;")();
 					var expectedValue;
 					if(__globalObject.Intl!==undefined){
-						expectedValue = currentTest.expected;
+						// TODO: generalize native tests to run on something else than Firefox as well?
+						if(isFF) {
+							expectedValue = currentTest.expected;
+						} 
 					}else{
 						expectedValue = currentTest.expected2;
 					}
-					assert.strictEqual(nf.format(currentTest.input), expectedValue,
-						'Intl.NumberFormat.format() with native = '+currentTest.native.toString()
-							+' should return expected string for locale '+currentTest.locales+'" style:'
-							+currentTest.style);
+					if (expectedValue) {
+						assert.strictEqual(nf.format(currentTest.input), expectedValue,
+								'Intl.NumberFormat.format() with native = ' + currentTest.native.toString()
+								+ ' should return expected string for locale ' + currentTest.locales + '" style:'
+								+ currentTest.style);
+					}
 				});
 
+			var i = 0;
 			dateTimeFormattingTestCases.forEach(function(currentTest) {
+				i++;
 				var expectedValue;
 				var __globalObject = Function("return this;")();
 				if(__globalObject.Intl!==undefined){
-					expectedValue = currentTest.expected;
+					// TODO: generalize native tests to run on something else than Firefox as well?
+					if(isFF) {
+						expectedValue = currentTest.expected;
+					}
 				}else{
 					expectedValue = currentTest.expected2;
 				}
@@ -379,9 +394,11 @@ define([ 'intern!object', 'intern/chai!assert', 'Intl', 'IntlShim' ], function(r
 				}else{
 					df = new Intl.DateTimeFormat(currentTest.locales, currentTest.options);
 				}
-				assert.strictEqual(df.format(currentTest.input), expectedValue,
-					'Intl.DateTimeFormat.format() with native = '+currentTest.native.toString()
-						+' should return expected string for locale '+currentTest.locales);
+				if (expectedValue) {
+					assert.strictEqual(df.format(currentTest.input), expectedValue,
+							'Intl.DateTimeFormat.format() with native = ' + currentTest.native.toString()
+							+ ' should return expected string for locale ' + currentTest.locales + " " + i);
+				}
 			});
 		}
 	});

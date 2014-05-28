@@ -8,7 +8,7 @@
  * @author Norbert Lindenberg
  */
 define(
-	[ 'intern!object', 'intern/chai!assert', 'Intl' ],
+	[ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ],
 	function(registerSuite, assert, Intl) {
 
 		/**
