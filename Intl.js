@@ -6,7 +6,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 		"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
 	function (Record, calendars, common, preloads, currencyDataJson, timeDataJson, calendarPreferenceDataJson,
 				likelySubtagsJson, numberingSystemsJson) {
-			/*jshint maxcomplexity: 22*/
+			/*jshint maxcomplexity: 25*/
 			var Intl = {};
 			var currencyData = JSON.parse(currencyDataJson);
 			var timeData = JSON.parse(timeDataJson).supplemental.timeData;
