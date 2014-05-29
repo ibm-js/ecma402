@@ -646,7 +646,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 				return calendars.toLocalTime(date, calendar, timeZone);
 			}
 
-			function _getCalendarField (calType, calData, year, standalone, property, format, value) {
+			function _getCalendarField(calType, calData, year, standalone, property, format, value) {
 				var result = null;
 				switch (property) {
 					case "weekday":
@@ -684,7 +684,7 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 						 * month number and the resource name in CLDR, so we have to adjust accordingly.
 						 */
 						if (calType === "hebrew") {
-							monthValue = calendars.hebrewMonthResource(year,value);
+							monthValue = calendars.hebrewMonthResource(year, value);
 						}
 						switch (format) {
 							case "narrow":

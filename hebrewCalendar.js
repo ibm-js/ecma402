@@ -11,12 +11,12 @@ define(
 	var BAHARAD = 11 * HALAKIM_PER_HOUR + 204;
 	var MILLIS_PER_MINUTE = 60000;
 
-	function isLeapYear (year) {
+	function isLeapYear(year) {
 		var x = (year * 12 + 17) % 19;
 		return x >= ((x < 0) ? -7 : 12);
 	}
 
-	function firstDayOfYear (year) {
+	function firstDayOfYear(year) {
 		var monthsBeforeYear = Math.floor((235 * year - 234) / 19);
 		var fractionalMonthsBeforeYear = monthsBeforeYear * HALAKIM_FRACTIONAL_MONTH + BAHARAD;
 		var dayNumber = monthsBeforeYear * 29 + Math.floor(fractionalMonthsBeforeYear / HALAKIM_PER_DAY);
@@ -38,9 +38,7 @@ define(
 	}
 
 	var calendarHebrew = {
-		isLeapYear : function (year) {
-			return isLeapYear(year);
-		},
+		isLeapYear : isLeapYear,
 		toLocalTime : function (date, timeZone) {
 			var result = new Record();
 			var dt = new Date(date);
@@ -48,7 +46,7 @@ define(
 			result.set("era", 0);
 			var MILLIS_PER_DAY = 86400000;
 			var HEBREW_DAY_ON_JAN_1_1970 = 2092591;
-			var time = (timeZone === "UTC" ? dt.getTime() : dt.getTime() - dt.getTimezoneOffset() * MILLIS_PER_MINUTE);
+			var time = timeZone === "UTC" ? dt.getTime() : dt.getTime() - dt.getTimezoneOffset() * MILLIS_PER_MINUTE;
 			var daysSinceEpoch = Math.floor(time / MILLIS_PER_DAY) + HEBREW_DAY_ON_JAN_1_1970;
 			var monthsSinceEpoch = Math.floor(daysSinceEpoch * HALAKIM_PER_DAY / HALAKIM_PER_MONTH);
 			var year = Math.floor((monthsSinceEpoch * 19 + 234) / 235) + 1;

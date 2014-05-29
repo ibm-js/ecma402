@@ -22,14 +22,14 @@ define([ "./Record",
 					return gregorianCalendar.toLocalTime(date, timeZone);
 			}
 		},
-		hebrewMonthResource : function (year,month) {
+		hebrewMonthResource : function (year, month) {
 			var mr;
 			if (hebrewCalendar.isLeapYear(year)) {
-				mr = new Array("1", "2", "3", "4", "5", "6", "7-yeartype-leap", "8", "9", "10", "11", "12", "13");
+				mr = ["1", "2", "3", "4", "5", "6", "7-yeartype-leap", "8", "9", "10", "11", "12", "13"];
 			} else {
-				mr = new Array("1", "2", "3", "4", "5", "7", "8", "9", "10", "11", "12", "13");
+				mr = ["1", "2", "3", "4", "5", "7", "8", "9", "10", "11", "12", "13"];
 			}
-			return mr[month-1];
+			return mr[month - 1];
 		}
 	};
 	return calendars;
