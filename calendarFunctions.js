@@ -45,6 +45,29 @@ define([ "./Record", "requirejs-text/text!./cldr/supplemental/calendarData.json"
 			var localMinutes = dt.getHours() * 60 + dt.getMinutes();
 			var UTCMinutes = dt.getUTCHours() * 60 + dt.getUTCMinutes();
 			result.set("inDST", timeZone === "UTC" ? false : localMinutes + dt.getTimezoneOffset() !== UTCMinutes);
+		},
+		isLeapYear : function (/*Date*/ dateObject) {
+			// summary:
+			//		Determines if the year of the dateObject is a leap year.
+			// description:
+			//		Leap years are years with an additional day YYYY-02-29, where the
+			//		Year number is a multiple of four with the following exception: If
+			//		A year is a multiple of 100, then it is only a leap year if it is
+			//		Also a multiple of 400. For example, 1900 was not a leap year, but
+			//		2000 is one.
+
+			var year = dateObject.getFullYear();
+			return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+		},
+		getYearStart : function (/*Number*/ year) {
+			// summary:
+			//		Return start of Islamic year.
+			return (year - 1) * 354	+ Math.floor((3 + 11 * year) / 30.0);
+		},
+		getMonthStart : function (/*Number*/ year, /*Number*/ month) {
+			// summary:
+			//		Return the start of Islamic Month.
+			return Math.ceil(29.5 * month) + (year - 1) * 354 + Math.floor((3 + 11 * year) / 30.0);
 		}
 	};
 	return calendarFunctions;

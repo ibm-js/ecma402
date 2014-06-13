@@ -22,6 +22,8 @@ define([
 				jsonElements.push("ca-roc");
 			} else if (locale === "ja") {
 				jsonElements.push("ca-japanese");
+			} else if (locale === "ar-SA") {
+				jsonElements.push("ca-islamic", "ca-islamic-umalqura", "ca-islamic-civil", "ca-islamic-tbla");
 			}
 			var dependencies = jsonElements.map(function (element) {
 				return "requirejs-text/text!./cldr/" + locale + "/" + element + ".json";
