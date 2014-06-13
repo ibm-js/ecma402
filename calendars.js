@@ -4,9 +4,12 @@ define([ "./Record",
         "./gregorianCalendar",
         "./hebrewCalendar",
         "./japaneseCalendar",
-        "./rocCalendar"],
+        "./rocCalendar",
+        "./civilTabularCalendar",
+        "./islamicCalendar",
+        "./umalquraCalendar"],
     function (Record, calendarDataJson, buddhistCalendar, gregorianCalendar, hebrewCalendar,
-	japaneseCalendar, rocCalendar) {
+	japaneseCalendar, rocCalendar, civilTabularCalendar, islamicCalendar, umalquraCalendar) {
 	var calendars = {
 		toLocalTime : function (date, calendar, timeZone) {
 			switch (calendar) {
@@ -18,6 +21,14 @@ define([ "./Record",
 				return japaneseCalendar.toLocalTime(date, timeZone);
 			case "roc" :
 				return rocCalendar.toLocalTime(date, timeZone);
+			case "islamic-civil" :
+				return civilTabularCalendar.toLocalTime(date, timeZone, "civil");
+			case "islamic-tbla" :
+				return civilTabularCalendar.toLocalTime(date, timeZone, "tbla");
+			case "islamic" :
+				return islamicCalendar.toLocalTime(date, timeZone);
+			case "islamic-umalqura" :
+				return umalquraCalendar.toLocalTime(date, timeZone);
 			default:
 				return gregorianCalendar.toLocalTime(date, timeZone);
 			}

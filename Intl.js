@@ -920,7 +920,8 @@ define([ "./Record", "./calendars", "./common", "./locales!",
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
-			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "hebrew", "japanese", "roc" ];
+			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "hebrew", "japanese", "roc",
+			                                      "islamic", "islamic-civil", "islamic-tbla", "islamic-umalqura"];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {
 				var region = "001";
