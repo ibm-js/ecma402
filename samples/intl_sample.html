@@ -2,7 +2,7 @@
 <html>
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>IBM ECMA-402 Intl demo</title>
+		<title>IBM ECMA-402 Demo</title>
 
 		<script src="../../requirejs/require.js"></script>
 		<script>
@@ -25,30 +25,30 @@
 						second : "numeric"
 					};
 
-					df1 = new IntlIbm.DateTimeFormat(locale, options);
-					var x1 = document.getElementById("demo");
+					dateIBMFormatter = new IntlIbm.DateTimeFormat(locale, options);
+					var dateIBMField = document.getElementById("dateIBM");
 					var theDate = new Date();
 					// For debugging purposes to set to a specific date... theDate.setFullYear(1745,0,1);
-					x1.innerHTML = df1.format(theDate);
-					nf = new IntlIbm.NumberFormat(locale, options);
-					var y = document.getElementById("numb");
-					y.innerHTML = nf.format(123456.789);
+					dateIBMField.innerHTML = dateIBMFormatter.format(theDate);
+					numbIBMFormatter = new IntlIbm.NumberFormat(locale, options);
+					var numbIBMField = document.getElementById("numbIBM");
+					numbIBMField.innerHTML = numbIBMFormatter.format(123456.789);
 
 					if (typeof Intl !== "undefined") {
-						var df = new Intl.DateTimeFormat(locale, options);
-						var x = document.getElementById("demo1");
-						x.innerHTML = df.format(theDate);
+						var dateNativeFormatter = new Intl.DateTimeFormat(locale, options);
+						var dateNativeField = document.getElementById("dateNative");
+						dateNativeField.innerHTML = dateNativeFormatter.format(theDate);
 
-						var nf1 = new Intl.NumberFormat(locale, options);
-						var y1 = document.getElementById("numb1");
-						y1.innerHTML = nf1.format(123456.789);
+						var numbNativeFormatter = new Intl.NumberFormat(locale, options);
+						var numbNativeField = document.getElementById("numbNative");
+						numbNativeField.innerHTML = numbNativeFormatter.format(123456.789);
 					}
 				};
 			});
 		</script>
     </head>
     <body>
-        <h1>IBM ECMA-402 Intl demo</h1>
+        <h1>IBM ECMA-402 Demo</h1>
         <h3>Click a button to change the locale being formatted.</h3>
 		<table border="2" style="width:80%">
 		<tr>
@@ -58,13 +58,13 @@
 		</tr>
 		<tr>
 		  <td>Current Date/Time</td>
-		  <td id="demo"></td>
-		  <td id="demo1"></td>
+		  <td id="dateIBM"></td>
+		  <td id="dateNative"></td>
 		</tr>
 		<tr>
 		  <td>Number</td>
-		  <td id="numb"></td>
-		  <td id="numb1"></td>
+		  <td id="numbIBM"></td>
+		  <td id="numbNative"></td>
 		</tr>
 		</table>
        <button onclick='formatit()'>[Default Locale]</button>
