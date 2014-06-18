@@ -26,7 +26,7 @@ define([
 				jsonElements.push("ca-islamic", "ca-islamic-umalqura", "ca-islamic-civil", "ca-islamic-tbla");
 			}
 			var dependencies = jsonElements.map(function (element) {
-				return "requirejs-text/text!./cldr/" + locale + "/" + element + ".json";
+				return "requirejs-text/text!../cldr/" + locale + "/" + element + ".json";
 			});
 
 			// Load all the JSON files requested, and then return their data in a hash

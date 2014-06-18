@@ -1,4 +1,4 @@
-define(["./Record", "./calendarFunctions", "./gregorianCalendar", "./islamicCalendar"],
+define(["../impl/Record", "../impl/calendarFunctions", "./gregorianCalendar", "./islamicCalendar"],
 	function (Record, calendarFunctions, gregorian, islamicCalendar) {
 
     return {

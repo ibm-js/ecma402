@@ -10,8 +10,8 @@
 define([
 	"module",
 	"require",
-	"./common",
-	"./load"	// just so builder knows we will be using that module
+	"./impl/common",
+	"./impl/load"	// just so builder knows we will be using that module
 ], function (module, require, common) {
 	// Compute locales to pre-load. Use hash to remove duplicates.
 	var localeHash = {};
@@ -40,7 +40,7 @@ define([
 	var locales = Object.keys(localeHash);
 
 	// Compute dependencies to require()
-	var dependencies = locales.map(function (locale) { return "./load!" + locale; });
+	var dependencies = locales.map(function (locale) { return "./impl/load!" + locale; });
 
 	return {
 		load: function (path, callerRequire, onload) {

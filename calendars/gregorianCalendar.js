@@ -1,13 +1,19 @@
-define([ "./Record", "./calendarFunctions"],
+define(
+	[ "../impl/Record", "../impl/calendarFunctions" ],
 	function (Record, calendarFunctions) {
-	var calendarBuddhist = {
+	var gregorianCalendar = {
 		toLocalTime : function (date, timeZone) {
 			var result = new Record();
 			var dt = new Date(date);
 			result.set("weekday", timeZone === "UTC" ? dt.getUTCDay() : dt.getDay());
-			result.set("era", 0);
 			var year = timeZone === "UTC" ? dt.getUTCFullYear() : dt.getFullYear();
-			year -= calendarFunctions.eraOffset("buddhist", 0);
+			if (year <= 0) {
+				result.set("era", 0);
+				year--; // Compensate for fact that year 0 doesn't exist.
+				year = -year;
+			} else {
+				result.set("era", 1);
+			}
 			result.set("year", year);
 			result.set("month", timeZone === "UTC" ? dt.getUTCMonth() : dt.getMonth());
 			result.set("day", timeZone === "UTC" ? dt.getUTCDate() : dt.getDate());
@@ -15,5 +21,5 @@ define([ "./Record", "./calendarFunctions"],
 			return result;
 		}
 	};
-	return calendarBuddhist;
+	return gregorianCalendar;
 });
