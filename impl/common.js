@@ -190,23 +190,29 @@ define(["./List", "./Record",
 				if (locales === null) {
 					throw new TypeError("Locale list can not be null");
 				}
-				var seen = [];
+				var seen = new List();
 				if (typeof locales === "string") {
 					locales = new Array(locales);
 				}
 				var O = Object(locales);
-				for (var Pk in O) {
-					var kValue = O[Pk];
-					if (typeof kValue !== "string" && typeof kValue !== "object") {
-						throw new TypeError(kValue + " must be a string or an object.");
-					}
-					var tag = kValue.toString();
-					if (!this.isStructurallyValidLanguageTag(tag)) {
-						throw new RangeError(tag + " is not a structurally valid language tag.");
-					}
-					tag = this.CanonicalizeLanguageTag(tag);
-					if (seen.indexOf(tag) < 0) {
-						seen.push(tag);
+				var lenValue = O.length;
+				var len = lenValue >>> 0; // Convert to unsigned 32-bit integer
+				for (var k = 0; k < len ; k++) {
+					var Pk = k.toString();
+					var kPresent = Pk in O;
+					if (kPresent) {
+						var kValue = O[Pk];
+						if (typeof kValue !== "string" && typeof kValue !== "object") {
+							throw new TypeError(kValue + " must be a string or an object.");
+						}
+						var tag = kValue.toString();
+						if (!this.isStructurallyValidLanguageTag(tag)) {
+							throw new RangeError(tag + " is not a structurally valid language tag.");
+						}
+						tag = this.CanonicalizeLanguageTag(tag);
+						if (seen.indexOf(tag) < 0) {
+							seen.push(tag);
+						}
 					}
 				}
 				return seen;
