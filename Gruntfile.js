@@ -5,7 +5,9 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		jshint: {
 			src: [
-				"*.js"
+				"*.js",
+				"calendars/*.js",
+				"impl/*.js"
 			],
 			options: {
 				jshintrc: ".jshintrc"

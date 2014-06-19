@@ -1,4 +1,4 @@
-define([ "./Record", "./calendarFunctions"], function (Record, calendarFunctions) {
+define([ "../impl/Record", "../impl/calendarFunctions"], function (Record, calendarFunctions) {
 	
 	return {
 		

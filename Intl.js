@@ -1,4 +1,4 @@
-define([ "./Record", "./calendars", "./common", "./locales!",
+define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 		"requirejs-text/text!./cldr/supplemental/currencyData.json",
 		"requirejs-text/text!./cldr/supplemental/timeData.json",
 		"requirejs-text/text!./cldr/supplemental/calendarPreferenceData.json",

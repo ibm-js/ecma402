@@ -1,5 +1,5 @@
 define(
-	[ "./Record", "./calendarFunctions"], function (Record, calendarFunctions) {
+	[ "../impl/Record", "../impl/calendarFunctions"], function (Record, calendarFunctions) {
 
 		
 	return {

@@ -1,5 +1,5 @@
 define(
-	[ "./Record", "./calendarFunctions" ], function (Record, calendarFunctions) {
+	[ "../impl/Record", "../impl/calendarFunctions" ], function (Record, calendarFunctions) {
 	// A helek ( plural halakim ) is the basic unit of time measurement in the Hebrew calendar.
 	// There are exactly 1080 halakim in an hour. Ref: http://en.wikipedia.org/wiki/Helek
 	var HALAKIM_PER_HOUR = 1080;
