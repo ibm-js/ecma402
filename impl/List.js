@@ -8,9 +8,24 @@ define(function () {
 		this.length = arguments.length;
 	};
 
+	List.prototype.forEach = function (f) {
+		for (var i = 0; i < this.length; i++) {
+			f(this[i]);
+		}
+	};
+	
 	List.prototype.push = function (item) {
 		this[this.length] = item;
 		this.length++;
+	};
+
+	List.prototype.indexOf = function (item) {
+		for (var i = 0; i < this.length; i++) {
+			if (this[i] === item) {
+				return i;
+			}
+		}
+		return -1;
 	};
 
 	List.prototype.toArray = function () {
