@@ -322,8 +322,8 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShi
 					timeZone : "UTC"
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM", // Because we're only doing exact pattern matches at this point.
-				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // Because we're only doing exact pattern matches at this point.
+				"expected" : "Thu, March 4, 1965 at 5:59:30 PM",
+				"expected2" : "Thu, March 4, 1965 at 5:59:30 PM"
 			}, {
 				"native" : true,
 				"locales" : "en-US",
@@ -339,7 +339,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl', 'ecma402/IntlShi
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
 				"expected": "Thursday, March 4, 1965, 5:59:30 PM",
-				"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browswer that doesn't have Intl.
+				"expected2" : "Thu, March 4, 1965 at 5:59:30 PM" // If on a browswer that doesn't have Intl.
 			} ];
 
 			numberFormattingTestCases

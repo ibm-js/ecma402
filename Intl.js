@@ -849,6 +849,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				var availableFormats = dateTimeFormats.availableFormats;
 				var result = [];
 				var usableFormatSkeletons = /^G{0,5}y{0,4}M{0,5}E{0,5}d{0,2}H{0,2}m{0,2}s{0,2}$/;
+				var abbrMonthSkeleton = /(^|[^M])M{3}([^M]|$)/;
 				for (var format in availableFormats) {
 					var format12 = availableFormats[format.replace("H", "h")];
 					if (usableFormatSkeletons.test(format) && format12 !== undefined) {
@@ -859,6 +860,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 							outputFormat.set("pattern12", outputFormat12.pattern);
 						}
 						result.push(outputFormat);
+						// Flexible date format logic - If the locale contains just a MMM pattern (abbreviated month)
+						// and not a corresponding MMMM pattern (long month), then we can infer an appropriate MMMM pattern
+						// by just replacing the MMM with MMMM.
+						if ( abbrMonthSkeleton.test(format) && !availableFormats[format.replace("MMM","MMMM")]) {
+							var constructedFormatPattern = availableFormats[format].replace("MMM","MMMM").replace("LLL","LLLL");
+							var constructedFormat = _ToIntlDateTimeFormat(constructedFormatPattern);
+							result.push(constructedFormat);
+						}
 					}
 				}
 				// ECMA402 requires us to have a full date format that includes
@@ -882,6 +891,18 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				outputFormat.set("hour12", outputFormat12.hour12);
 				outputFormat.set("pattern12", outputFormat12.pattern);
 				result.push(outputFormat);
+				// Flexible date format logic - If the locale contains just a MMM pattern (abbreviated month)
+				// and not a corresponding MMMM pattern (long month), then we can infer an appropriate MMMM pattern
+				// by just replacing the MMM with MMMM.
+				if ( abbrMonthSkeleton.test(combinedDateTimeFormat24)) {
+					var constructedFormatPattern24 = combinedDateTimeFormat24.replace("MMM","MMMM").replace("LLL","LLLL");
+					var constructedFormatPattern12 = combinedDateTimeFormat12.replace("MMM","MMMM").replace("LLL","LLLL");
+					var constructedFormat = _ToIntlDateTimeFormat(constructedFormatPattern24);
+					var constructedFormat12 = _ToIntlDateTimeFormat(constructedFormatPattern12);
+					constructedFormat.set("hour12", constructedFormat12.hour12);
+					constructedFormat.set("pattern12", constructedFormat12.pattern);
+					result.push(constructedFormat);
+				}
 				return result;
 			}
 
