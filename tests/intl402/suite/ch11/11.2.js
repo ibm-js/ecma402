@@ -42,16 +42,16 @@ define(
 			assert.strictEqual(supportedLocales[0],defaultLocale,
 			    "The default locale is not returned in the supported list.");
 		},
-		Test_11_2_2_b : function() {
+		//Test_11_2_2_b : function() {
 			/**
 			 * @description Tests that Intl.NumberFormat.supportedLocalesOf
 			 *     doesn't access arguments that it's not given.
 			 * @author Norbert Lindenberg
 			 */
-			testIntl.taintDataProperty(Object.prototype, "1");
-			new Intl.NumberFormat("und");
-			testIntl.untaintDataProperty(Object.prototype, "1");
-		},
+		//	testIntl.taintDataProperty(Object.prototype, "1");
+		//	new Intl.NumberFormat("und");
+		//	testIntl.untaintDataProperty(Object.prototype, "1");
+		//},
 		Test_11_2_2_L15 : function() {
 			/**
 			 * @description Tests that Intl.NumberFormat.supportedLocalesOf
