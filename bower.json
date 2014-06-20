@@ -3,7 +3,8 @@
 	"version": "0.1.0-dev",
 	"dependencies": {
 		"requirejs": ">=2.1.11",
-		"requirejs-text": ">=2.0.11"
+		"requirejs-text": ">=2.0.11",
+		"requirejs-dplugins": ">=0.2.2-dev"
 	},
 	"ignore": [
 		".jshintrc",
