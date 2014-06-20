@@ -29,12 +29,14 @@ define([
 			if (typeof config === "string") {
 				config = [ config ];
 			}
-			config.forEach(function (locale) {
-				var bestFitPreload = common.BestFitAvailableLocale(common.availableLocalesList, locale);
-				if (bestFitPreload) {
-					localeHash[bestFitPreload] = true;
-				}
-			});
+			if (config instanceof Array) {
+				config.forEach(function (locale) {
+					var bestFitPreload = common.BestFitAvailableLocale(common.availableLocalesList, locale);
+					if (bestFitPreload) {
+						localeHash[bestFitPreload] = true;
+					}
+				});
+			}
 		}
 	}
 	var locales = Object.keys(localeHash);
