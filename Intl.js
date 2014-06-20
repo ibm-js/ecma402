@@ -861,10 +861,11 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 						}
 						result.push(outputFormat);
 						// Flexible date format logic - If the locale contains just a MMM pattern (abbreviated month)
-						// and not a corresponding MMMM pattern (long month), then we can infer an appropriate MMMM pattern
-						// by just replacing the MMM with MMMM.
-						if ( abbrMonthSkeleton.test(format) && !availableFormats[format.replace("MMM","MMMM")]) {
-							var constructedFormatPattern = availableFormats[format].replace("MMM","MMMM").replace("LLL","LLLL");
+						// and not a corresponding MMMM pattern (long month), then we can infer
+						// an appropriate MMMM pattern by just replacing the MMM with MMMM.
+						if (abbrMonthSkeleton.test(format) && !availableFormats[format.replace("MMM", "MMMM")]) {
+							var constructedFormatPattern = availableFormats[format]
+								.replace("MMM", "MMMM").replace("LLL", "LLLL");
 							var constructedFormat = _ToIntlDateTimeFormat(constructedFormatPattern);
 							result.push(constructedFormat);
 						}
@@ -892,16 +893,18 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				outputFormat.set("pattern12", outputFormat12.pattern);
 				result.push(outputFormat);
 				// Flexible date format logic - If the locale contains just a MMM pattern (abbreviated month)
-				// and not a corresponding MMMM pattern (long month), then we can infer an appropriate MMMM pattern
-				// by just replacing the MMM with MMMM.
-				if ( abbrMonthSkeleton.test(combinedDateTimeFormat24)) {
-					var constructedFormatPattern24 = combinedDateTimeFormat24.replace("MMM","MMMM").replace("LLL","LLLL");
-					var constructedFormatPattern12 = combinedDateTimeFormat12.replace("MMM","MMMM").replace("LLL","LLLL");
-					var constructedFormat = _ToIntlDateTimeFormat(constructedFormatPattern24);
-					var constructedFormat12 = _ToIntlDateTimeFormat(constructedFormatPattern12);
-					constructedFormat.set("hour12", constructedFormat12.hour12);
-					constructedFormat.set("pattern12", constructedFormat12.pattern);
-					result.push(constructedFormat);
+				// and not a corresponding MMMM pattern (long month), then we can infer
+				// an appropriate MMMM pattern by just replacing the MMM with MMMM.
+				if (abbrMonthSkeleton.test(combinedDateTimeFormat24)) {
+					var longFormatPattern24 = combinedDateTimeFormat24
+						.replace("MMM", "MMMM").replace("LLL", "LLLL");
+					var longFormatPattern12 = combinedDateTimeFormat12
+						.replace("MMM", "MMMM").replace("LLL", "LLLL");
+					var longFormat = _ToIntlDateTimeFormat(longFormatPattern24);
+					var longFormat12 = _ToIntlDateTimeFormat(longFormatPattern12);
+					longFormat.set("hour12", longFormat12.hour12);
+					longFormat.set("pattern12", longFormat12.pattern);
+					result.push(longFormat);
 				}
 				return result;
 			}
