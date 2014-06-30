@@ -1,17 +1,13 @@
 define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 		"requirejs-text/text!./cldr/supplemental/currencyData.json",
 		"requirejs-text/text!./cldr/supplemental/timeData.json",
-		"requirejs-text/text!./cldr/supplemental/calendarPreferenceData.json",
-		"requirejs-text/text!./cldr/supplemental/likelySubtags.json",
 		"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
-	function (Record, calendars, common, preloads, currencyDataJson, timeDataJson, calendarPreferenceDataJson,
-				likelySubtagsJson, numberingSystemsJson) {
+	function (Record, calendars, common, preloads,
+			currencyDataJson, timeDataJson, numberingSystemsJson) {
 			/*jshint maxcomplexity: 25*/
 			var Intl = {};
 			var currencyData = JSON.parse(currencyDataJson);
 			var timeData = JSON.parse(timeDataJson).supplemental.timeData;
-			var calendarPreferenceData = JSON.parse(calendarPreferenceDataJson).supplemental.calendarPreferenceData;
-			var likelySubtags = JSON.parse(likelySubtagsJson).supplemental.likelySubtags;
 			var numberingSystems = JSON.parse(numberingSystemsJson).supplemental.numberingSystems;
 			var availableNumberingSystems = [ "latn" ];
 			for (var ns in numberingSystems) {
@@ -944,44 +940,17 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
-			DateTimeFormat.supportedCalendars = [ "gregory", "buddhist", "hebrew", "japanese", "roc",
-			                                      "islamic", "islamic-civil", "islamic-tbla", "islamic-umalqura"];
 			DateTimeFormat.localeData = {};
 			DateTimeFormat.availableLocales.forEach(function (loc) {
-				var region = "001";
+				var region = common._getRegion(loc);
 				var hour12 = false;
 				var hourNo0 = false;
-				var regionPos = loc.search(/(?:-)([A-Z]{2})(?=(-|$))/);
-				if (regionPos >= 0) {
-					region = loc.substr(regionPos + 1, 2);
-				} else {
-					var likelySubtag = likelySubtags[loc];
-					if (likelySubtag) {
-						region = likelySubtag.substr(-2);
-					}
-				}
-
 				hour12 = timeData[region] && (/h|K/.test(timeData[region]._preferred));
 				hourNo0 = timeData[region] && (/h|k/.test(timeData[region]._preferred));
-				var calendarPreferences = [];
-				if (calendarPreferenceData[region]) {
-					var prefs = calendarPreferenceData[region].toString().split(" ");
-					prefs.forEach(function (pref) {
-						var thisPref = pref.replace("gregorian", "gregory");
-						if (DateTimeFormat.supportedCalendars.indexOf(thisPref) !== -1) {
-							calendarPreferences.push(thisPref);
-						}
-					});
-				}
-				
-				/* Gregorian should always be supported */
-				if (calendarPreferences.indexOf("gregory") === -1) {
-					calendarPreferences.push("gregory");
-				}
 				
 				DateTimeFormat.localeData[loc] = {
 					"nu" : availableNumberingSystems,
-					"ca" : calendarPreferences,
+					"ca" : common._getSupportedCalendars(common._getRegion(loc)),
 					"hour12" : hour12,
 					"hourNo0" : hourNo0
 				};

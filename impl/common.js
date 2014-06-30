@@ -5,11 +5,17 @@ define(["./List", "./Record",
 		"requirejs-text/text!../cldr/config/availableLocales.json",
 		"requirejs-text/text!../cldr/supplemental/aliases.json",
 		"requirejs-text/text!../cldr/supplemental/localeAliases.json",
-		"requirejs-text/text!../cldr/supplemental/parentLocales.json" ],
-	function (List, Record, availableLocalesJson, aliasesJson, localeAliasesJson, parentLocalesJson) {
+		"requirejs-text/text!../cldr/supplemental/parentLocales.json",
+		"requirejs-text/text!../cldr/supplemental/likelySubtags.json",
+		"requirejs-text/text!../cldr/supplemental/calendarPreferenceData.json",
+],
+	function (List, Record, availableLocalesJson, aliasesJson, localeAliasesJson,
+			parentLocalesJson, likelySubtagsJson, calendarPreferenceDataJson) {
 		var aliases = JSON.parse(aliasesJson).supplemental.metadata.alias;
 		var localeAliases = JSON.parse(localeAliasesJson).supplemental.metadata.alias;
 		var parentLocales = JSON.parse(parentLocalesJson).supplemental.parentLocales.parentLocale;
+		var likelySubtags = JSON.parse(likelySubtagsJson).supplemental.likelySubtags;
+		var calendarPreferenceData = JSON.parse(calendarPreferenceDataJson).supplemental.calendarPreferenceData;
 		var common = {
 			unicodeLocaleExtensions : /-u(-[a-z0-9]{2,8})+/g,
 			// ECMA 402 Section 6.1
@@ -26,7 +32,38 @@ define(["./List", "./Record",
 					return m.toLowerCase();
 				}); // String
 			},
-
+			_getRegion : function (locale) {
+				var region = "001";
+				var regionPos = locale.search(/(?:-)([A-Z]{2})(?=(-|$))/);
+				if (regionPos >= 0) {
+					region = locale.substr(regionPos + 1, 2);
+				} else {
+					var likelySubtag = likelySubtags[locale];
+					if (likelySubtag) {
+						region = likelySubtag.substr(-2);
+					}
+				}
+				return region;
+			},
+			_getSupportedCalendars : function (region) {
+				var supportedCalendars = [ "gregory", "buddhist", "hebrew", "japanese", "roc",
+				                           "islamic", "islamic-civil", "islamic-tbla", "islamic-umalqura"];
+				var calendarPreferences = [];
+				if (calendarPreferenceData[region]) {
+					var prefs = calendarPreferenceData[region].toString().split(" ");
+					prefs.forEach(function (pref) {
+						var thisPref = pref.replace("gregorian", "gregory");
+						if (supportedCalendars.indexOf(thisPref) !== -1) {
+							calendarPreferences.push(thisPref);
+						}
+					});
+				}
+				/* Gregorian should always be supported */
+				if (calendarPreferences.indexOf("gregory") === -1) {
+					calendarPreferences.push("gregory");
+				}
+				return calendarPreferences;
+			},
 			// ECMA 402 Section 6.2.2
 			isStructurallyValidLanguageTag : function (locale) {
 				if (typeof locale !== "string") {
