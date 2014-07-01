@@ -199,11 +199,11 @@ define(["./List", "./Record",
 			// ECMA 402 Section 6.2.4
 			DefaultLocale : function () {
 				var result;
-				if (this.isStructurallyValidLanguageTag(navigator.language)) {
+				if (navigator && this.isStructurallyValidLanguageTag(navigator.language)) {
 					result = this.BestFitAvailableLocale(this.availableLocalesList, this
 						.CanonicalizeLanguageTag(navigator.language));
 				}
-				if (!result && this.isStructurallyValidLanguageTag(navigator.userLanguage)) {
+				if (!result && navigator && this.isStructurallyValidLanguageTag(navigator.userLanguage)) {
 					result = this.BestFitAvailableLocale(this.availableLocalesList, this
 						.CanonicalizeLanguageTag(navigator.userLanguage));
 				}
