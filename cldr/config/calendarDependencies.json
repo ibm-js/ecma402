@@ -1,0 +1,28 @@
+{
+  "buddhist": {
+    "calendar": "buddhistCalendar"
+  },
+  "hebrew": {
+    "calendar": "hebrewCalendar"
+  },
+  "islamic": {
+    "calendar": "islamicCalendar"
+  },
+  "islamic-civil": {
+    "calendar": "civilTabularCalendar",
+    "option": "civil"
+   },
+  "islamic-tbla": {
+    "calendar": "civilTabularCalendar",
+    "option": "tbla"
+  },
+  "islamic-umalqura": {
+    "calendar": "umalquraCalendar"
+  },
+  "japanese": {
+    "calendar": "japaneseCalendar"
+  },
+  "roc": {
+    "calendar": "rocCalendar"
+  }
+}
