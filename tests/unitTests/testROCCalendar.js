@@ -24,7 +24,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "long",
 					day : "numeric",
 				},
-				"input" : new Date("1965-03-04T17:59:30").getTime(),
+				"input" : new Date(1965,2,4).getTime(),
 				"expected" : "民國54年3月4日"
 			},{
 				"locales" : "zh-Hant-u-ca-roc",
@@ -33,7 +33,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("1912-03-04T17:59:30").getTime(),
+				"input" : new Date(1912,2,4).getTime(),
 				"expected" : "民國1年3月4日"
 			},{
 				"locales" : "zh-Hant-u-ca-roc",
@@ -42,7 +42,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("1911-03-04T17:59:30").getTime(),
+				"input" : new Date(1911,2,4).getTime(),
 				"expected" : "民國前1年3月4日"
 			},{
 				"locales" : "zh-Hant-u-ca-roc",
@@ -51,7 +51,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("1776-07-04T12:34:56").getTime(),
+				"input" : new Date(1776,6,4).getTime(),
 				"expected" : "民國前136年7月4日"
 			}];
 			testCases.forEach(function(currentTest) {

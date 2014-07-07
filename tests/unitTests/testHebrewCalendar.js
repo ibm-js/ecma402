@@ -42,7 +42,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					minute : "numeric",
 					second : "numeric",
 				},
-				"input" : new Date("2014-02-04T17:59:30").getTime(),
+				"input" : new Date(2014,01,04,17,59,30).getTime(),
 				"expected" : "יום ג׳, 4 באדר א׳ 5774 17:59:30"
 			},{
 				"locales" : "he-u-ca-hebrew",

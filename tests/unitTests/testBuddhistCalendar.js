@@ -24,7 +24,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "long",
 					day : "numeric",
 				},
-				"input" : new Date("1965-03-04T17:59:30").getTime(),
+				"input" : new Date(1965,2,4).getTime(),
 				"expected" : "4 มีนาคม 2508"
 			},{
 				"locales" : "th",
@@ -33,7 +33,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("-000542-03-04T17:59:30").getTime(),
+				"input" : new Date(-542,2,4).getTime(),
 				"expected" : "4/3/1"
 			},{
 				"locales" : "th",
@@ -42,7 +42,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("-000543-03-04T17:59:30").getTime(),
+				"input" : new Date(-543,2,4).getTime(),
 				"expected" : "4/3/0"
 			},{
 				"locales" : "th",
@@ -51,7 +51,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("-000548-03-04T17:59:30").getTime(),
+				"input" : new Date(-548,2,4).getTime(),
 				"expected" : "4/3/-5"
 			}];
 			testCases.forEach(function(currentTest) {

@@ -28,7 +28,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					minute : "numeric",
 					second : "numeric",
 				},
-				"input" : new Date("2014-03-04T17:59:30").getTime(),
+				"input" : new Date(2014,2,4,17,59,30).getTime(),
 				"expected" : "الثلاثاء، ٣ جمادى الأولى، ١٤٣٥ هـ ٥:٥٩:٣٠ م"
 			}];
 			testCases.forEach(function(currentTest) {
@@ -64,7 +64,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					minute : "numeric",
 					second : "numeric",
 				},
-				"input" : new Date("2014-03-04T17:59:30").getTime(),
+				"input" : new Date(2014,2,4,17,59,30).getTime(),
 				"expected" : "الثلاثاء، ٢ جمادى الأولى، ١٤٣٥ هـ ٥:٥٩:٣٠ م"
 			}];
 			testCases.forEach(function(currentTest) {
@@ -100,7 +100,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					minute : "numeric",
 					second : "numeric",
 				},
-				"input" : new Date("2014-03-04T17:59:30").getTime(),
+				"input" : new Date(2014,2,4,17,59,30).getTime(),
 				"expected" : "الثلاثاء، ٣ جمادى الأولى، ١٤٣٥ هـ ٥:٥٩:٣٠ م"
 			}];
 			testCases.forEach(function(currentTest) {
@@ -136,7 +136,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					minute : "numeric",
 					second : "numeric",
 				},
-				"input" : new Date("2014-03-04T17:59:30").getTime(),
+				"input" : new Date(2014,2,4,17,59,30).getTime(),
 				"expected" : "الثلاثاء، ٤ مارس، ٢٠١٤ ٥:٥٩:٣٠ م"
 			}];
 			testCases.forEach(function(currentTest) {

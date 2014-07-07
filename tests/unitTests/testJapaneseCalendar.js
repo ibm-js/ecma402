@@ -24,7 +24,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "long",
 					day : "numeric",
 				},
-				"input" : new Date("1989-01-07T00:00:00").getTime(),
+				"input" : new Date(1989,0,7).getTime(),
 				"expected" : "昭和64年1月7日"
 			},{
 				"locales" : "ja-u-ca-japanese",
@@ -33,7 +33,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "long",
 					day : "numeric",
 				},
-				"input" : new Date("1989-01-08T00:00:00").getTime(),
+				"input" : new Date(1989,0,8).getTime(),
 				"expected" : "平成1年1月8日"
 			},{
 				"locales" : "ja-u-ca-japanese",
@@ -42,7 +42,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "long",
 					day : "numeric",
 				},
-				"input" : new Date("2014-06-05T12:34:56").getTime(),
+				"input" : new Date(2014,5,5).getTime(),
 				"expected" : "平成26年6月5日"
 			},{
 				"locales" : "ja-u-ca-japanese",
@@ -51,7 +51,7 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 					month : "numeric",
 					day : "numeric",
 				},
-				"input" : new Date("0335-10-31T12:34:56").getTime(),
+				"input" : new Date(335,9,31).getTime(),
 				"expected" : "大化-309年10月31日"
 			}];
 			testCases.forEach(function(currentTest) {
