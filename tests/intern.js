@@ -52,12 +52,20 @@ define({
 	loader: {
 		baseUrl: "..",
 		config : { 
-			"ecma402/locales" : /^(ar|de(-CH)?|el|en(-(GB|NZ))?|es|he|hi|id|ja|pt.*|sl|sr(-Latn)?|th|zh.*)$/ 
+			"ecma402/locales" : /^(ar|de(-CH)?|el|en(-(GB|NZ))?|es|fr|he|hi|id|ja|pt.*|sl|sr(-Latn)?|th|zh.*)$/ 
 		}
 	},
 	
 	// Non-functional test suite(s) to run in each browser
-	suites : [  "ecma402/tests/unitTest",
+	suites : [  "ecma402/tests/unitTests/testAbstractOperations",
+	            "ecma402/tests/unitTests/testDateTimeFormat",
+	            "ecma402/tests/unitTests/testNumberFormat",
+	            "ecma402/tests/unitTests/testShim",
+	            "ecma402/tests/unitTests/testBuddhistCalendar",
+	            "ecma402/tests/unitTests/testHebrewCalendar",
+	            "ecma402/tests/unitTests/testIslamicCalendar",
+	            "ecma402/tests/unitTests/testJapaneseCalendar",
+	            "ecma402/tests/unitTests/testROCCalendar",
 	            "ecma402/tests/intl402/suite/ch06/6.2",
                 "ecma402/tests/intl402/suite/ch06/6.3",
                 "ecma402/tests/intl402/suite/ch06/6.4",

@@ -581,7 +581,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second",
 						"timeZoneName" ];
 				if (!isFinite(x)) {
-					throw new RangeError();
+					throw new RangeError("Attempting to format an invalid date/time.");
 				}
 				var locale = dateTimeFormat.locale;
 				var nf = {};
@@ -593,7 +593,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 					minimumIntegerDigits : 2,
 					useGrouping : false
 				});
-				var tm = _toLocalTime(x, dateTimeFormat.calendar, dateTimeFormat.timeZone);
+				var tm = calendars.toLocalTime(x, dateTimeFormat.calendar, dateTimeFormat.timeZone);
 				var pm = false;
 				var result = dateTimeFormat.pattern;
 				dateTimeProperties.forEach(function (prop) {
@@ -636,10 +636,6 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 					}
 				}
 				return result;
-			}
-			// ECMA 402 Section 12.3.2
-			function _toLocalTime(date, calendar, timeZone) {
-				return calendars.toLocalTime(date, calendar, timeZone);
 			}
 
 			function _getCalendarField(calType, calData, year, standalone, property, format, value) {

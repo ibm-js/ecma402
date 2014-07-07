@@ -126,11 +126,9 @@ define(["./List", "./Record",
 				var extlangTag = /^([a-z]{2,3}(-[a-z]{3}))(?=(-|$))/;
 				/* Canonicalize the Language Tag */
 				result = result.replace(languageTag, function (m) {
-					if (aliases !== null) {
-						var lookupAlias = aliases.languageAlias[m];
-						if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
-							m = lookupAlias._replacement ? lookupAlias._replacement : m;
-						}
+					var lookupAlias = aliases.languageAlias[m];
+					if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
+						m = lookupAlias._replacement ? lookupAlias._replacement : m;
 					}
 					return m;
 				}); // String
@@ -139,11 +137,9 @@ define(["./List", "./Record",
 					if (firstSingletonPosition === -1 || result.indexOf(m) < firstSingletonPosition) {
 						m = m.substring(0, 2).toUpperCase() + m.substring(2);
 						var script = m.substring(1);
-						if (aliases !== null) {
-							var lookupAlias = aliases.scriptAlias[script];
-							if (lookupAlias) {
-								m = lookupAlias._replacement ? "-" + lookupAlias._replacement : m;
-							}
+						var lookupAlias = aliases.scriptAlias[script];
+						if (lookupAlias) {
+							m = lookupAlias._replacement ? "-" + lookupAlias._replacement : m;
 						}
 					}
 					return m;
@@ -153,15 +149,13 @@ define(["./List", "./Record",
 					if (firstSingletonPosition === -1 || result.indexOf(m) < firstSingletonPosition) {
 						m = m.toUpperCase();
 						var region = m.substring(1);
-						if (aliases !== null) {
-							var lookupAlias = aliases.territoryAlias[region];
-							if (lookupAlias) {
-								var repl = lookupAlias._replacement;
-								if (repl.indexOf(" ") >= 0) {
-									repl = repl.substring(0, repl.indexOf(" "));
-								}
-								m = repl ? "-" + repl : m;
+						var lookupAlias = aliases.territoryAlias[region];
+						if (lookupAlias) {
+							var repl = lookupAlias._replacement;
+							if (repl.indexOf(" ") >= 0) {
+								repl = repl.substring(0, repl.indexOf(" "));
 							}
+							m = repl ? "-" + repl : m;
 						}
 					}
 					return m;
@@ -170,22 +164,18 @@ define(["./List", "./Record",
 				result = result.replace(variantTag, function (m) {
 					// Variant tags are upper case in CLDR's data.
 					var variant = common._toUpperCaseIdentifier(m.substring(1));
-					if (aliases !== null) {
-						var lookupAlias = aliases.variantAlias[variant];
-						if (lookupAlias) {
-							var repl = lookupAlias._replacement;
-							m = repl ? "-" + common._toLowerCaseIdentifier(repl) : m;
-						}
+					var lookupAlias = aliases.variantAlias[variant];
+					if (lookupAlias) {
+						var repl = lookupAlias._replacement;
+						m = repl ? "-" + common._toLowerCaseIdentifier(repl) : m;
 					}
 					return m;
 				}); // String
 				// Canonicalize any whole tag combinations or grandfathered tags
 				result = result.replace(result, function (m) {
-					if (aliases !== null) {
-						var lookupAlias = aliases.languageAlias[m];
-						if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
-							m = lookupAlias._replacement ? lookupAlias._replacement : m;
-						}
+					var lookupAlias = aliases.languageAlias[m];
+					if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
+						m = lookupAlias._replacement ? lookupAlias._replacement : m;
 					}
 					return m;
 				}); // String

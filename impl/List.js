@@ -2,10 +2,7 @@ define(function () {
 
 	// Implementation of the List abstract data type from ECMA 402.
 	var List = function () {
-		for (var i = 0; i < arguments.length; i++) {
-			this[i] = arguments[i];
-		}
-		this.length = arguments.length;
+		this.length = 0;
 	};
 
 	List.prototype.forEach = function (f) {

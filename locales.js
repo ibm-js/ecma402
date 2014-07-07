@@ -18,25 +18,23 @@ define([
 	localeHash.root = true;
 	localeHash[common.DefaultLocale()] = true;
 	var config = module.config();
-	if (config) {
-		if (config instanceof RegExp) {
-			common.availableLocalesList.forEach(function (locale) {
-				if (config.test(locale)) {
-					localeHash[locale] = true;
+	if (config instanceof RegExp) {
+		common.availableLocalesList.forEach(function (locale) {
+			if (config.test(locale)) {
+				localeHash[locale] = true;
+			}
+		});
+	} else {
+		if (typeof config === "string") {
+			config = [ config ];
+		}
+		if (config instanceof Array) {
+			config.forEach(function (locale) {
+				var bestFitPreload = common.BestFitAvailableLocale(common.availableLocalesList, locale);
+				if (bestFitPreload) {
+					localeHash[bestFitPreload] = true;
 				}
 			});
-		} else {
-			if (typeof config === "string") {
-				config = [ config ];
-			}
-			if (config instanceof Array) {
-				config.forEach(function (locale) {
-					var bestFitPreload = common.BestFitAvailableLocale(common.availableLocalesList, locale);
-					if (bestFitPreload) {
-						localeHash[bestFitPreload] = true;
-					}
-				});
-			}
 		}
 	}
 	var locales = Object.keys(localeHash);
