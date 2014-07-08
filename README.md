@@ -59,8 +59,8 @@ Then you can load `Intl` through the `ecma402/IntlShim` module and use it:
 </script>
 <script>
   require(["ecma402/IntlShim"], function(Intl) {
-     var nb = Intl.NumberFormat("fr", { style: "percent" });
-     console.log(nb.format(24.02));
+     var nf = Intl.NumberFormat("fr", { style: "percent" });
+     console.log(nf.format(24.02));
   });
 </script>
 ```
@@ -84,5 +84,37 @@ the `intl-api` flag to false in the RequireJS config as follows:
 </script>
 ```
 
-For further documentation on the ECMA-402 standard `Intl` API and how to use it you can check out [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl)
+Alternatively, if you always want to use the `Intl` as provided through this package, and not attempt to leverage the
+native support in the browser, you can load the `ecma402/Intl` module directly, as follows:
 
+```html
+<script>
+   // configuring RequireJS
+   require.config({
+     // where to find ecma402 package
+     baseUrl: "bower_components",
+     // which locales do I want to be available in addition to default browser locale
+     config: {
+        "ecma402/locales": /^(en|de|fr)$/
+     }
+   }
+</script>
+<script>
+  require(["ecma402/Intl"], function(Intl) {
+     var nf = Intl.NumberFormat("fr", { style: "percent" });
+     console.log(nf.format(24.02));
+  });
+</script>
+```
+
+For further documentation on the ECMA-402 standard `Intl` API and how to use it you can check out
+the information available at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+
+## Locale configuration using ecma402/locales
+
+This package contains locale data for a large number of locales as defined by Unicode [CLDR](http://cldr.unicode.org)
+For many run time environments, it is not necessary to load the data for all possible locales, but instead, only for the
+default locale as defined by the settings in the browser.  In order to keep the data load time to a minimum, by default only
+data associated with the default locale is loaded at run time unless additional locales are specified using the config
+option "ecma402/locales" as in the above example.  The argument can be either a regular expression, a string (for a
+single locale), or an array of strings.
