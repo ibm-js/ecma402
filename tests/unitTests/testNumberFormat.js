@@ -1,7 +1,7 @@
-define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl'], function(registerSuite, assert, Intl) {
+define([ "intern!object", "intern/chai!assert", "ecma402/Intl"], function (registerSuite, assert, Intl) {
 	registerSuite({
-		name : 'testNumberFormat',
-		currencyFormat : function() {
+		name : "testNumberFormat",
+		currencyFormat : function () {
 			var testCases = [ {
 				"locales" : "ar",
 				"style" : "currency",
@@ -33,17 +33,17 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl'], function(regist
 				"input" : 12345.678,
 				"expected" : "€12,345.68"
 			} ];
-			testCases.forEach(function(currentTest) {
+			testCases.forEach(function (currentTest) {
 				var nfOptions = {
 					style : currentTest.style
 				};
-				if(currentTest.style=="currency"){
+				if (currentTest.style === "currency") {
 					nfOptions.currency = currentTest.currency;
 				}
 				var nf = new Intl.NumberFormat(currentTest.locales, nfOptions);
 				assert.strictEqual(nf.format(currentTest.input), currentTest.expected,
-					'Intl.NumberFormat.format() should return expected string for locale '+currentTest.locales
-						+'" style:'+currentTest.style);
+					"Intl.NumberFormat.format() should return expected string for locale \"" + currentTest.locales
+						+ "\" style:" + currentTest.style);
 			});
 		}
 	});

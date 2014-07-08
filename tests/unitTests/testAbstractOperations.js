@@ -1,9 +1,9 @@
-define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(registerSuite, assert, Intl) {
+define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (registerSuite, assert, Intl) {
 	registerSuite({
-		name : 'testAbstractOperations',
-		matcherFunctions : function() {
+		name : "testAbstractOperations",
+		matcherFunctions : function () {
 			var lookupMatcherOptions = {
-					"localeMatcher": "lookup"
+				"localeMatcher" : "lookup"
 			};
 			var testLanguageTags = [ {
 				"input" : "en-US",
@@ -79,20 +79,21 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 				"bestfit" : "fr"
 			} ];
 
-			testLanguageTags.forEach(function(currentTag) {
+			testLanguageTags.forEach(function (currentTag) {
 				var nf = new Intl.NumberFormat(currentTag.input);
-				var nf2 = new Intl.NumberFormat(currentTag.input,lookupMatcherOptions);
+				var nf2 = new Intl.NumberFormat(currentTag.input, lookupMatcherOptions);
 				assert.strictEqual(nf.resolvedOptions().locale, currentTag.bestfit,
-						'BestFitMatcher() should return the correct locale for language tag "'+currentTag.input+'"');
+					"BestFitMatcher() should return the correct locale for language tag \"" + currentTag.input + "\"");
 				assert.strictEqual(nf2.resolvedOptions().locale, currentTag.lookup,
-						'LookupMatcher() should return the correct locale for language tag "'+currentTag.input+'"');
+					"LookupMatcher() should return the correct locale for language tag \"" + currentTag.input + "\"");
 			});
 		},
-		testCollator : function() {
-			var colFunction = function() {
-				col = new Intl.Collator();
+		testCollator : function () {
+			var colFunction = function () {
+				var col = new Intl.Collator();
+				return col;
 			};
-			assert.throws(colFunction,TypeError,"Intl.Collator is not supported.");
+			assert.throws(colFunction, TypeError, "Intl.Collator is not supported.");
 		}
 	});
 });

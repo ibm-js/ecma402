@@ -1,7 +1,7 @@
-define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(registerSuite, assert, Intl) {
+define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (registerSuite, assert, Intl) {
 	registerSuite({
-		name : 'testDateTimeFormat',
-		dateTimeFormat : function() {
+		name : "testDateTimeFormat",
+		dateTimeFormat : function () {
 			var testCases = [ {
 				"locales" : "en-US",
 				"options" : {
@@ -107,10 +107,10 @@ define([ 'intern!object', 'intern/chai!assert', 'ecma402/Intl' ], function(regis
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
 				"expected" : "12:00:00 π.μ."
 			} ];
-			testCases.forEach(function(currentTest) {
+			testCases.forEach(function (currentTest) {
 				var df = new Intl.DateTimeFormat(currentTest.locales, currentTest.options);
 				assert.strictEqual(df.format(currentTest.input), currentTest.expected,
-					'Intl.DateTimeFormat.format() should return expected string for locale '+currentTest.locales);
+					"Intl.DateTimeFormat.format() should return expected string for locale " + currentTest.locales);
 			});
 		}
 	});

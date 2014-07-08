@@ -7,7 +7,8 @@ module.exports = function (grunt) {
 			src: [
 				"*.js",
 				"calendars/*.js",
-				"impl/*.js"
+				"impl/*.js",
+				"tests/unitTests/*.js"
 			],
 			options: {
 				jshintrc: ".jshintrc"
