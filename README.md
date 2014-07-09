@@ -5,7 +5,6 @@ for number formatting ( Intl.NumberFormat ) and date and time formatting ( Intl.
 Collation ( Intl.Collator ) is not currently supported.
 
 ## Status
-![](https://david-dm.org/ibm-js/ecma402.png)
 No official release yet.
 
 ## Licensing
@@ -14,6 +13,8 @@ This project is distributed by the Dojo Foundation and licensed under the ["New"
 All contributions require a [Dojo Foundation CLA](http://dojofoundation.org/about/claForm).
 
 ## Dependencies
+
+[![Dependency Status](https://david-dm.org/ibm-js/ecma402.png)](https://david-dm.org/ibm-js/ecma402)
 
 This project requires the following other projects to run:
  * requirejs (git clone https://github.com/jrburke/requirejs.git)
