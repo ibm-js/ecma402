@@ -15,6 +15,7 @@ All contributions require a [Dojo Foundation CLA](http://dojofoundation.org/abou
 ## Dependencies
 
 [![Dependency Status](https://david-dm.org/ibm-js/ecma402.png)](https://david-dm.org/ibm-js/ecma402)
+[![devDependency Status](https://david-dm.org/ibm-js/ecma402/dev-status.png)](https://david-dm.org/ibm-js/ecma402#info=devDependencies)
 
 This project requires the following other projects to run:
  * requirejs (git clone https://github.com/jrburke/requirejs.git)
