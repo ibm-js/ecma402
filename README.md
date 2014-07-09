@@ -1,4 +1,4 @@
-#ecma402
+# ecma402 [![Build Status](https://travis-ci.org/ibm-js/ecma402.png?branch=master)](https://travis-ci.org/ibm-js/ecma402)
 
 This project provides an implementation of the [ECMA-402 JavaScript Internationalization APIs standard](http://www.ecma-international.org/ecma-402/1.0/ECMA-402.pdf)
 for number formatting ( Intl.NumberFormat ) and date and time formatting ( Intl.DateTimeFormat ).
