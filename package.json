@@ -42,7 +42,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/jquery/globalize.git"
+		"url": "git://github.com/ibm-js/ecma402.git"
 	},	
 	"devDependencies": {
 		"intern": "1.6",
