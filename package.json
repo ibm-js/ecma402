@@ -3,6 +3,47 @@
 	"version": "0.1.1-dev",
 	"dependencies": {
 	},
+	"keywords": [
+	    "utility",
+	    "globalization",
+	    "internationalization",
+	    "multilingualization",
+	    "localization",
+	    "g11n",
+	    "i18n",
+	    "m17n",
+	    "L10n",
+	    "localize",
+	    "format",
+	    "parse",
+	    "translate",
+	    "strings",
+	    "numbers",
+	    "dates",
+	    "times",
+	    "calendars",
+	    "cultures",
+	    "languages",
+	    "locales"
+	],
+	"homepage": "https://github.com/ibm-js/ecma402",
+	"author": "The Dojo Foundation",
+	"maintainers": [
+		{
+		  "name": "John Emmons",
+		  "email": "emmo@us.ibm.com",
+		  "url": "https://github.com/JCEmmons"
+		}
+	],
+	"contributors": [
+	    "Christophe Jolif <cjolif@gmail.com> (https://github.com/cjolif)",
+	    "Bill Keese <bill@dojotoolkit.org> (https://github.com/wkeese)",
+	    "Clément Mathieu (https://github.com/clmath)"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/jquery/globalize.git"
+	},	
 	"devDependencies": {
 		"intern": "1.6",
 		"grunt": "~0.4.2",
