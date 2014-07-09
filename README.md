@@ -5,7 +5,7 @@ for number formatting ( Intl.NumberFormat ) and date and time formatting ( Intl.
 Collation ( Intl.Collator ) is not currently supported.
 
 ## Status
-
+![](https://david-dm.org/ibm-js/ecma402.png)
 No official release yet.
 
 ## Licensing
