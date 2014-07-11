@@ -55,6 +55,10 @@ The ${DESIRED_LOCALES} regular expression for the full set (163 locales) is:
 For most new locales, if the language you are adding is the "default content" locale for the language, then
 you will only need to add the language locale and not language-territory.  For example, you will notice that
 "en" is present, but "en-US" is not, because en-US is the "default content" for English.
+
+If you need to add a new locale to the package and don't want to mess with the Java tools, you can just take the JSON files
+directly from the CLDR distribution and drop them into place.  The JSON data from the CLDR distribution will contain some
+fields that are not used by our ECMA-402 implementation, which will result in slower loading, but the keys ARE compatible.
 	
 2). Add the new locale entry to availableLocales.json in this directory. (cldr/config)
 

@@ -1,6 +1,11 @@
 define(function () {
 
-	// Implementation of the Record abstract data type from ECMA 402.
+	/**
+	 * Simple implementation of the Record abstract data type from ECMA 402.
+	 * 
+	 * @constructor
+	 * @private
+	 */
 	var Record = function () {
 		this.length = 0;
 	};

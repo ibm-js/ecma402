@@ -18,20 +18,41 @@ define(["./List", "./Record",
 		var calendarPreferenceData = JSON.parse(calendarPreferenceDataJson).supplemental.calendarPreferenceData;
 		var common = {
 			unicodeLocaleExtensions : /-u(-[a-z0-9]{2,8})+/g,
-			// ECMA 402 Section 6.1
+			/**
+			 * Utility function to convert identifier strings to upper case as defined in ECMA-402 Section 6.1
+			 * 
+			 * @param {String} identifier The string to be converted
+			 * @returns {String} The converted string
+			 * @private
+			 */
 			_toUpperCaseIdentifier : function (identifier) {
 				var match = /[a-z]/g;
 				return identifier.replace(match, function (m) {
 					return m.toUpperCase();
 				}); // String
 			},
-			// ECMA 402 Section 6.1
+			/**
+			 * Utility function to convert identifier strings to lower case as defined in ECMA-402 Section 6.1
+			 * 
+			 * @param {String} identifier The string to be converted
+			 * @returns {String} The converted string
+			 * @private
+			 */
 			_toLowerCaseIdentifier : function (identifier) {
 				var match = /[A-Z]/g;
 				return identifier.replace(match, function (m) {
 					return m.toLowerCase();
 				}); // String
 			},
+			/**
+			 * Utility function to retrieve the appropriate region code given a locale identifier.
+			 * If just a language tag is given, then the likely subtags data from CLDR is checked
+			 * to find the most likely region code.
+			 * 
+			 * @param {String} locale The locale identifier
+			 * @returns {String} The 2 letter region code
+			 * @private
+			 */
 			_getRegion : function (locale) {
 				var region = "001";
 				var regionPos = locale.search(/(?:-)([A-Z]{2})(?=(-|$))/);
@@ -45,6 +66,15 @@ define(["./List", "./Record",
 				}
 				return region;
 			},
+			/**
+			 * Utility function to determine the supported calendars for a given region.
+			 * Calendar preference data from CLDR is used to determine which locales are used
+			 * in a given region.
+			 * 
+			 * @param {String} region The 2 letter region code
+			 * @returns {String[]} An array containing the supported calendars for this region, in order of preference.
+			 * @private
+			 */
 			_getSupportedCalendars : function (region) {
 				var supportedCalendars = [ "gregory", "buddhist", "hebrew", "japanese", "roc",
 				                           "islamic", "islamic-civil", "islamic-tbla", "islamic-umalqura"];
@@ -64,7 +94,14 @@ define(["./List", "./Record",
 				}
 				return calendarPreferences;
 			},
-			// ECMA 402 Section 6.2.2
+
+			/**
+			 * IsStructurallyValidLanguageTag abstract operation as defined in ECMA-402 Section 6.2.2
+			 * 
+			 * @param {String} locale The language tag to check
+			 * @returns {Boolean} Returns true if the string is a structurally valid language tag.
+			 * @private
+			 */
 			isStructurallyValidLanguageTag : function (locale) {
 				if (typeof locale !== "string") {
 					return false; // Boolean
@@ -84,6 +121,14 @@ define(["./List", "./Record",
 					return true; // Boolean
 				}
 
+				/**
+				 * Utility function to determine whether the given element is a unique variant
+				 * within the context of a BCP 47 compliant language tag.
+				 * 
+				 * @param {String} element The element tag
+				 * @returns {Boolean} Returns true if the given element is a unique variant.
+				 * @private
+				 */
 				function _isUniqueVariant(element) {
 					var firstSingletonPosition = identifier.search(/-[a-z0-9]-/);
 					if (firstSingletonPosition > 0) {
@@ -94,6 +139,14 @@ define(["./List", "./Record",
 					return identifier.indexOf(element) === identifier.lastIndexOf(element); // Boolean
 				}
 
+				/**
+				 * Utility function to determine whether the given element is a unique singleton
+				 * within the context of a BCP 47 compliant language tag.
+				 * 
+				 * @param {String} element The element tag
+				 * @returns {Boolean} Returns true if the given element is a unique singleton.
+				 * @private
+				 */
 				function _isUniqueSingleton(element) {
 					var firstXPosition = identifier.search(/-x-/);
 					if (firstXPosition > 0) {
@@ -115,7 +168,13 @@ define(["./List", "./Record",
 				return false; // Boolean
 			},
 
-			// ECMA 402 Section 6.2.3
+			/**
+			 * CanonicalizeLanguageTag abstract operation as defined in ECMA-402 Section 6.2.3
+			 * 
+			 * @param {String} locale The structurally valid language tag to canonicalize
+			 * @returns {String} The canonical and case regularized form of the language tag.
+			 * @private
+			 */
 			CanonicalizeLanguageTag : function (locale) {
 				var result = locale.toLowerCase();
 				var firstSingletonPosition = result.search(/(^|-)[a-z0-9]-/);
@@ -186,7 +245,13 @@ define(["./List", "./Record",
 				return result; // String
 			},
 
-			// ECMA 402 Section 6.2.4
+			/**
+			 * DefaultLocale abstract operation as defined in ECMA-402 Section 6.2.4
+			 * 
+			 * @returns {String} A string value representing the structurally valid (6.2.2)
+			 *  and canonicalized (6.2.3) BCP 47 language tag for the host environment’s current locale.
+			 * @private
+			 */
 			DefaultLocale : function () {
 				var result;
 				if (navigator && this.isStructurallyValidLanguageTag(navigator.language)) {
@@ -203,13 +268,25 @@ define(["./List", "./Record",
 				return result;
 			},
 
-			// ECMA 402 Section 6.3.1
+			/**
+			 * IsWellFormedCurrencyCode abstract operation as defined in ECMA-402 Section 6.3.1
+			 * 
+			 * @param {String} currency The currency code to check
+			 * @returns {Boolean} Returns true if the string is a well formed currency code.
+			 * @private
+			 */
 			IsWellFormedCurrencyCode : function (currency) {
 				var wellFormed = /^[A-Za-z]{3}$/;
 				return wellFormed.test(currency.toString()); // Boolean
 			},
 
-			// ECMA 402 Section 9.2.1
+			/**
+			 * CanonicalizeLocaleList abstract operation as defined in ECMA-402 Section 9.2.1
+			 * 
+			 * @param {*} locales The list of locales to canonicalize
+			 * @returns {Object} The canonicalized list of locales, as a "List" object.
+			 * @private
+			 */
 			CanonicalizeLocaleList : function (locales) {
 				if (locales === undefined) {
 					return new List();
@@ -245,7 +322,14 @@ define(["./List", "./Record",
 				return seen;
 			},
 
-			// ECMA 402 Section 9.2.2
+			/**
+			 * BestAvailableLocale abstract operation as defined in ECMA-402 Section 9.2.2
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {String} locale The locale identifier to check
+			 * @returns {String} The best available locale, using the fallback mechanism of RFC 4647, section 3.4.
+			 * @private
+			 */
 			BestAvailableLocale : function (availableLocales, locale) {
 				var candidate = locale;
 				while (true) {
@@ -263,7 +347,14 @@ define(["./List", "./Record",
 				}
 			},
 
-			// ECMA 402 Section 9.2.3
+			/**
+			 * LookupMatcher abstract operation as defined in ECMA-402 Section 9.2.3
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {List} requestedLocales The canonicalized list of requested locales
+			 * @returns {String} The best available locale identifier to meet the request
+			 * @private
+			 */
 			LookupMatcher : function (availableLocales, requestedLocales) {
 				var i = 0;
 				var len = requestedLocales.length;
@@ -290,13 +381,20 @@ define(["./List", "./Record",
 				return result;
 			},
 
-			// Algorithm is similar to BestAvailableLocale, as in Section 9.2.2
-			// except that the following additional operations are performed:
-			// 1). CLDR macrolanguage replacements are done ( i.e. "cmn" becomes "zh" )
-			// 2). Known locale aliases, such as zh-TW = zh-Hant-TW, are resolved,
-			// 3). Explicit parent locales from CLDR's supplemental data are also considered.
-			// This data for item #2 is not currently in CLDR see http://unicode.org/cldr/trac/ticket/5949,
-			// but should be there in a future release.
+			/**
+			 * BestFitAvailableLocale abstract operation.
+			 * 
+			 * Algorithm is similar to BestAvailableLocale, as in Section 9.2.2
+			 * except that the following additional operations are performed:
+			 * 1). CLDR macrolanguage replacements are done ( i.e. "cmn" becomes "zh" )
+			 * 2). Known locale aliases, such as zh-TW = zh-Hant-TW, are resolved,
+			 * 3). Explicit parent locales from CLDR's supplemental data are also considered.
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {String} locale The locale identifier to check
+			 * @returns {String} The best fit available locale, using CLDR's locale fallback mechanism.
+			 * @private
+			 */
 
 			BestFitAvailableLocale : function (availableLocales, locale) {
 				var candidate = locale;
@@ -329,7 +427,14 @@ define(["./List", "./Record",
 				}
 			},
 
-			// ECMA 402 Section 9.2.4
+			/**
+			 * BestFitMatcher abstract operation as defined in ECMA-402 Section 9.2.4
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {List} requestedLocales The canonicalized list of requested locales
+			 * @returns {String} The best available locale identifier to meet the request
+			 * @private
+			 */
 			BestFitMatcher : function (availableLocales, requestedLocales) {
 				var i = 0;
 				var len = requestedLocales.length;
@@ -355,7 +460,20 @@ define(["./List", "./Record",
 				return result;
 			},
 
-			// ECMA 402 Section 9.2.5
+			/**
+			 * ResolveLocale abstract operation as defined in ECMA-402 Section 9.2.5
+			 * 
+			 * Compares a BCP 47 language priority list requestedLocales against the locales in availableLocales
+			 * and determines the best available language to meet the request.
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {List} requestedLocales The canonicalized list of requested locales
+			 * @param {Record} options Locale matching options (for example, "lookup" vs. "best fit" algorithm)
+			 * @param {String[]} relevantExtensionKeys Array of relevant -u extension keys for the match
+			 * @param {Object} localeData Hash table containing the preloaded locale data.
+			 * @returns {Record} The locale information regarding best available locale that meets the request
+			 * @private
+			 */
 			/* jshint maxcomplexity: 14 */
 			ResolveLocale : function (availableLocales, requestedLocales, options, relevantExtensionKeys,
 									  localeData) {
@@ -431,7 +549,18 @@ define(["./List", "./Record",
 			},
 			/* jshint maxcomplexity: 10 */
 
-			// ECMA 402 Section 9.2.6
+			/**
+			 * LookupSupportedLocales abstract operation as defined in ECMA-402 Section 9.2.6
+			 * 
+			 * Returns the subset of the provided BCP 47 language priority list requestedLocales for which
+			 * availableLocales has a matching locale when using the BCP 47 lookup algorithm.
+			 * Locales appear in the same order in the returned list as in requestedLocales.
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {List} requestedLocales The canonicalized list of requested locales
+			 * @returns {String[]} An array containing a list of matching locales
+			 * @private
+			 */
 			LookupSupportedLocales : function (availableLocales, requestedLocales) {
 				var len = requestedLocales.length;
 				var subset = new List();
@@ -449,7 +578,18 @@ define(["./List", "./Record",
 				return subsetArray;
 			},
 
-			// ECMA 402 Section 9.2.7
+			/**
+			 * BestFitSupportedLocales abstract operation as defined in ECMA-402 Section 9.2.7
+			 * 
+			 * Returns the subset of the provided BCP 47 language priority list requestedLocales for which
+			 * availableLocales has a matching locale when using the best fit matcher algorithm.
+			 * Locales appear in the same order in the returned list as in requestedLocales.
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {List} requestedLocales The canonicalized list of requested locales
+			 * @returns {String[]} An array containing a list of matching locales
+			 * @private
+			 */
 			BestFitSupportedLocales : function (availableLocales, requestedLocales) {
 				var len = requestedLocales.length;
 				var subset = new List();
@@ -467,7 +607,20 @@ define(["./List", "./Record",
 				return subsetArray;
 			},
 
-			// ECMA 402 Section 9.2.8
+			/**
+			 * SupportedLocales abstract operation as defined in ECMA-402 Section 9.2.8
+			 * 
+			 * Returns the subset of the provided BCP 47 language priority list requestedLocales for which
+			 * availableLocales has a matching locale. Two algorithms are available to match the locales:
+			 * the Lookup algorithm described in RFC 4647 section 3.4, and an implementation dependent
+			 * best-fit algorithm. Locales appear in the same order in the returned list as in requestedLocales.
+			 * 
+			 * @param {List} availableLocales The canonicalized list of available locales
+			 * @param {List} requestedLocales The canonicalized list of requested locales
+			 * @param {Object} options Specifies which lookup algorithm to use
+			 * @returns {String[]} An array containing a list of matching locales
+			 * @private
+			 */
 			SupportedLocales : function (availableLocales, requestedLocales, options) {
 				var matcher;
 				var subset;
@@ -501,7 +654,21 @@ define(["./List", "./Record",
 				return subset;
 			},
 
-			// ECMA 402 Section 9.2.9
+			/**
+			 * GetOption abstract operation as defined in ECMA-402 Section 9.2.9
+			 * 
+			 * Extracts the value of the named property from the provided options object,
+			 * converts it to the required type, checks whether it is one of a List of allowed values,
+			 * and fills in a fallback value if necessary.
+			 * 
+			 * @param {Object} options The object containing the options to search
+			 * @param {String} property The property to retrieve
+			 * @param {String} type The type of the resulting option value
+			 * @param {Array} values The list of allowed values
+			 * @param {*} fallback The fallback value
+			 * @returns {*} The resulting value as described above.
+			 * @private
+			 */
 			GetOption : function (options, property, type, values, fallback) {
 				var value = options[property];
 				if (value !== undefined) {
@@ -525,7 +692,21 @@ define(["./List", "./Record",
 				return fallback;
 			},
 
-			// ECMA 402 Section 9.2.10
+			/**
+			 * GetNumberOption abstract operation as defined in ECMA-402 Section 9.2.10
+			 * 
+			 * Extracts the value of the named property from the provided options object,
+			 * converts it to a Number value, checks whether it is in the allowed range,
+			 * and fills in a fallback value if necessary.
+			 * 
+			 * @param {Object} options The object containing the options to search
+			 * @param {String} property The property to retrieve
+			 * @param {Number} minimum The minimum numeric value for this option
+			 * @param {Number} maximum The maximum numeric value for this option
+			 * @param {*} fallback The fallback value
+			 * @returns {Number} The resulting value as described above.
+			 * @private
+			 */
 			GetNumberOption : function (options, property, minimum, maximum, fallback) {
 				var value = options[property];
 				if (value !== undefined) {

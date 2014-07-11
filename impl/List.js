@@ -1,6 +1,11 @@
 define(function () {
 
-	// Implementation of the List abstract data type from ECMA 402.
+	/**
+	 * Simple implementation of the List abstract data type from ECMA 402.
+	 * 
+	 * @constructor
+	 * @private
+	 */
 	var List = function () {
 		this.length = 0;
 	};

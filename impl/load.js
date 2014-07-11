@@ -1,7 +1,7 @@
 /**
  * Plugin to load a single locale.  For example, load!en returns
  * an Object like { currencies: ..., numbers: ..., "ca-gregorian": ... }.
- * Used by preloads! plugin.
+ * Used by locales! plugin.
  */
 define([
     "./calendars",

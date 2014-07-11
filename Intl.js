@@ -4,6 +4,12 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 		"requirejs-text/text!./cldr/supplemental/numberingSystems.json" ],
 	function (Record, calendars, common, preloads,
 			currencyDataJson, timeDataJson, numberingSystemsJson) {
+			/**
+			 * JavaScript implementation of internationalization APIs ("Intl") as defined by ECMA standard 402
+			 * version 1.0, available for download at http://www.ecma-international.org/ecma-402/1.0/ECMA-402.pdf
+			 * 
+			 * @constructor
+			 */
 			/*jshint maxcomplexity: 25*/
 			var Intl = {};
 			var currencyData = JSON.parse(currencyDataJson);
@@ -16,7 +22,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 			}
 
-			// ECMA 402 Section 11.1.1.1
+			/**
+			 * InitializeNumberFormat abstract operation as defined in ECMA-402 Section 11.1.1.1
+			 * 
+			 * @param {Object} numberFormat The object to be initialized as a NumberFormat object
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Number formatting options
+			 * @private
+			 */
 			function _initializeNumberFormat(numberFormat, locales, options) {
 				if (numberFormat.hasOwnProperty("initializedIntlObject") && numberFormat.initializedIntlObject) {
 					throw new TypeError("NumberFormat is already initialized.");
@@ -115,9 +128,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				numberFormat.initializedNumberFormat = true;
 			}
 
-			/*
+			/**
 			 * Utility function to insert grouping separators into the proper locations in a string of digits based on
 			 * the CLDR pattern string.
+			 * 
+			 * @param {String} n The string representing the number to be formatted
+			 * @param {String} pattern The number formatting pattern (from CLDR)
+			 * @returns {String} The formatted string
+			 * @private
 			 */
 			function doGrouping(n, pattern) {
 				var numExp = /[0-9#.,]+/;
@@ -141,8 +159,12 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return n;
 			}
-			/*
+			/**
 			 * Utility function to convert a string in scientific notation to a corresponding string of digits
+			 * 
+			 * @param {String} x The string to be converted
+			 * @returns {String} The corresponding string of digits
+			 * @private
 			 */
 			function _toDigitString(x) {
 				var m = x;
@@ -178,7 +200,15 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return m;
 			}
-			// ECMA 402 Section 11.3.2 (_toRawPrecision abstract operation)
+			/**
+			 * ToRawPrecision abstract operation as defined in ECMA-402 Section 11.3.2
+			 * 
+			 * @param {Number} x The number being formatted
+			 * @param {Number} minPrecision The minimum precision
+			 * @param {Number} maxPrecision The maximum precision
+			 * @returns {String} The string representing the formatted number
+			 * @private
+			 */
 			function _toRawPrecision(x, minPrecision, maxPrecision) {
 				var p = maxPrecision;
 				var e;
@@ -256,7 +286,16 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return m;
 			}
-			// ECMA 402 Section 11.3.2 (_toRawFixed abstract operation)
+			/**
+			 * ToRawFixed abstract operation as defined in ECMA-402 Section 11.3.2
+			 * 
+			 * @param {Number} x The number being formatted
+			 * @param {Number} minInteger The minimum number of integer digits
+			 * @param {Number} minFraction The minimum number of fractional digits
+			 * @param {Number} maxFraction The maximum number of fractional digits
+			 * @returns {String} The string representing the formatted number
+			 * @private
+			 */
 			function _toRawFixed(x, minInteger, minFraction, maxFraction) {
 				var m;
 				/*
@@ -290,7 +329,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return m;
 			}
-			// ECMA 402 Section 11.3.2 (_formatNumber abstract operation)
+			/**
+			 * FormatNumber abstract operation as defined in ECMA-402 Section 11.3.2
+			 * 
+			 * @param {Object} numberFormat The number format object to use for formatting
+			 * @param {Number} x The number being formatted
+			 * @returns {String} The string representing the formatted number
+			 * @private
+			 */
 			function _formatNumber(numberFormat, x) {
 				var negative = (x < 0);
 				var n;
@@ -353,7 +399,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return result;
 			}
 
-			// Utility function to retrive necessary number fields from the CLDR data
+			/**
+			 * Utility function to retrive necessary number fields from the CLDR data
+			 * 
+			 * @param {Object} numbers The JSON object containing numbers data from CLDR
+			 * @param {String} numberingSystem The numbering system being used
+			 * @returns {Object} An object containing the number symbols and formatting patterns
+			 * @private
+			 */
 			function _getNumberInfo(numbers, numberingSystem) {
 				var result = {};
 				result.symbols = {};
@@ -389,7 +442,15 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return result;
 			}
 
-			// ECMA 402 Section 12.1.1.1 (_toDateTimeOptions abstract operation)
+			/**
+			 * ToDateTimeOptions abstract operation as defined in ECMA-402 Section 12.1.1.1
+			 * 
+			 * @param {Object} options The number format object to use for formatting
+			 * @param {String} required String indicating which options are required
+			 * @param {String} defaults String indicating which options can use defaults
+			 * @returns {Object} The corresponding date/time options
+			 * @private
+			 */
 			function _toDateTimeOptions(options, required, defaults) {
 				if (options === undefined) {
 					options = null;
@@ -438,7 +499,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return options;
 			}
-			// ECMA 402 Section 12.1.1.1 (_basicFormatMatcher abstract operation)
+			/**
+			 * BasicFormatMatcher abstract operation as defined in ECMA-402 Section 12.1.1.1
+			 * 
+			 * @param {Object} options The requested options (i.e. fields) to be included in the date/time format
+			 * @param {Object []} formats An array of the available date/time formats
+			 * @returns {Object} The date/time format that best matches the requested options
+			 * @private
+			 */
 			function _basicFormatMatcher(options, formats) {
 				var removalPenalty = 120;
 				var additionPenalty = 20;
@@ -490,12 +558,28 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return bestFormat;
 			}
-			// ECMA 402 Section 12.1.1.1
+			/**
+			 * BestFitFormat abstract operation as defined in ECMA-402 Section 12.1.1.1
+			 * ECMA-402 allows this algorithm to be implementation defined. For now we are using
+			 * the same algorithm as for BasicFormatMatcher.
+			 * 
+			 * @param {Object} options The requested options (i.e. fields) to be included in the date/time format
+			 * @param {Object []} formats An array of the available date/time formats
+			 * @returns {Object} The date/time format that best matches the requested options
+			 * @private
+			 */
 			function _bestFitFormatMatcher(options, formats) {
 				return _basicFormatMatcher(options, formats);
 			}
 
-			/* ECMA 402 Section 12.1.1.1 */
+			/**
+			 * InitializeDateTimeFormat abstract operation as defined in ECMA-402 Section 12.1.1.1
+			 * 
+			 * @param {Object} dateTimeFormat The object to be initialized as a DateTimeFormat object
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Date/time formatting options
+			 * @private
+			 */
 			function _initializeDateTimeFormat(dateTimeFormat, locales, options) {
 				var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second",
 						"timeZoneName" ];
@@ -576,7 +660,15 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				dateTimeFormat.initializedDateTimeFormat = true;
 			}
 
-			// ECMA 402 Section 12.3.2
+			/**
+			 * FormatDateTime abstract operation as defined in ECMA-402 Section 12.3.2
+			 * 
+			 * @param {Object} dateTimeFormat The date/time format object to use for formatting
+			 * @param {Number} x The value of the date being formatted, as would be received from
+			 *  the getTime() method of the Date object
+			 * @returns {String} The string representing the formatted number
+			 * @private
+			 */
 			function _formatDateTime(dateTimeFormat, x) {
 				var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second",
 						"timeZoneName" ];
@@ -638,6 +730,20 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return result;
 			}
 
+			/**
+			 * Utility function to retrive necessary date/time fields from the CLDR data
+			 * 
+			 * @param {String} calType The type of calendar in use (i.e. "hebrew", "japanese", etc. )
+			 * @param {Object} calData The JSON object containing calendar data from CLDR
+			 * @param {Number} year The year number
+			 * @param {Boolean} standalone TRUE indicates a stand-alone month name,
+			 *  which is spelled differently in some languages.
+			 * @param {String} property The type of field being requested (i.e. "weekday", "month", etc.)
+			 * @param {String} format The length of the field being requested (i.e. "narrow", "short", "long")
+			 * @param {Number} value Indicates which month, day, etc. is being requested (zero based)
+			 * @returns {String} A string containing the requested calendar field
+			 * @private
+			 */
 			function _getCalendarField(calType, calData, year, standalone, property, format, value) {
 				var result = null;
 				switch (property) {
@@ -715,10 +821,14 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				return result;
 			}
-			/*
+			/**
 			 * Utility function to convert the availableFormats from a CLDR JSON object into an array of available
 			 * formats as defined by ECMA 402. For definition of fields, in CLDR, refer to
 			 * http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
+			 * 
+			 * @param {String} format The date/time format pattern as from CLDR
+			 * @returns {String} A string containing the corresponding date/time pattern in ECMA-402 format
+			 * @private
 			 */
 			function _ToIntlDateTimeFormat(format) {
 				var dateFields = /G{1,5}|y{1,4}|[ML]{1,5}|E{1,5}|d{1,2}|a|[Hh]{1,2}|m{1,2}|s{1,2}/g;
@@ -831,12 +941,17 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return result;
 			}
 
-			// Utility function to convert the availableFormats from a CLDR JSON
-			// object into
-			// an array of available formats as defined by ECMA 402. For
-			// definition of fields,
-			// in CLDR, refer to
-			// http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
+			/**
+			 * Utility function to convert the availableFormats from a CLDR JSON
+			 * object into an array of available formats as defined by ECMA 402. For
+			 * a definition of fields in CLDR, refer to
+			 * http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
+			 * 
+			 * @param {Object} dateTimeFormats The CLDR JSON object containing date/time information
+			 * @returns {String[]} A array of strings, each corrresponding to one of the date/time 
+			 *  patterns (in ECMA-402 format) that can be used to format dates or times
+			 * @private
+			 */
 			function _convertAvailableDateTimeFormats(dateTimeFormats) {
 				var availableFormats = dateTimeFormats.availableFormats;
 				var result = [];
@@ -901,9 +1016,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return result;
 			}
 
-			/*
+			/**
 			 * Utility function to return the valid values for a date/time field, according to table 3 in ECMA 402
 			 * section 12.1.1.1
+			 * 
+			 * @param {String} prop The requested date/time field
+			 * @returns {String[]} A array of strings, each corrresponding one of the valid date/time property values 
+			 * @private
 			 */
 			function _validDateTimePropertyValues(prop) {
 				if (prop === "weekday" || prop === "era") {
@@ -920,7 +1039,9 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 			}
 
-			// ECMA 402 Section 11.3.2
+			/**
+			 * Internal properties of NumberFormat, as defined in ECMA 402 Section 11.2.3
+			 */
 			var NumberFormat = {};
 			NumberFormat.availableLocales = Object.keys(preloads);
 			NumberFormat.relevantExtensionKeys = [ "nu" ];
@@ -932,7 +1053,9 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			});
 			Object.freeze(NumberFormat);
 
-			// ECMA 402 Section 12.2.3
+			/**
+			 * Internal properties of DateTimeFormat, as defined in ECMA 402 Section 12.2.3
+			 */
 			var DateTimeFormat = {};
 			DateTimeFormat.availableLocales = Object.keys(preloads);
 			DateTimeFormat.relevantExtensionKeys = [ "ca", "nu" ];
@@ -953,11 +1076,19 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			});
 			Object.freeze(DateTimeFormat);
 
+			/**
+			 * Placeholder for Intl.Collator constructor as defined by EMCA 402 Section 10.1.
+			 * Intl.Collator is not supported by this package.
+			 * @constructor
+			 */
 			Intl.Collator = function () {
 				throw new TypeError("Intl.Collator is not supported.");
 			};
 
-			// Intl.NumberFormat begins here.
+			/**
+			 * Intl.NumberFormat constructor as defined by EMCA 402 Section 11.1.
+			 * @constructor
+			 */
 			Intl.NumberFormat = function () {
 				this.prototype = Intl.NumberFormat.prototype;
 				this.extensible = true;
@@ -980,7 +1111,15 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				enumerable : false
 			});
 
-			// ECMA 402 Section 11.1.2.1
+			/**
+			 * Intl.NumberFormat.call as defined in ECMA-402 Section 11.1.2.1
+			 *
+			 * @param {Object} thisObject The NumberFormat object. If undefined,
+			 *  a new NumberFormat object will be created.
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Number formatting options
+			 * @returns 
+			 */
 			Intl.NumberFormat.call = function (thisObject, locales, options) {
 				if (thisObject === Intl || thisObject === undefined) {
 					return new Intl.NumberFormat(locales, options);
@@ -993,7 +1132,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return obj;
 			};
 
-			// ECMA 402 Section 11.2.2
+			/**
+			 * Intl.NumberFormat.supportedLocalesOf as defined in ECMA-402 Section 11.2.2
+			 *
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Locale lookup options
+			 * @returns {String[]} An array of supported locales that matches the request
+			 */
 			Object.defineProperty(Intl.NumberFormat, "supportedLocalesOf", {
 				value : function (locales) {
 					var availableLocales = NumberFormat.availableLocales;
@@ -1026,7 +1171,10 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				enumerable : false
 			});
 
-			// ECMA 402 Section 11.3.2
+			/**
+			 * Intl.NumberFormat.prototype.format as defined in ECMA-402 Section 11.3.2
+			 * @param {Number} value The number to format
+			 */
 			Object.defineProperty(Intl.NumberFormat.prototype, "format", {
 				get : function () {
 					if (this !== Object(this) || !this.initializedNumberFormat) {
@@ -1046,7 +1194,11 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				configurable : true
 			});
 
-			// ECMA 402 Section 11.3.3
+			/**
+			 * Intl.NumberFormat.resolvedOptions as defined in ECMA-402 Section 11.3.3
+			 *
+			 * @returns {Object} An object containing information about the options associated with a NumberFormat
+			 */
 			Object.defineProperty(Intl.NumberFormat.prototype, "resolvedOptions", {
 				value : function () {
 					if (this !== Object(this) || !this.initializedNumberFormat) {
@@ -1069,7 +1221,10 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				configurable : true
 			});
 
-			// Intl.DateTimeFormat begins here.
+			/**
+			 * Intl.DateTimeFormat constructor as defined by EMCA 402 Section 12.1.
+			 * @constructor
+			 */
 			Intl.DateTimeFormat = function () {
 				this.prototype = Intl.DateTimeFormat.prototype;
 				this.extensible = true;
@@ -1091,7 +1246,15 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				enumerable : false
 			});
 
-			// ECMA 402 Section 12.1.2.1
+			/**
+			 * Intl.DateTimeFormat.call as defined in ECMA-402 Section 12.1.2.1
+			 *
+			 * @param {Object} thisObject The DateTimeFormat object. If undefined,
+			 *  a new DateTimeFormat object will be created.
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Date/time formatting options
+			 * @returns 
+			 */
 			Intl.DateTimeFormat.call = function (thisObject, locales, options) {
 				if (thisObject === Intl || thisObject === undefined) {
 					return new Intl.DateTimeFormat(locales, options);
@@ -1104,7 +1267,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return obj;
 			};
 
-			// ECMA 402 Section 12.2.2
+			/**
+			 * Intl.DateTimeFormat.supportedLocalesOf as defined in ECMA-402 Section 12.2.2
+			 *
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Locale lookup options
+			 * @returns {String[]} An array of supported locales that matches the request
+			 */
 			Object.defineProperty(Intl.DateTimeFormat, "supportedLocalesOf", {
 				value : function (locales) {
 					var availableLocales = DateTimeFormat.availableLocales;
@@ -1129,7 +1298,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				configurable : false
 			});
 
-			// ECMA 402 Section 11.3.1
+			// ECMA 402 Section 12.3.1
 			Object.defineProperty(Intl.DateTimeFormat.prototype, "constructor", {
 				value : Intl.DateTimeFormat,
 				writable : true,
@@ -1137,7 +1306,10 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				enumerable : false
 			});
 
-			// ECMA 402 Section 12.3.2
+			/**
+			 * @param {Date} date The date to format
+			 * Intl.DateTimeFormat.prototype.format as defined in ECMA-402 Section 12.3.2
+			 */
 			Object.defineProperty(Intl.DateTimeFormat.prototype, "format", {
 				get : function () {
 					if (this !== Object(this) || !this.initializedDateTimeFormat) {
@@ -1166,7 +1338,11 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				configurable : true
 			});
 
-			// ECMA 402 Section 12.3.3
+			/**
+			 * Intl.DateTimeFormat.resolvedOptions as defined in ECMA-402 Section 12.3.3
+			 *
+			 * @returns {Object} An object containing information about the options associated with a DateTimeFormat
+			 */
 			Object.defineProperty(Intl.DateTimeFormat.prototype, "resolvedOptions", {
 				value : function () {
 					if (this !== Object(this) || !this.initializedDateTimeFormat) {
@@ -1188,7 +1364,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				configurable : true
 			});
 
-			// ECMA 402 Section 13.2.1
+			/**
+			 * Number.prototype.toLocaleString as defined in ECMA-402 Section 13.2.1
+			 *
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Number formatting options
+			 * @returns {String} String representing the formatted number
+			 */
 			Number.prototype.toLocaleString = function () {
 				if (!(this instanceof Number)) {
 					throw new TypeError("not a valid Number");
@@ -1207,7 +1389,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				return _formatNumber(numberFormat, x);
 			};
 
-			// ECMA 402 Section 13.3.1
+			/**
+			 * Date.prototype.toLocaleString as defined in ECMA-402 Section 13.3.1
+			 *
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Date/time formatting options
+			 * @returns {String} String representing the formatted date/time
+			 */
 			Date.prototype.toLocaleString = function () {
 				if (!(this instanceof Date)) {
 					throw new TypeError("not a valid Date");
@@ -1229,7 +1417,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				_initializeDateTimeFormat(dateTimeFormat, locales, options);
 				return _formatDateTime(dateTimeFormat, x);
 			};
-			// ECMA 402 Section 13.3.2
+			/**
+			 * Date.prototype.toLocaleDateString as defined in ECMA-402 Section 13.3.2
+			 *
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Date formatting options
+			 * @returns {String} String representing the formatted date
+			 */
 			Date.prototype.toLocaleDateString = function () {
 				if (!(this instanceof Date)) {
 					throw new TypeError("not a valid Date");
@@ -1251,7 +1445,13 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				_initializeDateTimeFormat(dateTimeFormat, locales, options);
 				return _formatDateTime(dateTimeFormat, x);
 			};
-			// ECMA 402 Section 13.3.3
+			/**
+			 * Date.prototype.toLocaleTimeString as defined in ECMA-402 Section 13.3.3
+			 *
+			 * @param {*} locales The requested locale or locales for formatting
+			 * @param {Object} options Time formatting options
+			 * @returns {String} String representing the formatted time
+			 */
 			Date.prototype.toLocaleTimeString = function () {
 				if (!(this instanceof Date)) {
 					throw new TypeError("not a valid Date");
