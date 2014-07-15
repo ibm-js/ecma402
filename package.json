@@ -3,7 +3,6 @@
 	"version": "0.2.0-dev",
 	"dependencies": {
 		"requirejs": ">=2.1.14",
-		"requirejs-text": ">=2.0.12",
 		"requirejs-dplugins": ">=0.2.2-dev"
 	},
 	"keywords": [
