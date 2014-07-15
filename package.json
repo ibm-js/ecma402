@@ -1,7 +1,10 @@
 {
 	"name": "ecma402",
-	"version": "0.1.1-dev",
+	"version": "0.2.0-dev",
 	"dependencies": {
+		"requirejs": ">=2.1.14",
+		"requirejs-text": ">=2.0.12",
+		"requirejs-dplugins": ">=0.2.2-dev"
 	},
 	"keywords": [
 	    "utility",
@@ -38,16 +41,17 @@
 	"contributors": [
 	    "Christophe Jolif <cjolif@gmail.com> (https://github.com/cjolif)",
 	    "Bill Keese <bill@dojotoolkit.org> (https://github.com/wkeese)",
-	    "Clément Mathieu (https://github.com/clmath)"
+	    "Clément Mathieu (https://github.com/clmath)",
+	    "Ahmed Mustafa <amustafa@eg.ibm.com> (https://github.com/AhmedMustafa)"
 	],
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/ibm-js/ecma402.git"
 	},	
 	"devDependencies": {
-		"intern": "1.6",
-		"grunt": "~0.4.2",
-		"grunt-contrib-jshint": "~0.6.3"
+		"intern": ">=2.0.1",
+		"grunt": "~0.4.5",
+		"grunt-contrib-jshint": "~0.10.0"
 	},
 	"licenses": [
 		{

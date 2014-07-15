@@ -5,7 +5,7 @@ for number formatting ( Intl.NumberFormat ) and date and time formatting ( Intl.
 Collation ( Intl.Collator ) is not currently supported.
 
 ## Status
-No official release yet.
+No official release yet. Relatively stable development release at 0.2.0-dev.
 
 ## Licensing
 
