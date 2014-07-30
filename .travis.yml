@@ -3,7 +3,7 @@ env:
     - secure: "EEUbxmLE2IFb0S+1W4kt4johYISOgV5QltdITYyuDFbZjqRxfdaEXzDtWhHVqJ14YmC6OEmt1E+0lNvwLLSTEj1m6b+gUxVgTqoSLj6E0q4vuNPoWCuZONREJBFy6Ks1E1xwCxRfoFh9A7/zETii8lntlDXgo14yolZkx7lG5w0="
     - secure: "MkDD2RhhZdLR/213cyDU0Cjn9TmzHrvWSQLJktvWBvurnBRVxTJDo8pT4n2gUFRNcn6ZegsRr2QTp3ofFHTWjehqPnhUgLJpPn55WSc2fYl0q0Ie/XT7JUVzigr9ZdG4J0K+qsjSO7FsBkKd8LeTgZHhiZ1qmbgK40v9ySogw/8="
 language: node_js
-node_js: 0.10
+node_js: "0.10"
 install:
    - npm install -g grunt-cli
    - npm -g install bower
