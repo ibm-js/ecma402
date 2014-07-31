@@ -5,7 +5,7 @@ for number formatting ( Intl.NumberFormat ) and date and time formatting ( Intl.
 Collation ( Intl.Collator ) is not currently supported.
 
 ## Status
-No official release yet. Relatively stable development release at 0.2.1-dev.
+No official release yet. Relatively stable development release at 0.2.2-dev.
 
 ## Licensing
 
@@ -57,7 +57,7 @@ Then you can load `Intl` through the `ecma402/IntlShim` module and use it:
      config: {
         "ecma402/locales": /^(en|de|fr)$/
      }
-   }
+   });
 </script>
 <script>
   require(["ecma402/IntlShim"], function(Intl) {
@@ -82,7 +82,7 @@ the `intl-api` flag to false in the RequireJS config as follows:
        	  "intl-api": false
        }
      }
-   }
+   });
 </script>
 ```
 
@@ -99,7 +99,7 @@ native support in the browser, you can load the `ecma402/Intl` module directly, 
      config: {
         "ecma402/locales": /^(en|de|fr)$/
      }
-   }
+   });
 </script>
 <script>
   require(["ecma402/Intl"], function(Intl) {
