@@ -49,7 +49,15 @@ define([
 	}
 
 	return {
-		load: function (path, callerRequire, onload) {
+		load: function (path, callerRequire, onload, loaderConfig) {
+			if (config instanceof Object && loaderConfig.isBuild) {
+				localeHash = {};
+				common.availableLocalesList.forEach(function (locale) {
+					localeHash[locale] = true;
+				});
+				locales = Object.keys(localeHash);
+			}
+
 			var dependencies = locales.map(getDependency);
 			// Load the locale data for every requested locale, and then return it in a hash
 			require(dependencies, function () {
