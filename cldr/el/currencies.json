@@ -331,10 +331,6 @@
             "displayName": "Λίτα Λιθουανίας",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Λατς Λετονίας",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Δηνάριο Λιβύης",
             "symbol": "LYD"
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "Φράγκο CFA Κεντρικής Αφρικής",
+            "displayName": "Φράγκο CFA Κεντρικής Αφρικής (BEAC)",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,7 +604,7 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "Φράγκο CFA Δυτικής Αφρικής",
+            "displayName": "Φράγκο CFA Δυτικής Αφρικής (BCEAO)",
             "symbol": "CFA"
           },
           "XPF": {

@@ -36,7 +36,7 @@
             "symbol": "AU$"
           },
           "AWG": {
-            "displayName": "阿魯巴盾",
+            "displayName": "阿路巴盾",
             "symbol": "AWG"
           },
           "AZN": {
@@ -44,7 +44,7 @@
             "symbol": "AZN"
           },
           "BAM": {
-            "displayName": "波士尼亞赫塞哥維納可轉換馬克",
+            "displayName": "波士尼亞-赫塞哥維納可轉換馬克",
             "symbol": "BAM"
           },
           "BBD": {
@@ -76,7 +76,7 @@
             "symbol": "BND"
           },
           "BOB": {
-            "displayName": "玻利維亞貨幣單位",
+            "displayName": "玻利維亞諾",
             "symbol": "BOB"
           },
           "BRL": {
@@ -276,7 +276,7 @@
             "symbol": "¥"
           },
           "KES": {
-            "displayName": "肯亞先令",
+            "displayName": "肯尼亞先令",
             "symbol": "KES"
           },
           "KGS": {
@@ -331,10 +331,6 @@
             "displayName": "立陶宛立特",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "拉脫維亞拉特銀幣",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "利比亞第納爾",
             "symbol": "LYD"
@@ -348,7 +344,7 @@
             "symbol": "MDL"
           },
           "MGA": {
-            "displayName": "馬達加斯加艾瑞爾",
+            "displayName": "馬達加斯加阿里亞里",
             "symbol": "MGA"
           },
           "MKD": {
@@ -392,7 +388,7 @@
             "symbol": "MYR"
           },
           "MZN": {
-            "displayName": "莫三比克美提卡",
+            "displayName": "莫三比克梅蒂卡爾",
             "symbol": "MZN"
           },
           "NAD": {
@@ -440,7 +436,7 @@
             "symbol": "PHP"
           },
           "PKR": {
-            "displayName": "巴基斯坦盧布",
+            "displayName": "巴基斯坦盧比",
             "symbol": "PKR"
           },
           "PLN": {
@@ -592,7 +588,7 @@
             "symbol": "₫"
           },
           "VUV": {
-            "displayName": "萬那杜萬杜",
+            "displayName": "萬那杜瓦圖",
             "symbol": "VUV"
           },
           "WST": {

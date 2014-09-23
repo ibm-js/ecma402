@@ -4,7 +4,7 @@
       "numbers": {
         "currencies": {
           "AED": {
-            "displayName": "Дирхам (ОАЭ)",
+            "displayName": "Дирхам ОАЭ",
             "symbol": "AED"
           },
           "AFN": {
@@ -120,7 +120,7 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "Юань Ренминби",
+            "displayName": "Китайский юань",
             "symbol": "CN¥"
           },
           "COP": {
@@ -292,11 +292,11 @@
             "symbol": "KMF"
           },
           "KPW": {
-            "displayName": "Северо-корейская вона",
+            "displayName": "Северокорейская вона",
             "symbol": "KPW"
           },
           "KRW": {
-            "displayName": "Вона Республики Кореи",
+            "displayName": "Южнокорейская вона",
             "symbol": "₩"
           },
           "KWD": {
@@ -312,7 +312,7 @@
             "symbol": "KZT"
           },
           "LAK": {
-            "displayName": "Кип ЛНДР",
+            "displayName": "Лаосский кип",
             "symbol": "LAK"
           },
           "LBP": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Литовский лит",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Латвийский лат",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Ливийский динар",
@@ -356,7 +352,7 @@
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "Кьят",
+            "displayName": "Мьянманский кьят",
             "symbol": "MMK"
           },
           "MNT": {
@@ -384,7 +380,7 @@
             "symbol": "MWK"
           },
           "MXN": {
-            "displayName": "Мексиканское новое песо",
+            "displayName": "Мексиканское песо",
             "symbol": "MX$"
           },
           "MYR": {
@@ -432,7 +428,7 @@
             "symbol": "PEN"
           },
           "PGK": {
-            "displayName": "Кина",
+            "displayName": "Кина Папуа — Новой Гвинеи",
             "symbol": "PGK"
           },
           "PHP": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "Паанга",
+            "displayName": "Тонганская паанга",
             "symbol": "TOP"
           },
           "TRY": {
@@ -592,11 +588,11 @@
             "symbol": "₫"
           },
           "VUV": {
-            "displayName": "Вату",
+            "displayName": "Вату Вануату",
             "symbol": "VUV"
           },
           "WST": {
-            "displayName": "Тала Самоа",
+            "displayName": "Самоанская тала",
             "symbol": "WST"
           },
           "XAF": {
@@ -612,7 +608,7 @@
             "symbol": "CFA"
           },
           "XPF": {
-            "displayName": "Франк КФП",
+            "displayName": "Французский тихоокеанский франк",
             "symbol": "CFPF"
           },
           "XXX": {
@@ -627,7 +623,7 @@
             "symbol": "ZAR"
           },
           "ZMW": {
-            "displayName": "Квача (замбийская)",
+            "displayName": "Замбийская квача",
             "symbol": "ZMW"
           }
         }

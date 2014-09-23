@@ -32,7 +32,7 @@
             "symbol": "ARS"
           },
           "AUD": {
-            "displayName": "Australian Dollar",
+            "displayName": "Dolyar ng Australya",
             "symbol": "A$"
           },
           "AWG": {
@@ -48,7 +48,7 @@
             "symbol": "BAM"
           },
           "BBD": {
-            "displayName": "Barbadian Dollar",
+            "displayName": "Dolyar ng Barbados",
             "symbol": "BBD"
           },
           "BDT": {
@@ -68,11 +68,11 @@
             "symbol": "BIF"
           },
           "BMD": {
-            "displayName": "Bermudan Dollar",
+            "displayName": "Dolyar ng Bermuda",
             "symbol": "BMD"
           },
           "BND": {
-            "displayName": "Brunei Dollar",
+            "displayName": "Dolyar ng Brunei",
             "symbol": "BND"
           },
           "BOB": {
@@ -84,7 +84,7 @@
             "symbol": "R$"
           },
           "BSD": {
-            "displayName": "Bahamian Dollar",
+            "displayName": "Dolyar ng Bahamas",
             "symbol": "BSD"
           },
           "BTN": {
@@ -100,11 +100,11 @@
             "symbol": "BYR"
           },
           "BZD": {
-            "displayName": "Belize Dollar",
+            "displayName": "Dolyar ng Belize",
             "symbol": "BZD"
           },
           "CAD": {
-            "displayName": "Canadian Dollar",
+            "displayName": "Dolyar ng Canada",
             "symbol": "CA$"
           },
           "CDF": {
@@ -116,7 +116,7 @@
             "symbol": "CHF"
           },
           "CLP": {
-            "displayName": "Chilean Peso",
+            "displayName": "Piso ng Chile",
             "symbol": "CLP"
           },
           "CNY": {
@@ -124,7 +124,7 @@
             "symbol": "CN¥"
           },
           "COP": {
-            "displayName": "Colombian Peso",
+            "displayName": "Piso ng Colombia",
             "symbol": "COP"
           },
           "CRC": {
@@ -132,11 +132,11 @@
             "symbol": "CRC"
           },
           "CUC": {
-            "displayName": "Cuban Convertible Peso",
+            "displayName": "Convertible na Piso ng Cuba",
             "symbol": "CUC"
           },
           "CUP": {
-            "displayName": "Cuban Peso",
+            "displayName": "Piso ng Cuba",
             "symbol": "CUP"
           },
           "CVE": {
@@ -156,7 +156,7 @@
             "symbol": "DKK"
           },
           "DOP": {
-            "displayName": "Dominican Peso",
+            "displayName": "Piso ng Dominican",
             "symbol": "DOP"
           },
           "DZD": {
@@ -180,7 +180,7 @@
             "symbol": "€"
           },
           "FJD": {
-            "displayName": "Fijian Dollar",
+            "displayName": "Dolyar ng Fiji",
             "symbol": "FJD"
           },
           "FKP": {
@@ -216,11 +216,11 @@
             "symbol": "GTQ"
           },
           "GYD": {
-            "displayName": "Guyanaese Dollar",
+            "displayName": "Dolyar ng Guyanese",
             "symbol": "GYD"
           },
           "HKD": {
-            "displayName": "Hong Kong Dollar",
+            "displayName": "Dolyar ng Hong Kong",
             "symbol": "HK$"
           },
           "HNL": {
@@ -264,7 +264,7 @@
             "symbol": "ISK"
           },
           "JMD": {
-            "displayName": "Jamaican Dollar",
+            "displayName": "Dolyar ng Jamaica",
             "symbol": "JMD"
           },
           "JOD": {
@@ -304,7 +304,7 @@
             "symbol": "KWD"
           },
           "KYD": {
-            "displayName": "Cayman Islands Dollar",
+            "displayName": "Dolyar ng Cayman Islands",
             "symbol": "KYD"
           },
           "KZT": {
@@ -324,16 +324,12 @@
             "symbol": "LKR"
           },
           "LRD": {
-            "displayName": "Liberian Dollar",
+            "displayName": "Dolyar ng Liberia",
             "symbol": "LRD"
           },
           "LTL": {
             "displayName": "Lithuanian Litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Latvian Lats",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Libyan Dinar",
@@ -384,7 +380,7 @@
             "symbol": "MWK"
           },
           "MXN": {
-            "displayName": "Mexican Peso",
+            "displayName": "Piso ng Mexico",
             "symbol": "MX$"
           },
           "MYR": {
@@ -396,7 +392,7 @@
             "symbol": "MZN"
           },
           "NAD": {
-            "displayName": "Namibian Dollar",
+            "displayName": "Dolyar ng Namibia",
             "symbol": "NAD"
           },
           "NGN": {
@@ -416,7 +412,7 @@
             "symbol": "NPR"
           },
           "NZD": {
-            "displayName": "New Zealand Dollar",
+            "displayName": "Dolyar ng New Zealand",
             "symbol": "NZ$"
           },
           "OMR": {
@@ -436,7 +432,7 @@
             "symbol": "PGK"
           },
           "PHP": {
-            "displayName": "Philippine Peso",
+            "displayName": "Piso ng Pilipinas",
             "symbol": "₱"
           },
           "PKR": {
@@ -476,7 +472,7 @@
             "symbol": "SAR"
           },
           "SBD": {
-            "displayName": "Solomon Islands Dollar",
+            "displayName": "Dolyar ng Solomon Islands",
             "symbol": "SBD"
           },
           "SCR": {
@@ -492,7 +488,7 @@
             "symbol": "SEK"
           },
           "SGD": {
-            "displayName": "Singapore Dollar",
+            "displayName": "Dolyar ng Singapore",
             "symbol": "SGD"
           },
           "SHP": {
@@ -508,7 +504,7 @@
             "symbol": "SOS"
           },
           "SRD": {
-            "displayName": "Surinamese Dollar",
+            "displayName": "Dolyar ng Suriname",
             "symbol": "SRD"
           },
           "SSP": {
@@ -552,11 +548,11 @@
             "symbol": "TRY"
           },
           "TTD": {
-            "displayName": "Trinidad and Tobago Dollar",
+            "displayName": "Dolyar ng Trinidad and Tobago",
             "symbol": "TTD"
           },
           "TWD": {
-            "displayName": "New Taiwan Dollar",
+            "displayName": "Dolyar ng New Taiwan",
             "symbol": "NT$"
           },
           "TZS": {
@@ -572,11 +568,11 @@
             "symbol": "UGX"
           },
           "USD": {
-            "displayName": "US Dollar",
+            "displayName": "Dolyar ng US",
             "symbol": "$"
           },
           "UYU": {
-            "displayName": "Uruguayan Peso",
+            "displayName": "Piso ng Uruguay",
             "symbol": "UYU"
           },
           "UZS": {
@@ -604,7 +600,7 @@
             "symbol": "FCFA"
           },
           "XCD": {
-            "displayName": "East Caribbean Dollar",
+            "displayName": "Dolyar ng Silangang Caribbean",
             "symbol": "EC$"
           },
           "XOF": {

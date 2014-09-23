@@ -331,10 +331,6 @@
             "displayName": "lit litewski",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "łat łotewski",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "dinar libijski",
             "symbol": "LYD"
@@ -456,7 +452,7 @@
             "symbol": "QAR"
           },
           "RON": {
-            "displayName": "leja rumuńska",
+            "displayName": "lej rumuński",
             "symbol": "RON"
           },
           "RSD": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "pa'anga tongijska",
+            "displayName": "pa’anga tongijska",
             "symbol": "TOP"
           },
           "TRY": {

@@ -92,7 +92,7 @@
             "symbol": "BTN"
           },
           "BWP": {
-            "displayName": "Botsvānas pula",
+            "displayName": "Botsvanas pula",
             "symbol": "BWP"
           },
           "BYR": {
@@ -184,7 +184,7 @@
             "symbol": "FJD"
           },
           "FKP": {
-            "displayName": "Folklenda salu mārciņa",
+            "displayName": "Folklenda Salu mārciņa",
             "symbol": "FKP"
           },
           "GBP": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Lietuvas lits",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Latvijas lats",
-            "symbol": "Ls"
           },
           "LYD": {
             "displayName": "Lībijas dinārs",
@@ -536,7 +532,7 @@
             "symbol": "TJS"
           },
           "TMT": {
-            "displayName": "Turkmenistānas jaunais manats",
+            "displayName": "Turkmenistānas manats",
             "symbol": "TMT"
           },
           "TND": {
@@ -548,7 +544,7 @@
             "symbol": "TOP"
           },
           "TRY": {
-            "displayName": "Turcijas jaunā lira",
+            "displayName": "Turcijas lira",
             "symbol": "TRY"
           },
           "TTD": {
@@ -623,7 +619,7 @@
             "symbol": "YER"
           },
           "ZAR": {
-            "displayName": "Dienvidāfrikas rands",
+            "displayName": "Dienvidāfrikas rends",
             "symbol": "ZAR"
           },
           "ZMW": {

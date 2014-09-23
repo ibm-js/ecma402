@@ -42,7 +42,7 @@
         },
         "CLF": {
           "_rounding": "0",
-          "_digits": "0"
+          "_digits": "4"
         },
         "CLP": {
           "_rounding": "0",
@@ -84,7 +84,9 @@
         },
         "HUF": {
           "_rounding": "0",
-          "_digits": "0"
+          "_digits": "2",
+          "_cashDigits": "0",
+          "_cashRounding": "0"
         },
         "IDR": {
           "_rounding": "0",

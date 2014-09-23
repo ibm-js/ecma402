@@ -179,8 +179,8 @@
                   "pm": "pēcpusdienā"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "priekšp.",
+                  "pm": "pēcp."
                 },
                 "wide": {
                   "am": "priekšpusdienā",
@@ -193,8 +193,8 @@
                   "pm": "pēcpusdienā"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "priekšp.",
+                  "pm": "pēcp."
                 },
                 "wide": {
                   "am": "priekšpusdienā",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E, HH:mm",
                 "EHms": "E, HH:mm:ss",
                 "Ed": "E, d.",
@@ -253,7 +254,7 @@
                 "yMMMM": "y. 'g'. MMMM",
                 "yMMMd": "y. 'g'. d. MMM",
                 "yMd": "d.M.y.",
-                "yQQQ": "QQQ y",
+                "yQQQ": "y. 'g'. QQQ",
                 "yQQQQ": "y. 'g'. QQQQ"
               }
             }

@@ -33,7 +33,7 @@
           },
           "AUD": {
             "displayName": "australisk dollar",
-            "symbol": "AU$"
+            "symbol": "AUD"
           },
           "AWG": {
             "displayName": "arubansk florin",
@@ -53,14 +53,14 @@
           },
           "BDT": {
             "displayName": "bangladeshisk taka",
-            "symbol": "Tk"
+            "symbol": "BDT"
           },
           "BGN": {
             "displayName": "bulgarisk lev",
             "symbol": "BGN"
           },
           "BHD": {
-            "displayName": "Bahrain-dinar",
+            "displayName": "bahrainsk dinar",
             "symbol": "BHD"
           },
           "BIF": {
@@ -72,8 +72,8 @@
             "symbol": "BM$"
           },
           "BND": {
-            "displayName": "Brunei-dollar",
-            "symbol": "BN$"
+            "displayName": "bruneisk dollar",
+            "symbol": "BND"
           },
           "BOB": {
             "displayName": "boliviansk boliviano",
@@ -120,8 +120,8 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "kinesisk yuan renminbi",
-            "symbol": "CN¥"
+            "displayName": "kinesisk yuan",
+            "symbol": "CNY"
           },
           "COP": {
             "displayName": "colombiansk peso",
@@ -180,16 +180,16 @@
             "symbol": "€"
           },
           "FJD": {
-            "displayName": "Fiji-dollar",
+            "displayName": "Fijidollar",
             "symbol": "FJD"
           },
           "FKP": {
-            "displayName": "Falklandsöarnas pund",
+            "displayName": "Falklandspund",
             "symbol": "FKP"
           },
           "GBP": {
-            "displayName": "brittiskt pund sterling",
-            "symbol": "GB£"
+            "displayName": "brittiskt pund",
+            "symbol": "GBP"
           },
           "GEL": {
             "displayName": "georgisk lari",
@@ -217,11 +217,11 @@
           },
           "GYD": {
             "displayName": "guyanansk dollar",
-            "symbol": "GY$"
+            "symbol": "GYD"
           },
           "HKD": {
-            "displayName": "Hongkong-dollar",
-            "symbol": "HK$"
+            "displayName": "Hongkongdollar",
+            "symbol": "HKD"
           },
           "HNL": {
             "displayName": "honduransk lempira",
@@ -249,7 +249,7 @@
           },
           "INR": {
             "displayName": "indisk rupie",
-            "symbol": "₹"
+            "symbol": "INR"
           },
           "IQD": {
             "displayName": "irakisk dinar",
@@ -273,7 +273,7 @@
           },
           "JPY": {
             "displayName": "japansk yen",
-            "symbol": "JP¥"
+            "symbol": "JPY"
           },
           "KES": {
             "displayName": "kenyansk shilling",
@@ -297,7 +297,7 @@
           },
           "KRW": {
             "displayName": "sydkoreansk won",
-            "symbol": "₩"
+            "symbol": "KRW"
           },
           "KWD": {
             "displayName": "kuwaitisk dinar",
@@ -324,16 +324,12 @@
             "symbol": "LKR"
           },
           "LRD": {
-            "displayName": "Liberia-dollar",
+            "displayName": "liberiansk dollar",
             "symbol": "LRD"
           },
           "LTL": {
             "displayName": "litauisk litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "lettisk lats",
-            "symbol": "Ls"
           },
           "LYD": {
             "displayName": "libysk dinar",
@@ -364,11 +360,11 @@
             "symbol": "MNT"
           },
           "MOP": {
-            "displayName": "Macao-pataca",
+            "displayName": "macaosk pataca",
             "symbol": "MOP"
           },
           "MRO": {
-            "displayName": "mauretansk ouguiya",
+            "displayName": "mauretansk ouquiya",
             "symbol": "MRO"
           },
           "MUR": {
@@ -396,7 +392,7 @@
             "symbol": "MZN"
           },
           "NAD": {
-            "displayName": "Namibia-dollar",
+            "displayName": "namibisk dollar",
             "symbol": "NAD"
           },
           "NGN": {
@@ -409,7 +405,7 @@
           },
           "NOK": {
             "displayName": "norsk krona",
-            "symbol": "NKr"
+            "symbol": "Nkr"
           },
           "NPR": {
             "displayName": "nepalesisk rupie",
@@ -417,7 +413,7 @@
           },
           "NZD": {
             "displayName": "nyzeeländsk dollar",
-            "symbol": "NZ$"
+            "symbol": "NZD"
           },
           "OMR": {
             "displayName": "omansk rial",
@@ -476,7 +472,7 @@
             "symbol": "SAR"
           },
           "SBD": {
-            "displayName": "Salomon-dollar",
+            "displayName": "Salomondollar",
             "symbol": "SBD"
           },
           "SCR": {
@@ -484,7 +480,7 @@
             "symbol": "SCR"
           },
           "SDG": {
-            "displayName": "sudanskt pund",
+            "displayName": "sudanesiskt pund",
             "symbol": "SDG"
           },
           "SEK": {
@@ -492,7 +488,7 @@
             "symbol": "kr"
           },
           "SGD": {
-            "displayName": "Singapore-dollar",
+            "displayName": "singaporiansk dollar",
             "symbol": "SGD"
           },
           "SHP": {
@@ -508,20 +504,20 @@
             "symbol": "SOS"
           },
           "SRD": {
-            "displayName": "Surinam-dollar",
+            "displayName": "surinamesisk dollar",
             "symbol": "SRD"
           },
           "SSP": {
-            "displayName": "sydsudanskt pund",
+            "displayName": "sydsudanesiskt pund",
             "symbol": "SSP"
           },
           "STD": {
-            "displayName": "São Tomé och Príncipe-dobra",
+            "displayName": "saotomeansk dobra",
             "symbol": "STD"
           },
           "SYP": {
             "displayName": "syriskt pund",
-            "symbol": "SY£"
+            "symbol": "SYP"
           },
           "SZL": {
             "displayName": "swaziländsk lilangeni",
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "thailändsk baht",
-            "symbol": "TH฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "tadzjikisk somoni",
@@ -548,7 +544,7 @@
             "symbol": "TOP"
           },
           "TRY": {
-            "displayName": "turkisk lire",
+            "displayName": "turkisk lira",
             "symbol": "TRY"
           },
           "TTD": {
@@ -556,8 +552,8 @@
             "symbol": "TTD"
           },
           "TWD": {
-            "displayName": "taiwanesisk ny dollar",
-            "symbol": "TW$"
+            "displayName": "Taiwandollar",
+            "symbol": "TWD"
           },
           "TZS": {
             "displayName": "tanzanisk shilling",
@@ -584,12 +580,12 @@
             "symbol": "UZS"
           },
           "VEF": {
-            "displayName": "venezuelansk bolivar",
+            "displayName": "venezuelansk bolívar",
             "symbol": "VEF"
           },
           "VND": {
             "displayName": "vietnamesisk dong",
-            "symbol": "VN₫"
+            "symbol": "VND"
           },
           "VUV": {
             "displayName": "vanuatisk vatu",

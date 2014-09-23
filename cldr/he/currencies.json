@@ -20,7 +20,7 @@
             "symbol": "AMD"
           },
           "ANG": {
-            "displayName": "גילדן של האנטילים ההולנדיים",
+            "displayName": "גילדר של האנטילים ההולנדיים",
             "symbol": "ANG"
           },
           "AOA": {
@@ -28,7 +28,7 @@
             "symbol": "AOA"
           },
           "ARS": {
-            "displayName": "פזו ארגנטינאי",
+            "displayName": "פסו ארגנטינאי",
             "symbol": "ARS"
           },
           "AUD": {
@@ -116,15 +116,15 @@
             "symbol": "CHF"
           },
           "CLP": {
-            "displayName": "פזו צ׳ילאני",
+            "displayName": "פסו צ׳ילאני",
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "יואן רנמינבי סיני",
+            "displayName": "יואן סיני",
             "symbol": "CN¥"
           },
           "COP": {
-            "displayName": "פזו קולומביאני",
+            "displayName": "פסו קולומביאני",
             "symbol": "COP"
           },
           "CRC": {
@@ -164,7 +164,7 @@
             "symbol": "DZD"
           },
           "EGP": {
-            "displayName": "לירה מיצרית",
+            "displayName": "לירה מצרית",
             "symbol": "EGP"
           },
           "ERN": {
@@ -232,7 +232,7 @@
             "symbol": "HRK"
           },
           "HTG": {
-            "displayName": "גארד האיטי",
+            "displayName": "גורד האיטי",
             "symbol": "HTG"
           },
           "HUF": {
@@ -248,7 +248,7 @@
             "symbol": "₪"
           },
           "INR": {
-            "displayName": "רופי הודית",
+            "displayName": "רופי הודי",
             "symbol": "₹"
           },
           "IQD": {
@@ -264,7 +264,7 @@
             "symbol": "ISK"
           },
           "JMD": {
-            "displayName": "דולר ג׳מאיקני",
+            "displayName": "דולר ג׳מייקני",
             "symbol": "JMD"
           },
           "JOD": {
@@ -292,11 +292,11 @@
             "symbol": "KMF"
           },
           "KPW": {
-            "displayName": "וון צפון קוראני",
+            "displayName": "וון צפון-קוריאני",
             "symbol": "KPW"
           },
           "KRW": {
-            "displayName": "וון דרום קוראני",
+            "displayName": "וון דרום-קוריאני",
             "symbol": "₩"
           },
           "KWD": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "ליטא ליטאי",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "לט לטבי",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "דינר לובי",
@@ -456,7 +452,7 @@
             "symbol": "QAR"
           },
           "RON": {
-            "displayName": "לאו רומני חדש",
+            "displayName": "לאו רומני",
             "symbol": "RON"
           },
           "RSD": {
@@ -464,7 +460,7 @@
             "symbol": "RSD"
           },
           "RUB": {
-            "displayName": "רובל",
+            "displayName": "רובל רוסי",
             "symbol": "RUB"
           },
           "RWF": {
@@ -512,7 +508,7 @@
             "symbol": "SRD"
           },
           "SSP": {
-            "displayName": "לירה דרום סודאנית",
+            "displayName": "לירה דרום-סודנית",
             "symbol": "SSP"
           },
           "STD": {
@@ -536,7 +532,7 @@
             "symbol": "TJS"
           },
           "TMT": {
-            "displayName": "מנאט טורקמני",
+            "displayName": "מאנאט טורקמני",
             "symbol": "TMT"
           },
           "TND": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "פאאמגה טונגי",
+            "displayName": "פאנגה טונגי",
             "symbol": "TOP"
           },
           "TRY": {
@@ -573,10 +569,10 @@
           },
           "USD": {
             "displayName": "דולר אמריקאי",
-            "symbol": "US$"
+            "symbol": "$"
           },
           "UYU": {
-            "displayName": "פזו אורוגוואי",
+            "displayName": "פסו אורוגוואי",
             "symbol": "UYU"
           },
           "UZS": {
@@ -612,7 +608,7 @@
             "symbol": "CFA"
           },
           "XPF": {
-            "displayName": "פרנק CFP",
+            "displayName": "פרנק פולינזיה הצרפתית",
             "symbol": "CFPF"
           },
           "XXX": {

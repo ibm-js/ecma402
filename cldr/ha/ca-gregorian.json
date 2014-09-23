@@ -129,7 +129,7 @@
                   "tue": "Talata",
                   "wed": "Laraba",
                   "thu": "Alhamis",
-                  "fri": "Jumma'a",
+                  "fri": "Jummaʼa",
                   "sat": "Asabar"
                 }
               },
@@ -167,7 +167,7 @@
                   "tue": "Talata",
                   "wed": "Laraba",
                   "thu": "Alhamis",
-                  "fri": "Jumma'a",
+                  "fri": "Jummaʼa",
                   "sat": "Asabar"
                 }
               }
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d, E",

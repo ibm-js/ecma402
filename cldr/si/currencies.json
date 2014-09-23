@@ -331,10 +331,6 @@
             "displayName": "ලිතුවේනියානු",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "ලැට්වියානු ලැට්ස්",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "ලිබියානු ඩිනාර්",
             "symbol": "LYD"
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "CFA ෆ්රෑන්ක් BEAC",
+            "displayName": "සිෆ්එ ෆ්රෑන්ක් බිඊඑසි",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,8 +604,8 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "CFA ෆ්රෑන්ක් BCEAO",
-            "symbol": "CFA"
+            "displayName": "සිෆ්එ ෆ්රෑන්ක් බිසීඊඑඔ",
+            "symbol": "සිෆ්එ"
           },
           "XPF": {
             "displayName": "ප්‍රංශ පොලිනීසියානු ෆ්‍රෑන්ක්",

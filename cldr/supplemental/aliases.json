@@ -27,6 +27,10 @@
             "_replacement": "ak",
             "_reason": "overlong"
           },
+          "alb": {
+            "_replacement": "sq",
+            "_reason": "bibliographic"
+          },
           "als": {
             "_replacement": "sq",
             "_reason": "macrolanguage"
@@ -46,6 +50,10 @@
           "arg": {
             "_replacement": "an",
             "_reason": "overlong"
+          },
+          "arm": {
+            "_replacement": "hy",
+            "_reason": "bibliographic"
           },
           "art-lojban": {
             "_replacement": "jbo",
@@ -87,6 +95,10 @@
             "_replacement": "bm",
             "_reason": "overlong"
           },
+          "baq": {
+            "_replacement": "eu",
+            "_reason": "bibliographic"
+          },
           "bcc": {
             "_replacement": "bal",
             "_reason": "macrolanguage"
@@ -127,6 +139,10 @@
             "_replacement": "bg",
             "_reason": "overlong"
           },
+          "bur": {
+            "_replacement": "my",
+            "_reason": "bibliographic"
+          },
           "bxk": {
             "_replacement": "luy",
             "_reason": "macrolanguage"
@@ -150,6 +166,10 @@
           "che": {
             "_replacement": "ce",
             "_reason": "overlong"
+          },
+          "chi": {
+            "_replacement": "zh",
+            "_reason": "bibliographic"
           },
           "chu": {
             "_replacement": "cu",
@@ -187,6 +207,10 @@
             "_replacement": "cy",
             "_reason": "overlong"
           },
+          "cze": {
+            "_replacement": "cs",
+            "_reason": "bibliographic"
+          },
           "dan": {
             "_replacement": "da",
             "_reason": "overlong"
@@ -214,6 +238,10 @@
           "div": {
             "_replacement": "dv",
             "_reason": "overlong"
+          },
+          "dut": {
+            "_replacement": "nl",
+            "_reason": "bibliographic"
           },
           "dzo": {
             "_replacement": "dz",
@@ -279,6 +307,10 @@
             "_replacement": "fr",
             "_reason": "overlong"
           },
+          "fre": {
+            "_replacement": "fr",
+            "_reason": "bibliographic"
+          },
           "fry": {
             "_replacement": "fy",
             "_reason": "overlong"
@@ -299,6 +331,14 @@
             "_replacement": "grb",
             "_reason": "macrolanguage"
           },
+          "geo": {
+            "_replacement": "ka",
+            "_reason": "bibliographic"
+          },
+          "ger": {
+            "_replacement": "de",
+            "_reason": "bibliographic"
+          },
           "gla": {
             "_replacement": "gd",
             "_reason": "overlong"
@@ -318,6 +358,10 @@
           "gno": {
             "_replacement": "gon",
             "_reason": "macrolanguage"
+          },
+          "gre": {
+            "_replacement": "el",
+            "_reason": "bibliographic"
           },
           "grn": {
             "_replacement": "gn",
@@ -430,6 +474,10 @@
           "ibo": {
             "_replacement": "ig",
             "_reason": "overlong"
+          },
+          "ice": {
+            "_replacement": "is",
+            "_reason": "bibliographic"
           },
           "ido": {
             "_replacement": "io",
@@ -623,6 +671,10 @@
             "_replacement": "lv",
             "_reason": "macrolanguage"
           },
+          "mac": {
+            "_replacement": "mk",
+            "_reason": "bibliographic"
+          },
           "mah": {
             "_replacement": "mh",
             "_reason": "overlong"
@@ -631,9 +683,17 @@
             "_replacement": "ml",
             "_reason": "overlong"
           },
+          "mao": {
+            "_replacement": "mi",
+            "_reason": "bibliographic"
+          },
           "mar": {
             "_replacement": "mr",
             "_reason": "overlong"
+          },
+          "may": {
+            "_replacement": "ms",
+            "_reason": "bibliographic"
           },
           "mhr": {
             "_replacement": "chm",
@@ -787,6 +847,10 @@
             "_replacement": "ps",
             "_reason": "macrolanguage"
           },
+          "per": {
+            "_replacement": "fa",
+            "_reason": "bibliographic"
+          },
           "pes": {
             "_replacement": "fa",
             "_reason": "macrolanguage"
@@ -819,7 +883,7 @@
             "_replacement": "qu",
             "_reason": "overlong"
           },
-          "qxp": {
+          "quz": {
             "_replacement": "qu",
             "_reason": "macrolanguage"
           },
@@ -834,6 +898,10 @@
           "ron": {
             "_replacement": "ro",
             "_reason": "overlong"
+          },
+          "rum": {
+            "_replacement": "ro",
+            "_reason": "bibliographic"
           },
           "run": {
             "_replacement": "rn",
@@ -874,6 +942,10 @@
           "slk": {
             "_replacement": "sk",
             "_reason": "overlong"
+          },
+          "slo": {
+            "_replacement": "sk",
+            "_reason": "bibliographic"
           },
           "slv": {
             "_replacement": "sl",
@@ -975,6 +1047,10 @@
             "_replacement": "th",
             "_reason": "overlong"
           },
+          "tib": {
+            "_replacement": "bo",
+            "_reason": "bibliographic"
+          },
           "tir": {
             "_replacement": "ti",
             "_reason": "overlong"
@@ -1050,6 +1126,10 @@
           "vol": {
             "_replacement": "vo",
             "_reason": "overlong"
+          },
+          "wel": {
+            "_replacement": "cy",
+            "_reason": "bibliographic"
           },
           "wln": {
             "_replacement": "wa",
@@ -3759,6 +3839,20 @@
           "Antarctica": {
             "South_Pole": {
               "_replacement": "Pacific/Auckland",
+              "_reason": "deprecated"
+            }
+          },
+          "Asia": {
+            "Chongqing": {
+              "_replacement": "Asia/Shanghai",
+              "_reason": "deprecated"
+            },
+            "Harbin": {
+              "_replacement": "Asia/Shanghai",
+              "_reason": "deprecated"
+            },
+            "Kashgar": {
+              "_replacement": "Asia/Urumqi",
               "_reason": "deprecated"
             }
           },

@@ -176,7 +176,7 @@
             "symbol": "ETB"
           },
           "EUR": {
-            "displayName": "Ewro",
+            "displayName": "ewro",
             "symbol": "€"
           },
           "FJD": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "LTL",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "LVL",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "LYD",
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "THB",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "TJS",

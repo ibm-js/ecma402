@@ -16,7 +16,7 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 						timeZone : "UTC"
 					},
 					"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-					"expected" : "民國54年3月4日週四下午5:59:30"
+					"expected" : "民國54年3月4日週四 下午5:59:30"
 				}, {
 					"locales" : "zh-Hant-u-ca-roc",
 					"options" : {

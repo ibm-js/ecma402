@@ -12,7 +12,7 @@
             "symbol": "AFN"
           },
           "ALL": {
-            "displayName": "ALL",
+            "displayName": "Alban leki",
             "symbol": "ALL"
           },
           "AMD": {
@@ -44,7 +44,7 @@
             "symbol": "AZN"
           },
           "BAM": {
-            "displayName": "BAM",
+            "displayName": "Bosniya va Gertsogovina ayriboshlash markasi",
             "symbol": "BAM"
           },
           "BBD": {
@@ -56,7 +56,7 @@
             "symbol": "BDT"
           },
           "BGN": {
-            "displayName": "BGN",
+            "displayName": "Bolgariya levi",
             "symbol": "BGN"
           },
           "BHD": {
@@ -76,7 +76,7 @@
             "symbol": "BND"
           },
           "BOB": {
-            "displayName": "Boliviya bolviani",
+            "displayName": "Boliviya bolivyani",
             "symbol": "BOB"
           },
           "BRL": {
@@ -96,7 +96,7 @@
             "symbol": "BWP"
           },
           "BYR": {
-            "displayName": "BYR",
+            "displayName": "Belarus rubli",
             "symbol": "BYR"
           },
           "BZD": {
@@ -144,7 +144,7 @@
             "symbol": "CVE"
           },
           "CZK": {
-            "displayName": "CZK",
+            "displayName": "Chex kronasi",
             "symbol": "CZK"
           },
           "DJF": {
@@ -200,7 +200,7 @@
             "symbol": "GHS"
           },
           "GIP": {
-            "displayName": "GIP",
+            "displayName": "Gibraltar funti",
             "symbol": "GIP"
           },
           "GMD": {
@@ -228,7 +228,7 @@
             "symbol": "HNL"
           },
           "HRK": {
-            "displayName": "HRK",
+            "displayName": "Horvat kunasi",
             "symbol": "HRK"
           },
           "HTG": {
@@ -236,7 +236,7 @@
             "symbol": "HTG"
           },
           "HUF": {
-            "displayName": "HUF",
+            "displayName": "Vengriya forinti",
             "symbol": "HUF"
           },
           "IDR": {
@@ -260,7 +260,7 @@
             "symbol": "IRR"
           },
           "ISK": {
-            "displayName": "ISK",
+            "displayName": "Islandiya kronasi",
             "symbol": "ISK"
           },
           "JMD": {
@@ -304,7 +304,7 @@
             "symbol": "KWD"
           },
           "KYD": {
-            "displayName": "Kayman oroli Dollari",
+            "displayName": "Kayman Orollari Dollari",
             "symbol": "KYD"
           },
           "KZT": {
@@ -328,12 +328,8 @@
             "symbol": "LRD"
           },
           "LTL": {
-            "displayName": "LTL",
+            "displayName": "Litva liti",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "LVL",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Liviya dinori",
@@ -344,7 +340,7 @@
             "symbol": "MAD"
           },
           "MDL": {
-            "displayName": "MDL",
+            "displayName": "Moldova leusi",
             "symbol": "MDL"
           },
           "MGA": {
@@ -352,7 +348,7 @@
             "symbol": "MGA"
           },
           "MKD": {
-            "displayName": "MKD",
+            "displayName": "Makedoniya dinori",
             "symbol": "MKD"
           },
           "MMK": {
@@ -428,7 +424,7 @@
             "symbol": "PAB"
           },
           "PEN": {
-            "displayName": "Peru nuyevo sol",
+            "displayName": "Peru noyvo soli",
             "symbol": "PEN"
           },
           "PGK": {
@@ -456,11 +452,11 @@
             "symbol": "QAR"
           },
           "RON": {
-            "displayName": "RON",
+            "displayName": "Rumin leusi",
             "symbol": "RON"
           },
           "RSD": {
-            "displayName": "RSD",
+            "displayName": "Serbiya dinori",
             "symbol": "RSD"
           },
           "RUB": {
@@ -484,7 +480,7 @@
             "symbol": "SCR"
           },
           "SDG": {
-            "displayName": "SDG",
+            "displayName": "Sudan funti",
             "symbol": "SDG"
           },
           "SEK": {
@@ -512,7 +508,7 @@
             "symbol": "SRD"
           },
           "SSP": {
-            "displayName": "SSP",
+            "displayName": "Janubiy Sudan funti",
             "symbol": "SSP"
           },
           "STD": {
@@ -540,7 +536,7 @@
             "symbol": "TMT"
           },
           "TND": {
-            "displayName": "TND",
+            "displayName": "Tunis dinori",
             "symbol": "TND"
           },
           "TOP": {
@@ -564,7 +560,7 @@
             "symbol": "TZS"
           },
           "UAH": {
-            "displayName": "UAH",
+            "displayName": "Ukrain grivnasi",
             "symbol": "UAH"
           },
           "UGX": {
@@ -616,7 +612,7 @@
             "symbol": "CFPF"
           },
           "XXX": {
-            "displayName": "Noma'lum valyuta"
+            "displayName": "Nomaʼlum valyuta"
           },
           "YER": {
             "displayName": "YER",

@@ -117,11 +117,11 @@
                 "short": {
                   "sun": "нед.",
                   "mon": "пон.",
-                  "tue": "3",
+                  "tue": "вт.",
                   "wed": "сре.",
                   "thu": "чет.",
                   "fri": "пет.",
-                  "sat": "7"
+                  "sat": "саб."
                 },
                 "wide": {
                   "sun": "недела",
@@ -179,8 +179,8 @@
                   "pm": "попладне"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "прет.",
+                  "pm": "попл."
                 },
                 "wide": {
                   "am": "претпладне",
@@ -193,8 +193,8 @@
                   "pm": "попладне"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "прет.",
+                  "pm": "попл."
                 },
                 "wide": {
                   "am": "претпладне",
@@ -204,30 +204,31 @@
             },
             "eras": {
               "eraNames": {
-                "0": "пр.н.е.",
-                "1": "н.е."
+                "0": "пред нашата ера",
+                "1": "од нашата ера"
               },
               "eraAbbr": {
                 "0": "пр.н.е.",
                 "1": "н.е."
               },
               "eraNarrow": {
-                "0": "пр.н.е.",
+                "0": "пр. н.е.",
                 "1": "н.е."
               }
             },
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "E, d",
                 "Ehm": "E h:mm a",
                 "Ehms": "E h:mm:ss a",
-                "Gy": "y 'г'. G",
-                "GyMMM": "MMM y 'г'. G",
-                "GyMMMEd": "E, dd MMM y 'г'. G",
-                "GyMMMd": "dd MMM y 'г'. G",
+                "Gy": "y G",
+                "GyMMM": "MMM y G",
+                "GyMMMEd": "E, dd MMM y G",
+                "GyMMMd": "dd MMM y G",
                 "H": "HH",
                 "Hm": "HH:mm",
                 "Hms": "HH:mm:ss",
@@ -245,7 +246,7 @@
                 "hm": "h:mm a",
                 "hms": "h:mm:ss a",
                 "ms": "mm:ss",
-                "y": "y 'г'.",
+                "y": "y",
                 "yM": "M.y",
                 "yMEd": "E, d.M.y",
                 "yMMM": "MMM y 'г'.",

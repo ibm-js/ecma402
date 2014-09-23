@@ -33,7 +33,7 @@
           },
           "AUD": {
             "displayName": "Australian Dollar",
-            "symbol": "$"
+            "symbol": "A$"
           },
           "AWG": {
             "displayName": "Aruban Florin",
@@ -334,10 +334,6 @@
           "LTL": {
             "displayName": "Lithuanian Litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Latvian Lats",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Libyan Dinar",

@@ -120,7 +120,7 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "Kínai jüan renminbi",
+            "displayName": "kínai jüan",
             "symbol": "CNY"
           },
           "COP": {
@@ -237,7 +237,7 @@
           },
           "HUF": {
             "displayName": "magyar forint",
-            "symbol": "Ft"
+            "symbol": "HUF"
           },
           "IDR": {
             "displayName": "indonéz rúpia",
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "litvániai litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "lett lats",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "líbiai dínár",
@@ -573,7 +569,7 @@
           },
           "USD": {
             "displayName": "USA-dollár",
-            "symbol": "$"
+            "symbol": "USD"
           },
           "UYU": {
             "displayName": "uruguay-i peso",

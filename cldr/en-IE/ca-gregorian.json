@@ -217,11 +217,12 @@
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1} 'at' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
-                "Ed": "E d",
+                "Ed": "d E",
                 "Ehm": "E h:mm a",
                 "Ehms": "E h:mm:ss a",
                 "Gy": "y G",
@@ -231,7 +232,7 @@
                 "H": "HH",
                 "Hm": "HH:mm",
                 "Hms": "HH:mm:ss",
-                "M": "LL",
+                "M": "L",
                 "MEd": "E, d/M",
                 "MMM": "LLL",
                 "MMMEd": "E d MMM",

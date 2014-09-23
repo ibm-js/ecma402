@@ -96,7 +96,7 @@
             "symbol": "BWP"
           },
           "BYR": {
-            "displayName": "Rublo bielorusso",
+            "displayName": "Rublo bielorrusso",
             "symbol": "BYR"
           },
           "BZD": {
@@ -208,7 +208,7 @@
             "symbol": "GMD"
           },
           "GNF": {
-            "displayName": "Franco Guineense",
+            "displayName": "Franco guineense",
             "symbol": "GNF"
           },
           "GTQ": {
@@ -331,10 +331,6 @@
             "displayName": "Litas da Lituânia",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Lats da Letónia",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Dinar líbio",
             "symbol": "LYD"
@@ -404,7 +400,7 @@
             "symbol": "NGN"
           },
           "NIO": {
-            "displayName": "Córdoba Ouro nicaraguano",
+            "displayName": "Córdoba de ouro da Nicarágua",
             "symbol": "NIO"
           },
           "NOK": {
@@ -424,7 +420,7 @@
             "symbol": "OMR"
           },
           "PAB": {
-            "displayName": "Balboa panamenho",
+            "displayName": "Balboa do Panamá",
             "symbol": "PAB"
           },
           "PEN": {
@@ -452,7 +448,7 @@
             "symbol": "PYG"
           },
           "QAR": {
-            "displayName": "Rial do Qatar",
+            "displayName": "Rial do Catar",
             "symbol": "QAR"
           },
           "RON": {
@@ -536,7 +532,7 @@
             "symbol": "TJS"
           },
           "TMT": {
-            "displayName": "Manat do Turcomenistão",
+            "displayName": "Manat do Turquemenistão",
             "symbol": "TMT"
           },
           "TND": {
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "Franco CFA de BEAC",
+            "displayName": "Franco CFA (BEAC)",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,7 +604,7 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "Franco CFA de BCEAO",
+            "displayName": "Franco CFA (BCEAO)",
             "symbol": "CFA"
           },
           "XPF": {

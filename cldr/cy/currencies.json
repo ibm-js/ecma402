@@ -331,10 +331,6 @@
             "displayName": "Litas Lithwania",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Lats Latfia",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Dinar Libya",
             "symbol": "LYD"
@@ -376,7 +372,7 @@
             "symbol": "MUR"
           },
           "MVR": {
-            "displayName": "Rufiyaa'r Maldives",
+            "displayName": "Rufiyaa’r Maldives",
             "symbol": "MVR"
           },
           "MWK": {

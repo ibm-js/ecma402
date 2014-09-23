@@ -179,8 +179,8 @@
                   "pm": "e.h."
                 },
                 "narrow": {
-                  "am": "f.h.",
-                  "pm": "e.h."
+                  "am": "f.",
+                  "pm": "e."
                 },
                 "wide": {
                   "am": "f.h.",
@@ -193,8 +193,8 @@
                   "pm": "e.h."
                 },
                 "narrow": {
-                  "am": "f.h.",
-                  "pm": "e.h."
+                  "am": "f.",
+                  "pm": "e."
                 },
                 "wide": {
                   "am": "f.h.",
@@ -204,8 +204,8 @@
             },
             "eras": {
               "eraNames": {
-                "0": "f.Kr.",
-                "1": "e.Kr."
+                "0": "fyrir Krist",
+                "1": "eftir Krist"
               },
               "eraAbbr": {
                 "0": "f.Kr.",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} 'kl.' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E, HH:mm",
                 "EHms": "E, HH:mm:ss",
                 "Ed": "E d.",

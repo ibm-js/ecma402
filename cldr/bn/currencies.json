@@ -8,7 +8,7 @@
             "symbol": "AED"
           },
           "AFN": {
-            "displayName": "আফগানি",
+            "displayName": "আফগান আফগানি",
             "symbol": "AFN"
           },
           "ALL": {
@@ -108,7 +108,7 @@
             "symbol": "CA$"
           },
           "CDF": {
-            "displayName": "কঙ্গো ফ্র্যাঙ্ক কঙ্গোলাইস",
+            "displayName": "কঙ্গোলিস ফ্র্যাঙ্ক",
             "symbol": "CDF"
           },
           "CHF": {
@@ -120,7 +120,7 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "চীনা য়ুয়ান রেন্মিন্‌বি",
+            "displayName": "চীনা য়ুয়ান",
             "symbol": "CN¥"
           },
           "COP": {
@@ -272,7 +272,7 @@
             "symbol": "JOD"
           },
           "JPY": {
-            "displayName": "জাপানিজ ইয়েন",
+            "displayName": "জাপানি ইয়েন",
             "symbol": "JP¥"
           },
           "KES": {
@@ -292,7 +292,7 @@
             "symbol": "KMF"
           },
           "KPW": {
-            "displayName": "নাইজেরিয়ান পাউন্ড",
+            "displayName": "উত্তর কোরিয়ার ওন",
             "symbol": "KPW"
           },
           "KRW": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "লিথুইনিয়ান লিটা",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "ল্যাটভিয়ান ল্যাট্‌স",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "লিবিয়ান ডলার",
@@ -432,7 +428,7 @@
             "symbol": "PEN"
           },
           "PGK": {
-            "displayName": "পপুয়ানিউগিনি কিনা",
+            "displayName": "পাপুয়া নিউ গিনিয়ান কিনা",
             "symbol": "PGK"
           },
           "PHP": {
@@ -556,7 +552,7 @@
             "symbol": "TTD"
           },
           "TWD": {
-            "displayName": "নূতন তাইওয়ান ক্যারাবিয়ান ডলার",
+            "displayName": "নতুন তাইওয়ান ডলার",
             "symbol": "NT$"
           },
           "TZS": {
@@ -596,7 +592,7 @@
             "symbol": "VUV"
           },
           "WST": {
-            "displayName": "পশ্চিমাঞ্চলীয় সামোয়ান টালা",
+            "displayName": "সামোয়ান টালা",
             "symbol": "WST"
           },
           "XAF": {
@@ -616,7 +612,7 @@
             "symbol": "CFPF"
           },
           "XXX": {
-            "displayName": "অজানা বা ভুল মুদ্রা"
+            "displayName": "অজানা মুদ্রা"
           },
           "YER": {
             "displayName": "ইয়েমেনি রিয়াল",

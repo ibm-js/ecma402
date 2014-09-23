@@ -179,8 +179,8 @@
                   "pm": "ҮХ"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "үө",
+                  "pm": "үх"
                 },
                 "wide": {
                   "am": "ҮӨ",
@@ -193,8 +193,8 @@
                   "pm": "ҮХ"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "үө",
+                  "pm": "үх"
                 },
                 "wide": {
                   "am": "ҮӨ",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "dd E",

@@ -179,7 +179,7 @@
                   "pm": "pop."
                 },
                 "narrow": {
-                  "am": "a",
+                  "am": "d",
                   "pm": "p"
                 },
                 "wide": {
@@ -193,7 +193,7 @@
                   "pm": "pop."
                 },
                 "narrow": {
-                  "am": "a",
+                  "am": "d",
                   "pm": "p"
                 },
                 "wide": {
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH.mm",
                 "EHms": "E HH.mm.ss",
                 "Ed": "E, d.",

@@ -1,9 +1,13 @@
 #ecma402 - CLDR Configuration
 
 This directory contains the configuration files for creating the JSON data for ecma402, using the Ldml2JsonConverter utility
-which is published as part of Unicode CLDR.
+which is published as part of Unicode CLDR. We use a customized set of configuration files to filter down the
+resulting JSON to only those fields that are actually used by our ECMA-402 implementation. The JSON files from the
+CLDR distrubution ARE use the same naming and keys as we do here, so it is possible to use JSON directly from CLDR's
+json.zip or json_full.zip.  Doing so will simply result in some wasted space and possible a slower data load, as
+there are many fields in the CLDR's JSON that we cimply don't use.
 
-CLDR Version = CLDR 25 ( Released 2014-03-19 )
+CLDR Version = CLDR 26 ( Released 2014-09-18 )
 
 ## Covered Locales
 
@@ -14,7 +18,12 @@ Like ICU, we only use CLDR data if it is draft status "contributed" or "approved
 
 ## How to Generate the JSON
 
-Currently we create the data in three passes:
+In addition to the arguments outlined below, you will also need to specify where the source directory ( CLDR's common directory ) and the 
+target directory ( where you want the JSON to go ) using the -c and -d arguments.
+
+-c c:\workspace\cldr\common\ -d c:\workspace\GIT\JCEmmons\ecma402\cldr
+
+Currently we create the data in four passes:
 
 1). Currencies - Since the list of currencies is potentially quite large, we only are interested in currencies in the "modern" coverage level
 for CLDR.
@@ -27,9 +36,6 @@ Ldml2JsonConverter -t main -r true -i false -k ecma402_cldr_currencies_config.tx
 Ldml2JsonConverter -t main -r true -i false -k ecma402_cldr_config.txt -s contributed -o false
   -m (${DESIRED_LOCALES})
 
-Third pass: Supplemental data (currency data and language tag canonicalization data).
-
-Ldml2JsonConverter -t supplemental -i false -k ecma402_cldr_config.txt -s contributed -o false
 
 In the first and second pass steps above, ${DESIRED_LOCALES} is a regular expression that matches the locale identifiers from CLDR
 for which you want to generate data.
@@ -42,6 +48,25 @@ The ${DESIRED_LOCALES} regular expression for the full set (163 locales) is:
  n[bn]|ne(_IN)?|nl(_BE)?|o[mr]|p[al]|pt(_(AO|MZ|PT))?|r[ouw]|root|s[iklqv]|sr(_Latn)?|sw(_KE)?|
  t[aehr]|uk|ur(_IN)?|uz(_Cyrl)?|vi|yo|zh(_(Hans(_SG)?|Hant(_HK)?))?)
 
+3). Supplemental data (currency data and language tag canonicalization data).
+
+Ldml2JsonConverter -t supplemental -i false -k ecma402_cldr_config.txt -s contributed -o false
+
+4). Data for non-Gregorian Calendars.
+
+For each of the supported non-Gregorian calendars, we generate calendar data only for those locale that need it. If you are generating
+data for a new CLDR release and the calendar preference data has changed ( supplemental/calendarPreferenceData.json ), then you may
+have to adjust the "-m" argument to correspond to the locales that need this data.
+
+For the current CLDR 26 release, the commands are as follows:
+
+Buddhist: Ldml2JsonConverter -t main -r true -i false -s contributed -o false -k ecma402_cldr_ca_buddhist_config.txt -m th
+Hebrew: Ldml2JsonConverter -t main -r true -i false -s contributed -o false -k ecma402_cldr_ca_hebrew_config.txt -m he
+Islamic: Ldml2JsonConverter -t main -r true -i false -s contributed -o false -k ecma402_cldr_ca_islamic_config.txt
+                            -m ar_(AE|BH|DZ|EG|IQ|JO|KW|LB|LY|MA|OM|QA|SA|SD|SY|TN|YE)|fr_(MR|MA|TN|DZ)|ar|he
+Umalqura: -t main -r true -i false -s contributed -o false -k ecma402_cldr_ca_islamic_umalqura_config.txt -m (ar_(AE|BH|KW|QA|SA))
+Japanese: -t main -r true -i false -s contributed -o false -k ecma402_cldr_ca_japanese_config.txt -m ja
+ROC: -t main -r true -i false -s contributed -o false -k ecma402_cldr_ca_roc_config.txt -m zh_Hant
 
 ## How to add JSON for a new locale
 

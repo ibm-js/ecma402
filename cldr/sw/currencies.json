@@ -40,11 +40,11 @@
             "symbol": "AWG"
           },
           "AZN": {
-            "displayName": "Manat ya Azebaijan",
+            "displayName": "Manat ya Azebaijani",
             "symbol": "AZN"
           },
           "BAM": {
-            "displayName": "Mark ya Bosnia na Hezegovina Inayoweza Kubadilishwa",
+            "displayName": "Convertible Mark ya Bosnia na Hezegovina",
             "symbol": "BAM"
           },
           "BBD": {
@@ -52,7 +52,7 @@
             "symbol": "BBD"
           },
           "BDT": {
-            "displayName": "Taka ya Bangladesh",
+            "displayName": "Taka ya Bangladeshi",
             "symbol": "BDT"
           },
           "BGN": {
@@ -120,7 +120,7 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "yuan Renminbi ya China",
+            "displayName": "yuan ya Uchina",
             "symbol": "CN¥"
           },
           "COP": {
@@ -172,7 +172,7 @@
             "symbol": "ERN"
           },
           "ETB": {
-            "displayName": "bir ya Uhabeshi",
+            "displayName": "birr ya Uhabeshi",
             "symbol": "ETB"
           },
           "EUR": {
@@ -208,7 +208,7 @@
             "symbol": "GMD"
           },
           "GNF": {
-            "displayName": "Franc ya Guinea",
+            "displayName": "faranga ya Guinea",
             "symbol": "GNF"
           },
           "GTQ": {
@@ -236,7 +236,7 @@
             "symbol": "HTG"
           },
           "HUF": {
-            "displayName": "Forint ya Hangaria",
+            "displayName": "Forint ya Hungaria",
             "symbol": "HUF"
           },
           "IDR": {
@@ -252,7 +252,7 @@
             "symbol": "₹"
           },
           "IQD": {
-            "displayName": "Dinari ya Irak",
+            "displayName": "Dinari ya Iraki",
             "symbol": "IQD"
           },
           "IRR": {
@@ -268,11 +268,11 @@
             "symbol": "JMD"
           },
           "JOD": {
-            "displayName": "Dinar ya Yordani",
+            "displayName": "Dinari ya Yordani",
             "symbol": "JOD"
           },
           "JPY": {
-            "displayName": "sarafu ya Kijapani",
+            "displayName": "Yen ya Japani",
             "symbol": "JP¥"
           },
           "KES": {
@@ -300,7 +300,7 @@
             "symbol": "₩"
           },
           "KWD": {
-            "displayName": "Dinar ya Kuwait",
+            "displayName": "Dinari ya Kuwaiti",
             "symbol": "KWD"
           },
           "KYD": {
@@ -320,7 +320,7 @@
             "symbol": "LBP"
           },
           "LKR": {
-            "displayName": "Rupee ya Sri Lanka",
+            "displayName": "Rupia ya Sirilanka",
             "symbol": "LKR"
           },
           "LRD": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Litas ya Lithuania",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Lats ya Lativia",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "dinari ya Libya",
@@ -348,7 +344,7 @@
             "symbol": "MDL"
           },
           "MGA": {
-            "displayName": "faranga ya Bukini",
+            "displayName": "Ariari ya Madagaska",
             "symbol": "MGA"
           },
           "MKD": {
@@ -368,7 +364,7 @@
             "symbol": "MOP"
           },
           "MRO": {
-            "displayName": "ugwiya ya Moritania",
+            "displayName": "Ouguiya ya Moritania",
             "symbol": "MRO"
           },
           "MUR": {
@@ -404,7 +400,7 @@
             "symbol": "NGN"
           },
           "NIO": {
-            "displayName": "Kodoba ya Nikaragua",
+            "displayName": "Cordoba ya Nikaragua",
             "symbol": "NIO"
           },
           "NOK": {
@@ -412,7 +408,7 @@
             "symbol": "NOK"
           },
           "NPR": {
-            "displayName": "Rupee ya Nepali",
+            "displayName": "Rupia ya Nepali",
             "symbol": "NPR"
           },
           "NZD": {
@@ -420,7 +416,7 @@
             "symbol": "NZ$"
           },
           "OMR": {
-            "displayName": "Rial ya Oman",
+            "displayName": "Rial ya Omani",
             "symbol": "OMR"
           },
           "PAB": {
@@ -440,7 +436,7 @@
             "symbol": "PHP"
           },
           "PKR": {
-            "displayName": "Rupee ya Pakistan",
+            "displayName": "Rupia ya Pakistani",
             "symbol": "PKR"
           },
           "PLN": {
@@ -480,11 +476,11 @@
             "symbol": "SBD"
           },
           "SCR": {
-            "displayName": "rupia ya Shelisheli",
+            "displayName": "rupia ya Ushelisheli",
             "symbol": "SCR"
           },
           "SDG": {
-            "displayName": "dinari ya Sudani",
+            "displayName": "pauni ya Sudani",
             "symbol": "SDG"
           },
           "SEK": {
@@ -492,7 +488,7 @@
             "symbol": "SEK"
           },
           "SGD": {
-            "displayName": "Dola ya Singapuri",
+            "displayName": "Dola ya Singapore",
             "symbol": "SGD"
           },
           "SHP": {
@@ -512,7 +508,7 @@
             "symbol": "SRD"
           },
           "SSP": {
-            "displayName": "Pauni ya Sudani Kusini",
+            "displayName": "pauni ya Sudani Kusini",
             "symbol": "SSP"
           },
           "STD": {
@@ -588,7 +584,7 @@
             "symbol": "VEF"
           },
           "VND": {
-            "displayName": "Dong ya Kivietinamu",
+            "displayName": "Dong ya Vietinamu",
             "symbol": "₫"
           },
           "VUV": {
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "faranga CFA BEAC",
+            "displayName": "CFA faranga ya BEAC",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,18 +604,18 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "faranga CFA BCEAO",
+            "displayName": "CFA faranga za BCEAO",
             "symbol": "CFA"
           },
           "XPF": {
-            "displayName": "Franc ya CFP",
+            "displayName": "Faranga ya CFP",
             "symbol": "CFPF"
           },
           "XXX": {
-            "displayName": "Fedha Isiyojulikana"
+            "displayName": "Fedha Zisizojulikana"
           },
           "YER": {
-            "displayName": "Rial ya Yemen",
+            "displayName": "Rial ya Yemeni",
             "symbol": "YER"
           },
           "ZAR": {

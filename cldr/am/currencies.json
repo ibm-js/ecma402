@@ -144,7 +144,7 @@
             "symbol": "CVE"
           },
           "CZK": {
-            "displayName": "ቼክ ሪፐፕሊክ ኮሩና",
+            "displayName": "ቼክ ሪፐብሊክ ኮሩና",
             "symbol": "CZK"
           },
           "DJF": {
@@ -168,7 +168,7 @@
             "symbol": "EGP"
           },
           "ERN": {
-            "displayName": "ዬኤርትራ ናቅፋ",
+            "displayName": "የኤርትራ ናቅፋ",
             "symbol": "ERN"
           },
           "ETB": {
@@ -200,7 +200,7 @@
             "symbol": "GHS"
           },
           "GIP": {
-            "displayName": "ጊብራልታር ፓውንድ",
+            "displayName": "ጂብራልተር ፓውንድ",
             "symbol": "GIP"
           },
           "GMD": {
@@ -331,10 +331,6 @@
             "displayName": "ሊቱዌንያን ሊታስ",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "የላቲቫ ላትስ",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "የሊቢያ ዲናር",
             "symbol": "LYD"
@@ -348,7 +344,7 @@
             "symbol": "MDL"
           },
           "MGA": {
-            "displayName": "የማደጋስካር ፋርንክ",
+            "displayName": "የማደጋስካር ማላጋስይ አሪያርይ",
             "symbol": "MGA"
           },
           "MKD": {
@@ -400,7 +396,7 @@
             "symbol": "NAD"
           },
           "NGN": {
-            "displayName": "የናይጄሪያ ናኢራ",
+            "displayName": "የናይጄሪያ ናይራ",
             "symbol": "NGN"
           },
           "NIO": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "ቶንጋን ፓ'አንጋ",
+            "displayName": "ቶንጋን ፓ’አንጋ",
             "symbol": "TOP"
           },
           "TRY": {

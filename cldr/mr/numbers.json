@@ -20,10 +20,10 @@
           "nan": "NaN"
         },
         "decimalFormats-numberSystem-deva": {
-          "standard": "#,##0.###"
+          "standard": "#,##,##0.###"
         },
         "decimalFormats-numberSystem-latn": {
-          "standard": "#,##0.###"
+          "standard": "#,##,##0.###"
         },
         "percentFormats-numberSystem-deva": {
           "standard": "#,##0%"

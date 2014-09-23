@@ -8,7 +8,7 @@
             "symbol": "AED"
           },
           "AFN": {
-            "displayName": "Авгани",
+            "displayName": "Авганистански авгани",
             "symbol": "AFN"
           },
           "ALL": {
@@ -76,7 +76,7 @@
             "symbol": "BND"
           },
           "BOB": {
-            "displayName": "BOB",
+            "displayName": "Боливиски боливиано",
             "symbol": "BOB"
           },
           "BRL": {
@@ -140,7 +140,7 @@
             "symbol": "CUP"
           },
           "CVE": {
-            "displayName": "Зелено'ртски ескудо",
+            "displayName": "Зелено’ртски ескудо",
             "symbol": "CVE"
           },
           "CZK": {
@@ -331,10 +331,6 @@
             "displayName": "Литваниска лита",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Латвијски лат",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Либијски динар",
             "symbol": "LYD"
@@ -356,7 +352,7 @@
             "symbol": "ден"
           },
           "MMK": {
-            "displayName": "Мја",
+            "displayName": "Мјанмарски киат",
             "symbol": "MMK"
           },
           "MNT": {
@@ -536,7 +532,7 @@
             "symbol": "TJS"
           },
           "TMT": {
-            "displayName": "TMT",
+            "displayName": "Туркменист. манат",
             "symbol": "TMT"
           },
           "TND": {
@@ -552,7 +548,7 @@
             "symbol": "TRY"
           },
           "TTD": {
-            "displayName": "TTD",
+            "displayName": "Долар на Тринидад и Тобаго",
             "symbol": "TTD"
           },
           "TWD": {

@@ -331,10 +331,6 @@
             "displayName": "litauisk lita",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "latvisk lat",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "libysk dinar",
             "symbol": "LYD"
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "thailandsk baht",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "tadsjikisk somoni",

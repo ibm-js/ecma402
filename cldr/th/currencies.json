@@ -331,10 +331,6 @@
             "displayName": "ลีตัสลิทัวเนีย",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "ลัตส์ลัตเวีย",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "ดีนาร์ลิเบีย",
             "symbol": "LYD"
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "บาทไทย",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "โซโมนิทาจิกิสถาน",

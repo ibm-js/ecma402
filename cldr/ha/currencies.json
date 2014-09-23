@@ -331,10 +331,6 @@
             "displayName": "LTL",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "LVL",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Kuɗin Libiya",
             "symbol": "LYD"
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "THB",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "TJS",

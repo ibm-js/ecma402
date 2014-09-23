@@ -179,8 +179,8 @@
                   "pm": "ප.ව."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "පෙ",
+                  "pm": "ප"
                 },
                 "wide": {
                   "am": "පෙ.ව.",
@@ -193,8 +193,8 @@
                   "pm": "ප.ව."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "පෙ",
+                  "pm": "ප"
                 },
                 "wide": {
                   "am": "පෙ.ව.",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d E",

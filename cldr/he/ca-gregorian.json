@@ -179,8 +179,8 @@
                   "pm": "אחה״צ"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "לפנה״צ",
+                  "pm": "אחה״צ"
                 },
                 "wide": {
                   "am": "לפנה״צ",
@@ -193,8 +193,8 @@
                   "pm": "אחה״צ"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "לפנה״צ",
+                  "pm": "אחה״צ"
                 },
                 "wide": {
                   "am": "לפנה״צ",
@@ -209,16 +209,17 @@
               },
               "eraAbbr": {
                 "0": "לפנה״ס",
-                "1": "לסה״נ"
+                "1": "לספירה"
               },
               "eraNarrow": {
                 "0": "לפנה״ס",
-                "1": "לסה״נ"
+                "1": "לספירה"
               }
             },
             "dateTimeFormats": {
               "full": "{1} בשעה {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E H:mm",
                 "EHms": "E H:mm:ss",
                 "Ed": "E ה-d",
@@ -232,11 +233,11 @@
                 "Hm": "HH:mm",
                 "Hms": "HH:mm:ss",
                 "M": "L",
-                "MEd": "E, d/M",
+                "MEd": "E, d.M",
                 "MMM": "LLL",
                 "MMMEd": "E, d בMMM",
                 "MMMd": "d בMMM",
-                "Md": "d/M",
+                "Md": "d.M",
                 "d": "d",
                 "h": "‏h a",
                 "hm": "h:mm a",
@@ -244,15 +245,15 @@
                 "ms": "mm:ss",
                 "y": "y",
                 "yM": "M.y",
-                "yMEd": "E, d/M/y",
-                "yMM": "MM/y",
+                "yMEd": "E, d.M.y",
+                "yMM": "M.y",
                 "yMMM": "MMM y",
                 "yMMMEd": "E, d בMMM y",
                 "yMMMM": "MMMM y",
                 "yMMMd": "d בMMM y",
                 "yMd": "d.M.y",
-                "yQQQ": "y QQQ",
-                "yQQQQ": "y QQQQ"
+                "yQQQ": "QQQ y",
+                "yQQQQ": "QQQQ y"
               }
             }
           }

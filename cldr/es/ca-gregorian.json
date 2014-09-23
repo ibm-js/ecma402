@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1}, {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E, H:mm",
                 "EHms": "E, H:mm:ss",
                 "Ed": "E d",
@@ -234,10 +235,10 @@
                 "M": "L",
                 "MEd": "E, d/M",
                 "MMM": "LLL",
-                "MMMEd": "E d 'de' MMM",
+                "MMMEd": "E, d 'de' MMM",
                 "MMMMd": "d 'de' MMMM",
                 "MMMd": "d 'de' MMM",
-                "MMMdd": "dd-MMM",
+                "MMMdd": "d 'de' MMM",
                 "MMd": "d/M",
                 "MMdd": "d/M",
                 "Md": "d/M",

@@ -51,18 +51,18 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "1": "jan",
-                  "2": "feb",
-                  "3": "mrt",
-                  "4": "apr",
-                  "5": "mei",
-                  "6": "jun",
-                  "7": "jul",
-                  "8": "aug",
-                  "9": "sep",
-                  "10": "okt",
-                  "11": "nov",
-                  "12": "dec"
+                  "1": "Jan.",
+                  "2": "Feb.",
+                  "3": "Mrt.",
+                  "4": "Apr.",
+                  "5": "Mei",
+                  "6": "Jun.",
+                  "7": "Jul.",
+                  "8": "Aug.",
+                  "9": "Sep.",
+                  "10": "Okt.",
+                  "11": "Nov.",
+                  "12": "Dec."
                 },
                 "narrow": {
                   "1": "J",
@@ -79,18 +79,18 @@
                   "12": "D"
                 },
                 "wide": {
-                  "1": "januari",
-                  "2": "februari",
-                  "3": "maart",
-                  "4": "april",
-                  "5": "mei",
-                  "6": "juni",
-                  "7": "juli",
-                  "8": "augustus",
-                  "9": "september",
-                  "10": "oktober",
-                  "11": "november",
-                  "12": "december"
+                  "1": "Januari",
+                  "2": "Februari",
+                  "3": "Maart",
+                  "4": "April",
+                  "5": "Mei",
+                  "6": "Juni",
+                  "7": "Juli",
+                  "8": "Augustus",
+                  "9": "September",
+                  "10": "Oktober",
+                  "11": "November",
+                  "12": "December"
                 }
               }
             },
@@ -135,13 +135,13 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "sun": "zo",
-                  "mon": "ma",
-                  "tue": "di",
-                  "wed": "wo",
-                  "thu": "do",
-                  "fri": "vr",
-                  "sat": "za"
+                  "sun": "Zo",
+                  "mon": "Ma",
+                  "tue": "Di",
+                  "wed": "Wo",
+                  "thu": "Do",
+                  "fri": "Vr",
+                  "sat": "Za"
                 },
                 "narrow": {
                   "sun": "Z",
@@ -162,49 +162,49 @@
                   "sat": "za"
                 },
                 "wide": {
-                  "sun": "zondag",
-                  "mon": "maandag",
-                  "tue": "dinsdag",
-                  "wed": "woensdag",
-                  "thu": "donderdag",
-                  "fri": "vrijdag",
-                  "sat": "zaterdag"
+                  "sun": "Zondag",
+                  "mon": "Maandag",
+                  "tue": "Dinsdag",
+                  "wed": "Woensdag",
+                  "thu": "Donderdag",
+                  "fri": "Vrijdag",
+                  "sat": "Zaterdag"
                 }
               }
             },
             "dayPeriods": {
               "format": {
                 "abbreviated": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 },
                 "narrow": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 },
                 "wide": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 }
               },
               "stand-alone": {
                 "abbreviated": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 },
                 "narrow": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 },
                 "wide": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 }
               }
             },
             "eras": {
               "eraNames": {
-                "0": "Voor Christus",
+                "0": "voor Christus",
                 "1": "na Christus"
               },
               "eraAbbr": {
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "E d",

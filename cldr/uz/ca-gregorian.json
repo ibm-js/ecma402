@@ -43,8 +43,8 @@
                   "6": "Iyun",
                   "7": "Iyul",
                   "8": "Avgust",
-                  "9": "Sentyabr",
-                  "10": "Oktyabr",
+                  "9": "Sentabr",
+                  "10": "Oktabr",
                   "11": "Noyabr",
                   "12": "Dekabr"
                 }
@@ -87,8 +87,8 @@
                   "6": "Iyun",
                   "7": "Iyul",
                   "8": "Avgust",
-                  "9": "Sentyabr",
-                  "10": "Oktyabr",
+                  "9": "Sentabr",
+                  "10": "Oktabr",
                   "11": "Noyabr",
                   "12": "Dekabr"
                 }
@@ -153,13 +153,13 @@
                   "sat": "S"
                 },
                 "short": {
-                  "sun": "Yaksh",
-                  "mon": "Dush",
-                  "tue": "Sesh",
-                  "wed": "Chor",
-                  "thu": "Pay",
-                  "fri": "Jum",
-                  "sat": "Shan"
+                  "sun": "Ya",
+                  "mon": "Du",
+                  "tue": "Se",
+                  "wed": "Cho",
+                  "thu": "Pa",
+                  "fri": "Ju",
+                  "sat": "Sha"
                 },
                 "wide": {
                   "sun": "yakshanba",
@@ -175,30 +175,30 @@
             "dayPeriods": {
               "format": {
                 "abbreviated": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "TO",
+                  "pm": "TK"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "o",
+                  "pm": "k"
                 },
                 "wide": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "TO",
+                  "pm": "TK"
                 }
               },
               "stand-alone": {
                 "abbreviated": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "TO",
+                  "pm": "TK"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "o",
+                  "pm": "k"
                 },
                 "wide": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "TO",
+                  "pm": "TK"
                 }
               }
             },
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d, E",

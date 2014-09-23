@@ -44,7 +44,7 @@
             "symbol": "AZN"
           },
           "BAM": {
-            "displayName": "Bosnië en Herzegowina omskakelbare marka",
+            "displayName": "Bosnies-Herzegowiniese omskakelbare marka",
             "symbol": "BAM"
           },
           "BBD": {
@@ -60,7 +60,7 @@
             "symbol": "BGN"
           },
           "BHD": {
-            "displayName": "Bahrainse dinar",
+            "displayName": "Bahreinse dinar",
             "symbol": "BHD"
           },
           "BIF": {
@@ -80,7 +80,7 @@
             "symbol": "BOB"
           },
           "BRL": {
-            "displayName": "Brasiliaanse real",
+            "displayName": "Brasilliaanse reaal",
             "symbol": "R$"
           },
           "BSD": {
@@ -236,7 +236,7 @@
             "symbol": "HTG"
           },
           "HUF": {
-            "displayName": "HUF",
+            "displayName": "Hongaarse florint",
             "symbol": "HUF"
           },
           "IDR": {
@@ -248,7 +248,7 @@
             "symbol": "₪"
           },
           "INR": {
-            "displayName": "Indiese rupee",
+            "displayName": "Indiese roepee",
             "symbol": "₹"
           },
           "IQD": {
@@ -288,7 +288,7 @@
             "symbol": "KHR"
           },
           "KMF": {
-            "displayName": "Comoriese frank",
+            "displayName": "Comoraanse frank",
             "symbol": "KMF"
           },
           "KPW": {
@@ -331,10 +331,6 @@
             "displayName": "Litause litas",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Lettiese lats",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Libiese dinar",
             "symbol": "LYD"
@@ -356,7 +352,7 @@
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "Myanma kyat",
+            "displayName": "Mianmese kyat",
             "symbol": "MMK"
           },
           "MNT": {
@@ -385,7 +381,7 @@
           },
           "MXN": {
             "displayName": "Meksikaanse peso",
-            "symbol": "MX$"
+            "symbol": "MXN"
           },
           "MYR": {
             "displayName": "Maleisiese ringgit",
@@ -432,7 +428,7 @@
             "symbol": "PEN"
           },
           "PGK": {
-            "displayName": "Papoease kina",
+            "displayName": "Papoea-Nieu-Guinese kina",
             "symbol": "PGK"
           },
           "PHP": {
@@ -452,7 +448,7 @@
             "symbol": "PYG"
           },
           "QAR": {
-            "displayName": "Katarese rial",
+            "displayName": "Katarrese rial",
             "symbol": "QAR"
           },
           "RON": {
@@ -492,7 +488,7 @@
             "symbol": "SEK"
           },
           "SGD": {
-            "displayName": "Singapoer-dollar",
+            "displayName": "Singapoer dollar",
             "symbol": "SGD"
           },
           "SHP": {
@@ -500,7 +496,7 @@
             "symbol": "SHP"
           },
           "SLL": {
-            "displayName": "Sierra Leonese leone",
+            "displayName": "Sierra Leoniese leone",
             "symbol": "SLL"
           },
           "SOS": {
@@ -536,7 +532,7 @@
             "symbol": "TJS"
           },
           "TMT": {
-            "displayName": "Toerkmeense manat",
+            "displayName": "Turkmeense manat",
             "symbol": "TMT"
           },
           "TND": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "Tongaanse pa'anga",
+            "displayName": "Tongaanse pa’anga",
             "symbol": "TOP"
           },
           "TRY": {
@@ -592,7 +588,7 @@
             "symbol": "₫"
           },
           "VUV": {
-            "displayName": "Vanuatu vatu",
+            "displayName": "Vanuatuse vatu",
             "symbol": "VUV"
           },
           "WST": {

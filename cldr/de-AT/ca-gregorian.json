@@ -179,8 +179,8 @@
                   "pm": "nachm."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "vorm.",
+                  "pm": "nachm."
                 },
                 "wide": {
                   "am": "vorm.",
@@ -193,8 +193,8 @@
                   "pm": "nachm."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "vorm.",
+                  "pm": "nachm."
                 },
                 "wide": {
                   "am": "vorm.",
@@ -217,8 +217,9 @@
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1} 'um' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E, HH:mm",
                 "EHms": "E, HH:mm:ss",
                 "Ed": "E, d.",

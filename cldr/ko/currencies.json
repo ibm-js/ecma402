@@ -176,7 +176,7 @@
             "symbol": "ETB"
           },
           "EUR": {
-            "displayName": "유로화",
+            "displayName": "유로",
             "symbol": "€"
           },
           "FJD": {
@@ -188,7 +188,7 @@
             "symbol": "FKP"
           },
           "GBP": {
-            "displayName": "영국령 파운드 스털링",
+            "displayName": "파운드",
             "symbol": "£"
           },
           "GEL": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "리투아니아 리타",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "라트비아 라트",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "리비아 디나르",
@@ -584,7 +580,7 @@
             "symbol": "UZS"
           },
           "VEF": {
-            "displayName": "베네주엘라 볼리바르",
+            "displayName": "베네수엘라 볼리바르",
             "symbol": "VEF"
           },
           "VND": {

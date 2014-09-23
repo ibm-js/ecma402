@@ -176,7 +176,7 @@
               "format": {
                 "abbreviated": {
                   "am": "пре подне",
-                  "pm": "поподне"
+                  "pm": "по подне"
                 },
                 "narrow": {
                   "am": "a",
@@ -184,13 +184,13 @@
                 },
                 "wide": {
                   "am": "пре подне",
-                  "pm": "поподне"
+                  "pm": "по подне"
                 }
               },
               "stand-alone": {
                 "abbreviated": {
                   "am": "пре подне",
-                  "pm": "поподне"
+                  "pm": "по подне"
                 },
                 "narrow": {
                   "am": "a",
@@ -198,7 +198,7 @@
                 },
                 "wide": {
                   "am": "пре подне",
-                  "pm": "поподне"
+                  "pm": "по подне"
                 }
               }
             },
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "E",
                 "EHm": "E, HH:mm",
                 "EHms": "E, HH:mm:ss",
                 "Ed": "E d.",

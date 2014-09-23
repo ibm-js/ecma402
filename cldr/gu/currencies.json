@@ -96,7 +96,7 @@
             "symbol": "BWP"
           },
           "BYR": {
-            "displayName": "બેલારુશિયન રબલ",
+            "displayName": "બેલારુશિયન રૂબલ",
             "symbol": "BYR"
           },
           "BZD": {
@@ -260,7 +260,7 @@
             "symbol": "IRR"
           },
           "ISK": {
-            "displayName": "આઇસ્લેંડિક ક્રોના",
+            "displayName": "આઇસલેન્ડિક ક્રોના",
             "symbol": "ISK"
           },
           "JMD": {
@@ -300,7 +300,7 @@
             "symbol": "₩"
           },
           "KWD": {
-            "displayName": "કુવૈતી દીનાર",
+            "displayName": "કુવૈતી દિનાર",
             "symbol": "KWD"
           },
           "KYD": {
@@ -331,16 +331,12 @@
             "displayName": "લિથુએનિયન લિતાસ",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "લાતવિયન લેત્સ",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "લિબ્યન દિનાર",
             "symbol": "LYD"
           },
           "MAD": {
-            "displayName": "મોરોક્કન દિરામ",
+            "displayName": "મોરોક્કન દિરહામ",
             "symbol": "MAD"
           },
           "MDL": {
@@ -356,7 +352,7 @@
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "મયાન્મા ક્યાત",
+            "displayName": "મ્યાંમાર ક્યાત",
             "symbol": "MMK"
           },
           "MNT": {
@@ -448,7 +444,7 @@
             "symbol": "PLN"
           },
           "PYG": {
-            "displayName": "પરાગ્વેયન ગૌરાની",
+            "displayName": "પરાગ્વેયન ગુઆરાની",
             "symbol": "PYG"
           },
           "QAR": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "ટોંગન પ'અંગા",
+            "displayName": "ટોંગન પ’અંગા",
             "symbol": "TOP"
           },
           "TRY": {
@@ -584,7 +580,7 @@
             "symbol": "UZS"
           },
           "VEF": {
-            "displayName": "વેનેઝ્વીલિયન બોલિવર",
+            "displayName": "વેનેઝુએલન બોલિવર",
             "symbol": "VEF"
           },
           "VND": {
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "CFA ફ્રેંક BEAC",
+            "displayName": "[CFA] ફ્રેંક [BEAC]",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,11 +604,11 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "CFA ફ્રેંક BCEAO",
+            "displayName": "[CFA] ફ્રેંક [BCEAO]",
             "symbol": "CFA"
           },
           "XPF": {
-            "displayName": "CFP ફ્રેંક",
+            "displayName": "[CFP] ફ્રેંક",
             "symbol": "CFPF"
           },
           "XXX": {

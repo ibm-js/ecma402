@@ -102,7 +102,7 @@
                   "tue": "Ç.A.",
                   "wed": "Ç.",
                   "thu": "C.A.",
-                  "fri": "C",
+                  "fri": "C.",
                   "sat": "Ş."
                 },
                 "narrow": {
@@ -120,7 +120,7 @@
                   "tue": "Ç.A.",
                   "wed": "Ç.",
                   "thu": "C.A.",
-                  "fri": "C",
+                  "fri": "C.",
                   "sat": "Ş."
                 },
                 "wide": {
@@ -140,7 +140,7 @@
                   "tue": "Ç.A.",
                   "wed": "Ç.",
                   "thu": "C.A.",
-                  "fri": "C",
+                  "fri": "C.",
                   "sat": "Ş."
                 },
                 "narrow": {
@@ -158,7 +158,7 @@
                   "tue": "Ç.A.",
                   "wed": "Ç.",
                   "thu": "C.A.",
-                  "fri": "C",
+                  "fri": "C.",
                   "sat": "Ş."
                 },
                 "wide": {
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d E",

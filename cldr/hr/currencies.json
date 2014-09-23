@@ -177,7 +177,7 @@
           },
           "EUR": {
             "displayName": "euro",
-            "symbol": "€"
+            "symbol": "EUR"
           },
           "FJD": {
             "displayName": "fidžijski dolar",
@@ -229,7 +229,7 @@
           },
           "HRK": {
             "displayName": "hrvatska kuna",
-            "symbol": "kn"
+            "symbol": "HRK"
           },
           "HTG": {
             "displayName": "haićanski gourd",
@@ -273,7 +273,7 @@
           },
           "JPY": {
             "displayName": "japanski jen",
-            "symbol": "¥"
+            "symbol": "JPY"
           },
           "KES": {
             "displayName": "kenijski šiling",
@@ -320,7 +320,7 @@
             "symbol": "LBP"
           },
           "LKR": {
-            "displayName": "šrilanska rupija",
+            "displayName": "šrilankanska rupija",
             "symbol": "LKR"
           },
           "LRD": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "litavski litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "letonski lats",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "libijski dinar",
@@ -448,7 +444,7 @@
             "symbol": "PLN"
           },
           "PYG": {
-            "displayName": "gvarani",
+            "displayName": "paragvajski gvarani",
             "symbol": "PYG"
           },
           "QAR": {
@@ -456,7 +452,7 @@
             "symbol": "QAR"
           },
           "RON": {
-            "displayName": "rumunjski leu",
+            "displayName": "rumunjski lej",
             "symbol": "RON"
           },
           "RSD": {
@@ -528,7 +524,7 @@
             "symbol": "SZL"
           },
           "THB": {
-            "displayName": "tajlandski bat",
+            "displayName": "tajlandski baht",
             "symbol": "THB"
           },
           "TJS": {
@@ -544,7 +540,7 @@
             "symbol": "TND"
           },
           "TOP": {
-            "displayName": "tongaška pa'anga",
+            "displayName": "tongaška pa’anga",
             "symbol": "TOP"
           },
           "TRY": {

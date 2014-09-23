@@ -51,18 +51,18 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "1": "janv.",
-                  "2": "févr.",
-                  "3": "mars",
-                  "4": "avr.",
-                  "5": "mai",
-                  "6": "juin",
-                  "7": "juil.",
-                  "8": "août",
-                  "9": "sept.",
-                  "10": "oct.",
-                  "11": "nov.",
-                  "12": "déc."
+                  "1": "Janv.",
+                  "2": "Févr.",
+                  "3": "Mars",
+                  "4": "Avr.",
+                  "5": "Mai",
+                  "6": "Juin",
+                  "7": "Juil.",
+                  "8": "Août",
+                  "9": "Sept.",
+                  "10": "Oct.",
+                  "11": "Nov.",
+                  "12": "Déc."
                 },
                 "narrow": {
                   "1": "J",
@@ -79,18 +79,18 @@
                   "12": "D"
                 },
                 "wide": {
-                  "1": "janvier",
-                  "2": "février",
-                  "3": "mars",
-                  "4": "avril",
-                  "5": "mai",
-                  "6": "juin",
-                  "7": "juillet",
-                  "8": "août",
-                  "9": "septembre",
-                  "10": "octobre",
-                  "11": "novembre",
-                  "12": "décembre"
+                  "1": "Janvier",
+                  "2": "Février",
+                  "3": "Mars",
+                  "4": "Avril",
+                  "5": "Mai",
+                  "6": "Juin",
+                  "7": "Juillet",
+                  "8": "Août",
+                  "9": "Septembre",
+                  "10": "Octobre",
+                  "11": "Novembre",
+                  "12": "Décembre"
                 }
               }
             },
@@ -135,13 +135,13 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "sun": "dim.",
-                  "mon": "lun.",
-                  "tue": "mar.",
-                  "wed": "mer.",
-                  "thu": "jeu.",
-                  "fri": "ven.",
-                  "sat": "sam."
+                  "sun": "Dim.",
+                  "mon": "Lun.",
+                  "tue": "Mar.",
+                  "wed": "Mer.",
+                  "thu": "Jeu.",
+                  "fri": "Ven.",
+                  "sat": "Sam."
                 },
                 "narrow": {
                   "sun": "D",
@@ -153,22 +153,22 @@
                   "sat": "S"
                 },
                 "short": {
-                  "sun": "dim.",
-                  "mon": "lun.",
-                  "tue": "mar.",
-                  "wed": "mer.",
-                  "thu": "jeu.",
-                  "fri": "ven.",
-                  "sat": "sam."
+                  "sun": "Di",
+                  "mon": "Lu",
+                  "tue": "Ma",
+                  "wed": "Me",
+                  "thu": "Je",
+                  "fri": "Ve",
+                  "sat": "Sa"
                 },
                 "wide": {
-                  "sun": "dimanche",
-                  "mon": "lundi",
-                  "tue": "mardi",
-                  "wed": "mercredi",
-                  "thu": "jeudi",
-                  "fri": "vendredi",
-                  "sat": "samedi"
+                  "sun": "Dimanche",
+                  "mon": "Lundi",
+                  "tue": "Mardi",
+                  "wed": "Mercredi",
+                  "thu": "Jeudi",
+                  "fri": "Vendredi",
+                  "sat": "Samedi"
                 }
               }
             },
@@ -179,7 +179,7 @@
                   "pm": "PM"
                 },
                 "narrow": {
-                  "am": "a",
+                  "am": "AM",
                   "pm": "p"
                 },
                 "wide": {
@@ -193,7 +193,7 @@
                   "pm": "PM"
                 },
                 "narrow": {
-                  "am": "a",
+                  "am": "AM",
                   "pm": "p"
                 },
                 "wide": {
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "E",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "E d",

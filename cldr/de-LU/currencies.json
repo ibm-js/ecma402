@@ -84,7 +84,7 @@
             "symbol": "R$"
           },
           "BSD": {
-            "displayName": "Bahama-Dollar",
+            "displayName": "Bahamas-Dollar",
             "symbol": "BSD"
           },
           "BTN": {
@@ -96,7 +96,7 @@
             "symbol": "BWP"
           },
           "BYR": {
-            "displayName": "Belarus-Rubel",
+            "displayName": "Weißrussischer Rubel",
             "symbol": "BYR"
           },
           "BZD": {
@@ -331,10 +331,6 @@
             "displayName": "Litauischer Litas",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Lettischer Lats",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Libyscher Dinar",
             "symbol": "LYD"
@@ -376,7 +372,7 @@
             "symbol": "MUR"
           },
           "MVR": {
-            "displayName": "Malediven-Rupie",
+            "displayName": "Malediven-Rufiyaa",
             "symbol": "MVR"
           },
           "MWK": {
@@ -404,7 +400,7 @@
             "symbol": "NGN"
           },
           "NIO": {
-            "displayName": "Nicaragua-Cordoba",
+            "displayName": "Nicaragua-Córdoba",
             "symbol": "NIO"
           },
           "NOK": {

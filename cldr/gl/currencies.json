@@ -33,7 +33,7 @@
           },
           "AUD": {
             "displayName": "Dólar australiano",
-            "symbol": "A$"
+            "symbol": "$A"
           },
           "AWG": {
             "displayName": "Florín arubeño",
@@ -81,7 +81,7 @@
           },
           "BRL": {
             "displayName": "Real brasileiro",
-            "symbol": "R$"
+            "symbol": "$R"
           },
           "BSD": {
             "displayName": "Dólar das Bahamas",
@@ -331,10 +331,6 @@
             "displayName": "Litas lituana",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Lats letón",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Dinar libio",
             "symbol": "LYD"
@@ -557,7 +553,7 @@
           },
           "TWD": {
             "displayName": "Novo dólar taiwanés",
-            "symbol": "NT$"
+            "symbol": "$NT"
           },
           "TZS": {
             "displayName": "Chelín tanzano",
@@ -616,7 +612,7 @@
             "symbol": "CFPF"
           },
           "XXX": {
-            "displayName": "Unidade monetaria descoñecida ou non válida"
+            "displayName": "Unidade monetaria descoñecida"
           },
           "YER": {
             "displayName": "Rial iemení",

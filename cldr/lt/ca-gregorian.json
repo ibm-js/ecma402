@@ -35,18 +35,18 @@
                   "12": "G"
                 },
                 "wide": {
-                  "1": "sausis",
-                  "2": "vasaris",
-                  "3": "kovas",
-                  "4": "balandis",
-                  "5": "gegužė",
-                  "6": "birželis",
-                  "7": "liepa",
-                  "8": "rugpjūtis",
-                  "9": "rugsėjis",
-                  "10": "spalis",
-                  "11": "lapkritis",
-                  "12": "gruodis"
+                  "1": "sausio",
+                  "2": "vasario",
+                  "3": "kovo",
+                  "4": "balandžio",
+                  "5": "gegužės",
+                  "6": "birželio",
+                  "7": "liepos",
+                  "8": "rugpjūčio",
+                  "9": "rugsėjo",
+                  "10": "spalio",
+                  "11": "lapkričio",
+                  "12": "gruodžio"
                 }
               },
               "stand-alone": {
@@ -179,8 +179,8 @@
                   "pm": "pop."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "priešpiet",
+                  "pm": "popiet"
                 },
                 "wide": {
                   "am": "priešpiet",
@@ -193,8 +193,8 @@
                   "pm": "pop."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "priešpiet",
+                  "pm": "popiet"
                 },
                 "wide": {
                   "am": "priešpiet",
@@ -219,23 +219,30 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "HH:mm, E",
                 "EHms": "HH:mm:ss, E",
                 "Ed": "d, E",
                 "Ehm": "hh:mm a, E",
                 "Ehms": "hh:mm:ss a, E",
                 "Gy": "y G",
-                "GyMMM": "y G MMM",
-                "GyMMMEd": "y G MMM d, E",
-                "GyMMMd": "y G MMM d",
+                "GyMMM": "y-MM G",
+                "GyMMMEd": "y-MM-dd G, E",
+                "GyMMMM": "y G LLLL",
+                "GyMMMMEd": "y G MMMM d, E",
+                "GyMMMMd": "y G MMMM d",
+                "GyMMMd": "y-MM-dd G",
                 "H": "HH",
                 "Hm": "HH:mm",
                 "Hms": "HH:mm:ss",
-                "M": "LL",
+                "M": "MM",
                 "MEd": "MM-dd, E",
-                "MMM": "LLL",
-                "MMMEd": "MMM d, E",
-                "MMMd": "MMM d",
+                "MMM": "MM",
+                "MMMEd": "MM-dd, E",
+                "MMMM": "LLLL",
+                "MMMMEd": "MMMM d, E",
+                "MMMMd": "MMMM d",
+                "MMMd": "MM-dd",
                 "MMdd": "MM-dd",
                 "Md": "MM-d",
                 "d": "dd",
@@ -246,9 +253,12 @@
                 "y": "y",
                 "yM": "y-MM",
                 "yMEd": "y-MM-dd, E",
-                "yMMM": "y MMM",
-                "yMMMEd": "y MMM d, E",
-                "yMMMd": "y MMM d",
+                "yMMM": "y-MM",
+                "yMMMEd": "y-MM-dd, E",
+                "yMMMM": "y LLLL",
+                "yMMMMEd": "y MMMM d, E",
+                "yMMMMd": "y MMMM d",
+                "yMMMd": "y-MM-dd",
                 "yMd": "y-MM-dd",
                 "yQQQ": "y QQQ",
                 "yQQQQ": "y QQQQ"

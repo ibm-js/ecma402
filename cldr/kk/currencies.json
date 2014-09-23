@@ -20,7 +20,7 @@
             "symbol": "AMD"
           },
           "ANG": {
-            "displayName": "Нидерланды антиль гульдені",
+            "displayName": "Нидерланд антиль гульдені",
             "symbol": "ANG"
           },
           "AOA": {
@@ -69,7 +69,7 @@
           },
           "BMD": {
             "displayName": "Бермуд доллары",
-            "symbol": "BMD"
+            "symbol": "БД"
           },
           "BND": {
             "displayName": "Бруней доллары",
@@ -105,7 +105,7 @@
           },
           "CAD": {
             "displayName": "Канада доллары",
-            "symbol": "CA$"
+            "symbol": "КД$"
           },
           "CDF": {
             "displayName": "Конго франкы",
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Литва литы",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Латвия латы",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Ливия динары",
@@ -573,7 +569,7 @@
           },
           "USD": {
             "displayName": "АҚШ доллары",
-            "symbol": "US$"
+            "symbol": "$"
           },
           "UYU": {
             "displayName": "Уругвай песосы",

@@ -7,28 +7,28 @@
             "months": {
               "format": {
                 "abbreviated": {
-                  "1": "ene.",
-                  "2": "febr.",
-                  "3": "mzo.",
-                  "4": "abr.",
-                  "5": "my.",
-                  "6": "jun.",
-                  "7": "jul.",
-                  "8": "ag.",
-                  "9": "set.",
-                  "10": "oct.",
-                  "11": "nov.",
-                  "12": "dic."
+                  "1": "ene",
+                  "2": "feb",
+                  "3": "mar",
+                  "4": "abr",
+                  "5": "may",
+                  "6": "jun",
+                  "7": "jul",
+                  "8": "ago",
+                  "9": "sep",
+                  "10": "oct",
+                  "11": "nov",
+                  "12": "dic"
                 },
                 "narrow": {
                   "1": "E",
                   "2": "F",
-                  "3": "Ma",
+                  "3": "M",
                   "4": "A",
-                  "5": "My",
-                  "6": "Jn",
-                  "7": "Jl",
-                  "8": "Ag",
+                  "5": "M",
+                  "6": "J",
+                  "7": "J",
+                  "8": "A",
                   "9": "S",
                   "10": "O",
                   "11": "N",
@@ -51,28 +51,28 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "1": "en.",
-                  "2": "febr.",
-                  "3": "mzo.",
-                  "4": "abr.",
-                  "5": "my.",
+                  "1": "ene",
+                  "2": "feb",
+                  "3": "mar",
+                  "4": "abr",
+                  "5": "may",
                   "6": "jun",
                   "7": "jul",
-                  "8": "ag.",
-                  "9": "set.",
-                  "10": "oct.",
-                  "11": "nov.",
-                  "12": "dic."
+                  "8": "ago",
+                  "9": "sep",
+                  "10": "oct",
+                  "11": "nov",
+                  "12": "dic"
                 },
                 "narrow": {
                   "1": "E",
                   "2": "F",
-                  "3": "Ma",
+                  "3": "M",
                   "4": "A",
-                  "5": "My",
-                  "6": "Jn",
-                  "7": "Jl",
-                  "8": "Ag",
+                  "5": "M",
+                  "6": "J",
+                  "7": "J",
+                  "8": "A",
                   "9": "S",
                   "10": "O",
                   "11": "N",
@@ -97,31 +97,31 @@
             "days": {
               "format": {
                 "abbreviated": {
-                  "sun": "dom.",
-                  "mon": "lun.",
-                  "tue": "mar.",
-                  "wed": "miér.",
-                  "thu": "jue.",
-                  "fri": "vier.",
+                  "sun": "dom",
+                  "mon": "lun",
+                  "tue": "mar",
+                  "wed": "mié",
+                  "thu": "jue",
+                  "fri": "vie",
                   "sat": "sáb"
                 },
                 "narrow": {
                   "sun": "D",
                   "mon": "L",
                   "tue": "M",
-                  "wed": "X",
+                  "wed": "M",
                   "thu": "J",
                   "fri": "V",
                   "sat": "S"
                 },
                 "short": {
-                  "sun": "do.",
-                  "mon": "lu.",
-                  "tue": "ma.",
-                  "wed": "mi.",
-                  "thu": "ju.",
-                  "fri": "vi.",
-                  "sat": "sá."
+                  "sun": "do",
+                  "mon": "lu",
+                  "tue": "ma",
+                  "wed": "mi",
+                  "thu": "ju",
+                  "fri": "vi",
+                  "sat": "sá"
                 },
                 "wide": {
                   "sun": "domingo",
@@ -135,31 +135,31 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "sun": "dom.",
+                  "sun": "dom",
                   "mon": "lun",
-                  "tue": "mar.",
-                  "wed": "mié.",
-                  "thu": "jue.",
+                  "tue": "mar",
+                  "wed": "mié",
+                  "thu": "jue",
                   "fri": "vie",
-                  "sat": "sáb."
+                  "sat": "sáb"
                 },
                 "narrow": {
-                  "sun": "D",
-                  "mon": "L",
-                  "tue": "M",
-                  "wed": "X",
-                  "thu": "J",
-                  "fri": "V",
-                  "sat": "S"
+                  "sun": "d",
+                  "mon": "l",
+                  "tue": "m",
+                  "wed": "m",
+                  "thu": "j",
+                  "fri": "v",
+                  "sat": "s"
                 },
                 "short": {
-                  "sun": "do.",
-                  "mon": "lu.",
-                  "tue": "ma.",
-                  "wed": "mi.",
-                  "thu": "ju.",
-                  "fri": "vi.",
-                  "sat": "sá."
+                  "sun": "do",
+                  "mon": "lu",
+                  "tue": "ma",
+                  "wed": "mi",
+                  "thu": "ju",
+                  "fri": "vi",
+                  "sat": "sá"
                 },
                 "wide": {
                   "sun": "domingo",
@@ -205,7 +205,7 @@
             "eras": {
               "eraNames": {
                 "0": "antes de Cristo",
-                "1": "anno Dómini"
+                "1": "Anno Domini"
               },
               "eraAbbr": {
                 "0": "a.C.",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E H:mm",
                 "EHms": "E H:mm:ss",
                 "Ed": "E d",
@@ -229,8 +230,8 @@
                 "GyMMMEd": "E, d 'de' MMMM 'de' y G",
                 "GyMMMd": "d MMM y G",
                 "H": "HH",
-                "Hm": "HH:mm",
-                "Hms": "HH:mm:ss",
+                "Hm": "H:mm",
+                "Hms": "H:mm:ss",
                 "M": "L",
                 "MEd": "E, d/M",
                 "MMM": "LLL",
@@ -242,9 +243,9 @@
                 "MMdd": "dd/MM",
                 "Md": "d/M",
                 "d": "d",
-                "h": "hh a",
-                "hm": "hh:mm a",
-                "hms": "hh:mm:ss a",
+                "h": "h a",
+                "hm": "h:mm a",
+                "hms": "h:mm:ss a",
                 "ms": "mm:ss",
                 "y": "y",
                 "yM": "M/y",

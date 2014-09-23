@@ -179,8 +179,8 @@
                   "pm": "오후"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "오전",
+                  "pm": "오후"
                 },
                 "wide": {
                   "am": "오전",
@@ -193,8 +193,8 @@
                   "pm": "오후"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "오전",
+                  "pm": "오후"
                 },
                 "wide": {
                   "am": "오전",
@@ -204,8 +204,8 @@
             },
             "eras": {
               "eraNames": {
-                "0": "서력기원전",
-                "1": "서력기원"
+                "0": "기원전",
+                "1": "서기"
               },
               "eraAbbr": {
                 "0": "기원전",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EEEEd": "d일 EEEE",
                 "EHm": "(E) HH:mm",
                 "EHms": "(E) HH:mm:ss",

@@ -219,12 +219,13 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EEEEd": "d日EEEE",
-                "EHm": "HH 時 mm 分 (E)",
-                "EHms": "HH 時 mm 分 ss 秒 (E)",
+                "EHm": "H:mm (E)",
+                "EHms": "H:mm:ss (E)",
                 "Ed": "d日(E)",
-                "Ehm": "a K 時 mm 分 (E)",
-                "Ehms": "a K 時 mm 分 ss 秒 (E)",
+                "Ehm": "aK:mm (E)",
+                "Ehms": "aK:mm:ss (E)",
                 "Gy": "Gy年",
                 "GyMMM": "Gy年M月",
                 "GyMMMEEEEd": "Gy年M月d日EEEE",

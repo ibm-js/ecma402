@@ -128,7 +128,7 @@
             "symbol": "COP"
           },
           "CRC": {
-            "displayName": "Costaricaanse colón",
+            "displayName": "Costa Ricaanse colon",
             "symbol": "CRC"
           },
           "CUC": {
@@ -308,7 +308,7 @@
             "symbol": "KYD"
           },
           "KZT": {
-            "displayName": "Kazachstaanse tenge",
+            "displayName": "Kazachse tenge",
             "symbol": "KZT"
           },
           "LAK": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Litouwse litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Letse lats",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Libische dinar",
@@ -432,7 +428,7 @@
             "symbol": "PEN"
           },
           "PGK": {
-            "displayName": "Papuaanse kina",
+            "displayName": "Papoea-Nieuw-Guinese kina",
             "symbol": "PGK"
           },
           "PHP": {
@@ -532,7 +528,7 @@
             "symbol": "฿"
           },
           "TJS": {
-            "displayName": "Tadzjikistaanse somoni",
+            "displayName": "Tadzjiekse somoni",
             "symbol": "TJS"
           },
           "TMT": {
@@ -580,7 +576,7 @@
             "symbol": "UYU"
           },
           "UZS": {
-            "displayName": "Oezbekistaanse sum",
+            "displayName": "Oezbeekse sum",
             "symbol": "UZS"
           },
           "VEF": {
@@ -616,7 +612,7 @@
             "symbol": "XPF"
           },
           "XXX": {
-            "displayName": "Onbekende munteenheid"
+            "displayName": "onbekende munteenheid"
           },
           "YER": {
             "displayName": "Jemenitische rial",

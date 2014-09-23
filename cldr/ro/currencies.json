@@ -12,7 +12,7 @@
             "symbol": "AFN"
           },
           "ALL": {
-            "displayName": "leka albanez",
+            "displayName": "leka albaneză",
             "symbol": "ALL"
           },
           "AMD": {
@@ -36,7 +36,7 @@
             "symbol": "AUD"
           },
           "AWG": {
-            "displayName": "florin din Aruba",
+            "displayName": "florin aruban",
             "symbol": "AWG"
           },
           "AZN": {
@@ -44,7 +44,7 @@
             "symbol": "AZN"
           },
           "BAM": {
-            "displayName": "marcă convertibilă bosniacă",
+            "displayName": "marcă convertibilă din Bosnia și Herțegovina",
             "symbol": "BAM"
           },
           "BBD": {
@@ -120,7 +120,7 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "yuan renminbi chinezesc",
+            "displayName": "yuan chinezesc",
             "symbol": "CNY"
           },
           "COP": {
@@ -128,7 +128,7 @@
             "symbol": "COP"
           },
           "CRC": {
-            "displayName": "colón costarican",
+            "displayName": "colon costarican",
             "symbol": "CRC"
           },
           "CUC": {
@@ -177,7 +177,7 @@
           },
           "EUR": {
             "displayName": "euro",
-            "symbol": "€"
+            "symbol": "EUR"
           },
           "FJD": {
             "displayName": "dolar fijian",
@@ -312,7 +312,7 @@
             "symbol": "KZT"
           },
           "LAK": {
-            "displayName": "kip din Laos",
+            "displayName": "kip laoțian",
             "symbol": "LAK"
           },
           "LBP": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "litu lituanian",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "lats Letonia",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "dinar libian",
@@ -356,7 +352,7 @@
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "kyat Myanmar",
+            "displayName": "kyat din Myanmar",
             "symbol": "MMK"
           },
           "MNT": {
@@ -476,7 +472,7 @@
             "symbol": "SAR"
           },
           "SBD": {
-            "displayName": "dolar Insulele Solomon",
+            "displayName": "dolar din Insulele Solomon",
             "symbol": "SBD"
           },
           "SCR": {
@@ -500,7 +496,7 @@
             "symbol": "SHP"
           },
           "SLL": {
-            "displayName": "leone Sierra Leone",
+            "displayName": "leone din Sierra Leone",
             "symbol": "SLL"
           },
           "SOS": {
@@ -600,11 +596,11 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "franc Comunitatea Financiară",
+            "displayName": "franc CFA BEAC",
             "symbol": "FCFA"
           },
           "XCD": {
-            "displayName": "dolar Caraibele de Est",
+            "displayName": "dolar din Caraibele de Est",
             "symbol": "XCD"
           },
           "XOF": {

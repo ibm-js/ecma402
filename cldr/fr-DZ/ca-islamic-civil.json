@@ -135,13 +135,13 @@
               },
               "stand-alone": {
                 "abbreviated": {
-                  "sun": "dim.",
-                  "mon": "lun.",
-                  "tue": "mar.",
-                  "wed": "mer.",
-                  "thu": "jeu.",
-                  "fri": "ven.",
-                  "sat": "sam."
+                  "sun": "Dim.",
+                  "mon": "Lun.",
+                  "tue": "Mar.",
+                  "wed": "Mer.",
+                  "thu": "Jeu.",
+                  "fri": "Ven.",
+                  "sat": "Sam."
                 },
                 "narrow": {
                   "sun": "D",
@@ -153,22 +153,22 @@
                   "sat": "S"
                 },
                 "short": {
-                  "sun": "dim.",
-                  "mon": "lun.",
-                  "tue": "mar.",
-                  "wed": "mer.",
-                  "thu": "jeu.",
-                  "fri": "ven.",
-                  "sat": "sam."
+                  "sun": "Di",
+                  "mon": "Lu",
+                  "tue": "Ma",
+                  "wed": "Me",
+                  "thu": "Je",
+                  "fri": "Ve",
+                  "sat": "Sa"
                 },
                 "wide": {
-                  "sun": "dimanche",
-                  "mon": "lundi",
-                  "tue": "mardi",
-                  "wed": "mercredi",
-                  "thu": "jeudi",
-                  "fri": "vendredi",
-                  "sat": "samedi"
+                  "sun": "Dimanche",
+                  "mon": "Lundi",
+                  "tue": "Mardi",
+                  "wed": "Mercredi",
+                  "thu": "Jeudi",
+                  "fri": "Vendredi",
+                  "sat": "Samedi"
                 }
               }
             },
@@ -179,7 +179,7 @@
                   "pm": "PM"
                 },
                 "narrow": {
-                  "am": "a",
+                  "am": "AM",
                   "pm": "p"
                 },
                 "wide": {
@@ -193,7 +193,7 @@
                   "pm": "PM"
                 },
                 "narrow": {
-                  "am": "a",
+                  "am": "AM",
                   "pm": "p"
                 },
                 "wide": {
@@ -216,6 +216,7 @@
             "dateTimeFormats": {
               "full": "{1} 'à' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "E d",

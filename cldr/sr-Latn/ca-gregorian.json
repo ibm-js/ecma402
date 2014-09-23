@@ -176,7 +176,7 @@
               "format": {
                 "abbreviated": {
                   "am": "pre podne",
-                  "pm": "popodne"
+                  "pm": "po podne"
                 },
                 "narrow": {
                   "am": "a",
@@ -184,13 +184,13 @@
                 },
                 "wide": {
                   "am": "pre podne",
-                  "pm": "popodne"
+                  "pm": "po podne"
                 }
               },
               "stand-alone": {
                 "abbreviated": {
                   "am": "pre podne",
-                  "pm": "popodne"
+                  "pm": "po podne"
                 },
                 "narrow": {
                   "am": "a",
@@ -198,7 +198,7 @@
                 },
                 "wide": {
                   "am": "pre podne",
-                  "pm": "popodne"
+                  "pm": "po podne"
                 }
               }
             },
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "E",
                 "EHm": "E, HH:mm",
                 "EHms": "E, HH:mm:ss",
                 "Ed": "E d.",

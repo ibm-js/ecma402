@@ -64,11 +64,11 @@
             "symbol": "BHD"
           },
           "BIF": {
-            "displayName": "برونڈیئن فرینک",
+            "displayName": "برونڈیئن فرانک",
             "symbol": "BIF"
           },
           "BMD": {
-            "displayName": "برمودا کا ڈالر",
+            "displayName": "برموڈا ڈالر",
             "symbol": "BMD"
           },
           "BND": {
@@ -108,7 +108,7 @@
             "symbol": "CA$"
           },
           "CDF": {
-            "displayName": "کانگولیز فرینک",
+            "displayName": "کانگولیز فرانک",
             "symbol": "CDF"
           },
           "CHF": {
@@ -148,7 +148,7 @@
             "symbol": "CZK"
           },
           "DJF": {
-            "displayName": "جبوتی کا فرینک",
+            "displayName": "جبوتی فرانک",
             "symbol": "DJF"
           },
           "DKK": {
@@ -164,7 +164,7 @@
             "symbol": "DZD"
           },
           "EGP": {
-            "displayName": "مصری پائونڈ",
+            "displayName": "مصری پاؤنڈ",
             "symbol": "EGP"
           },
           "ERN": {
@@ -208,7 +208,7 @@
             "symbol": "GMD"
           },
           "GNF": {
-            "displayName": "گنی کا فرینک",
+            "displayName": "گنی فرانک",
             "symbol": "GNF"
           },
           "GTQ": {
@@ -248,7 +248,7 @@
             "symbol": "₪"
           },
           "INR": {
-            "displayName": "انڈین روپیہ",
+            "displayName": "بھارتی روپیہ",
             "symbol": "₹"
           },
           "IQD": {
@@ -260,7 +260,7 @@
             "symbol": "IRR"
           },
           "ISK": {
-            "displayName": "آئس لینڈ کا کرونا",
+            "displayName": "آئس لينڈی کرونا",
             "symbol": "ISK"
           },
           "JMD": {
@@ -288,7 +288,7 @@
             "symbol": "KHR"
           },
           "KMF": {
-            "displayName": "کوموریئن فرینک",
+            "displayName": "کوموریئن فرانک",
             "symbol": "KMF"
           },
           "KPW": {
@@ -316,7 +316,7 @@
             "symbol": "LAK"
           },
           "LBP": {
-            "displayName": "لبانی پونڈ",
+            "displayName": "لبنانی پونڈ",
             "symbol": "LBP"
           },
           "LKR": {
@@ -331,10 +331,6 @@
             "displayName": "لیتھوینیائی لیٹاس",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "لاتویائی لیٹس",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "لیبیائی دینار",
             "symbol": "LYD"
@@ -344,7 +340,7 @@
             "symbol": "MAD"
           },
           "MDL": {
-            "displayName": "مالدیپ کا لیو",
+            "displayName": "مالدووی لیو",
             "symbol": "MDL"
           },
           "MGA": {
@@ -444,7 +440,7 @@
             "symbol": "Rs"
           },
           "PLN": {
-            "displayName": "پولش نیو زلوٹی",
+            "displayName": "پولش زلوٹی",
             "symbol": "PLN"
           },
           "PYG": {
@@ -468,7 +464,7 @@
             "symbol": "RUB"
           },
           "RWF": {
-            "displayName": "روانڈا کا فرینک",
+            "displayName": "روانڈا کا فرانک",
             "symbol": "RWF"
           },
           "SAR": {
@@ -484,7 +480,7 @@
             "symbol": "SCR"
           },
           "SDG": {
-            "displayName": "سوڈانی پونڈ",
+            "displayName": "سوڈانی پاؤنڈ",
             "symbol": "SDG"
           },
           "SEK": {
@@ -496,7 +492,7 @@
             "symbol": "SGD"
           },
           "SHP": {
-            "displayName": "سینٹ ہیلینا پونڈ",
+            "displayName": "سینٹ ہیلینا پاؤنڈ",
             "symbol": "SHP"
           },
           "SLL": {

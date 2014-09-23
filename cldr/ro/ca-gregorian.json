@@ -79,18 +79,18 @@
                   "12": "D"
                 },
                 "wide": {
-                  "1": "ianuarie",
-                  "2": "februarie",
-                  "3": "martie",
-                  "4": "aprilie",
-                  "5": "mai",
-                  "6": "iunie",
-                  "7": "iulie",
-                  "8": "august",
-                  "9": "septembrie",
-                  "10": "octombrie",
-                  "11": "noiembrie",
-                  "12": "decembrie"
+                  "1": "Ianuarie",
+                  "2": "Februarie",
+                  "3": "Martie",
+                  "4": "Aprilie",
+                  "5": "Mai",
+                  "6": "Iunie",
+                  "7": "Iulie",
+                  "8": "August",
+                  "9": "Septembrie",
+                  "10": "Octombrie",
+                  "11": "Noiembrie",
+                  "12": "Decembrie"
                 }
               }
             },
@@ -162,13 +162,13 @@
                   "sat": "Sâ"
                 },
                 "wide": {
-                  "sun": "duminică",
-                  "mon": "luni",
-                  "tue": "marți",
-                  "wed": "miercuri",
-                  "thu": "joi",
-                  "fri": "vineri",
-                  "sat": "sâmbătă"
+                  "sun": "Duminică",
+                  "mon": "Luni",
+                  "tue": "Marți",
+                  "wed": "Miercuri",
+                  "thu": "Joi",
+                  "fri": "Vineri",
+                  "sat": "Sâmbătă"
                 }
               }
             },
@@ -179,8 +179,8 @@
                   "pm": "p.m."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 },
                 "wide": {
                   "am": "a.m.",
@@ -193,8 +193,8 @@
                   "pm": "p.m."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "a.m.",
+                  "pm": "p.m."
                 },
                 "wide": {
                   "am": "a.m.",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1}, {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "E d",

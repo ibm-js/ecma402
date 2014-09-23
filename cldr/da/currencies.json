@@ -153,7 +153,7 @@
           },
           "DKK": {
             "displayName": "Dansk krone",
-            "symbol": "kr"
+            "symbol": "kr."
           },
           "DOP": {
             "displayName": "Dominikansk peso",
@@ -240,7 +240,7 @@
             "symbol": "HUF"
           },
           "IDR": {
-            "displayName": "Indonesisk pupiah",
+            "displayName": "Indonesisk rupiah",
             "symbol": "IDR"
           },
           "ILS": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Litauisk litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Lettisk lat",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Libysk dinar",

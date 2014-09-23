@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "EHH:mm",
                 "EHms": "EHH:mm:ss",
                 "Ed": "d日E",
@@ -245,7 +246,7 @@
                 "hms": "ah:mm:ss",
                 "ms": "mm:ss",
                 "y": "y年",
-                "yM": "y/M",
+                "yM": "y年M月",
                 "yMEd": "y/M/dE",
                 "yMM": "y年M月",
                 "yMMM": "y年M月",

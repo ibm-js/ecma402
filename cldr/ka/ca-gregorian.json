@@ -179,12 +179,12 @@
                   "pm": "PM"
                 },
                 "narrow": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a",
+                  "pm": "p"
                 },
                 "wide": {
-                  "am": "დილის",
-                  "pm": "საღამოს"
+                  "am": "AM",
+                  "pm": "PM"
                 }
               },
               "stand-alone": {
@@ -193,12 +193,12 @@
                   "pm": "PM"
                 },
                 "narrow": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "a",
+                  "pm": "p"
                 },
                 "wide": {
-                  "am": "დილის",
-                  "pm": "საღამოს"
+                  "am": "AM",
+                  "pm": "PM"
                 }
               }
             },
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d E",

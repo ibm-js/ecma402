@@ -175,71 +175,72 @@
             "dayPeriods": {
               "format": {
                 "abbreviated": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "dopoludnia",
+                  "pm": "odpoludnia"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "dop.",
+                  "pm": "odp."
                 },
                 "wide": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "dopoludnia",
+                  "pm": "odpoludnia"
                 }
               },
               "stand-alone": {
                 "abbreviated": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "dopoludnia",
+                  "pm": "odpoludnia"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "dop.",
+                  "pm": "odp."
                 },
                 "wide": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "dopoludnia",
+                  "pm": "odpoludnia"
                 }
               }
             },
             "eras": {
               "eraNames": {
-                "0": "pred n.l.",
-                "1": "n.l."
+                "0": "pred Kristom",
+                "1": "po Kristovi"
               },
               "eraAbbr": {
-                "0": "pred n.l.",
-                "1": "n.l."
+                "0": "pred Kr.",
+                "1": "po Kr."
               },
               "eraNarrow": {
-                "0": "pred n.l.",
-                "1": "n.l."
+                "0": "pred Kr.",
+                "1": "po Kr."
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1}, {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "E d.",
-                "Ehm": "E h:mm",
-                "Ehms": "E h:mm:ss",
+                "Ehm": "E h:mm a",
+                "Ehms": "E h:mm:ss a",
                 "Gy": "y G",
-                "GyMMM": "LLL y G",
-                "GyMMMEd": "E, d. MMM y G",
+                "GyMMM": "LLLL y G",
+                "GyMMMEd": "E, d. MMMM y G",
                 "GyMMMMd": "d. MMMM y G",
-                "GyMMMd": "d.M.y G",
+                "GyMMMd": "d. M. y G",
                 "H": "H",
                 "Hm": "H:mm",
                 "Hms": "H:mm:ss",
                 "M": "L.",
-                "MEd": "E, d.M.",
+                "MEd": "E, d. M.",
                 "MMM": "LLL",
-                "MMMEd": "E, d. MMM.",
+                "MMMEd": "E, d. M.",
                 "MMMMEd": "E, d. MMMM",
                 "MMMMd": "d. MMMM",
-                "MMMd": "d. MMM.",
-                "Md": "d.M.",
+                "MMMd": "d. M",
+                "Md": "d. M.",
                 "d": "d.",
                 "h": "h a",
                 "hm": "h:mm a",
@@ -247,14 +248,14 @@
                 "mmss": "mm:ss",
                 "ms": "mm:ss",
                 "y": "y",
-                "yM": "M.y",
+                "yM": "M/y",
                 "yMEd": "E d. M. y",
-                "yMMM": "LLL y",
-                "yMMMEd": "E, d. MMM y",
+                "yMMM": "LLLL y",
+                "yMMMEd": "E d. M. y",
                 "yMMMM": "LLLL y",
                 "yMMMMd": "d. MMMM y",
-                "yMMMd": "d.M.y",
-                "yMd": "d.M.y",
+                "yMMMd": "d. M. y",
+                "yMd": "d. M. y",
                 "yQQQ": "QQQ y",
                 "yQQQQ": "QQQQ y"
               }

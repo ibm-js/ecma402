@@ -177,7 +177,7 @@
           },
           "EUR": {
             "displayName": "Euras",
-            "symbol": "€"
+            "symbol": "EUR"
           },
           "FJD": {
             "displayName": "Fidžio doleris",
@@ -329,11 +329,7 @@
           },
           "LTL": {
             "displayName": "Lietuvos litas",
-            "symbol": "Lt"
-          },
-          "LVL": {
-            "displayName": "Latvijos latas",
-            "symbol": "LVL"
+            "symbol": "LTL"
           },
           "LYD": {
             "displayName": "Libijos dinaras",

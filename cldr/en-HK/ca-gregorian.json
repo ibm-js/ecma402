@@ -217,11 +217,12 @@
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1} 'at' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
-                "Ed": "E d",
+                "Ed": "d E",
                 "Ehm": "E h:mm a",
                 "Ehms": "E h:mm:ss a",
                 "Gy": "y G",
@@ -231,7 +232,7 @@
                 "H": "HH",
                 "Hm": "HH:mm",
                 "Hms": "HH:mm:ss",
-                "M": "LL",
+                "M": "L",
                 "MEd": "E dd/MM",
                 "MMM": "LLL",
                 "MMMEd": "E, d MMM",
@@ -249,9 +250,9 @@
                 "yM": "MM/y",
                 "yMEd": "E, dd/MM/y",
                 "yMMM": "MMM y",
-                "yMMMEd": "E, d MMM, y",
+                "yMMMEd": "E, d MMM y",
                 "yMMMM": "MMMM y",
-                "yMMMd": "d MMM, y",
+                "yMMMd": "d MMM y",
                 "yMd": "d/M/y",
                 "yQQQ": "QQQ y",
                 "yQQQQ": "QQQQ y"

@@ -85,7 +85,7 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 					timeZone : "UTC"
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Do., 4. März 1965 17:59:30"
+				"expected" : "Do., 4. März 1965 um 17:59:30"
 			}, {
 				"locales" : "en-US",
 				"options" : {

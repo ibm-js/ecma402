@@ -105,7 +105,7 @@
           },
           "CAD": {
             "displayName": "Dolar Kanada",
-            "symbol": "CA$"
+            "symbol": "CAD"
           },
           "CDF": {
             "displayName": "Franc Congo",
@@ -331,10 +331,6 @@
             "displayName": "Litas Lithuania",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Lats Latvia",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Dinar Libya",
             "symbol": "LYD"
@@ -385,7 +381,7 @@
           },
           "MXN": {
             "displayName": "Peso Mexico",
-            "symbol": "MX$"
+            "symbol": "MXN"
           },
           "MYR": {
             "displayName": "Ringgit Malaysia",
@@ -573,7 +569,7 @@
           },
           "USD": {
             "displayName": "Dolar AS",
-            "symbol": "US$"
+            "symbol": "USD"
           },
           "UYU": {
             "displayName": "UYU",

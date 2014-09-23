@@ -65,18 +65,18 @@
                   "12": "Diċ"
                 },
                 "narrow": {
-                  "1": "J",
-                  "2": "F",
-                  "3": "M",
-                  "4": "A",
-                  "5": "M",
-                  "6": "Ġ",
-                  "7": "L",
-                  "8": "A",
-                  "9": "S",
-                  "10": "O",
-                  "11": "N",
-                  "12": "D"
+                  "1": "Jn",
+                  "2": "Fr",
+                  "3": "Mz",
+                  "4": "Ap",
+                  "5": "Mj",
+                  "6": "Ġn",
+                  "7": "Lj",
+                  "8": "Aw",
+                  "9": "St",
+                  "10": "Ob",
+                  "11": "Nv",
+                  "12": "Dċ"
                 },
                 "wide": {
                   "1": "Jannar",
@@ -144,13 +144,13 @@
                   "sat": "Sib"
                 },
                 "narrow": {
-                  "sun": "Ħ",
-                  "mon": "T",
-                  "tue": "T",
-                  "wed": "E",
-                  "thu": "Ħ",
-                  "fri": "Ġ",
-                  "sat": "S"
+                  "sun": "Ħd",
+                  "mon": "Tn",
+                  "tue": "Tl",
+                  "wed": "Er",
+                  "thu": "Ħm",
+                  "fri": "Ġm",
+                  "sat": "Sb"
                 },
                 "short": {
                   "sun": "Ħad",
@@ -175,30 +175,30 @@
             "dayPeriods": {
               "format": {
                 "abbreviated": {
-                  "am": "QN",
-                  "pm": "WN"
+                  "am": "AM",
+                  "pm": "PM"
                 },
                 "narrow": {
                   "am": "a",
                   "pm": "p"
                 },
                 "wide": {
-                  "am": "QN",
-                  "pm": "WN"
+                  "am": "AM",
+                  "pm": "PM"
                 }
               },
               "stand-alone": {
                 "abbreviated": {
-                  "am": "QN",
-                  "pm": "WN"
+                  "am": "AM",
+                  "pm": "PM"
                 },
                 "narrow": {
                   "am": "a",
                   "pm": "p"
                 },
                 "wide": {
-                  "am": "QN",
-                  "pm": "WN"
+                  "am": "AM",
+                  "pm": "PM"
                 }
               }
             },
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d, E",

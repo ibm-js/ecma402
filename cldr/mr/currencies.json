@@ -44,7 +44,7 @@
             "symbol": "AZN"
           },
           "BAM": {
-            "displayName": "बोस्निया-हर्जेगोविना कन्व्हर्टिबल मार्क",
+            "displayName": "बोस्निया-हर्जेगोविना विनिमय मार्क",
             "symbol": "BAM"
           },
           "BBD": {
@@ -80,7 +80,7 @@
             "symbol": "BOB"
           },
           "BRL": {
-            "displayName": "ब्राझिलियन रेयाल",
+            "displayName": "ब्राझिलियन रियाल",
             "symbol": "R$"
           },
           "BSD": {
@@ -176,7 +176,7 @@
             "symbol": "ETB"
           },
           "EUR": {
-            "displayName": "यूरो",
+            "displayName": "युरो",
             "symbol": "€"
           },
           "FJD": {
@@ -260,7 +260,7 @@
             "symbol": "IRR"
           },
           "ISK": {
-            "displayName": "आइसलँडिक क्रोन",
+            "displayName": "आइसलँडिक क्रोना",
             "symbol": "ISK"
           },
           "JMD": {
@@ -328,12 +328,8 @@
             "symbol": "LRD"
           },
           "LTL": {
-            "displayName": "लिथुआनियन लिटाज्",
+            "displayName": "लिथुआनियन लिटास",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "लाट्व्हियन लाट्झ",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "लिबियाचा दिनार",
@@ -352,11 +348,11 @@
             "symbol": "MGA"
           },
           "MKD": {
-            "displayName": "मॅसेडोनियन दिनार",
+            "displayName": "मॅसेडोनियन देनार",
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "म्यानमा क्याट",
+            "displayName": "म्यानमार क्याट",
             "symbol": "MMK"
           },
           "MNT": {
@@ -476,7 +472,7 @@
             "symbol": "SAR"
           },
           "SBD": {
-            "displayName": "सोलोमन आयलँड्स",
+            "displayName": "सोलोमन आयलँड्स डॉलर",
             "symbol": "SBD"
           },
           "SCR": {
@@ -488,7 +484,7 @@
             "symbol": "SDG"
           },
           "SEK": {
-            "displayName": "स्वीडिश क्रोन",
+            "displayName": "स्वीडिश क्रोना",
             "symbol": "SEK"
           },
           "SGD": {
@@ -540,7 +536,7 @@
             "symbol": "TMT"
           },
           "TND": {
-            "displayName": "ट्यूनिसियन दिनार",
+            "displayName": "ट्यूनिशियन दिनार",
             "symbol": "TND"
           },
           "TOP": {
@@ -564,7 +560,7 @@
             "symbol": "TZS"
           },
           "UAH": {
-            "displayName": "यूक्रेनियन हरिन्या",
+            "displayName": "युक्रेनियन रिवनिया",
             "symbol": "UAH"
           },
           "UGX": {
@@ -612,7 +608,7 @@
             "symbol": "CFA"
           },
           "XPF": {
-            "displayName": "सीएफपी फ्रँक",
+            "displayName": "[CFP] फ्रँक",
             "symbol": "CFPF"
           },
           "XXX": {

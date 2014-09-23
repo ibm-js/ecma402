@@ -33,7 +33,7 @@
           },
           "AUD": {
             "displayName": "Ástralskur dalur",
-            "symbol": "A$"
+            "symbol": "AUD"
           },
           "AWG": {
             "displayName": "Arúbönsk flórína",
@@ -81,7 +81,7 @@
           },
           "BRL": {
             "displayName": "Brasilískt ríal",
-            "symbol": "R$"
+            "symbol": "BRL"
           },
           "BSD": {
             "displayName": "Bahamadalur",
@@ -177,7 +177,7 @@
           },
           "EUR": {
             "displayName": "Evra",
-            "symbol": "€"
+            "symbol": "EUR"
           },
           "FJD": {
             "displayName": "Fídjeyskur dalur",
@@ -189,7 +189,7 @@
           },
           "GBP": {
             "displayName": "Sterlingspund",
-            "symbol": "£"
+            "symbol": "GBP"
           },
           "GEL": {
             "displayName": "Georgískur lari",
@@ -249,7 +249,7 @@
           },
           "INR": {
             "displayName": "Indversk rúpía",
-            "symbol": "₹"
+            "symbol": "INR"
           },
           "IQD": {
             "displayName": "Írakskur denari",
@@ -261,7 +261,7 @@
           },
           "ISK": {
             "displayName": "Íslensk króna",
-            "symbol": "kr"
+            "symbol": "ISK"
           },
           "JMD": {
             "displayName": "Jamaískur dalur",
@@ -297,7 +297,7 @@
           },
           "KRW": {
             "displayName": "Suðurkóreskt vonn",
-            "symbol": "₩"
+            "symbol": "KRW"
           },
           "KWD": {
             "displayName": "Kúveiskur denari",
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Litháískt lít",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Lettneskt lat",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Líbískur denari",
@@ -417,7 +413,7 @@
           },
           "NZD": {
             "displayName": "Nýsjálenskur dalur",
-            "symbol": "NZ$"
+            "symbol": "NZD"
           },
           "OMR": {
             "displayName": "Ómanskt ríal",
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "Taílenskt bat",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "Tadsjikskur sómóni",
@@ -557,7 +553,7 @@
           },
           "TWD": {
             "displayName": "Taívanskur dalur",
-            "symbol": "NT$"
+            "symbol": "TWD"
           },
           "TZS": {
             "displayName": "Tansanískur skildingur",
@@ -589,7 +585,7 @@
           },
           "VND": {
             "displayName": "Víetnamskt dong",
-            "symbol": "₫"
+            "symbol": "VND"
           },
           "VUV": {
             "displayName": "Vanúatúskt vatú",

@@ -192,7 +192,7 @@
             "symbol": "£"
           },
           "GEL": {
-            "displayName": "जर्जियन लारी",
+            "displayName": "जर्जियाली लारी",
             "symbol": "GEL"
           },
           "GHS": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "लिथुनियाली लिटास",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "लाट्भियाली लाट्स",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "लिवियाली डिनार",
@@ -572,11 +568,11 @@
             "symbol": "UGX"
           },
           "USD": {
-            "displayName": "संयुक्त राज्य डलर",
+            "displayName": "अमेरिकी डलर",
             "symbol": "US$"
           },
           "UYU": {
-            "displayName": "उरूग्वेयन पेसो",
+            "displayName": "उरूगुवायाली पेसो",
             "symbol": "UYU"
           },
           "UZS": {
@@ -616,7 +612,7 @@
             "symbol": "CFPF"
           },
           "XXX": {
-            "displayName": "अपरिचित मुद्रा"
+            "displayName": "अज्ञात मुद्रा"
           },
           "YER": {
             "displayName": "येमेनी रियाल",

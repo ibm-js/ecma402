@@ -219,9 +219,10 @@
             "dateTimeFormats": {
               "full": "{1} 'kl.' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH.mm",
                 "EHms": "E HH.mm.ss",
-                "Ed": "E 'd'. d.",
+                "Ed": "E 'den' d.",
                 "Ehm": "E h.mm a",
                 "Ehms": "E h.mm.ss a",
                 "Gy": "y G",

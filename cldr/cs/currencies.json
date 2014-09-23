@@ -20,7 +20,7 @@
             "symbol": "AMD"
           },
           "ANG": {
-            "displayName": "zlatý Nizozemských Antil",
+            "displayName": "nizozemskoantilský gulden",
             "symbol": "ANG"
           },
           "AOA": {
@@ -245,7 +245,7 @@
           },
           "ILS": {
             "displayName": "izraelský nový šekel",
-            "symbol": "₪"
+            "symbol": "ILS"
           },
           "INR": {
             "displayName": "indická rupie",
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "litevský litas",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "lotyšský lat",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "libyjský dinár",

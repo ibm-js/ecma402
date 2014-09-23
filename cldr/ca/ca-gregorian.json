@@ -8,7 +8,7 @@
               "format": {
                 "abbreviated": {
                   "1": "gen.",
-                  "2": "feb.",
+                  "2": "febr.",
                   "3": "març",
                   "4": "abr.",
                   "5": "maig",
@@ -52,7 +52,7 @@
               "stand-alone": {
                 "abbreviated": {
                   "1": "gen.",
-                  "2": "feb.",
+                  "2": "febr.",
                   "3": "març",
                   "4": "abr.",
                   "5": "maig",
@@ -155,7 +155,7 @@
                 "short": {
                   "sun": "dg.",
                   "mon": "dl.",
-                  "tue": "dm.",
+                  "tue": "dt.",
                   "wed": "dc.",
                   "thu": "dj.",
                   "fri": "dv.",
@@ -217,8 +217,9 @@
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1} 'a les' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E H:mm",
                 "EHms": "E H:mm:ss",
                 "Ed": "E d",
@@ -248,7 +249,7 @@
                 "y": "y",
                 "yM": "M/y",
                 "yMEd": "E, d/M/y",
-                "yMMM": "LLL y",
+                "yMMM": "LLL 'de' y",
                 "yMMMEd": "E, d MMM, y",
                 "yMMMM": "LLLL 'de' y",
                 "yMMMd": "d MMM y",

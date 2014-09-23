@@ -179,8 +179,8 @@
                   "pm": "ល្ងាច"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "ព្រឹក",
+                  "pm": "ល្ងាច"
                 },
                 "wide": {
                   "am": "ព្រឹក",
@@ -193,8 +193,8 @@
                   "pm": "ល្ងាច"
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "ព្រឹក",
+                  "pm": "ល្ងាច"
                 },
                 "wide": {
                   "am": "ព្រឹក",
@@ -217,8 +217,9 @@
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1} នៅ {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d E",

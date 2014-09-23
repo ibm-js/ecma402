@@ -9,7 +9,7 @@
           },
           "AFN": {
             "displayName": "afgani afgano",
-            "symbol": "AFN"
+            "symbol": "Af"
           },
           "ALL": {
             "displayName": "lek albanés",
@@ -29,14 +29,14 @@
           },
           "ARS": {
             "displayName": "peso argentino",
-            "symbol": "AR$"
+            "symbol": "$a"
           },
           "AUD": {
             "displayName": "dólar australiano",
             "symbol": "AU$"
           },
           "AWG": {
-            "displayName": "florín de Aruba",
+            "displayName": "florín arubeño",
             "symbol": "Afl."
           },
           "AZN": {
@@ -48,7 +48,7 @@
             "symbol": "BAM"
           },
           "BBD": {
-            "displayName": "dólar de Barbados",
+            "displayName": "dólar barbadense",
             "symbol": "BBD"
           },
           "BDT": {
@@ -64,7 +64,7 @@
             "symbol": "BHD"
           },
           "BIF": {
-            "displayName": "franco de Burundi",
+            "displayName": "franco burundés",
             "symbol": "BIF"
           },
           "BMD": {
@@ -84,7 +84,7 @@
             "symbol": "BRL"
           },
           "BSD": {
-            "displayName": "dólar de las Bahamas",
+            "displayName": "dólar bahameño",
             "symbol": "BSD"
           },
           "BTN": {
@@ -100,7 +100,7 @@
             "symbol": "BYR"
           },
           "BZD": {
-            "displayName": "dólar de Belice",
+            "displayName": "dólar beliceño",
             "symbol": "BZD"
           },
           "CAD": {
@@ -148,7 +148,7 @@
             "symbol": "CZK"
           },
           "DJF": {
-            "displayName": "franco de Yibuti",
+            "displayName": "franco yibutiano",
             "symbol": "DJF"
           },
           "DKK": {
@@ -180,11 +180,11 @@
             "symbol": "EUR"
           },
           "FJD": {
-            "displayName": "dólar de las Islas Fiyi",
+            "displayName": "dólar fiyiano",
             "symbol": "FJD"
           },
           "FKP": {
-            "displayName": "libra de las Islas Malvinas",
+            "displayName": "libra malvinense",
             "symbol": "FKP"
           },
           "GBP": {
@@ -200,7 +200,7 @@
             "symbol": "GHS"
           },
           "GIP": {
-            "displayName": "libra de Gibraltar",
+            "displayName": "libra gibraltareña",
             "symbol": "GIP"
           },
           "GMD": {
@@ -244,7 +244,7 @@
             "symbol": "IDR"
           },
           "ILS": {
-            "displayName": "nuevo sheqel israelí",
+            "displayName": "nuevo shéquel israelí",
             "symbol": "ILS"
           },
           "INR": {
@@ -264,7 +264,7 @@
             "symbol": "ISK"
           },
           "JMD": {
-            "displayName": "dólar de Jamaica",
+            "displayName": "dólar jamaiquino",
             "symbol": "JMD"
           },
           "JOD": {
@@ -276,7 +276,7 @@
             "symbol": "JPY"
           },
           "KES": {
-            "displayName": "chelín keniata",
+            "displayName": "chelín keniano",
             "symbol": "KES"
           },
           "KGS": {
@@ -308,7 +308,7 @@
             "symbol": "KYD"
           },
           "KZT": {
-            "displayName": "tenge kazako",
+            "displayName": "tenge kazajo",
             "symbol": "KZT"
           },
           "LAK": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "litas lituano",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "lats letón",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "dinar libio",
@@ -380,7 +376,7 @@
             "symbol": "MVR"
           },
           "MWK": {
-            "displayName": "kwacha de Malawi",
+            "displayName": "kwacha malauí",
             "symbol": "MWK"
           },
           "MXN": {
@@ -388,7 +384,7 @@
             "symbol": "$"
           },
           "MYR": {
-            "displayName": "ringgit malasio",
+            "displayName": "ringgit malayo",
             "symbol": "MYR"
           },
           "MZN": {
@@ -396,7 +392,7 @@
             "symbol": "MZN"
           },
           "NAD": {
-            "displayName": "dólar de Namibia",
+            "displayName": "dólar namibio",
             "symbol": "NAD"
           },
           "NGN": {
@@ -412,7 +408,7 @@
             "symbol": "NOK"
           },
           "NPR": {
-            "displayName": "rupia nepalesa",
+            "displayName": "rupia nepalí",
             "symbol": "NPR"
           },
           "NZD": {
@@ -536,7 +532,7 @@
             "symbol": "TJS"
           },
           "TMT": {
-            "displayName": "manat turcomano",
+            "displayName": "manat turkmeno",
             "symbol": "TMT"
           },
           "TND": {

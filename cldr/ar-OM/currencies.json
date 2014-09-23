@@ -241,7 +241,7 @@
           },
           "IDR": {
             "displayName": "روبية إندونيسية",
-            "symbol": "IDR"
+            "symbol": "ر.إن."
           },
           "ILS": {
             "displayName": "شيكل إسرائيلي جديد",
@@ -257,7 +257,7 @@
           },
           "IRR": {
             "displayName": "ريال إيراني",
-            "symbol": "IRR"
+            "symbol": "ر.إ."
           },
           "ISK": {
             "displayName": "كرونه أيسلندي",
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "ليتا ليتوانية",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "لاتس لاتفيا",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "دينار ليبي",
@@ -441,7 +437,7 @@
           },
           "PKR": {
             "displayName": "روبية باكستاني",
-            "symbol": "PKR"
+            "symbol": "ر.ب."
           },
           "PLN": {
             "displayName": "زلوتي بولندي",
@@ -549,7 +545,7 @@
           },
           "TRY": {
             "displayName": "ليرة تركية",
-            "symbol": "TRY"
+            "symbol": "ل.ت."
           },
           "TTD": {
             "displayName": "دولار ترينداد وتوباجو",

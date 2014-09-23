@@ -179,8 +179,8 @@
                   "pm": "பிற்பகல்"
                 },
                 "narrow": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "மு.ப",
+                  "pm": "பி.ப"
                 },
                 "wide": {
                   "am": "முற்பகல்",
@@ -193,8 +193,8 @@
                   "pm": "பிற்பகல்"
                 },
                 "narrow": {
-                  "am": "AM",
-                  "pm": "PM"
+                  "am": "மு.ப",
+                  "pm": "பி.ப"
                 },
                 "wide": {
                   "am": "முற்பகல்",
@@ -217,8 +217,9 @@
               }
             },
             "dateTimeFormats": {
-              "full": "{1} {0}",
+              "full": "{1} ’அன்று’ {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",
                 "Ed": "d E",
@@ -240,9 +241,9 @@
                 "MMdd": "dd-MM",
                 "Md": "d/M",
                 "d": "d",
-                "h": "h a",
-                "hm": "h:mm a",
-                "hms": "h:mm:ss a",
+                "h": "a h",
+                "hm": "a h:mm",
+                "hms": "a h:mm:ss",
                 "ms": "mm:ss",
                 "y": "y",
                 "yM": "M/y",

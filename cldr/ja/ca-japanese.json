@@ -921,6 +921,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EEEEd": "d日EEEE",
                 "EHm": "E HH:mm",
                 "EHms": "E HH:mm:ss",

@@ -24,7 +24,7 @@
             "symbol": "ANG"
           },
           "AOA": {
-            "displayName": "Kwanza ey'Angola",
+            "displayName": "Kwanza ey’Angola",
             "symbol": "AOA"
           },
           "ARS": {
@@ -32,7 +32,7 @@
             "symbol": "ARS"
           },
           "AUD": {
-            "displayName": "Doola ey'Awusiturelya",
+            "displayName": "Doola ey’Awusiturelya",
             "symbol": "A$"
           },
           "AWG": {
@@ -60,11 +60,11 @@
             "symbol": "BGN"
           },
           "BHD": {
-            "displayName": "Dinaali ey'eBaareeni",
+            "displayName": "Dinaali ey’eBaareeni",
             "symbol": "BHD"
           },
           "BIF": {
-            "displayName": "Faranga ey'eburundi",
+            "displayName": "Faranga ey’eburundi",
             "symbol": "BIF"
           },
           "BMD": {
@@ -92,7 +92,7 @@
             "symbol": "BTN"
           },
           "BWP": {
-            "displayName": "Pula ey'eBotiswana",
+            "displayName": "Pula ey’eBotiswana",
             "symbol": "BWP"
           },
           "BYR": {
@@ -104,15 +104,15 @@
             "symbol": "BZD"
           },
           "CAD": {
-            "displayName": "Doola ey'eKanada",
+            "displayName": "Doola ey’eKanada",
             "symbol": "CA$"
           },
           "CDF": {
-            "displayName": "Faranga ey'eKongo",
+            "displayName": "Faranga ey’eKongo",
             "symbol": "CDF"
           },
           "CHF": {
-            "displayName": "Faranga ey'eSwitizirandi",
+            "displayName": "Faranga ey’eSwitizirandi",
             "symbol": "CHF"
           },
           "CLP": {
@@ -120,7 +120,7 @@
             "symbol": "CLP"
           },
           "CNY": {
-            "displayName": "Yuwani Reniminibi ey'eCayina",
+            "displayName": "Yuwani Reniminibi ey’eCayina",
             "symbol": "CN¥"
           },
           "COP": {
@@ -140,7 +140,7 @@
             "symbol": "CUP"
           },
           "CVE": {
-            "displayName": "Esikudo ey'Keepu Veredi",
+            "displayName": "Esikudo ey’Keepu Veredi",
             "symbol": "CVE"
           },
           "CZK": {
@@ -148,7 +148,7 @@
             "symbol": "CZK"
           },
           "DJF": {
-            "displayName": "Faranga ey'eJjibuti",
+            "displayName": "Faranga ey’eJjibuti",
             "symbol": "DJF"
           },
           "DKK": {
@@ -160,19 +160,19 @@
             "symbol": "DOP"
           },
           "DZD": {
-            "displayName": "Dinaali ey'Aligerya",
+            "displayName": "Dinaali ey’Aligerya",
             "symbol": "DZD"
           },
           "EGP": {
-            "displayName": "Pawundi ey'eMisiri",
+            "displayName": "Pawundi ey’eMisiri",
             "symbol": "EGP"
           },
           "ERN": {
-            "displayName": "Nakifa ey'Eritureya",
+            "displayName": "Nakifa ey’Eritureya",
             "symbol": "ERN"
           },
           "ETB": {
-            "displayName": "Biiru ey'Esyopya",
+            "displayName": "Biiru ey’Esyopya",
             "symbol": "ETB"
           },
           "EUR": {
@@ -188,7 +188,7 @@
             "symbol": "FKP"
           },
           "GBP": {
-            "displayName": "Pawundi ey'eBungereza",
+            "displayName": "Pawundi ey’eBungereza",
             "symbol": "£"
           },
           "GEL": {
@@ -204,7 +204,7 @@
             "symbol": "GIP"
           },
           "GMD": {
-            "displayName": "Dalasi ey'eGambya",
+            "displayName": "Dalasi ey’eGambya",
             "symbol": "GMD"
           },
           "GNF": {
@@ -248,7 +248,7 @@
             "symbol": "₪"
           },
           "INR": {
-            "displayName": "Rupiya ey'eBuyindi",
+            "displayName": "Rupiya ey’eBuyindi",
             "symbol": "₹"
           },
           "IQD": {
@@ -272,11 +272,11 @@
             "symbol": "JOD"
           },
           "JPY": {
-            "displayName": "Yeni ey'eJapani",
+            "displayName": "Yeni ey’eJapani",
             "symbol": "JP¥"
           },
           "KES": {
-            "displayName": "Silingi ey'eKenya",
+            "displayName": "Silingi ey’eKenya",
             "symbol": "KES"
           },
           "KGS": {
@@ -288,7 +288,7 @@
             "symbol": "KHR"
           },
           "KMF": {
-            "displayName": "Faranga ey'eKomoro",
+            "displayName": "Faranga ey’eKomoro",
             "symbol": "KMF"
           },
           "KPW": {
@@ -324,23 +324,19 @@
             "symbol": "LKR"
           },
           "LRD": {
-            "displayName": "Doola ey'eLiberya",
+            "displayName": "Doola ey’eLiberya",
             "symbol": "LRD"
           },
           "LTL": {
             "displayName": "LTL",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "LVL",
-            "symbol": "LVL"
-          },
           "LYD": {
-            "displayName": "Dinaali ey'eLibya",
+            "displayName": "Dinaali ey’eLibya",
             "symbol": "LYD"
           },
           "MAD": {
-            "displayName": "Diraamu ey'eMoroko",
+            "displayName": "Diraamu ey’eMoroko",
             "symbol": "MAD"
           },
           "MDL": {
@@ -348,7 +344,7 @@
             "symbol": "MDL"
           },
           "MGA": {
-            "displayName": "Faranga ey'eMalagase",
+            "displayName": "Faranga ey’eMalagase",
             "symbol": "MGA"
           },
           "MKD": {
@@ -368,11 +364,11 @@
             "symbol": "MOP"
           },
           "MRO": {
-            "displayName": "Wugwiya ey'eMawritenya",
+            "displayName": "Wugwiya ey’eMawritenya",
             "symbol": "MRO"
           },
           "MUR": {
-            "displayName": "Rupiya ey'eMawurisyasi",
+            "displayName": "Rupiya ey’eMawurisyasi",
             "symbol": "MUR"
           },
           "MVR": {
@@ -380,7 +376,7 @@
             "symbol": "MVR"
           },
           "MWK": {
-            "displayName": "Kwaca ey'eMalawi",
+            "displayName": "Kwaca ey’eMalawi",
             "symbol": "MWK"
           },
           "MXN": {
@@ -396,11 +392,11 @@
             "symbol": "MZN"
           },
           "NAD": {
-            "displayName": "Doola ey'eNamibiya",
+            "displayName": "Doola ey’eNamibiya",
             "symbol": "NAD"
           },
           "NGN": {
-            "displayName": "Nayira ey'eNayijerya",
+            "displayName": "Nayira ey’eNayijerya",
             "symbol": "NGN"
           },
           "NIO": {
@@ -468,11 +464,11 @@
             "symbol": "RUB"
           },
           "RWF": {
-            "displayName": "Faranga ey'eRwanda",
+            "displayName": "Faranga ey’eRwanda",
             "symbol": "RWF"
           },
           "SAR": {
-            "displayName": "Riyaali ey'eBuwarabu",
+            "displayName": "Riyaali ey’eBuwarabu",
             "symbol": "SAR"
           },
           "SBD": {
@@ -480,11 +476,11 @@
             "symbol": "SBD"
           },
           "SCR": {
-            "displayName": "Rupiya ey'eSesere",
+            "displayName": "Rupiya ey’eSesere",
             "symbol": "SCR"
           },
           "SDG": {
-            "displayName": "Dinaali ey'eSudaani",
+            "displayName": "Dinaali ey’eSudaani",
             "symbol": "SDG"
           },
           "SEK": {
@@ -496,7 +492,7 @@
             "symbol": "SGD"
           },
           "SHP": {
-            "displayName": "Pawundi ey'eSenti Herena",
+            "displayName": "Pawundi ey’eSenti Herena",
             "symbol": "SHP"
           },
           "SLL": {
@@ -504,7 +500,7 @@
             "symbol": "SLL"
           },
           "SOS": {
-            "displayName": "Silingi ey'eSomaliya",
+            "displayName": "Silingi ey’eSomaliya",
             "symbol": "SOS"
           },
           "SRD": {
@@ -516,7 +512,7 @@
             "symbol": "SSP"
           },
           "STD": {
-            "displayName": "Dobura ey'eSantome ne Purincipe",
+            "displayName": "Dobura ey’eSantome ne Purincipe",
             "symbol": "STD"
           },
           "SYP": {
@@ -529,7 +525,7 @@
           },
           "THB": {
             "displayName": "THB",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "TJS",
@@ -540,7 +536,7 @@
             "symbol": "TMT"
           },
           "TND": {
-            "displayName": "Dinaali ey'eTunizya",
+            "displayName": "Dinaali ey’eTunizya",
             "symbol": "TND"
           },
           "TOP": {
@@ -560,7 +556,7 @@
             "symbol": "NT$"
           },
           "TZS": {
-            "displayName": "Silingi ey'eTanzaniya",
+            "displayName": "Silingi ey’eTanzaniya",
             "symbol": "TZS"
           },
           "UAH": {
@@ -572,7 +568,7 @@
             "symbol": "USh"
           },
           "USD": {
-            "displayName": "Doola ey'Amerika",
+            "displayName": "Doola ey’Amerika",
             "symbol": "US$"
           },
           "UYU": {
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "Faranga ey'omu Afirika eya wakati",
+            "displayName": "Faranga ey’omu Afirika eya wakati",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,7 +604,7 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "Faranga ey'omu Afirika ey'ebugwanjuba",
+            "displayName": "Faranga ey’omu Afirika ey’ebugwanjuba",
             "symbol": "CFA"
           },
           "XPF": {
@@ -623,11 +619,11 @@
             "symbol": "YER"
           },
           "ZAR": {
-            "displayName": "Randi ey'eSawusafirika",
+            "displayName": "Randi ey’eSawusafirika",
             "symbol": "ZAR"
           },
           "ZMW": {
-            "displayName": "Kwaca ey'eZambya",
+            "displayName": "Kwaca ey’eZambya",
             "symbol": "ZMW"
           }
         }

@@ -335,10 +335,6 @@
             "displayName": "Lithuanian Litas",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "Latvian Lats",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "Libyan Dinar",
             "symbol": "LYD"
@@ -500,7 +496,7 @@
             "symbol": "SGD"
           },
           "SHP": {
-            "displayName": "Saint Helena Pound",
+            "displayName": "St. Helena Pound",
             "symbol": "SHP"
           },
           "SLL": {
@@ -520,7 +516,7 @@
             "symbol": "SSP"
           },
           "STD": {
-            "displayName": "São Tomé and Príncipe Dobra",
+            "displayName": "São Tomé & Príncipe Dobra",
             "symbol": "STD"
           },
           "SYP": {
@@ -533,7 +529,7 @@
           },
           "THB": {
             "displayName": "Thai Baht",
-            "symbol": "฿"
+            "symbol": "THB"
           },
           "TJS": {
             "displayName": "Tajikistani Somoni",
@@ -556,7 +552,7 @@
             "symbol": "TRY"
           },
           "TTD": {
-            "displayName": "Trinidad and Tobago Dollar",
+            "displayName": "Trinidad & Tobago Dollar",
             "symbol": "$"
           },
           "TWD": {

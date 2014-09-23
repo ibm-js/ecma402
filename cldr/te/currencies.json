@@ -96,7 +96,7 @@
             "symbol": "BWP"
           },
           "BYR": {
-            "displayName": "బెలరూసియన్ రూబుల్",
+            "displayName": "బెలరూసియన్ రూబల్",
             "symbol": "BYR"
           },
           "BZD": {
@@ -132,7 +132,7 @@
             "symbol": "CRC"
           },
           "CUC": {
-            "displayName": "కుబన్ మార్పిడి చెయ్యగలిగే పెసో",
+            "displayName": "క్యూబన్ కన్వర్టబుల్ పెసో",
             "symbol": "CUC"
           },
           "CUP": {
@@ -331,10 +331,6 @@
             "displayName": "లిథోనియన్ లీటాస్",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "లాత్వియన్ లాట్స్",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "లిబియన్ దీనార్",
             "symbol": "LYD"
@@ -356,7 +352,7 @@
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "మ్యాన్మా క్యాట్",
+            "displayName": "మయన్మార్ క్యాట్",
             "symbol": "MMK"
           },
           "MNT": {
@@ -464,7 +460,7 @@
             "symbol": "RSD"
           },
           "RUB": {
-            "displayName": "రష్యా రూబల్",
+            "displayName": "రష్యన్ రూబల్",
             "symbol": "RUB"
           },
           "RWF": {

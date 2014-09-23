@@ -204,7 +204,7 @@
             },
             "eras": {
               "eraNames": {
-                "0": "SM",
+                "0": "Sebelum Masehi",
                 "1": "M"
               },
               "eraAbbr": {
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E HH.mm",
                 "EHms": "E HH.mm.ss",
                 "Ed": "E, d",

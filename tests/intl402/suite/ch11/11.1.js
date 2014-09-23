@@ -175,7 +175,7 @@ define(
 			 * @author Norbert Lindenberg
 			 */
 
-			// data from CLDR 25 common/supplemental/supplementalData.xml
+			// data from CLDR 26 common/supplemental/supplementalData.xml
 			var currencyDigits = {
 			    AED: 2,
 			    AFN: 0,
@@ -208,7 +208,7 @@ define(
 			    CHE: 2,
 			    CHF: 2,
 			    CHW: 2,
-			    CLF: 0,
+			    CLF: 4,
 			    CLP: 0,
 			    CNY: 2,
 			    COP: 0,
@@ -240,7 +240,7 @@ define(
 			    HNL: 2,
 			    HRK: 2,
 			    HTG: 2,
-			    HUF: 0,
+			    HUF: 2,
 			    IDR: 0,
 			    ILS: 2,
 			    INR: 2,

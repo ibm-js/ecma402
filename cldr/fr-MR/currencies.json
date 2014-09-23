@@ -121,7 +121,7 @@
           },
           "CNY": {
             "displayName": "yuan renminbi chinois",
-            "symbol": "¥CN"
+            "symbol": "CNY"
           },
           "COP": {
             "displayName": "peso colombien",
@@ -141,7 +141,7 @@
           },
           "CVE": {
             "displayName": "escudo capverdien",
-            "symbol": "$CV"
+            "symbol": "CVE"
           },
           "CZK": {
             "displayName": "couronne tchèque",
@@ -165,7 +165,7 @@
           },
           "EGP": {
             "displayName": "livre égyptienne",
-            "symbol": "£EG"
+            "symbol": "EGP"
           },
           "ERN": {
             "displayName": "nafka érythréen",
@@ -221,7 +221,7 @@
           },
           "HKD": {
             "displayName": "dollar de Hong Kong",
-            "symbol": "$HK"
+            "symbol": "HKD"
           },
           "HNL": {
             "displayName": "lempira hondurien",
@@ -273,7 +273,7 @@
           },
           "JPY": {
             "displayName": "yen japonais",
-            "symbol": "¥JP"
+            "symbol": "JPY"
           },
           "KES": {
             "displayName": "shilling kényan",
@@ -325,15 +325,11 @@
           },
           "LRD": {
             "displayName": "dollar libérien",
-            "symbol": "$LR"
+            "symbol": "LRD"
           },
           "LTL": {
             "displayName": "litas lituanien",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "lats letton",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "dinar libyen",
@@ -485,7 +481,7 @@
           },
           "SDG": {
             "displayName": "livre soudanaise",
-            "symbol": "£SD"
+            "symbol": "SDG"
           },
           "SEK": {
             "displayName": "couronne suédoise",
@@ -497,7 +493,7 @@
           },
           "SHP": {
             "displayName": "livre de Sainte-Hélène",
-            "symbol": "£SH"
+            "symbol": "SHP"
           },
           "SLL": {
             "displayName": "leone sierra-léonais",
@@ -513,7 +509,7 @@
           },
           "SSP": {
             "displayName": "livre sud-soudanaise",
-            "symbol": "£SS"
+            "symbol": "SSP"
           },
           "STD": {
             "displayName": "dobra santoméen",
@@ -557,7 +553,7 @@
           },
           "TWD": {
             "displayName": "nouveau dollar taïwanais",
-            "symbol": "$TW"
+            "symbol": "TWD"
           },
           "TZS": {
             "displayName": "shilling tanzanien",
@@ -605,7 +601,7 @@
           },
           "XCD": {
             "displayName": "dollar des Caraïbes orientales",
-            "symbol": "EC$"
+            "symbol": "XCD"
           },
           "XOF": {
             "displayName": "franc CFA (BCEAO)",

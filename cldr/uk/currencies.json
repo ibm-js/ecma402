@@ -33,7 +33,7 @@
           },
           "AUD": {
             "displayName": "австралійський долар",
-            "symbol": "AU$"
+            "symbol": "AUD"
           },
           "AWG": {
             "displayName": "арубський флорин",
@@ -41,7 +41,7 @@
           },
           "AZN": {
             "displayName": "азербайджанський манат",
-            "symbol": "ман."
+            "symbol": "AZN"
           },
           "BAM": {
             "displayName": "конвертована марка Боснії і Герцеговини",
@@ -177,7 +177,7 @@
           },
           "EUR": {
             "displayName": "євро",
-            "symbol": "€"
+            "symbol": "EUR"
           },
           "FJD": {
             "displayName": "фіджійський долар",
@@ -189,7 +189,7 @@
           },
           "GBP": {
             "displayName": "англійський фунт стерлінгів",
-            "symbol": "£"
+            "symbol": "GBP"
           },
           "GEL": {
             "displayName": "грузинський ларі",
@@ -331,10 +331,6 @@
             "displayName": "литовський літ",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "латвійський лат",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "лівійський динар",
             "symbol": "LYD"
@@ -461,11 +457,11 @@
           },
           "RSD": {
             "displayName": "сербський динар",
-            "symbol": "дин."
+            "symbol": "RSD"
           },
           "RUB": {
             "displayName": "російський рубль",
-            "symbol": "руб."
+            "symbol": "RUB"
           },
           "RWF": {
             "displayName": "руандійський франк",
@@ -560,7 +556,7 @@
             "symbol": "TWD"
           },
           "TZS": {
-            "displayName": "танзанійський шилінганзанійський шилінг",
+            "displayName": "танзанійський шилінг",
             "symbol": "TZS"
           },
           "UAH": {
@@ -608,7 +604,7 @@
             "symbol": "XCD"
           },
           "XOF": {
-            "displayName": "західноафриканський франк",
+            "displayName": "західноафриканський франк BCEAO",
             "symbol": "CFA"
           },
           "XPF": {

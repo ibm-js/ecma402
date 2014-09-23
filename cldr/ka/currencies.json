@@ -331,10 +331,6 @@
             "displayName": "ლიტვური ლიტა",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "ლატვიური ლატი",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "ლიბიური დინარი",
             "symbol": "LYD"
@@ -557,7 +553,7 @@
           },
           "TWD": {
             "displayName": "ტაივანური ახალი დოლარი",
-            "symbol": "TWD"
+            "symbol": "NT$"
           },
           "TZS": {
             "displayName": "ტანზანიური შილინგი",

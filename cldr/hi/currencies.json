@@ -152,7 +152,7 @@
             "symbol": "DJF"
           },
           "DKK": {
-            "displayName": "डेनमार्क क्रोन",
+            "displayName": "डैनिश क्रोन",
             "symbol": "DKK"
           },
           "DOP": {
@@ -184,7 +184,7 @@
             "symbol": "FJD"
           },
           "FKP": {
-            "displayName": "फ़ॉकलैंड द्वीप पाउंड",
+            "displayName": "फ़ॉकलैंड द्वीपसमूह पाउंड",
             "symbol": "FKP"
           },
           "GBP": {
@@ -232,7 +232,7 @@
             "symbol": "HRK"
           },
           "HTG": {
-            "displayName": "हैशियन गर्ड",
+            "displayName": "हैतियाई गर्ड",
             "symbol": "HTG"
           },
           "HUF": {
@@ -244,7 +244,7 @@
             "symbol": "IDR"
           },
           "ILS": {
-            "displayName": "इसराइली न्यू शेकेल",
+            "displayName": "इज़राइली न्यू शेकेल",
             "symbol": "₪"
           },
           "INR": {
@@ -304,7 +304,7 @@
             "symbol": "KWD"
           },
           "KYD": {
-            "displayName": "कैमेन द्वीप डॉलर",
+            "displayName": "कैमेन द्वीपसमूह डॉलर",
             "symbol": "KYD"
           },
           "KZT": {
@@ -331,10 +331,6 @@
             "displayName": "लिथुआनियाई लितास",
             "symbol": "LTL"
           },
-          "LVL": {
-            "displayName": "लात्वियन लैत्स",
-            "symbol": "LVL"
-          },
           "LYD": {
             "displayName": "लीबियाई दिनार",
             "symbol": "LYD"
@@ -356,7 +352,7 @@
             "symbol": "MKD"
           },
           "MMK": {
-            "displayName": "म्यांमा क्याट",
+            "displayName": "म्यांमार क्याट",
             "symbol": "MMK"
           },
           "MNT": {
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "CFA फ़्रैंक BEAC",
+            "displayName": "[CFA] फ़्रैंक [BEAC]",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,11 +604,11 @@
             "symbol": "EC$"
           },
           "XOF": {
-            "displayName": "CFA फ़्रैंक BCEAO",
+            "displayName": "[CFA] फ़्रैंक [BCEAO]",
             "symbol": "CFA"
           },
           "XPF": {
-            "displayName": "CFP फ़्रैंक",
+            "displayName": "[CFP] फ़्रैंक",
             "symbol": "CFPF"
           },
           "XXX": {

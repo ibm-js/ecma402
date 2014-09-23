@@ -92,7 +92,7 @@
             "symbol": "BTN"
           },
           "BWP": {
-            "displayName": "Ботсуанска пула",
+            "displayName": "Ботсванска пула",
             "symbol": "BWP"
           },
           "BYR": {
@@ -330,10 +330,6 @@
           "LTL": {
             "displayName": "Литовски литас",
             "symbol": "LTL"
-          },
-          "LVL": {
-            "displayName": "Латвийски лат",
-            "symbol": "LVL"
           },
           "LYD": {
             "displayName": "Либийски динар",
@@ -600,7 +596,7 @@
             "symbol": "WST"
           },
           "XAF": {
-            "displayName": "Централноафрикански CFA франк",
+            "displayName": "Централноафрикански франк",
             "symbol": "FCFA"
           },
           "XCD": {
@@ -608,7 +604,7 @@
             "symbol": "XCD"
           },
           "XOF": {
-            "displayName": "Западноафрикански CFA франк",
+            "displayName": "Западноафрикански франк",
             "symbol": "CFA"
           },
           "XPF": {
@@ -616,7 +612,7 @@
             "symbol": "CFPF"
           },
           "XXX": {
-            "displayName": "Непозната или невалидна валута"
+            "displayName": "Непозната валута"
           },
           "YER": {
             "displayName": "Йеменски риал",

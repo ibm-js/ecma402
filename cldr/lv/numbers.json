@@ -18,7 +18,7 @@
           "standard": "#,##0%"
         },
         "currencyFormats-numberSystem-latn": {
-          "standard": "¤#,##0.00"
+          "standard": "¤#0.00"
         }
       }
     }

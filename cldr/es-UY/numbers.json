@@ -15,7 +15,7 @@
           "standard": "#,##0.###"
         },
         "percentFormats-numberSystem-latn": {
-          "standard": "#,##0%"
+          "standard": "#,##0 %"
         },
         "currencyFormats-numberSystem-latn": {
           "standard": "¤ #,##0.00"

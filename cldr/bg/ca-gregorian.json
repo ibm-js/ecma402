@@ -179,8 +179,8 @@
                   "pm": "сл.об."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "пр.об.",
+                  "pm": "сл.об."
                 },
                 "wide": {
                   "am": "пр.об.",
@@ -193,8 +193,8 @@
                   "pm": "сл.об."
                 },
                 "narrow": {
-                  "am": "a",
-                  "pm": "p"
+                  "am": "пр.об.",
+                  "pm": "сл.об."
                 },
                 "wide": {
                   "am": "пр.об.",
@@ -204,8 +204,8 @@
             },
             "eras": {
               "eraNames": {
-                "0": "пр.Хр.",
-                "1": "сл.Хр."
+                "0": "преди Христа",
+                "1": "след Христа"
               },
               "eraAbbr": {
                 "0": "пр.Хр.",
@@ -219,11 +219,12 @@
             "dateTimeFormats": {
               "full": "{1}, {0}",
               "availableFormats": {
-                "EHm": "E HH:mm",
+                "E": "ccc",
+                "EHm": "E, HH:mm",
                 "EHms": "E, H:mm:ss",
                 "Ed": "E, d",
                 "Ehm": "E, h:mm a",
-                "Ehms": "E h:mm:ss a",
+                "Ehms": "E, h:mm:ss a",
                 "Gy": "y 'г'. G",
                 "GyMMM": "MM.y 'г'. G",
                 "GyMMMEd": "E, d.MM.y 'г'. G",

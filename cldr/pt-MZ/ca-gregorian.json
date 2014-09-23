@@ -7,18 +7,18 @@
             "months": {
               "format": {
                 "abbreviated": {
-                  "1": "Jan",
-                  "2": "Fev",
-                  "3": "Mar",
-                  "4": "Abr",
-                  "5": "Mai",
-                  "6": "Jun",
-                  "7": "Jul",
-                  "8": "Ago",
-                  "9": "Set",
-                  "10": "Out",
-                  "11": "Nov",
-                  "12": "Dez"
+                  "1": "jan",
+                  "2": "fev",
+                  "3": "mar",
+                  "4": "abr",
+                  "5": "mai",
+                  "6": "jun",
+                  "7": "jul",
+                  "8": "ago",
+                  "9": "set",
+                  "10": "out",
+                  "11": "nov",
+                  "12": "dez"
                 },
                 "narrow": {
                   "1": "J",
@@ -35,18 +35,18 @@
                   "12": "D"
                 },
                 "wide": {
-                  "1": "Janeiro",
-                  "2": "Fevereiro",
-                  "3": "Março",
-                  "4": "Abril",
-                  "5": "Maio",
-                  "6": "Junho",
-                  "7": "Julho",
-                  "8": "Agosto",
-                  "9": "Setembro",
-                  "10": "Outubro",
-                  "11": "Novembro",
-                  "12": "Dezembro"
+                  "1": "janeiro",
+                  "2": "fevereiro",
+                  "3": "março",
+                  "4": "abril",
+                  "5": "maio",
+                  "6": "junho",
+                  "7": "julho",
+                  "8": "agosto",
+                  "9": "setembro",
+                  "10": "outubro",
+                  "11": "novembro",
+                  "12": "dezembro"
                 }
               },
               "stand-alone": {
@@ -204,8 +204,8 @@
             },
             "eras": {
               "eraNames": {
-                "0": "Antes de Cristo",
-                "1": "Ano do Senhor"
+                "0": "antes de Cristo",
+                "1": "depois de Cristo"
               },
               "eraAbbr": {
                 "0": "a.C.",
@@ -219,6 +219,7 @@
             "dateTimeFormats": {
               "full": "{1} 'às' {0}",
               "availableFormats": {
+                "E": "ccc",
                 "EHm": "E, HH:mm",
                 "EHms": "E, HH:mm:ss",
                 "Ed": "E, d",

@@ -85,6 +85,10 @@
         "_allowed": "H h",
         "_preferred": "h"
       },
+      "BQ": {
+        "_allowed": "H",
+        "_preferred": "H"
+      },
       "BR": {
         "_allowed": "H",
         "_preferred": "H"
@@ -106,6 +110,10 @@
         "_preferred": "h"
       },
       "CD": {
+        "_allowed": "H",
+        "_preferred": "H"
+      },
+      "CG": {
         "_allowed": "H",
         "_preferred": "H"
       },
