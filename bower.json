@@ -4,7 +4,7 @@
 	"dependencies": {
 		"requirejs": "2.1.x",
 		"requirejs-text": "2.0.x",
-		"requirejs-dplugins": "0.2.x"
+		"requirejs-dplugins": "0.3.x"
 	},
 	"ignore": [
 		".jshintrc",
