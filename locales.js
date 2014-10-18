@@ -12,7 +12,7 @@ define([
 	"require",
 	"./impl/common",
 	"./impl/load"
-], function (module, require, common, loadCss) {
+], function (module, require, common, load) {
 	// Build variable
 	var writeFile;
 
@@ -45,12 +45,16 @@ define([
 
 	// Compute dependencies to require()
 	function getDependency(locale) {
-		return loadCss.id + "!" + locale;
+		return load.id + "!" + locale;
+	}
+
+	function isObject(value) {
+		return Object.prototype.toString.call(value) === "[object Object]";
 	}
 
 	return {
 		load: function (path, callerRequire, onload, loaderConfig) {
-			if (config instanceof Object && loaderConfig.isBuild) {
+			if (isObject(config) && loaderConfig.isBuild) {
 				localeHash = {};
 				common.availableLocalesList.forEach(function (locale) {
 					localeHash[locale] = true;
@@ -99,7 +103,7 @@ define([
 			});
 
 			localeHash._layerMid = layerMid;
-			write("require.config({config:{'" + loadCss.id + "':" + JSON.stringify(localeHash) + "}});");
+			write("require.config({config:{'" + load.id + "':" + JSON.stringify(localeHash) + "}});");
 
 			// Reset
 			localeDataHash = {};
