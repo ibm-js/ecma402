@@ -1,6 +1,6 @@
 {
 	"name": "ecma402",
-	"version": "0.2.3-dev",
+	"version": "0.2.4",
 	"dependencies": {
 		"requirejs": ">=2.1.14",
 		"requirejs-dplugins": ">=0.2.2-dev"
