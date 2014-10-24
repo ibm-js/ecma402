@@ -2,7 +2,15 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 	registerSuite({
 		name : "testDateTimeFormat",
 		dateTimeFormat : function () {
-			var testCases = [ {
+			var testCases = [  {
+				"locales" : "en-US",
+				"options" : {
+					weekday : "long",
+					timeZone : "UTC"
+				},
+				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
+				"expected" : "Thursday"
+			}, {
 				"locales" : "en-US",
 				"options" : {
 					hour : "numeric",
@@ -17,13 +25,13 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 				"options" : {
 					era : "short",
 					year : "numeric",
-					month : "short",
+					month : "long",
 					day : "numeric",
-					weekday : "short",
+					weekday : "long",
 					timeZone : "UTC"
 				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
-				"expected" : "Thu, Jan 1, 1970 AD"
+				"expected" : "Thursday, January 1, 1970 AD"
 			}, {
 				"locales" : "zh-Hant",
 				"options" : {

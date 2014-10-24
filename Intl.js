@@ -711,7 +711,8 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 							fv = fv.substr(-2);
 						}
 					} else {
-						var standalone = (p === "month" && dateTimeFormat.standaloneMonth);
+						var standalone = (p === "month" && dateTimeFormat.standaloneMonth || 
+								p === "weekday" && dateTimeFormat.standaloneWeekday);
 						fv = _getCalendarField(dateTimeFormat.calendar, dateTimeFormat.calData, tm.year, standalone, p,
 								f, v);
 					}
@@ -745,6 +746,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			 * @private
 			 */
 			function _getCalendarField(calType, calData, year, standalone, property, format, value) {
+				/*jshint maxcomplexity: 36*/
 				var result = null;
 				switch (property) {
 				case "weekday":
@@ -752,13 +754,16 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 					var weekdayKey = cldrWeekdayKeys[value];
 					switch (format) {
 					case "narrow":
-						result = calData.days.format.narrow[weekdayKey];
+						result = standalone ? calData.days["stand-alone"].narrow[weekdayKey]
+								: calData.days.format.narrow[weekdayKey];
 						break;
 					case "short":
-						result = calData.days.format.abbreviated[weekdayKey];
+						result = standalone ? calData.days["stand-alone"].abbreviated[weekdayKey]
+						: calData.days.format.abbreviated[weekdayKey];
 						break;
 					case "long":
-						result = calData.days.format.wide[weekdayKey];
+						result = standalone ? calData.days["stand-alone"].wide[weekdayKey]
+						: calData.days.format.wide[weekdayKey];
 						break;
 					}
 					break;
@@ -831,11 +836,11 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			 * @private
 			 */
 			function _ToIntlDateTimeFormat(format) {
-				var dateFields = /G{1,5}|y{1,4}|[ML]{1,5}|E{1,5}|d{1,2}|a|[Hh]{1,2}|m{1,2}|s{1,2}/g;
+				var dateFields = /G{1,5}|y{1,4}|[ML]{1,5}|[Ec]{1,5}|d{1,2}|a|[Hh]{1,2}|m{1,2}|s{1,2}/g;
 				var result = new Record();
 				var pieces = format.split("'");
 				for (var x = 0; x < pieces.length; x += 2) { // Don't do replacements for fields that are quoted
-					/*jshint maxcomplexity: 36*/
+					/*jshint maxcomplexity: 45*/
 					pieces[x] = pieces[x].replace(dateFields, function (field) {
 						switch (field) {
 						case "GGGGG":
@@ -886,11 +891,25 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 						case "M":
 							result.set("month", "numeric");
 							return "{month}";
+						case "ccccc":
+							result.set("standaloneWeekday", true);
+							result.set("weekday", "narrow");
+							return "{weekday}";
 						case "EEEEE":
 							result.set("weekday", "narrow");
 							return "{weekday}";
+						case "cccc":
+							result.set("standaloneWeekday", true);
+							result.set("weekday", "long");
+							return "{weekday}";
 						case "EEEE":
 							result.set("weekday", "long");
+							return "{weekday}";
+						case "ccc":
+						case "cc":
+						case "c":
+							result.set("standaloneWeekday", true);
+							result.set("weekday", "short");
 							return "{weekday}";
 						case "EEE":
 						case "EE":
@@ -942,6 +961,25 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			}
 
 			/**
+			 * Utility function to construct alternate forms of flexible date
+			 * patterns to accommodate the various widths.
+			 * 
+			 * @param {String} format The original date format pattern
+			 * @param {RegExp} sourceFormat Matches the field that will be replaced in the "format" context.
+			 * @param {String} targetFormat String to replace "sourceFormat" when matched.
+			 * @param {RegExp} sourceStandalone Matches the field that will be replaced in the "stand alone" context.
+			 * @param {String} targetStandalone String to replace "sourceStandalone" when matched.
+			 * @returns {String[]} The constructed date pattern, in ECMA-402 format
+			 * @private
+			 */
+			function _constructFormat(format,sourceFormat,targetFormat,sourceStandalone,targetStandalone) {
+				var constructedFormatPattern = format.replace(sourceFormat, targetFormat)
+					.replace(sourceStandalone, targetStandalone);
+				var constructedFormat = _ToIntlDateTimeFormat(constructedFormatPattern);
+				constructedFormat.cldrPattern = constructedFormatPattern;
+				return constructedFormat;
+			}
+			/**
 			 * Utility function to convert the availableFormats from a CLDR JSON
 			 * object into an array of available formats as defined by ECMA 402. For
 			 * a definition of fields in CLDR, refer to
@@ -957,6 +995,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				var result = [];
 				var usableFormatSkeletons = /^G{0,5}y{0,4}M{0,5}E{0,5}d{0,2}H{0,2}m{0,2}s{0,2}$/;
 				var abbrMonthSkeleton = /(^|[^M])M{3}([^M]|$)/;
+				var weekdaySkeleton = /E{1,5}/;
 				for (var format in availableFormats) {
 					var format12 = availableFormats[format.replace("H", "h")];
 					if (usableFormatSkeletons.test(format) && format12 !== undefined) {
@@ -967,17 +1006,42 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 							outputFormat.set("pattern12", outputFormat12.pattern);
 						}
 						result.push(outputFormat);
+						// Flexible date format logic - If the locale contains just a E pattern (abbreviated weekday)
+						// and not a corresponding EEEE pattern (long weekday), then we can infer
+						// an appropriate EEEE pattern by just replacing the E with EEEE.
+						if (weekdaySkeleton.test(format) && !availableFormats[format.replace("E", "EEEE")]) {
+							result.push(_constructFormat(availableFormats[format],/E{1,3}/,"EEEE",/c{1,3}/,"cccc"));
+						}
+						// Flexible date format logic - If the locale contains just a E pattern (abbreviated weekday)
+						// and not a corresponding EEEEE pattern (narrow weekday), then we can infer
+						// an appropriate EEEEE pattern by just replacing the E with EEEEE.
+						if (weekdaySkeleton.test(format) && !availableFormats[format.replace("E", "EEEEE")]) {
+							result.push(_constructFormat(availableFormats[format],/E{1,3}/,"EEEEE",/c{1,3}/,"ccccc"));
+						}
 						// Flexible date format logic - If the locale contains just a MMM pattern (abbreviated month)
 						// and not a corresponding MMMM pattern (long month), then we can infer
 						// an appropriate MMMM pattern by just replacing the MMM with MMMM.
 						if (abbrMonthSkeleton.test(format) && !availableFormats[format.replace("MMM", "MMMM")]) {
-							var constructedFormatPattern = availableFormats[format]
-								.replace("MMM", "MMMM").replace("LLL", "LLLL");
-							var constructedFormat = _ToIntlDateTimeFormat(constructedFormatPattern);
+							var constructedSkeleton = format.replace("MMM", "MMMM");
+							var constructedFormat = _constructFormat(availableFormats[format],
+									/M{3}/,"MMMM",/L{3}/,"LLLL");
 							result.push(constructedFormat);
+							// If the constructed format contains a weekday pattern, then we have to repeat the
+							// two steps above to cover that case as well.
+							if (weekdaySkeleton.test(constructedSkeleton) && 
+									!availableFormats[constructedSkeleton.replace(weekdaySkeleton, "EEEE")]) {
+								result.push(_constructFormat(constructedFormat.cldrPattern,
+										/E{1,3}/,"EEEE",/c{1,3}/,"cccc"));
+							}
+							if (weekdaySkeleton.test(constructedSkeleton) &&
+									!availableFormats[constructedSkeleton.replace(weekdaySkeleton, "EEEEE")]) {
+								result.push(_constructFormat(constructedFormat.cldrPattern,
+										/E{1,3}/,"EEEEE",/c{1,3}/,"ccccc"));
+							}
 						}
 					}
 				}
+				// TODO: This section needs to be reworked!!!
 				// ECMA402 requires us to have a full date format that includes
 				// weekday, year, month
 				// day, hour, minute, and second. Since CLDR doesn't
