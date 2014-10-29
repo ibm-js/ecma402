@@ -581,8 +581,12 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 			 * @private
 			 */
 			function _initializeDateTimeFormat(dateTimeFormat, locales, options) {
+				var dateProperties = [ "weekday", "era", "year", "month", "day" ];
+				var timeProperties = [ "hour", "minute", "second", "timeZoneName" ];
 				var dateTimeProperties = [ "weekday", "era", "year", "month", "day", "hour", "minute", "second",
-						"timeZoneName" ];
+				                           "timeZoneName" ];
+				var hasDateProperties = false;
+				var hasTimeProperties = false;
 				if (dateTimeFormat.hasOwnProperty("initializedIntlObject") && dateTimeFormat.initializedIntlObject) {
 					throw new TypeError("DateTimeFormat is already initialized.");
 				}
@@ -609,10 +613,25 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				}
 				dateTimeFormat.timeZone = tz;
 				opt = new Record();
-				dateTimeProperties.forEach(function (prop) {
+				var requestedDateOptions = new Record();
+				var requestedTimeOptions = new Record();
+				dateProperties.forEach(function (prop) {
 					var value = common
 							.GetOption(options, prop, "string", _validDateTimePropertyValues(prop), undefined);
 					opt.set(prop, value);
+					if (value) {
+						requestedDateOptions.set(prop,value);
+						hasDateProperties = true;
+					}
+				});
+				timeProperties.forEach(function (prop) {
+					var value = common
+							.GetOption(options, prop, "string", _validDateTimePropertyValues(prop), undefined);
+					opt.set(prop, value);
+					if (value) {
+						requestedTimeOptions.set(prop,value);
+						hasTimeProperties = true;
+					}
 				});
 
 				/*
@@ -625,16 +644,55 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				var cldrCalendar = dateTimeFormat.calendar.replace("gregory", "gregorian");
 				dateTimeFormat.calData =
 					preloads[r.dataLocale]["ca-" + cldrCalendar].main[r.dataLocale].dates.calendars[cldrCalendar];
-				var formats = _convertAvailableDateTimeFormats(dateTimeFormat.calData.dateTimeFormats);
+				var dateTimeFormats = dateTimeFormat.calData.dateTimeFormats;
+				var formats = _convertAvailableDateTimeFormats(dateTimeFormats);
 				matcher = common.GetOption(options, "formatMatcher", "string", [ "basic", "best fit" ], "best fit");
-				var bestFormat = matcher === "basic" ? _basicFormatMatcher(opt, formats) : _bestFitFormatMatcher(opt,
-						formats);
-				dateTimeProperties.forEach(function (prop) {
-					var pDesc = Object.getOwnPropertyDescriptor(bestFormat, prop);
-					if (pDesc !== undefined) {
-						dateTimeFormat[prop] = bestFormat[prop];
+				var bestFormat;
+				if (hasDateProperties && hasTimeProperties) {
+					var bestDateFormat = matcher === "basic" ? _basicFormatMatcher(requestedDateOptions, formats) : 
+						_bestFitFormatMatcher(requestedDateOptions, formats);
+					var bestTimeFormat = matcher === "basic" ? _basicFormatMatcher(requestedTimeOptions, formats) :
+						_bestFitFormatMatcher(requestedTimeOptions, formats);
+					bestFormat = bestDateFormat;
+					var combinedDateFormat;
+					if (requestedDateOptions.weekday === "long" &&
+						requestedDateOptions.month === "long" ) {
+						combinedDateFormat = _ToIntlDateTimeFormat(dateTimeFormats.full || "{1} {0}");
+					} else if (requestedDateOptions.month === "long") {
+						combinedDateFormat = _ToIntlDateTimeFormat(dateTimeFormats.long || "{1} {0}");
+					} else if (requestedDateOptions.month === "short") {
+						combinedDateFormat = _ToIntlDateTimeFormat(dateTimeFormats.medium || "{1} {0}");
+					} else {
+						combinedDateFormat = _ToIntlDateTimeFormat(dateTimeFormats.short || "{1} {0}");
 					}
-				});
+					combinedDateFormat.pattern = combinedDateFormat.pattern.replace("{1}", bestDateFormat.pattern);
+					var combinedDateTimeFormat24 = combinedDateFormat.pattern.replace("{0}", bestTimeFormat.pattern);
+					var combinedDateTimeFormat12 = combinedDateFormat.pattern.replace("{0}", bestTimeFormat.pattern12);
+					bestFormat.set("hour12", bestTimeFormat.hour12);
+					bestFormat.set("pattern", combinedDateTimeFormat24);
+					bestFormat.set("pattern12", combinedDateTimeFormat12);
+					dateProperties.forEach(function (prop) {
+						var pDesc = Object.getOwnPropertyDescriptor(bestDateFormat, prop);
+						if (pDesc !== undefined) {
+							dateTimeFormat[prop] = bestDateFormat[prop];
+						}
+					});					
+					timeProperties.forEach(function (prop) {
+						var pDesc = Object.getOwnPropertyDescriptor(bestTimeFormat, prop);
+						if (pDesc !== undefined) {
+							dateTimeFormat[prop] = bestTimeFormat[prop];
+						}
+					});					
+				} else {
+					bestFormat = matcher === "basic" ? _basicFormatMatcher(opt, formats) : _bestFitFormatMatcher(opt,
+						formats);
+					dateTimeProperties.forEach(function (prop) {
+						var pDesc = Object.getOwnPropertyDescriptor(bestFormat, prop);
+						if (pDesc !== undefined) {
+							dateTimeFormat[prop] = bestFormat[prop];
+						}
+					});
+				}
 				var pattern;
 				var hr12 = common.GetOption(options, "hour12", "boolean", undefined, undefined);
 				if (dateTimeFormat.hour !== undefined) {
@@ -995,7 +1053,7 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 				var result = [];
 				var usableFormatSkeletons = /^G{0,5}y{0,4}M{0,5}E{0,5}d{0,2}H{0,2}m{0,2}s{0,2}$/;
 				var abbrMonthSkeleton = /(^|[^M])M{3}([^M]|$)/;
-				var weekdaySkeleton = /E{1,5}/;
+				var weekdaySkeleton = /(^|[^E])E{1,3}([^E]|$)/;
 				for (var format in availableFormats) {
 					var format12 = availableFormats[format.replace("H", "h")];
 					if (usableFormatSkeletons.test(format) && format12 !== undefined) {
@@ -1040,42 +1098,6 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 							}
 						}
 					}
-				}
-				// TODO: This section needs to be reworked!!!
-				// ECMA402 requires us to have a full date format that includes
-				// weekday, year, month
-				// day, hour, minute, and second. Since CLDR doesn't
-				// specifically have that combination,
-				// we have to piece it together using three pieces:
-				// a). The yMMMMEd or yMMMEd format from available formats
-				// b). The "full" date/time format combiner.
-				// c). The Hms format in locales using 24-hour clock, or the hms
-				// format in locales using a 12-hour clock.
-				var combinedDateFormat = dateTimeFormats.full || "{1} {0}";
-				combinedDateFormat = combinedDateFormat.replace("{1}",
-						availableFormats.yMMMMEd || availableFormats.yMMMEd ||
-						availableFormats.yyyyMMMMEd || availableFormats.yyyyMMMEd ||
-						availableFormats.GyMMMMEd || availableFormats.GyMMMEd);
-				var combinedDateTimeFormat24 = combinedDateFormat.replace("{0}", availableFormats.Hms);
-				var combinedDateTimeFormat12 = combinedDateFormat.replace("{0}", availableFormats.hms);
-				outputFormat = _ToIntlDateTimeFormat(combinedDateTimeFormat24);
-				outputFormat12 = _ToIntlDateTimeFormat(combinedDateTimeFormat12);
-				outputFormat.set("hour12", outputFormat12.hour12);
-				outputFormat.set("pattern12", outputFormat12.pattern);
-				result.push(outputFormat);
-				// Flexible date format logic - If the locale contains just a MMM pattern (abbreviated month)
-				// and not a corresponding MMMM pattern (long month), then we can infer
-				// an appropriate MMMM pattern by just replacing the MMM with MMMM.
-				if (abbrMonthSkeleton.test(combinedDateTimeFormat24)) {
-					var longFormatPattern24 = combinedDateTimeFormat24
-						.replace("MMM", "MMMM").replace("LLL", "LLLL");
-					var longFormatPattern12 = combinedDateTimeFormat12
-						.replace("MMM", "MMMM").replace("LLL", "LLLL");
-					var longFormat = _ToIntlDateTimeFormat(longFormatPattern24);
-					var longFormat12 = _ToIntlDateTimeFormat(longFormatPattern12);
-					longFormat.set("hour12", longFormat12.hour12);
-					longFormat.set("pattern12", longFormat12.pattern);
-					result.push(longFormat);
 				}
 				return result;
 			}

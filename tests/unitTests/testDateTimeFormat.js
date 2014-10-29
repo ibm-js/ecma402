@@ -65,35 +65,83 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 					timeZone : "UTC"
 				},
 				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
-				"expected" : "Thu, Jan 1, 1970 at 12:00:00 AM"
+				"expected" : "Thu, Jan 1, 1970, 12:00:00 AM"
+			}, {
+				"locales" : "en-US",
+				"options" : {
+					year : "numeric",
+					month : "long",
+					day : "numeric",
+					weekday : "long",
+					hour : "numeric",
+					minute : "numeric",
+					timeZone : "UTC"
+				},
+				"input" : new Date("1970-01-01T00:00:00Z").getTime(),
+				"expected" : "Thursday, January 1, 1970 at 12:00 AM"
+			}, {
+				"locales" : "en-US",
+				"options" : {
+					year : "numeric",
+					month : "long",
+					day : "numeric",
+					hour : "numeric",
+					minute : "numeric",
+					second : "numeric",
+					timeZone : "UTC"
+				},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "March 4, 1965 at 5:59:30 PM"
+			}, {
+				"locales" : "de-DE",
+				"options" : {
+					year : "numeric",
+					month : "long",
+					day : "numeric",
+					weekday : "long",
+					hour : "numeric",
+					minute : "numeric",
+					timeZone : "UTC"
+				},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "Donnerstag, 4. März 1965 um 17:59"
+			}, {
+				"locales" : "de-DE",
+				"options" : {
+					year : "numeric",
+					month : "long",
+					day : "numeric",
+					hour : "numeric",
+					minute : "numeric",
+					timeZone : "UTC"
+				},
+				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+				"expected" : "4. März 1965 um 17:59"
 			}, {
 				"locales" : "en-US",
 				"options" : {
 					year : "numeric",
 					month : "short",
 					day : "numeric",
-					weekday : "short",
 					hour : "numeric",
 					minute : "numeric",
-					second : "numeric",
 					timeZone : "UTC"
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM"
+				"expected" : "Mar 4, 1965, 5:59 PM"
 			}, {
 				"locales" : "de-DE",
 				"options" : {
 					year : "numeric",
-					month : "short",
+					month : "numeric",
 					day : "numeric",
-					weekday : "short",
 					hour : "numeric",
 					minute : "numeric",
 					second : "numeric",
 					timeZone : "UTC"
 				},
 				"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-				"expected" : "Do., 4. März 1965 um 17:59:30"
+				"expected" : "4.3.1965, 17:59:30"
 			}, {
 				"locales" : "en-US",
 				"options" : {

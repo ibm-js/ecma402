@@ -19,7 +19,7 @@ define(
 							"currency" : "eur",
 							"input" : 12345.678,
 							"expected" : "12.345,68\u00A0€",
-							"expected2" : "12.345,68\u00A0€" // If on a browser that doesn"t have Intl.
+							"expected2" : "12.345,68\u00A0€" // If on a browser with no Intl.
 						} ];
 
 					var dateTimeFormattingTestCases =
@@ -52,38 +52,6 @@ define(
 							"locales" : "en-US",
 							"options" : {
 								year : "numeric",
-								month : "short",
-								day : "numeric",
-								weekday : "short",
-								hour : "numeric",
-								minute : "numeric",
-								second : "numeric",
-								timeZone : "UTC"
-							},
-							"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-							"expected" : "Thu, Mar 4, 1965 at 5:59:30 PM",
-							"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM"
-						}, {
-							"native" : true,
-							"locales" : "en-US",
-							"options" : {
-								year : "numeric",
-								month : "short",
-								day : "numeric",
-								weekday : "short",
-								hour : "numeric",
-								minute : "numeric",
-								second : "numeric",
-								timeZone : "UTC"
-							},
-							"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-							"expected" : "Thu, Mar 4, 1965, 5:59:30 PM",
-							"expected2" : "Thu, Mar 4, 1965 at 5:59:30 PM" // If on a browser that doesn"t have Intl.
-						}, {
-							"native" : false,
-							"locales" : "en-US",
-							"options" : {
-								year : "numeric",
 								month : "long",
 								day : "numeric",
 								weekday : "long",
@@ -93,8 +61,8 @@ define(
 								timeZone : "UTC"
 							},
 							"input" : new Date("1965-03-04T17:59:30Z").getTime(),
-							"expected" : "Thu, March 4, 1965 at 5:59:30 PM",
-							"expected2" : "Thu, March 4, 1965 at 5:59:30 PM"
+							"expected" : "Thursday, March 4, 1965 at 5:59:30 PM",
+							"expected2" : "Thursday, March 4, 1965 at 5:59:30 PM"
 						}, {
 							"native" : true,
 							"locales" : "en-US",
@@ -110,8 +78,39 @@ define(
 							},
 							"input" : new Date("1965-03-04T17:59:30Z").getTime(),
 							"expected" : "Thursday, March 4, 1965, 5:59:30 PM",
-							"expected2" : "Thu, March 4, 1965 at 5:59:30 PM" // If on a browswer that doesn"t have
-																				// Intl.
+							"expected2" : "Thursday, March 4, 1965 at 5:59:30 PM" // If on a browser with no Intl.
+						}, {
+							"native" : false,
+							"locales" : "en-US",
+							"options" : {
+								year : "numeric",
+								month : "long",
+								day : "numeric",
+								weekday : "long",
+								hour : "numeric",
+								minute : "numeric",
+								second : "numeric",
+								timeZone : "UTC"
+							},
+							"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+							"expected" : "Thursday, March 4, 1965 at 5:59:30 PM",
+							"expected2" : "Thursday, March 4, 1965 at 5:59:30 PM"
+						}, {
+							"native" : true,
+							"locales" : "en-US",
+							"options" : {
+								year : "numeric",
+								month : "long",
+								day : "numeric",
+								weekday : "long",
+								hour : "numeric",
+								minute : "numeric",
+								second : "numeric",
+								timeZone : "UTC"
+							},
+							"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+							"expected" : "Thursday, March 4, 1965, 5:59:30 PM",
+							"expected2" : "Thursday, March 4, 1965 at 5:59:30 PM" // If on a browser with no Intl.
 						} ];
 
 					numberFormattingTestCases.forEach(function (currentTest) {

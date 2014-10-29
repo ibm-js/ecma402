@@ -1,4 +1,4 @@
-section=ca-gregorian ; path=//cldr/main/[^/]++/dates/calendars/gregorian/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="(0|1)"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
+section=ca-gregorian ; path=//cldr/main/[^/]++/dates/calendars/gregorian/((months|days|dateTimeFormats/(full|long|medium|short|availableFormats)).*|eras.*/era\[@type="(0|1)"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
 section=numbers ; path=//cldr/main/[^/]++/numbers/(symbols\[@numberSystem="[a-z]{4,8}"\]/(decimal|group|nan|infinity|minusSign|percentSign)|(decimal|currency|percent)Formats\[@numberSystem="[a-z]{4,8}"\]/standard|defaultNumberingSystem)
 section=currencyData ; path=//cldr/supplemental/currencyData/fractions/.*
 section=calendarData ; path=//cldr/supplemental/calendarData/eras/.*

@@ -1,2 +1,2 @@
-section=ca-islamic-umalqura ; path=//cldr/main/[^/]++/dates/calendars/islamic-umalqura/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
-section=ca-islamic-rgsa ; path=//cldr/main/[^/]++/dates/calendars/islamic-rgsa/((months|days|dateTimeFormats/(full|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
+section=ca-islamic-umalqura ; path=//cldr/main/[^/]++/dates/calendars/islamic-umalqura/((months|days|dateTimeFormats/(full|long|medium|short|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])
+section=ca-islamic-rgsa ; path=//cldr/main/[^/]++/dates/calendars/islamic-rgsa/((months|days|dateTimeFormats/(full|long|medium|short|availableFormats)).*|eras.*/era\[@type="[^\"]++"\]|dayPeriods.*/dayPeriod\[@type="(am|pm)"\])

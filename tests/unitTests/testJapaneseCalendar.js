@@ -23,6 +23,19 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 						year : "numeric",
 						month : "long",
 						day : "numeric",
+						weekday : "long",
+						hour : "numeric",
+						minute : "numeric",
+						timeZone : "UTC"
+					},
+					"input" : new Date("1965-03-04T17:59:30Z").getTime(),
+					"expected" : "昭和40年3月4日木曜日 17:59"
+				}, {
+					"locales" : "ja-u-ca-japanese",
+					"options" : {
+						year : "numeric",
+						month : "long",
+						day : "numeric",
 					},
 					"input" : new Date(1989, 0, 7).getTime(),
 					"expected" : "昭和64年1月7日"

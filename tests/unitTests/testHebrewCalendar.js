@@ -16,7 +16,7 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 						timeZone : "UTC"
 					},
 					"input" : new Date("2014-03-04T17:59:30Z").getTime(),
-					"expected" : "יום ג׳, 2 באדר ב׳ 5774 בשעה 17:59:30"
+					"expected" : "יום ג׳, 2 באדר ב׳ 5774, 17:59:30"
 				}, {
 					"locales" : "he-u-ca-hebrew",
 					"options" : {
@@ -30,7 +30,7 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 						timeZone : "UTC"
 					},
 					"input" : new Date("2014-02-04T17:59:30Z").getTime(),
-					"expected" : "יום ג׳, 4 באדר א׳ 5774 בשעה 17:59:30"
+					"expected" : "יום ג׳, 4 באדר א׳ 5774, 17:59:30"
 				}, {
 					"locales" : "he-u-ca-hebrew",
 					"options" : {
@@ -43,7 +43,7 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 						second : "numeric",
 					},
 					"input" : new Date(2014, 01, 04, 17, 59, 30).getTime(),
-					"expected" : "יום ג׳, 4 באדר א׳ 5774 בשעה 17:59:30"
+					"expected" : "יום ג׳, 4 באדר א׳ 5774, 17:59:30"
 				}, {
 					"locales" : "he-u-ca-hebrew",
 					"options" : {
@@ -57,7 +57,7 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 						timeZone : "UTC"
 					},
 					"input" : new Date("2013-02-12T17:59:30Z").getTime(),
-					"expected" : "יום ג׳, 2 באדר 5773 בשעה 17:59:30"
+					"expected" : "יום ג׳, 2 באדר 5773, 17:59:30"
 				}, {
 					"locales" : "he-u-ca-hebrew",
 					"options" : {

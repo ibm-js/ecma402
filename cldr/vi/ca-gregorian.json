@@ -218,6 +218,9 @@
             },
             "dateTimeFormats": {
               "full": "{0} {1}",
+              "long": "{0} {1}",
+              "medium": "{0} {1}",
+              "short": "{0} {1}",
               "availableFormats": {
                 "E": "ccc",
                 "EHm": "E HH:mm",
