@@ -180,7 +180,7 @@ define(["./List", "./Record",
 				var firstSingletonPosition = result.search(/(^|-)[a-z0-9]-/);
 				var languageTag = /^([a-z]{2,3}(-[a-z]{3}){0,3}|[a-z]{4,8})(?=(-|$))/;
 				var scriptTag = /(?:-)([a-z]{4})(?=(-|$))/;
-				var regionTag = /(?:-)([a-z]{2})(?=(-|$))/g;
+				var regionTag = /(?:-)([a-z]{2}|\\d{3})(?=(-|$))/g;
 				var variantTag = /(?:-)([a-z0-9]{5,8}|\d[a-z0-9]{3})/;
 				var extlangTag = /^([a-z]{2,3}(-[a-z]{3}))(?=(-|$))/;
 				/* Canonicalize the Language Tag */
