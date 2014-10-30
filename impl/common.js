@@ -253,10 +253,18 @@ define(["./List", "./Record",
 			 * @private
 			 */
 			DefaultLocale : function () {
-				var result;
+				var result = null;
 				var global = (function () {return this; })();
 				var navigator = global.navigator;
-				if (navigator && this.isStructurallyValidLanguageTag(navigator.language)) {
+				if (navigator && navigator.languages) {
+					var languageList = navigator.languages.slice(0);
+					while (!result && languageList.length > 0) {
+						var tag = languageList.shift();
+						result = this.BestFitAvailableLocale(this.availableLocalesList, this
+								.CanonicalizeLanguageTag(tag));						
+					}
+				}
+				if (!result && navigator && this.isStructurallyValidLanguageTag(navigator.language)) {
 					result = this.BestFitAvailableLocale(this.availableLocalesList, this
 						.CanonicalizeLanguageTag(navigator.language));
 				}
