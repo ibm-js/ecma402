@@ -1,9 +1,8 @@
 {
 	"name": "ecma402",
-	"version": "0.2.4",
+	"version": "0.2.5",
 	"dependencies": {
-		"requirejs": ">=2.1.14",
-		"requirejs-dplugins": ">=0.2.2-dev"
+		"requirejs": ">=2.1.14"
 	},
 	"keywords": [
 	    "utility",
@@ -46,7 +45,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/ibm-js/ecma402.git"
-	},	
+	},
 	"devDependencies": {
 		"intern": "1.6",
 		"grunt": "~0.4.5",
