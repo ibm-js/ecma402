@@ -47,7 +47,7 @@
 		"url": "git://github.com/ibm-js/ecma402.git"
 	},
 	"devDependencies": {
-		"intern": "1.6",
+		"intern": "2.1.x",
 		"grunt": "~0.4.5",
 		"grunt-contrib-jshint": "~0.10.0"
 	},
