@@ -13,7 +13,7 @@ define({
 		{ browserName: "firefox", version: "29", platform: [ "OS X 10.6", "Windows 7", "Linux" ], name: "ecma402" },
 		{ browserName: "chrome", version: "32", platform: [ "OS X 10.6", "Windows 7", "Linux" ], name: "ecma402" },
 		{ browserName: "safari", version: "6", platform: "OS X 10.8", name: "ecma402" },
-		{ browserName: "safari", version: "7", platform: "OS X 10.9", name: "ecma402" },
+		{ browserName: "safari", version: "7", platform: "OS X 10.9", name: "ecma402" }/*,
 		{ browserName: "", platform: "OS X 10.9", version: "7.1", deviceName: "iPhone",
 			app: "safari", device: "iPhone Simulator", name: "ecma402" },
 		{ browserName: "", platform: "OS X 10.9", version: "7.1", deviceName: "iPad",
@@ -21,7 +21,7 @@ define({
 		{ browserName: "", platform: "OS X 10.9", version: "7.0", deviceName: "iPhone",
 			app: "safari", device: "iPhone Simulator", name: "ecma402" },
 		{ browserName: "", platform: "OS X 10.9", version: "7.0", deviceName: "iPad",
-			app: "safari", device: "iPad Simulator", name: "ecma402" }
+			app: "safari", device: "iPad Simulator", name: "ecma402" }*/
 	],
 
 	// Maximum number of simultaneous integration tests that should be executed on the remote WebDriver service
