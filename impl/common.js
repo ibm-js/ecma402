@@ -4,15 +4,13 @@
 define(["./List", "./Record",
 		"requirejs-text/text!../cldr/config/availableLocales.json",
 		"requirejs-text/text!../cldr/supplemental/aliases.json",
-		"requirejs-text/text!../cldr/supplemental/localeAliases.json",
 		"requirejs-text/text!../cldr/supplemental/parentLocales.json",
 		"requirejs-text/text!../cldr/supplemental/likelySubtags.json",
 		"requirejs-text/text!../cldr/supplemental/calendarPreferenceData.json",
 ],
-	function (List, Record, availableLocalesJson, aliasesJson, localeAliasesJson,
+	function (List, Record, availableLocalesJson, aliasesJson, 
 			parentLocalesJson, likelySubtagsJson, calendarPreferenceDataJson) {
 		var aliases = JSON.parse(aliasesJson).supplemental.metadata.alias;
-		var localeAliases = JSON.parse(localeAliasesJson).supplemental.metadata.alias;
 		var parentLocales = JSON.parse(parentLocalesJson).supplemental.parentLocales.parentLocale;
 		var likelySubtags = JSON.parse(likelySubtagsJson).supplemental.likelySubtags;
 		var calendarPreferenceData = JSON.parse(calendarPreferenceDataJson).supplemental.calendarPreferenceData;
@@ -235,7 +233,13 @@ define(["./List", "./Record",
 					var lookupAlias = aliases.languageAlias[m];
 					if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
 						m = lookupAlias._replacement ? lookupAlias._replacement : m;
-					}
+					} else if (variantTag.test(m)){						
+						var noVariantTag = m.replace(variantTag,"");
+						lookupAlias = aliases.languageAlias[noVariantTag];
+						if (lookupAlias && lookupAlias._reason !== "macrolanguage") {
+							m = lookupAlias._replacement ? lookupAlias._replacement + m.match(variantTag)[0] : m;
+						}
+					}				
 					return m;
 				}); // String
 				// Remove the prefix if an extlang tag exists
@@ -414,7 +418,7 @@ define(["./List", "./Record",
 					if (lookupAlias && lookupAlias._reason === "macrolanguage") {
 						candidate = candidate.replace(langtag, lookupAlias._replacement);
 					}
-					lookupAlias = localeAliases.localeAlias[candidate];
+					lookupAlias = aliases.languageAlias[candidate];
 					if (lookupAlias) {
 						candidate = lookupAlias._replacement;
 					}

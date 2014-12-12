@@ -35,27 +35,27 @@ define([ "intern!object", "intern/chai!assert", "ecma402/Intl" ], function (regi
 				"bestfit" : "he"
 			}, {
 				"input" : "zh-CN",
-				"lookup" : "zh",
+				"lookup" : "zh-Hans",
 				"bestfit" : "zh-Hans"
 			}, {
 				"input" : "zh-SG",
-				"lookup" : "zh-SG",
+				"lookup" : "zh-Hans-SG",
 				"bestfit" : "zh-Hans-SG"
 			}, {
 				"input" : "zh-TW",
-				"lookup" : "zh-TW",
+				"lookup" : "zh-Hant",
 				"bestfit" : "zh-Hant"
 			}, {
 				"input" : "zh-MO",
-				"lookup" : "zh",
+				"lookup" : "zh-Hant",
 				"bestfit" : "zh-Hant-HK"
 			}, {
 				"input" : "zh-HK-VARIANT",
-				"lookup" : "zh-HK",
+				"lookup" : "zh-Hant-HK",
 				"bestfit" : "zh-Hant-HK"
 			}, {
 				"input" : "sr-ME",
-				"lookup" : "sr",
+				"lookup" : "sr-Latn",
 				"bestfit" : "sr-Latn"
 			}, {
 				"input" : "sr-YU",

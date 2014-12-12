@@ -274,7 +274,7 @@ define(
 					}).resolvedOptions().locale;
 					if(request===result){
 						supported.push(request);
-					}else if(request.indexOf(result)===0){
+					}else if(request.split("-")[0]===result.split("-")[0]){
 						byFallback.push(request);
 					}else{
 						unsupported.push(request);

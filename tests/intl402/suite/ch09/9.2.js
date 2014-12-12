@@ -183,7 +183,7 @@ define(
 			    var info = testIntl.getLocaleSupportInfo(Constructor);
 			    // this test should work equally for both matching algorithms
 			    ["lookup", "best fit"].forEach(function (matcher) {
-			        var supportedByConstructor = info.supported.concat(info.byFallback);
+			        var supportedByConstructor = info.supported; //.concat(info.byFallback);
 			        var supported = Constructor.supportedLocalesOf(supportedByConstructor,
 			            {localeMatcher: matcher});
 			        // we could check the length first, but it's probably more interesting which locales are missing

@@ -32,11 +32,12 @@ define(
 						assert.notStrictEqual(info.supported.indexOf(fallback),-1,
 							"Locale " + locale + " is supported, but fallback " + fallback + " isn't.");
 		            }
-					var match = /([a-z]{2,3})(-[A-Z][a-z]{3})(-[A-Z]{2})/.exec(locale);
-					if (match !== null) {
-						fallback = match[1] + match[3];
-						assert.notStrictEqual(info.supported.indexOf(fallback),-1,"Locale " + locale + " is supported, but fallback " + fallback + " isn't.");
-					}
+// JCE: This isn't really a valid test, because locales like zh_SG alias to zh_Hans_SG.
+//					var match = /([a-z]{2,3})(-[A-Z][a-z]{3})(-[A-Z]{2})/.exec(locale);
+//					if (match !== null) {
+//						fallback = match[1] + match[3];
+//						assert.notStrictEqual(info.supported.indexOf(fallback),-1,"Locale " + locale + " is supported, but fallback " + fallback + " isn't.");
+//					}
 				});
 			});
 		}
