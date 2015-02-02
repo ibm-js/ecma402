@@ -1,46 +1,46 @@
 {
 	"name": "ecma402",
-	"version": "0.3.0-alpha",
+	"version": "0.3.0",
 	"dependencies": {
 		"requirejs": ">=2.1.14"
 	},
 	"keywords": [
-	    "utility",
-	    "globalization",
-	    "internationalization",
-	    "multilingualization",
-	    "localization",
-	    "g11n",
-	    "i18n",
-	    "m17n",
-	    "L10n",
-	    "localize",
-	    "format",
-	    "parse",
-	    "translate",
-	    "strings",
-	    "numbers",
-	    "dates",
-	    "times",
-	    "calendars",
-	    "cultures",
-	    "languages",
-	    "locales"
+		"utility",
+		"globalization",
+		"internationalization",
+		"multilingualization",
+		"localization",
+		"g11n",
+		"i18n",
+		"m17n",
+		"L10n",
+		"localize",
+		"format",
+		"parse",
+		"translate",
+		"strings",
+		"numbers",
+		"dates",
+		"times",
+		"calendars",
+		"cultures",
+		"languages",
+		"locales"
 	],
 	"homepage": "https://github.com/ibm-js/ecma402",
 	"author": "The Dojo Foundation",
 	"maintainers": [
 		{
-		  "name": "John Emmons",
-		  "email": "emmo@us.ibm.com",
-		  "url": "https://github.com/JCEmmons"
+			"name": "John Emmons",
+			"email": "emmo@us.ibm.com",
+			"url": "https://github.com/JCEmmons"
 		}
 	],
 	"contributors": [
-	    "Christophe Jolif <cjolif@gmail.com> (https://github.com/cjolif)",
-	    "Bill Keese <bill@dojotoolkit.org> (https://github.com/wkeese)",
-	    "Clément Mathieu (https://github.com/clmath)",
-	    "Ahmed Mustafa <amustafa@eg.ibm.com> (https://github.com/AhmedMustafa)"
+		"Christophe Jolif <cjolif@gmail.com> (https://github.com/cjolif)",
+		"Bill Keese <bill@dojotoolkit.org> (https://github.com/wkeese)",
+		"Clément Mathieu (https://github.com/clmath)",
+		"Ahmed Mustafa <amustafa@eg.ibm.com> (https://github.com/AhmedMustafa)"
 	],
 	"repository": {
 		"type": "git",
