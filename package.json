@@ -57,5 +57,6 @@
 			"url": "https://github.com/ibm-js/ecma402/blob/master/LICENSE"
 		}
 	],
-	"bugs": "https://github.com/ibm-js/ecma402/issues"
+	"bugs": "https://github.com/ibm-js/ecma402/issues",
+	"private": true
 }
