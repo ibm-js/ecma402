@@ -63,7 +63,9 @@ define([ 'intern!object', 'intern/chai!assert' ],
 				var desc = Object.getOwnPropertyDescriptor(obj, "length");
 				assert.isFalse(desc.writable, "The length property of a built-in function must not be writable.");
 				assert.isFalse(desc.enumerable,"The length property of a built-in function must not be enumerable.");
+				/* Since the length property changed from ECMA 5 to ECMA 6, we won't bother to test for it here.
 				assert.isFalse(desc.configurable,"The length property of a built-in function must not be configurable.");
+				*/
 			}
 
 			properties.forEach(function(prop) {
