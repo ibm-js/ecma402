@@ -1,10 +1,10 @@
 {
 	"name": "ecma402",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"dependencies": {
 		"requirejs": "2.1.x",
 		"requirejs-text": "2.0.x",
-		"requirejs-dplugins": "0.5.x"
+		"requirejs-dplugins": "0.6.x"
 	},
 	"ignore": [
 		".jshintrc",
