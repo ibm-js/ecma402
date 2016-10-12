@@ -6,7 +6,7 @@ define(["./List", "./Record",
 		"requirejs-text/text!../cldr/supplemental/aliases.json",
 		"requirejs-text/text!../cldr/supplemental/parentLocales.json",
 		"requirejs-text/text!../cldr/supplemental/likelySubtags.json",
-		"requirejs-text/text!../cldr/supplemental/calendarPreferenceData.json",
+		"requirejs-text/text!../cldr/supplemental/calendarPreferenceData.json"
 ],
 	function (List, Record, availableLocalesJson, aliasesJson, 
 			parentLocalesJson, likelySubtagsJson, calendarPreferenceDataJson) {

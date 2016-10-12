@@ -322,10 +322,10 @@ define([ "./impl/Record", "./impl/calendars", "./impl/common", "./locales!",
 					m = m.replace(/\.$/, "");
 				}
 				var dPos = m.indexOf(".");
-				var int = dPos > 0 ? dPos : m.length;
-				while (int < minInteger) {
+				var _int = dPos > 0 ? dPos : m.length;
+				while (_int < minInteger) {
 					m = "0" + m;
-					int++;
+					_int++;
 				}
 				return m;
 			}
